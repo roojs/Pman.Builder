@@ -1,0 +1,88 @@
+
+.typeBoolTrue {
+	color:green;
+}
+.typeBoolFalse {
+	color:red;
+}
+.typeObject {
+	color: blue;
+	font-style: italic;
+}
+.resizeLayer {
+	background:red;
+	text-align:center;
+	font:bold 10px arial;
+	overflow:hidden;
+}
+div.b-component {
+	-moz-border-radius:3px;
+	 
+	border: solid black 2px;
+	text-align:left;
+	color:black;
+	 
+	/*background: #CCCCFF url(bg1.png) repeat-x scroll center bottom;*/
+	overflow:hidden;
+	display:block;
+	cursor:pointer;
+    margin: 5px;
+    padding: 2px;
+    border-color:navy;
+     font-family:arial,tahoma,helvetica,sans-serif;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    
+}
+/*div.b-component  {
+	
+	 float: left; breaks dd 
+}
+*/
+ 
+ 
+.b-erm-rect {fill:#ccc;}
+.b-erm-recthead {fill:#bbb;}
+.b-erm-tblname {font-size:12pt; font-family:arial,tahoma,helvetica,sans-serif;fill:#000000;font-weight:bold;}
+.b-erm-colname {font-size:10pt; font-family:arial,tahoma,helvetica,sans-serif;fill:#333;}
+.b-erm-coltype {font-size:8pt; font-family:arial,tahoma,helvetica,sans-serif;fill:#666;}
+	
+ 
+div.b-component  .component.selected {
+	border-color:blue;
+}
+
+.b-selectedElementParent {
+/*	background:#ccf; */
+    border: 1px dashed green !important;
+}
+.b-selectedElement {
+	/* background:#ffc; */
+    border: 2px dotted red !important;
+}
+
+.icon-reset { background-image:url(icons/asterisk_orange.png) !important; }
+.icon-help { background-image:url(icons/help.png) !important; }
+.icon-time { background-image:url(icons/time.png) !important; }
+.icon-delete { background-image:url(icons/delete.png) !important; }
+.icon-add { background-image:url(icons/add.png) !important; }
+
+.icon-el { background-image:url(icons/application.png) !important; }
+.icon-deleteEl { background-image:url(icons/application_delete.png) !important; }
+.icon-addEl { background-image:url(icons/application_add.png) !important; }
+.icon-dupEl { background-image:url(icons/application_double.png) !important; }
+.icon-editEl { background-image:url(icons/application_edit.png) !important; }
+
+.icon-undo { background-image:url(icons/arrow_undo.png) !important; }
+.icon-update { background-image:url(icons/arrow_refresh.png) !important; }
+.icon-resize { background-image:url(icons/arrow_inout.png) !important; }
+
+
+
+
+
+/* vim600: set foldenable foldmethod=marker foldmarker={,} foldlevel=1 : */
