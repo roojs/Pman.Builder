@@ -44,10 +44,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
 {
     
 
-    function Pman_Builder_Generator($page)
-    {
-        $this->page = $page;
-    }
+   
     // inherrited..
     // $tablekeys
     // $tables
