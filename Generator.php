@@ -67,7 +67,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     var $def;
     
       
-    
+    var $page = false; // page container when run from cli.
     
     // dont do usual stuff!!!
     var $rootDir = '';
@@ -154,7 +154,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = $this->rootDir."/Pman/$m/DataObjects/$f";
+                $tg = dirname(__FILE__)."/../$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
                     $tg = dirname(__FILE__)."/../$m/$f";
                 }
