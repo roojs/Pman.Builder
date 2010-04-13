@@ -154,7 +154,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = dirname(__FILE__)."/../$m/DataObjects/$f";
+                $tg = $this->rootDir."/Pman/$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
                     $tg = dirname(__FILE__)."/../$m/$f";
                 }
