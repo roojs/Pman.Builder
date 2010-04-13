@@ -381,7 +381,8 @@ class Pman_Builder_Elements extends Pman
         if ($conf) {
             return $conf;
         }
-        $top = dirname(__FILE__).'/../';
+        $ff = HTML_FlexyFramework::get();
+        $top = $ff->rootDir.'/Pman';
         
         
         $conf = array('database__render'=>array());
