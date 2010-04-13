@@ -62,7 +62,8 @@ class Pman_Builder_Code extends Pman
             $this->jerr("invalid");
         }
         // fixme!!!!
-        $fn = dirname(__FILE__).'/../' . $code.'.js';
+        
+        $fn = $this->rootDir .'/Pman/' . $code.'.js';
         
         list($app, $mod) = explode('/', $code);
         
