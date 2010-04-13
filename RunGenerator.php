@@ -40,7 +40,7 @@ class Pman_Builder_RunGenerator extends Pman
         if (preg_match('/RunGenerator/', $lastarg)) {
             $lastarg  = '';
         }
-        $x = new Pman_Builder_Generator();
+        $x = new Pman_Builder_Generator($this);
         $x->start($this->cli, $args, $lastarg);
         die("done!");
     }
