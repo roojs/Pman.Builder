@@ -44,7 +44,10 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
 {
     
 
-    
+    function Pman_Builder_Generator($page)
+    {
+        $this->page = $page;
+    }
     // inherrited..
     // $tablekeys
     // $tables
@@ -154,9 +157,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = dirname(__FILE__)."/../$m/DataObjects/$f";
+                $tg = $this->page->rootDir."/Pman/$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
-                    $tg = dirname(__FILE__)."/../$m/$f";
+                    $tg = $this->page->rootDir."/Pman/$m/$f";
                 }
                 
                 if (!file_exists($tg) || !filesize($tg) ) {
@@ -240,7 +243,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 continue;
             }
             foreach($fl as $f) {
-                $fn = dirname(__FILE__). "/../$m/DataObjects/$f";
+                $fn = $this->page->rootDir. "/Pman/$m/DataObjects/$f";
                 $cmd = $cat . ' ' . escapeshellarg($fn) . " | $mysql_cmd -f ";
                 echo $cmd. ($cli ? "\n" : "<BR>\n");
                 if ($cli) {
@@ -274,7 +277,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
         
         
-        $top = dirname(__FILE__).'/..';
+        $top = $this->page->rootDir .'/Pman';
         $this->modtables = array();
         $this->modmap = array();
         $this->modmapsql = array();
