@@ -23,7 +23,9 @@ class Pman_Builder_Readers extends Pman
     }
     function get()
     {
-        $top = dirname(__FILE__).'/../';
+         $ff = HTML_FlexyFramework::get();
+        $top = $ff->rootDir.'/Pman/';
+      
         
         
         
