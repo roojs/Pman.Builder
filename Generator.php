@@ -401,7 +401,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
            
            
             $outfilename    = $rd.'/'.$mod.'/'. ucfirst($this->table).'.php';
-            $orig           = $this->page->rootDir '/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
+            $orig           = $this->page->rootDir .'/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
             
            
                 // file_get_contents???
