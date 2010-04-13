@@ -22,9 +22,14 @@ class Pman_Builder_App extends Pman
             die("Invalid Application (2)");
         }
         $this->builderJs = array();
+        
+        $ff = HTML_FlexyFramework::get();
+        
         while ($p->fetch()) {
             // file exists in file system - dont add it twice!
-            $fl = dirname(__FILE__).'/../'. $app .'/'.$p->module.'.js';
+            // this is a bit questionable..  - we may need to check if the
+            // db version is more recent.
+            $fl = $ff->rootDir.'/Pman/'. $app .'/'.$p->module.'.js';
             if (file_exists($fl) && filesize($fl)) {
                 continue;
                }
