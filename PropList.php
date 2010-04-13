@@ -33,7 +33,7 @@ class Pman_Builder_PropList extends Pman
         
         $this->src = isset($opts->Pman_Builder['roojs1_path']) ?
             $opts->Pman_Builder['roojs1_path'] .'/docs/json':
-            realpath(dirname(__FILE__). '/../../roojs1/docs/json');
+            realpath($opts->rootDir. '/roojs1/docs/json');
         if (!$this->src) {
             $this->jerr("roojs1 directory is not in top level folder, or Builder.roojs1_path is not set");
         }
