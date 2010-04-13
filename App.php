@@ -32,7 +32,7 @@ class Pman_Builder_App extends Pman
             $fl = $ff->rootDir.'/Pman/'. $app .'/'.$p->module.'.js';
             if (file_exists($fl) && filesize($fl)) {
                 continue;
-               }
+            }
             $this->builderJs[] = $p->module;
         }
         $o  = HTML_FlexyFramework::get();
