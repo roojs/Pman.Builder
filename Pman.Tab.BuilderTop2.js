@@ -335,7 +335,7 @@ Pman.Tab.BuilderTop2 = new Roo.util.Observable({
                                             module : t.root.elConfig['|module'],
                                             app : t.root.elConfig.app,
                                             btype : 'FORM',
-                                            id : sidd,
+                                            id : sid,
                                             giturl : _this.modsel.lastData.giturl
                                         }, 
                                         success : function(data) {
