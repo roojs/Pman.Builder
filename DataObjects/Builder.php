@@ -42,9 +42,15 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
         
         
     }
-    function gitCommit($path, )
+    function gitCommit($file )
     {
-        
+        $n = basename($file);
+        $dir = dirname($file);
+        chdir($dir);
+        $cmd = "git commit -m 'commit by builder' " . escapeshellarg($file);
+        `$cmd`;
+        $cmd = "git push";
+        `$cmd`;
     }
     
     
