@@ -24,6 +24,7 @@ Pman.Readers.Builder_app = {
 		{name : 'id',type : 'int'},
 		'app',
 		'davurl',
-		{name : 'davwrite',type : 'int'}
+		{name : 'davwrite',type : 'int'},
+        'gitpath'
 	]
 };
