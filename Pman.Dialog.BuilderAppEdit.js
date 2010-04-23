@@ -67,13 +67,17 @@ Pman.Dialog.BuilderAppEdit = {
                                 ,
                                 actioncomplete: function (_self, action)
                                 {
-                                   _this.dialog.el.unmask();
-                                   _this.dialog.hide();
-                                   
-                                    if (_this.callback) {
-                                       _this.callback.call(_this, _this.form.getValues());
+                                   if (action.type == 'submit') {
+                                       
+                                       _this.dialog.el.unmask();
+                                       _this.dialog.hide();
+                                       
+                                        if (_this.callback) {
+                                           _this.callback.call(_this, _this.form.getValues());
+                                        }
+                                        _this.form.reset();
+                                    
                                     }
-                                    _this.form.reset();
                                 }
                                 ,
                                 rendered: function (_self)
