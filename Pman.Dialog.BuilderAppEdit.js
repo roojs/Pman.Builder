@@ -82,6 +82,7 @@ Pman.Dialog.BuilderAppEdit = {
                                 }
                                 
                             },
+                            
                             items : [
                                 {
                                     name : 'id',
