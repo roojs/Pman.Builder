@@ -35,6 +35,12 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
     }
     function onUpdate($old , $req, $roo)
     {
+        if (!empty($req['gitpath']) && !empty($this->app)) {
+            $this->writeCopy($req['gitpath'], $roo);
+            $this->gitCommit($req['gitpath']);
+            
+        }
+        
         $this->writeCopy($roo);
     }
     
