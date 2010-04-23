@@ -35,46 +35,36 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
     }
     function onUpdate($old , $req, $roo)
     {
-        if (!empty($req['gitpath']) && !empty($this->app)) {
-            $this->writeCopy($req['gitpath'], $roo);
-            $this->gitCommit($req['gitpath']);
-            
+        if (!empty($req['gitpath']) && !empty($this->module)) {
+            $file = $this->writeCopy($req['gitpath'], $roo);
+            $this->gitCommit($file );
         }
         
-        $this->writeCopy($roo);
+        
+    }
+    function gitCommit($path, )
+    {
+        
     }
     
-    function writeCopy($roo)
+    
+    function writeCopy($roo, $path)
     {
-        return;
-        // write to file to disk!! - for backup purposes..
-        $o = PEAR::getStaticProperty('Pman_Builder', 'options');
-        //var_dump($o);
-        if (empty($o['writeOnSave']) || 
-                empty($this->app) || 
-                empty($this->module) || 
-                empty($this->json)
-                
-            ) {
+        
+        if (!file_exists($path)) {
             return;
         }
-        if (!file_exists($o['writeOnSave'].'/'. $this->app)) {
-            return;
-        }
-        $apdir = $o['writeOnSave'].'/'. $this->app;
-        // write the data - for recovery purposes..
-        if (file_exists($apdir.'/src')) {
-            file_put_contents($apdir.'/src/'. $this->module.'.json', $this->json);
-        }
+        
+       
         require_once 'Pman/Builder/Code.php';
         $x = new Pman_Builder_Code();
-        if (!is_writable($apdir.'/'. $this->module.'.js')) {
-            $roo->jerr("Can not write to " . $apdir.'/'. $this->module.'.js');
+        if (!is_writable($path.'/'. $this->module.'.js')) {
+            $roo->jerr("Can not write to " . $path.'/'. $this->module.'.js');
             return;
         }
-        file_put_contents($apdir.'/'. $this->module.'.js', 
+        file_put_contents($path.'/'. $this->module.'.js', 
                 $x->toJSFile(json_decode($this->json))) ;
-        
+        return $path.'/'. $this->module.'.js';
     }
     function toRooArray()
     {
