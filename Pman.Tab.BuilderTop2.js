@@ -336,7 +336,7 @@ Pman.Tab.BuilderTop2 = new Roo.util.Observable({
                                             app : t.root.elConfig.app,
                                             btype : 'FORM',
                                             id : sid,
-                                            giturl : _this.modsel.lastData.giturl
+                                            gitpath : _this.modsel.lastData.gitpath
                                         }, 
                                         success : function(data) {
                                             // set the fileSel!!
