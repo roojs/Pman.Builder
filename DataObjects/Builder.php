@@ -68,6 +68,10 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
             $roo->jerr("Can not write to " . $path.'/'. $this->module.'.js');
             return;
         }
+        $this->_new_file = false;
+        if (!file_exists($path.'/'. $this->module.'.js')) {
+            $this->_new_file = true;
+        }
         file_put_contents($path.'/'. $this->module.'.js', 
                 $x->toJSFile(json_decode($this->json))) ;
         return $path.'/'. $this->module.'.js';
