@@ -21,7 +21,7 @@ CREATE TABLE `builder_app` (
   PRIMARY KEY (`id`)
 );
 ALTER TABLE builder_app CHANGE COLUMN davwrite davwrite int(2)  NOT NULL DEFAULT 0;
-ALTER TABLE builder_app ADD COLUMN `gitpath` varchar(255)  NOT NULL;
+ALTER TABLE builder_app ADD COLUMN `gitpath` varchar(255)  NOT NULL DEFAULT '';
 
 
 CREATE TABLE  `translations` (
