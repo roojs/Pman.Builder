@@ -47,6 +47,11 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
         $n = basename($file);
         $dir = dirname($file);
         chdir($dir);
+        if ($this->_new_file) {
+            $cmd = "git add " . escapeshellarg($n);
+            `$cmd`;
+        }
+        
         $cmd = "git commit -m 'commit by builder' " . escapeshellarg($n);
         `$cmd`;
         $cmd = "git push";
