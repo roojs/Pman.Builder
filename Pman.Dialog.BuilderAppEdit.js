@@ -80,7 +80,6 @@ Pman.Dialog.BuilderAppEdit = {
                                 {
                                     _this.form = _self;
                                 }
-                                
                             },
                             items : [
                                 {
