@@ -69,14 +69,19 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
        
         require_once 'Pman/Builder/Code.php';
         $x = new Pman_Builder_Code();
-        if (!is_writable($path.'/'. $this->module.'.js')) {
-            $roo->jerr("Can not write to " . $path.'/'. $this->module.'.js');
-            return;
-        }
         $this->_new_file = false;
         if (!file_exists($path.'/'. $this->module.'.js')) {
             $this->_new_file = true;
         }
+        if (!$this->_new_file && !is_writable($path.'/'. $this->module.'.js')) {
+            $roo->jerr("Can not write to " . $path.'/'. $this->module.'.js');
+            return;
+        }
+        if ($this->_new_file && !is_writable($path)) {
+            $roo->jerr("Can not write to " . $path);
+            return;
+        }
+       
         file_put_contents($path.'/'. $this->module.'.js', 
                 $x->toJSFile(json_decode($this->json))) ;
         return $path.'/'. $this->module.'.js';
