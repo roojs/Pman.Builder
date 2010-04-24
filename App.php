@@ -30,9 +30,9 @@ class Pman_Builder_App extends Pman
             // this is a bit questionable..  - we may need to check if the
             // db version is more recent.
             $fl = $ff->rootDir.'/Pman/'. $app .'/'.$p->module.'.js';
-            if (file_exists($fl) && filesize($fl)) {
-                continue;
-            }
+            //if (file_exists($fl) && filesize($fl)) {
+            //    continue;
+            //}
             $this->builderJs[] = $p->module;
         }
         $o  = HTML_FlexyFramework::get();
