@@ -31,7 +31,9 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
     
     function onInsert($req,$roo)
     {
-        $this->writeCopy($req['gitpath'],$roo);
+        if (!empty($req['gitpath']) && !empty($this->module)) {
+            $this->writeCopy($req['gitpath'],$roo);
+        }
     }
     function onUpdate($old , $req, $roo)
     {
