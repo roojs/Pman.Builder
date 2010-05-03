@@ -61,7 +61,7 @@ class Pman_Builder_DataObjects_Builder extends DB_DataObject
     
     function writeCopy($path,$roo)
     {
-        var_dump($path);
+       
         if (!file_exists($path)) {
             return;
         }
