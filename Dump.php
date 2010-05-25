@@ -21,7 +21,9 @@ class Pman_Builder_Dump extends Pman
             $data = json_decode($b->json);
             $data->title = $data->name;
             $data->name = $data->{'|module'};
-            
+            if (empty($data->name)) {
+                continue;
+               }
             
            // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
                 //ome/alan/buildertest/layout test.bjs"
