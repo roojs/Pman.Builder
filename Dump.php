@@ -15,6 +15,10 @@ class Pman_Builder_Dump extends Pman
         $b->find();
         echo '<PRE>';
         $dir = "/home/gitlive/";
+        
+        $map = array(
+            'Clipping' => 'web.Clipping/Pman/Clipping'
+        );
         while ($b->fetch()) {
           //  print_r($b);
             
@@ -29,8 +33,14 @@ class Pman_Builder_Dump extends Pman
             
            // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
                 //ome/alan/buildertest/layout test.bjs"
-            
             $fn = $dir ."Pman.". trim($data->app) . '/' . $data->name . '.bjs';
+            if (isseT($map[$data->app])) {
+                $fn = $dir .$map[$data->app]. '/' . $data->name . '.bjs';
+            }
+            
+            
+            
+            
             if (!file_exists(dirname($fn))) {
                 print "SKIP " . $fn;
                 continue;
