@@ -19,7 +19,7 @@ class Pman_Builder_Dump extends Pman
         $map = array(
             'Clipping' => 'web.Clipping/Pman/Clipping',
             'Ris' => 'web.Ris/Pman/Ris',
-            
+            'TestApp' => false,
             
         );
         while ($b->fetch()) {
@@ -38,6 +38,9 @@ class Pman_Builder_Dump extends Pman
                 //ome/alan/buildertest/layout test.bjs"
             $fn = $dir ."Pman.". trim($data->app) . '/' . $data->name . '.bjs';
             if (isseT($map[$data->app])) {
+                if ($map[$data->app] === false) {
+                    continue;
+                }
                 $fn = $dir .$map[$data->app]. '/' . $data->name . '.bjs';
             }
             
