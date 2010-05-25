@@ -26,6 +26,7 @@ class Pman_Builder_Dump extends Pman
             'ExampleOld' => false,
             'Deleted' => false,
             'DealFlow' => 'web.Dealflow/Pman/DealFlow',
+            'Aviation' => 'web.Aviation/Pman/Aviation',
             
         );
         while ($b->fetch()) {
