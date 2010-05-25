@@ -19,7 +19,7 @@ class Pman_Builder_Dump extends Pman
             exit;
         
         }
-        
+        exit;
         
     }
     
