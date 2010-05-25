@@ -18,6 +18,7 @@ class Pman_Builder_Dump extends Pman
         
         $map = array(
             'Clipping' => 'web.MediaOutreach/Pman/Clipping',
+            'PressRelease' => 'web.MediaOutreach/Pman/PressRelease',
             'Ris' => 'web.Ris/Pman/Ris',
             'TestApp' => false,
             'Hex' => false,
