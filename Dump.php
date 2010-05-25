@@ -51,7 +51,7 @@ class Pman_Builder_Dump extends Pman
             
             
             if (!file_exists(dirname($fn))) {
-                print "SKIP " . $fn . "\n";
+                print "<B>SKIP " . $fn . "</B>\n";
                 continue;
             }
             echo "WRITE : " . $fn . "\n";
