@@ -30,7 +30,7 @@ class Pman_Builder_Dump extends Pman
             
             $fn = "Pman.".$data->app . '/' . $data->name . '.bjs';
             echo "WRITE : " . $fn . "\n";
-            echo htmlspecialchars(json_encode($data)) . "\n";
+            echo "                          " .htmlspecialchars(json_encode($data)) . "\n";
             
             
              
