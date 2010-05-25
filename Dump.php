@@ -26,7 +26,7 @@ class Pman_Builder_Dump extends Pman
            // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
                 //ome/alan/buildertest/layout test.bjs"
             
-            $fn = "Pman.".$b->app . './' . $data['|module'] . '.bjs';
+            $fn = "Pman.".$data->app . './' . $data['|module'] . '.bjs';
             echo "WRITE : " . $fn . "\n";
             echo json_encode($data) . "\n";
             
