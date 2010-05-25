@@ -12,8 +12,12 @@ class Pman_Builder_Dump extends Pman
   
     function get($app) {
         $b = DB_DataObject::Factory('Builder');
-        $b->find(true);
+        $b->find();
+        while ($b->fetch) {
+            print_r($b);
+            exit;
         
+        }
         
         
     }
