@@ -29,6 +29,7 @@ class Pman_Builder_Dump extends Pman
             'Aviation' => 'web.Aviation/Pman/Aviation',
             
         );
+        $dirs = array();
         while ($b->fetch()) {
           //  print_r($b);
             
@@ -58,12 +59,16 @@ class Pman_Builder_Dump extends Pman
                 print "<B>SKIP " . $fn . "</B>\n";
                 continue;
             }
+            
+            $dirs[dirname($fn)] = true;
             echo "WRITE : " . $fn . "\n";
             echo "                          " .htmlspecialchars(json_encode($data)) . "\n";
             
             
              
         }
+        print_r($dirs);
+        
         exit;
         
     }
