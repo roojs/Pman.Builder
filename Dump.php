@@ -19,7 +19,7 @@ class Pman_Builder_Dump extends Pman
             
             
             $data = json_decode($b->json);
-            $data->title = $data->name
+            $data->title = $data->name;
             $data->name = $data->{'|module'};
             
             
