@@ -63,7 +63,7 @@ class Pman_Builder_Dump extends Pman
             $dirs[dirname($fn)] = true;
             echo "WRITE : " . $fn . "\n";
             echo "                          " .htmlspecialchars(json_encode($data)) . "\n";
-            
+            file_put_contents($fn, json_encode($data));
             
              
         }
