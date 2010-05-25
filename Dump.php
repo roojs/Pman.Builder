@@ -24,6 +24,7 @@ class Pman_Builder_Dump extends Pman
             'Hex' => false,
             'Example' => false,
             'ExampleOld' => false,
+            'Deleted' => false,
             
         );
         while ($b->fetch()) {
