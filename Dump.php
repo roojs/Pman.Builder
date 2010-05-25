@@ -43,8 +43,8 @@ class Pman_Builder_Dump extends Pman
            // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
                 //ome/alan/buildertest/layout test.bjs"
             $fn = $dir ."Pman.". trim($data->app) . '/' . $data->name . '.bjs';
-            if (isseT($map[$data->app])) {
-                if ($map[$data->app] === false) {
+            if (isseT($map[trim($data->app)])) {
+                if ($map[trim($data->app)] === false) {
                     continue;
                 }
                 $fn = $dir .$map[$data->app]. '/' . $data->name . '.bjs';
