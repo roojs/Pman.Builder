@@ -75,7 +75,7 @@ class Pman_Builder_Dump extends Pman
             echo $cmd ."\n" . `$cmd`;
             $cmd  = "git commit -m 'add bjs' -a  2>&1";
             echo $cmd ."\n" . `$cmd`;
-            $cmd  = 'git push  2>&1";
+            $cmd  = "git push  2>&1";
             echo $cmd ."\n" . `$cmd`;
         }
         exit;
