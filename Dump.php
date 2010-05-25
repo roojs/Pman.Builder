@@ -73,7 +73,7 @@ class Pman_Builder_Dump extends Pman
             chdir($d);
             $cmd  = 'git add --all 2>&1';
             echo $cmd ."\n" . `$cmd`;
-            $cmd  = "git commit -m 'add bjs' -a  2>&1";
+            $cmd  = "git commit -m 'add bjs' -a --author='Alan Knowles <alan@akbkhome.com>' 2>&1";
             echo $cmd ."\n" . `$cmd`;
             $cmd  = "git push  2>&1";
             echo $cmd ."\n" . `$cmd`;
