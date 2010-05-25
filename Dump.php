@@ -17,7 +17,10 @@ class Pman_Builder_Dump extends Pman
         $dir = "/home/gitlive/";
         
         $map = array(
-            'Clipping' => 'web.Clipping/Pman/Clipping'
+            'Clipping' => 'web.Clipping/Pman/Clipping',
+            'Ris' => 'web.Ris/Pman/Ris',
+            
+            
         );
         while ($b->fetch()) {
           //  print_r($b);
