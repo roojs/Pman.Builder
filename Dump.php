@@ -70,11 +70,11 @@ class Pman_Builder_Dump extends Pman
         print_r($dirs);
         foreach($dirs as $d => $n)
         {
-            $cmd  = 'GIT_DIR=' . $d . ' git add --all';
+            $cmd  = 'GIT_DIR=' . $d . ' git add --all 2>&1';
             echo $cmd ."\n" . `$cmd`;
-            $cmd  = 'GIT_DIR=' . $d . " git commit -m 'add bjs' -a";
+            $cmd  = 'GIT_DIR=' . $d . " git commit -m 'add bjs' -a  2>&1";
             echo $cmd ."\n" . `$cmd`;
-            $cmd  = 'GIT_DIR=' . $d . " git push";
+            $cmd  = 'GIT_DIR=' . $d . " git push  2>&1";
             echo $cmd ."\n" . `$cmd`;
         }
         exit;
