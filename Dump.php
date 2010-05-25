@@ -33,6 +33,7 @@ class Pman_Builder_Dump extends Pman
             $fn = $dir ."Pman.". trim($data->app) . '/' . $data->name . '.bjs';
             if (!file_exists(dirname($fn))) {
                 print "SKIP " . $fn;
+                continue;
             }
             echo "WRITE : " . $fn . "\n";
             echo "                          " .htmlspecialchars(json_encode($data)) . "\n";
