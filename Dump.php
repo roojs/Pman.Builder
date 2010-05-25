@@ -14,7 +14,7 @@ class Pman_Builder_Dump extends Pman
         $b = DB_DataObject::Factory('Builder');
         $b->find();
         echo '<PRE>';
-        while ($b->fetch) {
+        while ($b->fetch()) {
             print_r($b);
             exit;
         
