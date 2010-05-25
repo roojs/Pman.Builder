@@ -15,7 +15,7 @@ class Pman_Builder_Dump extends Pman
         $b->find();
         echo '<PRE>';
         while ($b->fetch()) {
-            print_r($b);
+          //  print_r($b);
             
             
             $data = json_decode($b->json);
