@@ -16,7 +16,23 @@ class Pman_Builder_Dump extends Pman
         echo '<PRE>';
         while ($b->fetch()) {
             print_r($b);
-            exit;
+            
+            
+            $data = json_decode($b->json);
+            $data->title = $data->name
+            $data->name = $data->{'|module'};
+            
+            
+           // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
+                //ome/alan/buildertest/layout test.bjs"
+            
+            $fn = "Pman.".$b->app . './' . $data['|module'] . '.bjs';
+            echo "WRITE : " . $fn . "\n";
+            echo json_encode($data) . "\n";
+            
+            
+            
+            
         
         }
         exit;
