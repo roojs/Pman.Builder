@@ -20,7 +20,10 @@ class Pman_Builder_Dump extends Pman
             'Clipping' => 'web.Clipping/Pman/Clipping',
             'Ris' => 'web.Ris/Pman/Ris',
             'TestApp' => false,
-            'Pman.Hex' => false,
+            'Hex' => false,
+            'Example' => false,
+            'ExampleOld' => false,
+            
         );
         while ($b->fetch()) {
           //  print_r($b);
