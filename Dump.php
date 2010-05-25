@@ -31,9 +31,7 @@ class Pman_Builder_Dump extends Pman
             echo json_encode($data) . "\n";
             
             
-            
-            
-        
+             
         }
         exit;
         
