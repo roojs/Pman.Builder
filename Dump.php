@@ -14,6 +14,7 @@ class Pman_Builder_Dump extends Pman
         $b = DB_DataObject::Factory('Builder');
         $b->find();
         echo '<PRE>';
+        $dir = "/home/gitlive/";
         while ($b->fetch()) {
           //  print_r($b);
             
@@ -23,12 +24,16 @@ class Pman_Builder_Dump extends Pman
             $data->name = $data->{'|module'};
             if (empty($data->name)) {
                 continue;
-               }
+            }
+            
             
            // {"id":"roo-file-1","name":"layout test.bjs","parent":"","title":false,"path":"/h
                 //ome/alan/buildertest/layout test.bjs"
             
-            $fn = "Pman.". trim($data->app) . '/' . $data->name . '.bjs';
+            $fn = $dir ."Pman.". trim($data->app) . '/' . $data->name . '.bjs';
+            if (!file_exists(dirname($fn))) {
+                print "SKIP " . $fn;
+            }
             echo "WRITE : " . $fn . "\n";
             echo "                          " .htmlspecialchars(json_encode($data)) . "\n";
             
