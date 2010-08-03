@@ -897,7 +897,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             if (!isset($this->def['readers'][$tab][$rshow])){
                 
                 echo "WARNING in links.ini TABLE $tab does not have renderer $rshow <BR>\n";
-                print_r($this->def['readers']);exit;
+                print_r($this->def);exit;
                 continue;
             }
             
