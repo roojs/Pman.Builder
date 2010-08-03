@@ -28,7 +28,7 @@ class Pman_Builder_Cli
     - does not change files, just shows you want would happen
 
     
-    $cli Builder/RunGenerator/PROJECT pman.ini,PROJECT.readers.js,...
+    $cli Builder/RunGenerator/COMPONENT pman.ini,COMPONENT.readers.js,...
 
     Runs the generator for a project (NOTE - runs all the SQL updates)
     - Changes the files.
