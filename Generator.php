@@ -438,7 +438,13 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
    // function generateClasses() { }
    
     var $jsHeader = "//<script type=\"text/javascript\">\n";
-        
+    /**
+     * 
+     * generate the reader tables.. 
+     * I'm not sure if this is needed any more, as our desktop builder 
+     * generates that data anyway.
+     * 
+     */
     function generateRoo()
     {
         
