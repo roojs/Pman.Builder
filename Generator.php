@@ -114,7 +114,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
        
        
        
-          $ff = HTML_FlexyFramework::get();
+       
        
        
        
@@ -128,7 +128,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         // now for each of the directories copy/show diffs..
         echo $cli ? '' : '<PRE>';
         $flist = explode(',', $overwrite);
-        foreach($ff->page->modtables as $m=>$ar) {
+        foreach($this->modtables as $m=>$ar) {
             if ($options['database'] !=  $standard_database) {
                 $options['database'] =  $standard_database ;
                 
@@ -154,9 +154,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = $ff->page->rootDir."/Pman/$m/DataObjects/$f";
+                $tg = $this->page->rootDir."/Pman/$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
-                    $tg = $ff->page->rootDir."/Pman/$m/$f";
+                    $tg = $this->page->rootDir."/Pman/$m/$f";
                 }
                 
                 if (!file_exists($tg) || !filesize($tg) ) {
@@ -207,8 +207,6 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
         
-        $ff = HTML_FlexyFramework::get();
-        
         $url = parse_url($options['database']);
         // hide stuff for web..
         $cli = $options['cli'];
@@ -224,7 +222,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         $cat = System::which('cat');
         $mysql = System::which('mysql');
         
-        foreach($ff->page->modsql as $m => $fl)
+        foreach($this->modsql as $m => $fl)
         {
             if ($cli && isset($options['database_'. $m])) {
                 $url =parse_url($options['database_'.$m]);
@@ -242,7 +240,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 continue;
             }
             foreach($fl as $f) {
-                $fn = $ff->page->rootDir. "/Pman/$m/DataObjects/$f";
+                $fn = $this->page->rootDir. "/Pman/$m/DataObjects/$f";
                 $cmd = $cat . ' ' . escapeshellarg($fn) . " | $mysql_cmd -f ";
                 echo $cmd. ($cli ? "\n" : "<BR>\n");
                 if ($cli) {
@@ -265,21 +263,21 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     
     function scanModules()
     {
-        $ff = HTML_FlexyFramework::get();
+        
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
         if (isset($options['modtables'])) {
-            $ff->page->modtables = $options['modtables'];
-            $ff->page->modmap = $options['modmap'];
-            $ff->page->modsql = $options['modsql'];
+            $this->modtables = $options['modtables'];
+            $this->modmap = $options['modmap'];
+            $this->modsql = $options['modsql'];
             return;
         }
         
         
         
-        $top = $ff->page->rootDir .'/Pman';
-        $ff->page->modtables = array();
-        $ff->page->modmap = array();
-        $ff->page->modmapsql = array();
+        $top = $this->page->rootDir .'/Pman';
+        $this->modtables = array();
+        $this->modmap = array();
+        $this->modmapsql = array();
         foreach(scandir($top) as $m) {
             
             if (!strlen($m) || 
@@ -289,27 +287,27 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 ) {
                 continue;
             }
-            $ff->page->modtables[$m] = array();
-            $ff->page->modsql[$m] = array();
+            $this->modtables[$m] = array();
+            $this->modsql[$m] = array();
             foreach(scandir($top .'/'.$m.'/DataObjects') as $f) {
                 if (!strlen($f) ||   $m[0] == '.') {
                     continue;
                 }
                 if (preg_match('/\.sql$/', $f))  {
-                    $ff->page->modsql[$m][] = $f;
+                    $this->modsql[$m][] = $f;
                 }
                                 
                 if (preg_match('/\.php$/', $f))  {
                     $tn = strtolower(preg_replace('/\.php$/', '', $f));
-                    $ff->page->modtables[$m][] = $tn;
-                    $ff->page->modmap[$tn] = $m;
+                    $this->modtables[$m][] = $tn;
+                    $this->modmap[$tn] = $m;
                     continue;
                 }
             }
         }
-        $options['modtables'] = $ff->page->modtables;
-        $options['modmap'] = $ff->page->modmap;
-        $options['modsql'] = $ff->page->modsql;
+        $options['modtables'] = $this->modtables;
+        $options['modmap'] = $this->modmap;
+        $options['modsql'] = $this->modsql;
         
     }
     /**
@@ -323,7 +321,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $this->debug("-- NO TABLES -- \n");
             return;
         }
-        if (!isset($ff->page->modmap)) {
+        if (!isset($this->modmap)) {
             $this->scanModules();
         }
          $options = &PEAR::getStaticProperty('DB_DataObject','options');
@@ -333,8 +331,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         foreach($this->tables as $this->table) {
             
             $tn  = strtolower($this->table);
-            //print_r($ff->page->modmap);//[$tn]);//
-            if (!isset($ff->page->modmap[$tn])) {
+            //print_r($this->modmap);//[$tn]);//
+            if (!isset($this->modmap[$tn])) {
                 die("No existing DataObject file found for table {$this->table} \n".
                     "- create an empty file in the related Module/DataObjects directory
                     eg. 
@@ -342,7 +340,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                    \n");
                     
             }
-            $mod = $ff->page->modmap[$tn];
+            $mod = $this->modmap[$tn];
             $inis[$mod] = isset($inis[$mod]) ? $inis[$mod] : '';
             
             
@@ -380,11 +378,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     
     function generateClasses() 
     {
-      // print_R($ff->page->modmap);
+      // print_R($this->modmap);
        // die("generateClasses");
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
-        $ff = HTML_FlexyFramework::get();
-        
         $rd = $options['rootDir'];
         $mods = $options['mods'];
         $this->_extends = 'DB_DataObject';
@@ -394,7 +390,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         foreach($this->tables as $this->table) {
             $this->table        = trim($this->table);
             $tn  = strtolower($this->table);
-            $mod = $ff->page->modmap[$tn];
+            $mod = $this->modmap[$tn];
             
              if (!empty($mods) && !in_array($mod, $mods)) {
                 continue;
@@ -405,7 +401,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
            
            
             $outfilename    = $rd.'/'.$mod.'/'. ucfirst($this->table).'.php';
-            $orig           = $ff->page->rootDir .'/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
+            $orig           = $this->page->rootDir .'/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
             
            
                 // file_get_contents???
@@ -440,7 +436,6 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
          
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
-           $ff = HTML_FlexyFramework::get();
          $mods = $options['mods'];
         $this->rootDir = $options['rootDir'];
         $this->overwrite = true;
@@ -466,7 +461,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         $ds = ucfirst($this->_database);
        
         // we always write these files....
-        foreach($ff->page->modtables as $m=>$ts) {
+        foreach($this->modtables as $m=>$ts) {
              if (!empty($mods) && !in_array($m, $mods)) {
                 continue;
             }
@@ -496,7 +491,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         foreach($this->tables as $this->table) {
             
             
-            if ($ff->page->modmap[strtolower($this->table)] != $m) {
+            if ($this->modmap[strtolower($this->table)] != $m) {
                 continue;
             }
             
@@ -836,16 +831,19 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
     }
     
+     
+    
+   
+    
+     
       
+   
     function parseConfig()
     {
-        $ff = HTML_FlexyFramework::get();
         
-        //print_r($ff);
-        
-         $dirs = array($ff->page->rootDir.'/Pman/DataObjects'); // not used anymore!
-        foreach($ff->page->modtables as $m=>$ts) {
-            $dirs[] = $ff->page->rootDir.'/Pman/'.$m.'/DataObjects';
+        $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
+        foreach($this->modtables as $m=>$ts) {
+            $dirs[] = $this->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
         $ini = array('database__render' => array());
         foreach($dirs as $d) {
@@ -862,7 +860,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $ini['database__render'] = array_merge($ini['database__render'] , $r);
         }
          //echo '<PRE>';print_R($ini);//exit;
-         
+        
+        
         if (!isset($ini['database__render'])) {
             die("database__render not available in links files.");
             return;
@@ -895,9 +894,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             // reader:
             //- just add an extra line..
             if (!isset($this->def['readers'][$tab][$rshow])){
-                
                 echo "WARNING in links.ini TABLE $tab does not have renderer $rshow <BR>\n";
-                print_r($this->def);exit;
                 continue;
             }
             
