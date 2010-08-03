@@ -839,6 +839,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     function parseConfig()
     {
         $ff = HTML_FlexyFramework::get();
+        
+        print_r($ff);
+        
          $dirs = array($ff->page->rootDir.'/Pman/DataObjects'); // not used anymore!
         foreach($ff->page->modtables as $m=>$ts) {
             $dirs[] = $ff->page->rootDir.'/Pman/'.$m.'/DataObjects';
