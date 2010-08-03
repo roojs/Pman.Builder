@@ -41,7 +41,7 @@ class Pman_Builder_RunGenerator extends Pman
             $lastarg  = '';
         }
         $x = new Pman_Builder_Generator();
-        $x->page = clone($this);
+       // $x->page = clone($this);
         $x->start($this->cli, $args, $lastarg);
         die("done!");
     }
