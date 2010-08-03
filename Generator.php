@@ -278,6 +278,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         $this->modtables = array();
         $this->modmap = array();
         $this->modmapsql = array();
+        print_r(scandir($top));
         foreach(scandir($top) as $m) {
             
             if (!strlen($m) || 
