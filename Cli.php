@@ -15,10 +15,16 @@ class Pman_Builder_Cli
     function help($cli)
     {
         echo "
- 
-    $cli Builder/RunGenerator/PROJECT
 
-    Runs the generator for a project (NOTE - runs all the SQL updates)
+    $cli Builder/RunGenerator
+
+    Creates ALL database tables
+    - does not change files, just shows you want would happen
+        
+        
+    $cli Builder/RunGenerator/COMPONENT
+
+    Runs the generator for a COMPONENT (NOTE - will update that COMPONENT sql)
     - does not change files, just shows you want would happen
 
     
