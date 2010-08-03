@@ -207,6 +207,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
         
+        $ff = HTML_FlexyFramework::get();
+        
         $url = parse_url($options['database']);
         // hide stuff for web..
         $cli = $options['cli'];
@@ -240,7 +242,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 continue;
             }
             foreach($fl as $f) {
-                $fn = $this->page->rootDir. "/Pman/$m/DataObjects/$f";
+                $fn = $ff->page->rootDir. "/Pman/$m/DataObjects/$f";
                 $cmd = $cat . ' ' . escapeshellarg($fn) . " | $mysql_cmd -f ";
                 echo $cmd. ($cli ? "\n" : "<BR>\n");
                 if ($cli) {
@@ -263,7 +265,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     
     function scanModules()
     {
-        
+        $ff = HTML_FlexyFramework::get();
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
         if (isset($options['modtables'])) {
             $this->modtables = $options['modtables'];
@@ -274,7 +276,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
         
         
-        $top = $this->page->rootDir .'/Pman';
+        $top = $ff->page->rootDir .'/Pman';
         $this->modtables = array();
         $this->modmap = array();
         $this->modmapsql = array();
@@ -381,6 +383,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
       // print_R($this->modmap);
        // die("generateClasses");
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
+        $ff = HTML_FlexyFramework::get();
+        
         $rd = $options['rootDir'];
         $mods = $options['mods'];
         $this->_extends = 'DB_DataObject';
@@ -401,7 +405,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
            
            
             $outfilename    = $rd.'/'.$mod.'/'. ucfirst($this->table).'.php';
-            $orig           = $this->page->rootDir .'/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
+            $orig           = $ff->page->rootDir .'/Pman/'.$mod.'/DataObjects/'. ucfirst($this->table).'.php';
             
            
                 // file_get_contents???
@@ -835,9 +839,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     function parseConfig()
     {
         $ff = HTML_FlexyFramework::get();
-         $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
+         $dirs = array($ff->page->rootDir.'/Pman/DataObjects'); // not used anymore!
         foreach($ff->page->modtables as $m=>$ts) {
-            $dirs[] = $this->page->rootDir.'/Pman/'.$m.'/DataObjects';
+            $dirs[] = $ff->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
         $ini = array('database__render' => array());
         foreach($dirs as $d) {
