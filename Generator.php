@@ -386,6 +386,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
       // print_R($this->modmap);
        // die("generateClasses");
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
+        
+        $ff = HTML_Flexyframework::get();
+        
         $rd = $options['rootDir'];
         $mods = $options['mods'];
         $this->_extends = 'DB_DataObject';
