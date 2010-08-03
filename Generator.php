@@ -234,7 +234,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 (!empty($url['pass']) ? ' -p' . escapeshellarg($url['pass'])  :  '') .
                 ' ' . basename($url['path']);
            
-          
+            echo $mysql_cmd ;
             
             if (!empty($options['mods'] ) && !in_array($m,  $options['mods'] )) {
                 continue;
