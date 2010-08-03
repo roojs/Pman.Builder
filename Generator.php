@@ -843,7 +843,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         //print_r($ff);
         
          $dirs = array($ff->page->rootDir.'/Pman/DataObjects'); // not used anymore!
-        foreach($ff->pagemodtables as $m=>$ts) {
+        foreach($ff->page->modtables as $m=>$ts) {
             $dirs[] = $ff->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
         $ini = array('database__render' => array());
