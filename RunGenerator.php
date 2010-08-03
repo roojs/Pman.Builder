@@ -28,8 +28,7 @@ class Pman_Builder_RunGenerator extends Pman
         $this->authUser = $au;
         return true;
     }
-    
-    
+     
     function get($args)
     {
         require_once 'Pman/Builder/Generator.php';
