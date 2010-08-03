@@ -82,7 +82,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     function start($cli=false, $mods='', $overwrite='')
     {
         
-        
+        $ff = HTML_Flexyframework::get();
         $this->scanModules();
         //echo '<PRE>'; print_r($this->modtables); exit;
         
@@ -154,9 +154,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = $this->page->rootDir."/Pman/$m/DataObjects/$f";
+                $tg = $ff->page->rootDir."/Pman/$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
-                    $tg = $this->page->rootDir."/Pman/$m/$f";
+                    $tg = $ff->page->rootDir."/Pman/$m/$f";
                 }
                 
                 if (!file_exists($tg) || !filesize($tg) ) {
