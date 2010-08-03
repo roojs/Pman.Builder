@@ -116,7 +116,6 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
        
        
        
-       print_r($ff);exit;
        
        
        
