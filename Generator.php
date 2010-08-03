@@ -239,7 +239,6 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             echo $mysql_cmd . "\n" ;
             
             if (!empty($options['mods'] ) && !in_array($m,  $options['mods'] )) {
-                if  
                 continue;
             }
             
