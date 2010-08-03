@@ -838,6 +838,15 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
    
     function parseConfig()
     {
+         $options = &PEAR::getStaticProperty('DB_DataObject','options');
+        
+          if (isset($options['modtables'])) {
+            $this->modtables = $options['modtables'];
+            $this->modmap = $options['modmap'];
+            $this->modsql = $options['modsql'];
+            return;
+        }
+        
         
         $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
         foreach($this->modtables as $m=>$ts) {
