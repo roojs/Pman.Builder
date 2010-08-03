@@ -440,6 +440,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
          
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
+           $ff = HTML_FlexyFramework::get();
          $mods = $options['mods'];
         $this->rootDir = $options['rootDir'];
         $this->overwrite = true;
