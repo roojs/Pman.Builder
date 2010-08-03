@@ -207,6 +207,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
         
+        $ff = HTML_Flexyframework::get();
+        
         $url = parse_url($options['database']);
         // hide stuff for web..
         $cli = $options['cli'];
@@ -237,11 +239,12 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             echo $mysql_cmd . "\n" ;
             
             if (!empty($options['mods'] ) && !in_array($m,  $options['mods'] )) {
-                
+                if  
                 continue;
             }
+            
             foreach($fl as $f) {
-                $fn = $this->page->rootDir. "/Pman/$m/DataObjects/$f";
+                $fn = $ff->page->rootDir. "/Pman/$m/DataObjects/$f";
                 $cmd = $cat . ' ' . escapeshellarg($fn) . " | $mysql_cmd -f ";
                 echo $cmd. ($cli ? "\n" : "<BR>\n");
                 if ($cli) {
