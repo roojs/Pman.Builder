@@ -272,9 +272,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             return;
         }
         
+        $ff = HTML_Flexyframework::get();
         
-        
-        $top = $this->page->rootDir .'/Pman';
+        $top = $ff->page->rootDir .'/Pman';
         $this->modtables = array();
         $this->modmap = array();
         $this->modmapsql = array();
