@@ -221,7 +221,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         require_once 'System.php';
         $cat = System::which('cat');
         $mysql = System::which('mysql');
-        print_r($this->modsql);
+        print_r($options['mods'] );
         foreach($this->modsql as $m => $fl)
         {
             if ($cli && isset($options['database_'. $m])) {
@@ -237,6 +237,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             echo $mysql_cmd . "\n" ;
             
             if (!empty($options['mods'] ) && !in_array($m,  $options['mods'] )) {
+                
                 continue;
             }
             foreach($fl as $f) {
