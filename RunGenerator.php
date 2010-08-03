@@ -29,6 +29,7 @@ class Pman_Builder_RunGenerator extends Pman
         return true;
     }
     
+    
     function get($args)
     {
         require_once 'Pman/Builder/Generator.php';
@@ -42,6 +43,7 @@ class Pman_Builder_RunGenerator extends Pman
         }
         $x = new Pman_Builder_Generator();
         $x->page = $this;
+        echo "START";
         $x->start($this->cli, $args, $lastarg);
         die("done!");
     }
