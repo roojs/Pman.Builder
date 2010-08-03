@@ -847,7 +847,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         }
         
         $ff = HTML_Flexyframework::get();
-        $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
+        $dirs = array($ff->page->rootDir.'/Pman/DataObjects'); // not used anymore!
         foreach($this->modtables as $m=>$ts) {
             $dirs[] = $ff->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
