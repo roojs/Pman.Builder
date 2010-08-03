@@ -840,7 +840,11 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     {
          $options = &PEAR::getStaticProperty('DB_DataObject','options');
         
-        
+        if (isset($options['modtables'])) {
+            $this->modtables = $options['modtables'];
+            $this->modmap = $options['modmap'];
+            $this->modsql = $options['modsql'];
+        }
         
         $ff = HTML_Flexyframework::get();
         $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
