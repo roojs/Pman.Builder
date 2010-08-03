@@ -820,7 +820,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             'id' => 'id', // primary key!!?
         );
          
-        $d = $this->tableToData($this->_definitions[$table]);
+        $d = $this->tableToData($table, $this->_definitions[$table]);
         
         $this->tablekeys[$this->table]  = $d['tablekey'];
         
