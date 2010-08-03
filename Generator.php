@@ -831,18 +831,13 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
     }
     
-     
-    
-   
-    
-     
       
-   
     function parseConfig()
     {
-        
+        $ff = HTML_FlexyFramework::get();
+        print_r($ff);exit;
         $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
-        foreach($this->modtables as $m=>$ts) {
+        foreach($ff->modtables as $m=>$ts) {
             $dirs[] = $this->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
         $ini = array('database__render' => array());
@@ -860,8 +855,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $ini['database__render'] = array_merge($ini['database__render'] , $r);
         }
          //echo '<PRE>';print_R($ini);//exit;
-        
-        
+         
         if (!isset($ini['database__render'])) {
             die("database__render not available in links files.");
             return;
