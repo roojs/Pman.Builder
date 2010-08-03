@@ -114,7 +114,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
        
        
        
-       
+          $ff = HTML_FlexyFramework::get();
        
        
        
@@ -154,9 +154,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
                 }
                 // does it exist!!!
                 $src = $options['rootDir']."/$m/$f";
-                $tg = $this->page->rootDir."/Pman/$m/DataObjects/$f";
+                $tg = $ff->page->rootDir."/Pman/$m/DataObjects/$f";
                 if (preg_match('/\.js$/', $f)) {
-                    $tg = $this->page->rootDir."/Pman/$m/$f";
+                    $tg = $ff->page->rootDir."/Pman/$m/$f";
                 }
                 
                 if (!file_exists($tg) || !filesize($tg) ) {
@@ -835,9 +835,8 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     function parseConfig()
     {
         $ff = HTML_FlexyFramework::get();
-        print_r($this);exit;
-        $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
-        foreach($ff->modtables as $m=>$ts) {
+         $dirs = array($this->page->rootDir.'/Pman/DataObjects'); // not used anymore!
+        foreach($ff->page->modtables as $m=>$ts) {
             $dirs[] = $this->page->rootDir.'/Pman/'.$m.'/DataObjects';
         }
         $ini = array('database__render' => array());
