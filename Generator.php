@@ -441,7 +441,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
     function generateRoo()
     {
-         
+        
         $options = &PEAR::getStaticProperty('DB_DataObject','options');
          $mods = $options['mods'];
         $this->rootDir = $options['rootDir'];
