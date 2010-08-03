@@ -832,11 +832,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     }
     
      
-    
-   
-    
      
-      
    
     function parseConfig()
     {
