@@ -829,7 +829,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             // store the globals
         $this->def['order'][$table] = $d['order'];
         $this->def['readers'][$table]= $d['readers'];
-        $this->def['colmodels'][$table] = $d['colmodes'];
+        $this->def['colmodels'][$table] = $d['colmodels'];
         $this->def['forms'][$table] = $d['forms'];
         
         $this->readersArgs[$table]   = $d['args'];
