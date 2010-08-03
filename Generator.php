@@ -844,7 +844,6 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $this->modtables = $options['modtables'];
             $this->modmap = $options['modmap'];
             $this->modsql = $options['modsql'];
-            return;
         }
         
         
