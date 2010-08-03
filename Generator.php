@@ -885,6 +885,13 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
     function mergeConfig($table, $conf, $render)
     {
         $this->mapcols[$table] = array();
+        $options = &PEAR::getStaticProperty('DB_DataObject','options');
+        if (isset($options['modtables'])) {
+            $this->modtables = $options['modtables'];
+            $this->modmap = $options['modmap'];
+            $this->modsql = $options['modsql'];
+        }
+        
         
         foreach($conf as $ocol=>$info) {
             // format col => showval..
