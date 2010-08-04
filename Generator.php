@@ -91,9 +91,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
         
         $proj = 'pman'; //ucfirst(basename($options['database']));
         // we are going to generate all of the code into a temporay foldler..
-        $user = posix_getpwuid(posix_getuid(());
+        $user = posix_getpwuid(posix_getuid());
         
-        $options['rootDir'] = ini_get('session.save_path').'/temp_'. $proj.'_'. $user;
+        $options['rootDir'] = ini_get('session.save_path').'/temp_'. $proj.'_'. $user['name'];
         $options['cli'] = $cli;
         $options['mods'] = empty($mods) ? array() : explode('/',$mods);
        
