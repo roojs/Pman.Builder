@@ -329,6 +329,9 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $this->scanModules();
         }
          $options = &PEAR::getStaticProperty('DB_DataObject','options');
+        $builder_options = &PEAR::getStaticProperty('Pman_Builder','options');
+        $ignore = empty($builder_options['skip_tables']) ? array() : $builder_options['skip_tables'];
+        
          $mods = $options['mods'];
         $inis = array();
         $this->_newConfig = '';
@@ -336,12 +339,24 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             
             $tn  = strtolower($this->table);
             //print_r($this->modmap);//[$tn]);//
+            
+            
+            
             if (!isset($this->modmap[$tn])) {
-                die("No existing DataObject file found for table {$this->table} \n".
-                    "- create an empty file in the related Module/DataObjects directory
-                    eg. 
-                    touch Pman/????/DataObjects/".ucfirst($this->table).".php
-                   \n");
+                
+                if (in_array($tn, $builder_options)) {
+                    continue;
+                }
+             
+             
+                die("No existing DataObject file found for table {$this->table} 
+                
+- either add it to Pman_Builder[skip_tables] or\n
+- create an empty file in the related Module/DataObjects directory
+eg. 
+touch Pman/????/DataObjects/".ucfirst($this->table).".php
+
+");
                     
             }
             $mod = $this->modmap[$tn];
