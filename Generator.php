@@ -344,7 +344,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             
             if (!isset($this->modmap[$tn])) {
                 
-                if (in_array($tn, $builder_options)) {
+                if (in_array($tn, $ignore)) {
                     continue;
                 }
              
