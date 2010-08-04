@@ -329,7 +329,7 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             $this->scanModules();
         }
          $options = &PEAR::getStaticProperty('DB_DataObject','options');
-        $builder_options = &PEAR::getStaticProperty('Pman_Builder','options');
+        $builder_options = PEAR::getStaticProperty('Pman_Builder','options');
         $ignore = empty($builder_options['skip_tables']) ? array() : $builder_options['skip_tables'];
         
          $mods = $options['mods'];
