@@ -509,7 +509,7 @@ touch Pman/????/DataObjects/".ucfirst($this->table).".php
     
     function _generateReaders($m)
     {
-         
+        $ff = HTML_FlexyFramework::get();
         $udb = ucfirst($this->_database);
         $ret = $this->jsHeader;
         $j = new Pman_Builder_Generator_JSON();
@@ -534,7 +534,7 @@ touch Pman/????/DataObjects/".ucfirst($this->table).".php
                 }
             }
             $this->readersArgs[$this->table]['xtype'] = 'JsonReader';
-            $ret.="\n$udb.Readers.$utable = ";
+            $ret.="\n{$ff->project}.Readers.$utable = ";
             $x = $j->encodeUnsafe($this->readersArgs[$this->table]);
             $ret .=  trim(substr($x, 0, -1)) . ",\n"; // strip of trailing ;};
             $ret .=  $j->tab . "fields : [\n". $j->tab.$j->tab;
