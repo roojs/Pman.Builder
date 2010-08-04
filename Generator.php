@@ -510,7 +510,7 @@ touch Pman/????/DataObjects/".ucfirst($this->table).".php
     function _generateReaders($m)
     {
         $ff = HTML_FlexyFramework::get();
-        $udb = ucfirst($this->_database);
+        
         $ret = $this->jsHeader;
         $j = new Pman_Builder_Generator_JSON();
         $j->indent = 0;
