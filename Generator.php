@@ -344,10 +344,10 @@ class Pman_Builder_Generator extends DB_DataObject_Generator
             
             if (!isset($this->modmap[$tn])) {
                 
-                if (in_array($tn, $ignore)) {
+                if (in_array($this->table, $ignore)) {
                     continue;
                 }
-             print_r($ignore);
+             
              
                 die("No existing DataObject file found for table {$this->table} 
                 
