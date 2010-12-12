@@ -398,8 +398,12 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                         _this.redrawBtn.setText("Redraw (AUTO OFF)");
-                                            _this.redrawBtn.auto = 0;
+                                         
+                                            _this.redrawBtn.setText("Redraw");
+                                             _this.redrawBtn.auto = 1;
+                                            var bp = Pman.Tab.BuilderPanel;
+                                            bp.redraw.defer(100,bp,[true]);
+                                            
                                         
                                         }
                                     },
