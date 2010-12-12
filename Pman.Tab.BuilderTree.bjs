@@ -61,7 +61,7 @@
                                             "*prop": "root",
                                             "text": "Part",
                                             "xtype": "TreeNode",
-                                            "|elConfig": "function() {\n    \n}\n",
+                                            "|elConfig": "function() {\n    return  {\n         xtype : '*Module',\n            \n            app : 'TestApp',\n            // perm\n            // permtype\n            modkey : 0,\n            '|module' :  '',\n            region : 'center',\n            '|parent' : 'Pman',\n            name : \"Module Name\",\n            items: [] \n\n    \n    }\n}\n",
                                             "|xns": "Roo.tree"
                                         }
                                     ]
