@@ -22,12 +22,12 @@
                         },
                         {
                             "|xns": "Roo",
-                            "xtype": "ContentPanel"
+                            "xtype": "LayoutRegion",
+                            "*prop": "center"
                         },
                         {
                             "|xns": "Roo",
-                            "xtype": "LayoutRegion",
-                            "*prop": "center"
+                            "xtype": "ContentPanel"
                         }
                     ]
                 }
