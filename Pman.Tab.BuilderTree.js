@@ -46,7 +46,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                     {
                         xtype: 'TreePanel',
                         xns: Roo,
-                        region : ''
+                        region : 'center'
                     },
                     {
                         xtype: 'ContentPanel',
