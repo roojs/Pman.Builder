@@ -403,7 +403,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    text : "Auto redraw - OFF"
+                                    text : "Auto redraw - On"
                                 }
                             ]
                         }
