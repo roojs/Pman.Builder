@@ -107,7 +107,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         xns: Roo.form,
                         allowBlank : true,
                         selectOnFocus : true,
-                        width : 0
+                        width : 100
                     }
                 ]
             }
