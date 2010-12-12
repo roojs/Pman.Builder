@@ -232,8 +232,10 @@
                             "xtype": "Separator"
                         },
                         {
-                            "|xns": "Roo.Toolbar",
                             "xtype": "SplitButton",
+                            "|xns": "Roo.Toolbar",
+                            "text": "",
+                            "listeners": {},
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
