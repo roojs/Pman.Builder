@@ -72,11 +72,14 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                            Pman.Dialog.BuilderAppEdit.show({
-                                                 id : 0
-                                            },function(data) {
+                                         
+                                            if (!_this.modsel.lastData || !_this.modsel.lastData.id) {
+                                                Roo.MessageBox.alert("Error", "Select Module");
+                                                return false;
+                                            }
+                                            Pman.Dialog.BuilderAppEdit.show( _this.modsel.lastData ,function(data) {
                                                 if (data) {
-                                                   _this.modsel.setFromData(data);
+                                                    _this.modsel.setFromData(data);
                                                 }
                                             });
                                         
