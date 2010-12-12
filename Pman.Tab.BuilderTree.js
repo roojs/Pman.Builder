@@ -50,8 +50,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                 south : {
                     xtype: 'LayoutRegion',
                     xns: Roo,
-                    split : true,
-                    height : 0
+                    height : 300,
+                    split : true
                 }
             }
         });
