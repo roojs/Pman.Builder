@@ -348,7 +348,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                           _this.saveBtn.save(false,0);
                                         }
                                     },
-                                    icon : 'rootURL + \'/Pman/templates/images/save.gif\'',
+                                    icon : rootURL + '/Pman/templates/images/save.gif',
                                     text : "Save a copy as"
                                 },
                                 {
