@@ -41,7 +41,9 @@
                             "titlebar": true,
                             "width": 200,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo"
+                            "|xns": "Roo",
+                            "title": "",
+                            "listeners": {}
                         }
                     ]
                 }
