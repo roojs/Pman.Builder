@@ -216,6 +216,83 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 }
                             ]
                         }
+                    },
+                    {
+                        xtype: 'ComboBox',
+                        xns: Roo.form,
+                        listeners : {
+                            select : function (combo, record, index)
+                            {
+                                _this.filesel.reset();
+                               _this.filesel.fireEvent('select', false);
+                            
+                            },
+                            render : function (_self)
+                            {
+                                _this.modsel = this;
+                            }
+                        },
+                        allowBlank : true,
+                        alwaysQuery : true,
+                        displayField : 'app',
+                        editable : false,
+                        forceSelection : true,
+                        listWidth : 300,
+                        loadingText : "Searching...",
+                        minChars : 2,
+                        pageSize : 40,
+                        queryParam : 'query[name]',
+                        selectOnFocus : true,
+                        tpl : '<div class="x-grid-cell-text x-btn button"><b>{app}</b></div>',
+                        triggerAction : 'all',
+                        typeAhead : true,
+                        valueField : 'id',
+                        width : 100,
+                        store : {
+                            xtype: 'Store',
+                            xns: Roo.data,
+                            remoteSort : true,
+                            sortInfo : { field : 'app' , direction : 'asc' },
+                            proxy : {
+                                xtype: 'HttpProxy',
+                                xns: Roo.data,
+                                method : 'GET',
+                                url : baseURL + '/Roo/Builder_app.php'
+                            },
+                            reader : {
+                                xtype: 'JsonReader',
+                                xns: Roo.data,
+                                id : 'id',
+                                root : 'data',
+                                totalProperty : 'total',
+                                fields : [
+                                    {
+                                        'name': 'id',
+                                        'type': 'int'
+                                    },
+                                    {
+                                        'name': 'name',
+                                        'type': 'string'
+                                    },
+                                    {
+                                        'name': 'btype',
+                                        'type': 'string'
+                                    },
+                                    {
+                                        'name': 'json',
+                                        'type': 'string'
+                                    },
+                                    {
+                                        'name': 'app',
+                                        'type': 'string'
+                                    },
+                                    {
+                                        'name': 'module',
+                                        'type': 'string'
+                                    }
+                                ]
+                            }
+                        }
                     }
                 ]
             }
