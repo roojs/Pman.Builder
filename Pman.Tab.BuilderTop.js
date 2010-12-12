@@ -38,7 +38,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
             region : 'north',
             toolbar : {
                 xtype: 'Toolbar',
-                xns: Roo
+                xns: Roo,
+                items : [
+                    {
+                        xtype: 'Button',
+                        xns: Roo.Toolbar
+                    }
+                ]
             }
         });
         this.layout = this.panel.layout;
