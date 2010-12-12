@@ -80,7 +80,14 @@
                                     "remoteSort": true,
                                     "|sortInfo": "{ field : 'app' , direction : 'asc' }",
                                     "xtype": "Store",
-                                    "|xns": "Roo.data"
+                                    "|xns": "Roo.data",
+                                    "items": [
+                                        {
+                                            "|xns": "Roo.data",
+                                            "xtype": "HttpProxy",
+                                            "*prop": "proxy"
+                                        }
+                                    ]
                                 }
                             ]
                         }
