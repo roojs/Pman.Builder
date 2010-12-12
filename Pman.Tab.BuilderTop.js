@@ -208,7 +208,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    text : "New Part"
+                                    text : "New Part",
+                                    icon : ''
                                 },
                                 {
                                     xtype: 'Item',
