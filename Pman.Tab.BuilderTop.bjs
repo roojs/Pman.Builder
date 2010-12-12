@@ -57,7 +57,8 @@
                         },
                         {
                             "listeners": {
-                                "select": "function (combo, record, index)\n{\n    _this.filesel.reset();\n   _this.filesel.fireEvent('select', false);\n\n}"
+                                "select": "function (combo, record, index)\n{\n    _this.filesel.reset();\n   _this.filesel.fireEvent('select', false);\n\n}",
+                                "render": "function (_self)\n{\n\n}"
                             },
                             "allowBlank": true,
                             "alwaysQuery": true,
