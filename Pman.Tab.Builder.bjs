@@ -1,50 +1,32 @@
 {
-    "id": "roo-file-50",
-    "name": "Pman.Tab.Builder",
-    "parent": "Pman",
-    "title": "Pman.Tab.Builder",
-    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.Builder.bjs",
+    "id": "roo-file-47",
+    "name": "Pman.Tab.BuilderTab",
+    "parent": "",
+    "title": "Builder - Tab",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTab.bjs",
     "items": [
         {
             "listeners": {
-                "activate": "function (_self)\n{\n    if (_this.keyListener) {\n        return;\n    }\n    _this.keyListener = true;\n    \n    Roo.get(document).on(   'keyup',  function(e) {\n        if (!  _this.panel.active ) {\n            return;\n        }\n         \n        // check..\n        if (!Pman.Tab.BuilderPanel.isMouseOver && !Pman.Tab.BuilderTree.isMouseOver) {\n            return;\n        }\n       // console.log(e);\n        //Roo.EventObject.DELETE,\n        if (e.getCharCode() == Roo.EventObject.DELETE) {\n            //  console.log('delete');\n          \n            var res = Pman.Tab.BuilderTree.deleteCurrent();\n            if (res) {\n                 var bp = Pman.Tab.BuilderPanel;\n                 bp.redraw.defer(100,bp, [ true ]);\n                \n            }\n            e.stopEvent();\n        }\n        \n         \n     });\n \n}"
+                "|activate": "function (_self)\n{\n   _self.layout.getRegion('center').showPanel(0)\n}"
             },
+            "background": true,
+            "fitToFrame": true,
+            "region": "center",
             "title": "Customize",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
             "items": [
                 {
-                    "|xns": "Roo",
-                    "xtype": "BorderLayout",
                     "*prop": "layout",
+                    "xtype": "BorderLayout",
+                    "|xns": "Roo",
                     "items": [
                         {
-                            "*prop": "north",
-                            "height": 26,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo"
-                        },
-                        {
-                            "*prop": "west",
-                            "split": true,
-                            "width": 255,
-                            "xtype": "LayoutRegion",
-                            "|xns": "Roo"
-                        },
-                        {
-                            "|xns": "Roo",
-                            "xtype": "LayoutRegion",
-                            "*prop": "center"
-                        },
-                        {
-                            "*prop": "east",
-                            "collapsed": true,
-                            "collapsible": true,
-                            "split": true,
-                            "title": "Palete",
-                            "titlebar": true,
-                            "width": 200,
-                            "xtype": "LayoutRegion",
+                            "*prop": "center",
+                            "titlebar": false,
+                            "listeners": {},
+                            "tabPosition": "top",
                             "|xns": "Roo"
                         }
                     ]
@@ -52,6 +34,6 @@
             ]
         }
     ],
-    "permname": "Builder",
-    "modOrder": "750"
+    "permname": "",
+    "modOrder": "001"
 }
