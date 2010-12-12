@@ -211,7 +211,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n  _this.saveBtn.save(false,0);\n}"
+                                                "click": "function (_self, e)\n{\n   _this.saveBtn.save(\n     function() {\n    \n  } );\n}"
                                             },
                                             "text": "Show JSON",
                                             "xtype": "Item",
