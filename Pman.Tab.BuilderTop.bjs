@@ -30,7 +30,10 @@
                                         {
                                             "text": "Create",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu"
+                                            "|xns": "Roo.menu",
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n\n}"
+                                            }
                                         }
                                     ]
                                 }
