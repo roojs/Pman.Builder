@@ -35,7 +35,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
             xns: Roo,
             background : true,
             fitToFrame : true,
-            region : '',
+            region : 'north',
             toolbar : {
                 xtype: 'Toolbar',
                 xns: Roo
