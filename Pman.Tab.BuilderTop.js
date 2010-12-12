@@ -320,13 +320,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     {
                         xtype: 'Button',
                         xns: Roo.Toolbar,
-                        text : "Save",
                         listeners : {
                             click : function (_self, e)
                             {
-                            
+                                this.save();
                             }
-                        }
+                        },
+                        text : "Save"
                     }
                 ]
             }
