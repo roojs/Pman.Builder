@@ -29,11 +29,6 @@
                         },
                         {
                             "region": "center",
-                            "xtype": "ContentPanel",
-                            "|xns": "Roo"
-                        },
-                        {
-                            "region": "center",
                             "xtype": "TreePanel",
                             "|xns": "Roo"
                         },
