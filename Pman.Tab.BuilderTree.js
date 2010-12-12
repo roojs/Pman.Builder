@@ -10,7 +10,7 @@ Pman.on('beforeload', function()
     Pman.register({
         modKey : '001-Pman.Tab.BuilderTree',
         module : Pman.Tab.BuilderTree,
-        region : 'west',
+        region : 'center',
         parent : Pman.Tab.BuilderTab,
         name : "Pman.Tab.BuilderTree",
         disabled : false, 
@@ -42,6 +42,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                         xtype: 'ContentPanel',
                         xns: Roo,
                         region : 'center'
+                    },
+                    {
+                        xtype: 'TreePanel',
+                        xns: Roo
                     },
                     {
                         xtype: 'ContentPanel',
