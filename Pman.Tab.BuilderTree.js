@@ -165,7 +165,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 xtype: 'TreeNode',
                                 xns: Roo.tree,
                                 text : "Part",
-                                 : function() {
+                                elConfig : function() {
                                     
                                 }
                             }
