@@ -28,10 +28,9 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "text": "Create",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu",
-                                            "text": "",
-                                            "listeners": {}
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
