@@ -46,6 +46,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                 center : {
                     xtype: 'LayoutRegion',
                     xns: Roo
+                },
+                center : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo
                 }
             }
         });
