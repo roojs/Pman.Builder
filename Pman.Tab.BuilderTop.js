@@ -333,6 +333,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             }
                         },
                         text : "Save",
+                        cls : '',
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,
