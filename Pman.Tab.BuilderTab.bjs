@@ -9,7 +9,7 @@
             "listeners": {
                 "activate": "function (_self)\n{\n    if (_this.keyListener) {\n        return;\n    }\n    _this.keyListener = true;\n    \n    Roo.get(document).on(   'keyup',  function(e) {\n        if (!  _this.panel.active ) {\n            return;\n        }\n         \n        // check..\n        if (!Pman.Tab.BuilderPanel.isMouseOver && !Pman.Tab.BuilderTree.isMouseOver) {\n            return;\n        }\n       // console.log(e);\n        //Roo.EventObject.DELETE,\n        if (e.getCharCode() == Roo.EventObject.DELETE) {\n            //  console.log('delete');\n          \n            var res = Pman.Tab.BuilderTree.deleteCurrent();\n            if (res) {\n                 var bp = Pman.Tab.BuilderPanel;\n                 bp.redraw.defer(100,bp, [ true ]);\n                \n            }\n            e.stopEvent();\n        }\n        \n         \n     });\n \n}"
             },
-            "title": "Customize",
+            "title": "Designer",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
             "items": [
