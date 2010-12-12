@@ -1,1 +1,54 @@
-{"xtype":"*Module","app":"Builder","|module":"Pman.Dialog.BuilderViewCode","name":"Pman.Dialog.BuilderViewCode","listeners":{},"items":[{"xtype":"LayoutDialog","|xns":"Roo","background":true,"width":400,"height":400,"title":"View Generated Code","modal":true,"resizable":false,"collapsible":false,"closable":false,"listeners":{"|show":"function (_self)\n{\n    if (_this.isBuilder) {\n       return;\n    }\n    _this.dialog = _self;        \n    _this.dialog.getLayout().beginUpdate();\n             \n            _this.dialog.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);\n            _this.dialog.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));\n         \n            \n            _this.dialog.moveTo(35,35);\n            \n            _this.dialog.getLayout().endUpdate();\n            \n            _this.previewContentPanel.load({\n                url: baseURL + '\/Builder\/Code.php',\n                method: 'GET',\n                params: {\n                    id: _this.data.id\n                    \n                }\n            });\n            \n}"},"items":[{"xtype":"*LayoutRegion","*prop":"center","titlebar":false},{"xtype":"ContentPanel","background":false,"fitToFrame":true,"region":"center","listeners":{"|activate":"function (_self)\n{\n_this.previewContentPanel = _self;\n}"},"autoScroll":true},{"xtype":"Array","*prop":"buttons","items":[{"text":"OK","xtype":"Button","|xns":"Roo","listeners":{"|click":"function() {\n    _this.dialog.hide();\n\n}"}}]}]}],"title":"Builder - View Dialog"}
+{
+    "id": "roo-file-2",
+    "name": "Pman.Dialog.BuilderViewCode",
+    "parent": "",
+    "title": "Builder - View Dialog",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderViewCode.bjs",
+    "items": [
+        {
+            "listeners": {
+                "|show": "function (_self)\n{\n    if (_this.isBuilder) {\n       return;\n    }\n    _this.dialog = _self;        \n    _this.dialog.getLayout().beginUpdate();\n             \n            _this.dialog.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);\n            _this.dialog.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));\n         \n            \n            _this.dialog.moveTo(35,35);\n            \n            _this.dialog.getLayout().endUpdate();\n            \n            _this.previewContentPanel.load({\n                url: baseURL + '/Builder/Code.php',\n                method: 'GET',\n                params: {\n                    id: _this.data.id\n                    \n                }\n            });\n            \n}"
+            },
+            "background": true,
+            "closable": false,
+            "collapsible": false,
+            "height": 400,
+            "modal": true,
+            "resizable": false,
+            "title": "View Generated Code",
+            "width": 400,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "xtype": "LayoutRegion",
+                    "*prop": "center",
+                    "titlebar": false,
+                    "|xns": "Roo"
+                },
+                {
+                    "xtype": "ContentPanel",
+                    "background": false,
+                    "fitToFrame": true,
+                    "region": "center",
+                    "listeners": {
+                        "|activate": "function (_self)\n{\n_this.previewContentPanel = _self;\n}"
+                    },
+                    "autoScroll": true,
+                    "|xns": "Roo"
+                },
+                {
+                    "text": "OK",
+                    "xtype": "Button",
+                    "|xns": "Roo",
+                    "listeners": {
+                        "|click": "function() {\n    _this.dialog.hide();\n\n}"
+                    },
+                    "*prop": "buttons[]"
+                }
+            ]
+        }
+    ],
+    "permname": "",
+    "modOrder": "001"
+}
