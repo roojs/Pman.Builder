@@ -9,7 +9,14 @@
             "background": true,
             "fitToFrame": true,
             "xtype": "ContentPanel",
-            "|xns": "Roo"
+            "|xns": "Roo",
+            "items": [
+                {
+                    "|xns": "Roo",
+                    "xtype": "Toolbar",
+                    "*prop": "toolbar"
+                }
+            ]
         }
     ],
     "permname": "",
