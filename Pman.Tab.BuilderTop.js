@@ -129,7 +129,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             proxy : {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
-                                url : baseURL + '/Roo/Builder_app.php'
+                                url : baseURL + '/Roo/Builder_app.php',
+                                method : ''
                             }
                         }
                     }
