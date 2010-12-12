@@ -124,6 +124,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 },
                                 click : function (node, e)
                                 {
+                                  e.preventDefault();
+                                                       // console.log(e.button);
+                                                        _this.setCurrentNode(node);
                                 
                                 }
                             },
