@@ -121,6 +121,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                         var bp = Pman.Tab.BuilderPanel;
                                                         bp.redraw.defer(1000, bp, [true]);
                                 
+                                },
+                                click : function (node, e)
+                                {
+                                
                                 }
                             },
                             animate : false,
