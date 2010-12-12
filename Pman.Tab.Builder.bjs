@@ -36,12 +36,11 @@
                         {
                             "*prop": "east",
                             "collapsed": true,
+                            "collapsible": true,
                             "split": true,
                             "width": 255,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "collapsible": true,
-                            "listeners": {}
+                            "|xns": "Roo"
                         }
                     ]
                 }
