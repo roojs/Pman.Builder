@@ -41,7 +41,9 @@
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|xns": "Roo.tree"
+                                    "|xns": "Roo.tree",
+                                    "animate": true,
+                                    "listeners": {}
                                 }
                             ]
                         },
