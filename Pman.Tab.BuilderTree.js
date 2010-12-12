@@ -112,6 +112,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                         return false;
                                                         
                                 
+                                },
+                                nodedrop : function (dropEvent)
+                                {
+                                
                                 }
                             },
                             animate : false,
