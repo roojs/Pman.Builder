@@ -249,7 +249,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n _this.redrawBtn.setText(\"Redraw (AUTO OFF)\");\n    _this.redrawBtn.auto = 0;\n\n}"
+                                                "click": "function (_self, e)\n{\n \n    _this.redrawBtn.setText(\"Redraw\");\n     _this.redrawBtn.auto = 1;\n    var bp = Pman.Tab.BuilderPanel;\n    bp.redraw.defer(100,bp,[true]);\n    \n\n}"
                                             },
                                             "text": "Auto redraw - On",
                                             "xtype": "Item",
