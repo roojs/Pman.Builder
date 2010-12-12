@@ -43,9 +43,8 @@
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
+                                    "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
-                                    "|renderer": "",
-                                    "listeners": {},
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
