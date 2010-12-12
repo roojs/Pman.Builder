@@ -38,12 +38,11 @@
                             "collapsed": true,
                             "collapsible": true,
                             "split": true,
+                            "title": "Palete",
                             "titlebar": true,
                             "width": 200,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "title": "",
-                            "listeners": {}
+                            "|xns": "Roo"
                         }
                     ]
                 }
