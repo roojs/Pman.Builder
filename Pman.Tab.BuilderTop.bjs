@@ -84,10 +84,9 @@
                                     "items": [
                                         {
                                             "*prop": "proxy",
+                                            "url": "baseURL + '/Roo/Builder_app.php'",
                                             "xtype": "HttpProxy",
-                                            "|xns": "Roo.data",
-                                            "url": "",
-                                            "listeners": {}
+                                            "|xns": "Roo.data"
                                         }
                                     ]
                                 }
