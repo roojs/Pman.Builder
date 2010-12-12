@@ -135,7 +135,7 @@
                         },
                         {
                             "listeners": {
-                                "select": "function (combo, record, index)\n{\n    _this.filesel.reset();\n   _this.filesel.fireEvent('select', false);\n\n}",
+                                "select": "function (combo, record, index)\n{\n   //cb.lastData = rec.data;\n    var bt = Pman.Tab.BuilderTree;\n    if (!rec) {\n        bt.clearAll();\n        bt.setCurrentNode(bt.tree.root,true);\n        var bp = Pman.Tab.BuilderPanel;\n        bp.redraw.defer(100,bp,[true]);\n        return;\n    }\n    \n    bt.loadJSON.defer(10, bt, [rec.data.json]);\n\n\n}",
                                 "render": "function (_self)\n{\n    _this.modsel = this;\n}"
                             },
                             "allowBlank": true,
