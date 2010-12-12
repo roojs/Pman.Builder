@@ -202,10 +202,9 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "text": "Save a copy as",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu",
-                                            "text": "",
-                                            "listeners": {}
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
