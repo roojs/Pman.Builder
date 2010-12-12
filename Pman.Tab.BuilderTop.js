@@ -243,7 +243,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         pageSize : 40,
                         queryParam : 'query[name]',
                         selectOnFocus : true,
-                        tpl : '<div class="x-grid-cell-text x-btn button"><b>{app}</b></div>',
+                        tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b></div>',
                         triggerAction : 'all',
                         typeAhead : true,
                         valueField : 'id',
