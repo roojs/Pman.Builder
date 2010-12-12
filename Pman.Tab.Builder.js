@@ -41,7 +41,7 @@ Pman.Tab.Builder = new Roo.util.Observable({
                     }
                     _this.keyListener = true;
                     
-                     Roo.get(document).on(   'keyup',  function(e) {
+                    Roo.get(document).on(   'keyup',  function(e) {
                         if (!  _this.panel.active ) {
                             return;
                         }
