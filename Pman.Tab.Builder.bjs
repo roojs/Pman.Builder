@@ -9,6 +9,9 @@
             "title": "Customize",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
+            "listeners": {
+                "activate": "function (_self)\n{\n\n}"
+            },
             "items": [
                 {
                     "|xns": "Roo",
