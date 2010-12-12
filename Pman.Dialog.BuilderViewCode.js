@@ -1,6 +1,7 @@
 //<script type="text/javascript">
 
-// Auto generated file - created by Builder Module - do not edit directly
+// Auto generated file - created by app.Builder.js- do not edit directly (at present!)
+
 Pman.Dialog.BuilderViewCode = {
 
     dialog : false,
@@ -14,10 +15,11 @@ Pman.Dialog.BuilderViewCode = {
 
         this.callback = cb;
         this.data = data;
-        this.dialog.show();
+        this.dialog.show(this.data._el);
         if (this.form) {
            this.form.reset();
            this.form.setValues(data);
+           this.form.fireEvent('actioncomplete', this.form,  { type: 'setdata', data: data });
         }
 
     },
@@ -26,18 +28,10 @@ Pman.Dialog.BuilderViewCode = {
     {
         var _this = this;
         this.dialog = Roo.factory({
-            xtype : 'LayoutDialog',
+            xtype: 'LayoutDialog',
             xns: Roo,
-            background : true,
-            width : 400,
-            height : 400,
-            title : "View Generated Code",
-            modal : true,
-            resizable : false,
-            collapsible : false,
-            closable : false,
             listeners : {
-                show: function (_self)
+                show : function (_self)
                 {
                     if (_this.isBuilder) {
                        return;
@@ -64,14 +58,23 @@ Pman.Dialog.BuilderViewCode = {
                             
                 }
             },
+            background : true,
+            closable : false,
+            collapsible : false,
+            height : 400,
+            modal : true,
+            resizable : false,
+            title : "View Generated Code",
+            width : 400,
             items : [
                 {
-                    xtype : 'ContentPanel',
+                    xtype: 'ContentPanel',
+                    xns: Roo,
                     background : false,
                     fitToFrame : true,
                     region : 'center',
                     listeners : {
-                        activate: function (_self)
+                        activate : function (_self)
                         {
                         _this.previewContentPanel = _self;
                         }
@@ -80,15 +83,17 @@ Pman.Dialog.BuilderViewCode = {
                 }
             ],
             center : {
+                xtype: 'LayoutRegion',
+                xns: Roo,
                 titlebar : false
             },
             buttons : [
                 {
-                    text : "OK",
-                    xtype : 'Button',
+                    xtype: 'Button',
                     xns: Roo,
+                    text : "OK",
                     listeners : {
-                        click: function() {
+                        click : function() {
                             _this.dialog.hide();
                         
                         }
