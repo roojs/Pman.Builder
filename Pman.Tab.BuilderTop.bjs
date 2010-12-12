@@ -57,6 +57,7 @@
                         },
                         {
                             "allowBlank": true,
+                            "alwaysQuery": true,
                             "displayField": "app",
                             "editable": false,
                             "forceSelection": true,
