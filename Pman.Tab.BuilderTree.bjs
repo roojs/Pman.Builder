@@ -33,10 +33,9 @@
                             "|xns": "Roo"
                         },
                         {
+                            "region": "center",
                             "xtype": "TreePanel",
-                            "|xns": "Roo",
-                            "region": "",
-                            "listeners": {}
+                            "|xns": "Roo"
                         },
                         {
                             "region": "south",
