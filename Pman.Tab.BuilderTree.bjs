@@ -56,6 +56,11 @@
                                             "|xns": "Roo.tree",
                                             "xtype": "DefaultSelectionModel",
                                             "*prop": "sm"
+                                        },
+                                        {
+                                            "|xns": "Roo.tree",
+                                            "xtype": "TreeNode",
+                                            "*prop": "root"
                                         }
                                     ]
                                 }
