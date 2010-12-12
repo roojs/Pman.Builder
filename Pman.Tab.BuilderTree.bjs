@@ -45,6 +45,9 @@
                                     "xtype": "TreePanel",
                                     "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
+                                    "listeners": {
+                                        "beforenodedrop": "function (dropEvent)\n{\n\n}"
+                                    },
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
