@@ -10,6 +10,8 @@
             "fitToFrame": true,
             "xtype": "ContentPanel",
             "|xns": "Roo",
+            "region": "",
+            "listeners": {},
             "items": [
                 {
                     "|xns": "Roo",
