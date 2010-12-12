@@ -36,9 +36,11 @@
                             "|xns": "Roo",
                             "items": [
                                 {
-                                    "|xns": "Roo.tree",
+                                    "*prop": "tree",
                                     "xtype": "TreePanel",
-                                    "*prop": "tree"
+                                    "|xns": "Roo.tree",
+                                    "containerScroll": true,
+                                    "listeners": {}
                                 }
                             ]
                         },
