@@ -93,13 +93,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                            Pman.Dialog.BuilderAppEdit.show({
-                                                 id : 0
-                                            },function(data) {
-                                                if (data) {
-                                                   _this.modsel.setFromData(data);
-                                                }
-                                            });
+                                           
                                         
                                         }
                                     },
