@@ -237,7 +237,13 @@
                                 {
                                     "|xns": "Roo.menu",
                                     "xtype": "Menu",
-                                    "*prop": "menu"
+                                    "*prop": "menu",
+                                    "items": [
+                                        {
+                                            "|xns": "Roo.menu",
+                                            "xtype": "Item"
+                                        }
+                                    ]
                                 }
                             ]
                         }
