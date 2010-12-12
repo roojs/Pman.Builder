@@ -334,7 +334,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         },
                         cls : 'x-btn-text-icon',
                         text : "Save",
-                         : function() {
+                        save : function() {
                                // first see if first element has a name.. - we can not save otherwise..
                                 var t = Pman.Tab.BuilderTree.tree;
                                 if (!t.root.elConfig.name.length) {
