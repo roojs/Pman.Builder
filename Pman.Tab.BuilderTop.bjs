@@ -213,7 +213,7 @@
                                             "listeners": {
                                                 "click": "function (_self, e)\n{\n  _this.saveBtn.save(false,0);\n}"
                                             },
-                                            "text": "Save a copy as",
+                                            "text": "Show JSON",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
                                         }
