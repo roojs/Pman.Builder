@@ -38,11 +38,10 @@
                             "collapsed": true,
                             "collapsible": true,
                             "split": true,
+                            "titlebar": true,
                             "width": 200,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "titlebar": true,
-                            "listeners": {}
+                            "|xns": "Roo"
                         }
                     ]
                 }
