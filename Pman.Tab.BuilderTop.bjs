@@ -61,6 +61,7 @@
                             "displayField": "app",
                             "editable": false,
                             "forceSelection": true,
+                            "listWidth": 200,
                             "loadingText": "Searching...",
                             "queryParam": "query[name]",
                             "selectOnFocus": true,
@@ -70,9 +71,7 @@
                             "valueField": "id",
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form",
-                            "listWidth": 0,
-                            "listeners": {}
+                            "|xns": "Roo.form"
                         }
                     ]
                 }
