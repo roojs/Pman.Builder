@@ -100,7 +100,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    text : "Edit"
+                                    text : "Delete"
                                 }
                             ]
                         }
