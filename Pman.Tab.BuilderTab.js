@@ -14,7 +14,7 @@ Pman.on('beforeload', function()
         parent : Pman.Tab.Builder,
         name : "Pman.Tab.BuilderTab",
         disabled : false, 
-        permname: 'Builder' 
+        permname: '' 
     });
 });
 
