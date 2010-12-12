@@ -258,39 +258,6 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 xns: Roo.data,
                                 method : 'GET',
                                 url : baseURL + '/Roo/Builder.php'
-                            },
-                            reader : {
-                                xtype: 'JsonReader',
-                                xns: Roo.data,
-                                id : 'id',
-                                root : 'data',
-                                totalProperty : 'total',
-                                fields : [
-                                    {
-                                        'name': 'id',
-                                        'type': 'int'
-                                    },
-                                    {
-                                        'name': 'name',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'btype',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'json',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'app',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'module',
-                                        'type': 'string'
-                                    }
-                                ]
                             }
                         }
                     }
