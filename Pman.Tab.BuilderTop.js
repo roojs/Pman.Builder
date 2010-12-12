@@ -120,7 +120,11 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         triggerAction : 'all',
                         typeAhead : true,
                         valueField : 'id',
-                        width : 100
+                        width : 100,
+                        store : {
+                            xtype: 'Store',
+                            xns: Roo.data
+                        }
                     }
                 ]
             }
