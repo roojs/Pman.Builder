@@ -39,12 +39,11 @@
                                     "*prop": "tree",
                                     "animate": false,
                                     "containerScroll": true,
+                                    "ddGroup": "component",
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|xns": "Roo.tree",
-                                    "ddGroup": "",
-                                    "listeners": {}
+                                    "|xns": "Roo.tree"
                                 }
                             ]
                         },
