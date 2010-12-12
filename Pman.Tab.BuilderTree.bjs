@@ -33,7 +33,7 @@
                             "|xns": "Roo"
                         },
                         {
-                            "region": "center",
+                            "region": "south",
                             "xtype": "ContentPanel",
                             "|xns": "Roo"
                         }
