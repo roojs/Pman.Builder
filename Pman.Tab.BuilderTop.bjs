@@ -74,6 +74,9 @@
                             "width": 100,
                             "xtype": "ComboBox",
                             "|xns": "Roo.form",
+                            "listeners": {
+                                "select": "function (combo, record, index)\n{\n\n}"
+                            },
                             "items": [
                                 {
                                     "*prop": "store",
