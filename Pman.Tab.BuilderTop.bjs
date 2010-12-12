@@ -57,12 +57,11 @@
                         },
                         {
                             "allowBlank": true,
+                            "editable": false,
                             "selectOnFocus": true,
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form",
-                            "editable": true,
-                            "listeners": {}
+                            "|xns": "Roo.form"
                         }
                     ]
                 }
