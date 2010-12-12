@@ -57,13 +57,12 @@
                         },
                         {
                             "allowBlank": true,
+                            "displayField": "app",
                             "editable": false,
                             "selectOnFocus": true,
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form",
-                            "displayField": "",
-                            "listeners": {}
+                            "|xns": "Roo.form"
                         }
                     ]
                 }
