@@ -76,9 +76,10 @@
                             "|xns": "Roo.form",
                             "items": [
                                 {
-                                    "|xns": "Roo.data",
+                                    "*prop": "store",
+                                    "remoteSort": true,
                                     "xtype": "Store",
-                                    "*prop": "store"
+                                    "|xns": "Roo.data"
                                 }
                             ]
                         }
