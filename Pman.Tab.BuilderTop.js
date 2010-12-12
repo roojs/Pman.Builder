@@ -121,6 +121,12 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         typeAhead : true,
                         valueField : 'id',
                         width : 100,
+                        listeners : {
+                            select : function (combo, record, index)
+                            {
+                            
+                            }
+                        },
                         store : {
                             xtype: 'Store',
                             xns: Roo.data,
