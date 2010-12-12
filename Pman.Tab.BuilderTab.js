@@ -70,6 +70,7 @@ Pman.Tab.BuilderTab = new Roo.util.Observable({
                 }
             },
             title : "Designer",
+            region : '',
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
