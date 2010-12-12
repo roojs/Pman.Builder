@@ -125,8 +125,10 @@
                                             "|xns": "Roo.menu"
                                         },
                                         {
+                                            "xtype": "Item",
                                             "|xns": "Roo.menu",
-                                            "xtype": "Item"
+                                            "text": "",
+                                            "listeners": {}
                                         }
                                     ]
                                 }
