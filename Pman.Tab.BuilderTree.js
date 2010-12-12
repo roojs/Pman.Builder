@@ -42,6 +42,12 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                         xtype: 'TreePanel',
                         xns: Roo,
                         region : 'center',
+                        listeners : {
+                            activate : function (_self)
+                            {
+                            
+                            }
+                        },
                         tree : {
                             xtype: 'TreePanel',
                             xns: Roo.tree
