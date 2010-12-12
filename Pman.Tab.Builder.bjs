@@ -32,6 +32,13 @@
                             "|xns": "Roo",
                             "xtype": "LayoutRegion",
                             "*prop": "center"
+                        },
+                        {
+                            "*prop": "west",
+                            "split": true,
+                            "width": 255,
+                            "xtype": "LayoutRegion",
+                            "|xns": "Roo"
                         }
                     ]
                 }
