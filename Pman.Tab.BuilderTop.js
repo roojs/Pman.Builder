@@ -355,7 +355,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                           _this.saveBtn.save(false,0);
                                         }
                                     },
-                                    text : "Save a copy as"
+                                    text : "Show JSON"
                                 }
                             ]
                         }
