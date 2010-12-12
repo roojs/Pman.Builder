@@ -188,10 +188,9 @@
                             ]
                         },
                         {
+                            "text": "Save",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar",
-                            "text": "",
-                            "listeners": {}
+                            "|xns": "Roo.Toolbar"
                         }
                     ]
                 }
