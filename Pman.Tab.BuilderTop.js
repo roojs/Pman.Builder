@@ -110,7 +110,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         displayField : 'app',
                         editable : false,
                         forceSelection : true,
-                        loadingText : "Searching",
+                        loadingText : "Searching...",
                         queryParam : 'query[name]',
                         selectOnFocus : true,
                         tpl : '<div class="x-grid-cell-text x-btn button"><b>{app}</b></div>',
