@@ -43,7 +43,14 @@
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|xns": "Roo.tree"
+                                    "|xns": "Roo.tree",
+                                    "items": [
+                                        {
+                                            "|xns": "Roo.tree",
+                                            "xtype": "DefaultSelectionModel",
+                                            "*prop": "sm"
+                                        }
+                                    ]
                                 }
                             ]
                         },
