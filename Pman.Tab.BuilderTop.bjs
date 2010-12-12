@@ -18,10 +18,9 @@
                     "*prop": "toolbar",
                     "items": [
                         {
+                            "text": "Manage Modules",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar",
-                            "text": "",
-                            "listeners": {}
+                            "|xns": "Roo.Toolbar"
                         }
                     ]
                 }
