@@ -194,10 +194,10 @@
                                 "click": "function (_self, e)\n{\n    this.save();\n}",
                                 "render": "function (_self)\n{\n   _this.saveBtn = this;\n}"
                             },
+                            "cls": "x-btn-text-icon",
                             "text": "Save",
                             "xtype": "Button",
                             "|xns": "Roo.Toolbar",
-                            "cls": "",
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
