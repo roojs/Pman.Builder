@@ -3,7 +3,6 @@
     "name": "Pman.Tab.Builder",
     "parent": "Pman",
     "title": "Builder",
-    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTab.bjs",
     "items": [
         {
             "listeners": {
