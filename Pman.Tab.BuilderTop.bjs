@@ -31,10 +31,10 @@
                                             "listeners": {
                                                 "click": "function (_self, e)\n{\n    Pman.Dialog.BuilderAppEdit.show({\n         id : 0\n    },function(data) {\n        if (data) {\n           _this.modsel.setFromData(data);\n        }\n    });\n\n}"
                                             },
+                                            "icon": "Roo.rootURL + 'images/default/dd/drop-add.gif",
                                             "text": "Create",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu",
-                                            "icon": ""
+                                            "|xns": "Roo.menu"
                                         },
                                         {
                                             "listeners": {
