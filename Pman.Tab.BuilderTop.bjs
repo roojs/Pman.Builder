@@ -60,12 +60,11 @@
                             "displayField": "app",
                             "editable": false,
                             "selectOnFocus": true,
+                            "typeAhead": true,
                             "valueField": "id",
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form",
-                            "typeAhead": true,
-                            "listeners": {}
+                            "|xns": "Roo.form"
                         }
                     ]
                 }
