@@ -6,8 +6,10 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTree.bjs",
     "items": [
         {
+            "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
-            "xtype": "NestedLayoutPanel"
+            "region": "",
+            "listeners": {}
         }
     ],
     "permname": "",
