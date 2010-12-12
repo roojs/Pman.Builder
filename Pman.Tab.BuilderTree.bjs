@@ -58,9 +58,11 @@
                                             "*prop": "sm"
                                         },
                                         {
-                                            "|xns": "Roo.tree",
+                                            "*prop": "root",
                                             "xtype": "TreeNode",
-                                            "*prop": "root"
+                                            "|xns": "Roo.tree",
+                                            "text": "",
+                                            "listeners": {}
                                         }
                                     ]
                                 }
