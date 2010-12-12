@@ -239,7 +239,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             },
                             render : function (_self)
                             {
-                                _this.modsel = this;
+                                _this.filesel = this;
                             }
                         },
                         allowBlank : true,
