@@ -30,7 +30,14 @@
                         {
                             "region": "center",
                             "xtype": "TreePanel",
-                            "|xns": "Roo"
+                            "|xns": "Roo",
+                            "items": [
+                                {
+                                    "|xns": "Roo.tree",
+                                    "xtype": "TreePanel",
+                                    "*prop": "tree"
+                                }
+                            ]
                         },
                         {
                             "region": "south",
