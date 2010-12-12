@@ -64,7 +64,9 @@
                             "valueField": "id",
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form"
+                            "|xns": "Roo.form",
+                            "forceSelection": true,
+                            "listeners": {}
                         }
                     ]
                 }
