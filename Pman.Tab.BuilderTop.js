@@ -338,7 +338,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 {
                                     xtype: 'Item',
                                     xns: Roo.menu,
-                                    text : "Save a copy as"
+                                    text : "Save a copy as",
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                        
+                                        }
+                                    }
                                 }
                             ]
                         }
