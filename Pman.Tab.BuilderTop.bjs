@@ -232,7 +232,14 @@
                         },
                         {
                             "|xns": "Roo.Toolbar",
-                            "xtype": "SplitButton"
+                            "xtype": "SplitButton",
+                            "items": [
+                                {
+                                    "|xns": "Roo.menu",
+                                    "xtype": "Menu",
+                                    "*prop": "menu"
+                                }
+                            ]
                         }
                     ]
                 }
