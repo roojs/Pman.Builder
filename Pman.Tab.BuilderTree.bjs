@@ -44,6 +44,8 @@
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
                                     "|xns": "Roo.tree",
+                                    "|renderer": "",
+                                    "listeners": {},
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
