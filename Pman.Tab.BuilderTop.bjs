@@ -56,8 +56,10 @@
                             ]
                         },
                         {
+                            "xtype": "ComboBox",
                             "|xns": "Roo.form",
-                            "xtype": "ComboBox"
+                            "selectOnFocus": true,
+                            "listeners": {}
                         }
                     ]
                 }
