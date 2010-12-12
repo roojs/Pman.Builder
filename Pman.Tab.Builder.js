@@ -42,7 +42,7 @@ Pman.Tab.Builder = new Roo.util.Observable({
                     xns: Roo,
                     height : 26
                 },
-                center : {
+                west : {
                     xtype: 'LayoutRegion',
                     xns: Roo
                 },
