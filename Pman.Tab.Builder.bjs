@@ -23,10 +23,9 @@
                         },
                         {
                             "*prop": "west",
+                            "width": 255,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "width": 0,
-                            "listeners": {}
+                            "|xns": "Roo"
                         },
                         {
                             "|xns": "Roo",
