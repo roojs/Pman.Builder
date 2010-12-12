@@ -381,7 +381,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             items : [
                                 {
                                     xtype: 'Item',
-                                    xns: Roo.menu
+                                    xns: Roo.menu,
+                                    text : ""
                                 }
                             ]
                         }
