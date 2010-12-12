@@ -110,13 +110,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         displayField : 'app',
                         editable : false,
                         forceSelection : true,
+                        queryParam : 'query[name]',
                         selectOnFocus : true,
                         tpl : '<div class="x-grid-cell-text x-btn button"><b>{app}</b></div>',
                         triggerAction : 'all',
                         typeAhead : true,
                         valueField : 'id',
-                        width : 100,
-                        queryParam : ''
+                        width : 100
                     }
                 ]
             }
