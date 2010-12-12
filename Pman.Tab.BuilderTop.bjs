@@ -232,10 +232,9 @@
                             "xtype": "Separator"
                         },
                         {
+                            "text": "Redraw",
                             "xtype": "SplitButton",
                             "|xns": "Roo.Toolbar",
-                            "text": "",
-                            "listeners": {},
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
