@@ -333,8 +333,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             }
                         },
                         cls : 'x-btn-text-icon',
+                        icon : 'rootURL + \'/Pman/templates/images/save.gif\'',
                         text : "Save",
-                        icon : '',
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,
