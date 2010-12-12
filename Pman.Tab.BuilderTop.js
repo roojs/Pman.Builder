@@ -208,8 +208,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    text : "New Part",
-                                    icon : ''
+                                    icon : 'Roo.rootURL + \'images/default/dd/drop-add.gif\'',
+                                    text : "New Part"
                                 },
                                 {
                                     xtype: 'Item',
