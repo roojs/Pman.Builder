@@ -188,12 +188,12 @@
                             ]
                         },
                         {
+                            "listeners": {
+                                "click": "function (_self, e)\n{\n    this.save();\n}"
+                            },
                             "text": "Save",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar",
-                            "listeners": {
-                                "click": "function (_self, e)\n{\n\n}"
-                            }
+                            "|xns": "Roo.Toolbar"
                         }
                     ]
                 }
