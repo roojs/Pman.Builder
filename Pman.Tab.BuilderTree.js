@@ -63,6 +63,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
+                            renderer : function(n) { return n.text; },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
