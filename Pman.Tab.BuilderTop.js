@@ -10,7 +10,7 @@ Pman.on('beforeload', function()
     Pman.register({
         modKey : '001-Pman.Tab.BuilderTop',
         module : Pman.Tab.BuilderTop,
-        region : 'north',
+        region : 'center',
         parent : Pman.Tab.BuilderTab,
         name : "Pman.Tab.BuilderTop",
         disabled : false, 
@@ -193,20 +193,17 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                         if (!_this.modsel.lastData || !_this.modsel.lastData.id) {
-                                                                    Roo.MessageBox.alert("Error", "Select Moudle");
-                                                                    return false;
-                                                                }
-                                                                
-                                                                _this.filesel.setFromData({
-                                                                    id : 0,
-                                                                    name : ''
-                                                                });
-                                                                Pman.Tab.BuilderTree.clearAll();
-                                                                Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
-                                                                
-                                                                var bp = Pman.Tab.BuilderPanel;
-                                                                bp.redraw.defer(100,bp,[true]);
+                                            if (!_this.modsel.lastData || !_this.modsel.lastData.id) {
+                                                Roo.MessageBox.alert("Error", "Select Module");
+                                                return false;
+                                            }
+                                            
+                                            _this.filesel.reset();
+                                            Pman.Tab.BuilderTree.clearAll();
+                                            Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
+                                            
+                                            var bp = Pman.Tab.BuilderPanel;
+                                            bp.redraw.defer(100,bp,[true]);
                                         
                                         }
                                     },
