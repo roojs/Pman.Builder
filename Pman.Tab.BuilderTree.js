@@ -37,6 +37,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo
+            },
+            layout : {
+                xtype: 'BorderLayout',
+                xns: Roo
             }
         });
         this.layout = this.panel.layout;
