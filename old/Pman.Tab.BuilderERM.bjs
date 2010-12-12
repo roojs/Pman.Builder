@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>401 Authorization Required</title>
+</head><body>
+<h1>Authorization Required</h1>
+<p>This server could not verify that you
+are authorized to access the document
+requested.  Either you supplied the wrong
+credentials (e.g., bad password), or your
+browser doesn't understand how to supply
+the credentials required.</p>
+<hr>
+<address>Apache/2.2.16 (Debian) DAV/2 SVN/1.5.1 mod_fastcgi/2.4.6 PHP/5.3.2-1 with Suhosin-Patch proxy_html/3.0.0 mod_ssl/2.2.16 OpenSSL/0.9.8m mod_perl/2.0.4 Perl/v5.10.1 Server at git.roojs.com Port 80</address>
+</body></html>
