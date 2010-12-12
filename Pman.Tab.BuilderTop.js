@@ -122,7 +122,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         displayField : 'app',
                         editable : false,
                         forceSelection : true,
-                        listWidth : 200,
+                        listWidth : 300,
                         loadingText : "Searching...",
                         minChars : 2,
                         pageSize : 40,
