@@ -59,14 +59,13 @@
                             "allowBlank": true,
                             "displayField": "app",
                             "editable": false,
+                            "forceSelection": true,
                             "selectOnFocus": true,
                             "typeAhead": true,
                             "valueField": "id",
                             "width": 100,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form",
-                            "forceSelection": true,
-                            "listeners": {}
+                            "|xns": "Roo.form"
                         }
                     ]
                 }
