@@ -34,6 +34,12 @@ Pman.Tab.Builder = new Roo.util.Observable({
             xtype: 'NestedLayoutPanel',
             xns: Roo,
             title : "Customize",
+            listeners : {
+                activate : function (_self)
+                {
+                
+                }
+            },
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
