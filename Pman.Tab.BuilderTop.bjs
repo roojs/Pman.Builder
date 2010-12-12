@@ -202,12 +202,12 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n  _this.saveBtn.save(false,0);\n}"
+                                            },
                                             "text": "Save a copy as",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu",
-                                            "listeners": {
-                                                "click": "function (_self, e)\n{\n\n}"
-                                            }
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
