@@ -33,7 +33,8 @@
                                             },
                                             "text": "Create",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu"
+                                            "|xns": "Roo.menu",
+                                            "icon": ""
                                         },
                                         {
                                             "listeners": {
