@@ -41,10 +41,6 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                 xns: Roo,
                 items : [
                     {
-                        xtype: 'SplitButton',
-                        xns: Roo.Toolbar
-                    },
-                    {
                         xtype: 'Button',
                         xns: Roo.Toolbar,
                         text : "Manage Modules",
@@ -374,6 +370,10 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     },
                     {
                         xtype: 'Separator',
+                        xns: Roo.Toolbar
+                    },
+                    {
+                        xtype: 'SplitButton',
                         xns: Roo.Toolbar
                     }
                 ]
