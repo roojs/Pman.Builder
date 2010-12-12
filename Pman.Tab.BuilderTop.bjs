@@ -4,7 +4,12 @@
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTop",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTop.bjs",
-    "items": [],
+    "items": [
+        {
+            "|xns": "Roo",
+            "xtype": "ContentPanel"
+        }
+    ],
     "permname": "",
     "modOrder": "001"
 }
