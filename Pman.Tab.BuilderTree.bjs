@@ -37,10 +37,9 @@
                             "items": [
                                 {
                                     "*prop": "tree",
-                                    "xtype": "TreePanel",
-                                    "|xns": "Roo.tree",
                                     "containerScroll": true,
-                                    "listeners": {}
+                                    "xtype": "TreePanel",
+                                    "|xns": "Roo.tree"
                                 }
                             ]
                         },
