@@ -246,6 +246,14 @@
                                             "text": "Auto redraw - OFF",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n _this.redrawBtn.setText(\"Redraw (AUTO OFF)\");\n    _this.redrawBtn.auto = 0;\n\n}"
+                                            },
+                                            "text": "Auto redraw - OFF",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
