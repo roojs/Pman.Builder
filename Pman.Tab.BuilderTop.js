@@ -64,7 +64,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif,
+                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif',
                                     text : "Create"
                                 },
                                 {
