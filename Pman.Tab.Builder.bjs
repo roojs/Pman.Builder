@@ -1,8 +1,9 @@
 {
-    "id": "roo-file-47",
+    "id": "roo-file-0",
     "name": "Pman.Tab.Builder",
     "parent": "Pman",
     "title": "Builder",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.Builder.bjs",
     "items": [
         {
             "listeners": {
@@ -11,7 +12,7 @@
             "background": true,
             "fitToFrame": true,
             "region": "center",
-            "title": "Customize",
+            "title": "Customize App",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
             "items": [
