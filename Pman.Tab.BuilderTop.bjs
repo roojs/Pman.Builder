@@ -18,10 +18,6 @@
                     "*prop": "toolbar",
                     "items": [
                         {
-                            "|xns": "Roo.Toolbar",
-                            "xtype": "SplitButton"
-                        },
-                        {
                             "text": "Manage Modules",
                             "xtype": "Button",
                             "|xns": "Roo.Toolbar",
@@ -233,6 +229,10 @@
                         {
                             "|xns": "Roo.Toolbar",
                             "xtype": "Separator"
+                        },
+                        {
+                            "|xns": "Roo.Toolbar",
+                            "xtype": "SplitButton"
                         }
                     ]
                 }
