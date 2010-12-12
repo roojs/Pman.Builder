@@ -195,7 +195,7 @@
                                 "render": "function (_self)\n{\n   _this.saveBtn = this;\n}"
                             },
                             "cls": "x-btn-text-icon",
-                            "icon": "rootURL + '/Pman/templates/images/save.gif'",
+                            "|icon": "rootURL + '/Pman/templates/images/save.gif'",
                             "text": "Save",
                             "xtype": "Button",
                             "|xns": "Roo.Toolbar",
