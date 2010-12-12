@@ -382,13 +382,15 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 {
                                     xtype: 'Item',
                                     xns: Roo.menu,
-                                    text : "Auto redraw - OFF",
                                     listeners : {
                                         click : function (_self, e)
                                         {
+                                         _this.redrawBtn.setText("Redraw (AUTO OFF)");
+                                            _this.redrawBtn.auto = 0;
                                         
                                         }
-                                    }
+                                    },
+                                    text : "Auto redraw - OFF"
                                 }
                             ]
                         }
