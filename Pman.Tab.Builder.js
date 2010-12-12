@@ -14,7 +14,7 @@ Pman.on('beforeload', function()
         parent : Pman,
         name : "Builder",
         disabled : false, 
-        permname: '' 
+        permname: 'Builder' 
     });
 });
 
