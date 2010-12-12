@@ -123,7 +123,8 @@
                                             },
                                             "text": "New Part",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu"
+                                            "|xns": "Roo.menu",
+                                            "icon": ""
                                         },
                                         {
                                             "text": "Delete",
