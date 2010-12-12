@@ -60,6 +60,7 @@
                             "displayField": "app",
                             "editable": false,
                             "selectOnFocus": true,
+                            "valueField": "id",
                             "width": 100,
                             "xtype": "ComboBox",
                             "|xns": "Roo.form"
