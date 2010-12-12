@@ -110,7 +110,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         editable : false,
                         selectOnFocus : true,
                         valueField : 'id',
-                        width : 100
+                        width : 100,
+                        typeAhead : true
                     }
                 ]
             }
