@@ -111,10 +111,6 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 _this.filesel.reset();
                                _this.filesel.fireEvent('select', false);
                             
-                            },
-                            collapse : function (combo)
-                            {
-                            
                             }
                         },
                         allowBlank : true,
