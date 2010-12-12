@@ -8,13 +8,13 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
-        modKey : '001-Pman.Tab.BuilderTab',
+        modKey : '750-Pman.Tab.BuilderTab',
         module : Pman.Tab.BuilderTab,
         region : 'center',
-        parent : false,
-        name : "Builder - Tab",
+        parent : Pman.Tab.Builder,
+        name : "Pman.Tab.BuilderTab",
         disabled : false, 
-        permname: '' 
+        permname: 'Builder' 
     });
 });
 
@@ -36,21 +36,67 @@ Pman.Tab.BuilderTab = new Roo.util.Observable({
             listeners : {
                 activate : function (_self)
                 {
-                   _self.layout.getRegion('center').showPanel(0)
+                    if (_this.keyListener) {
+                        return;
+                    }
+                    _this.keyListener = true;
+                    
+                    Roo.get(document).on(   'keyup',  function(e) {
+                        if (!  _this.panel.active ) {
+                            return;
+                        }
+                         
+                        // check..
+                        if (!Pman.Tab.BuilderPanel.isMouseOver && !Pman.Tab.BuilderTree.isMouseOver) {
+                            return;
+                        }
+                       // console.log(e);
+                        //Roo.EventObject.DELETE,
+                        if (e.getCharCode() == Roo.EventObject.DELETE) {
+                            //  console.log('delete');
+                          
+                            var res = Pman.Tab.BuilderTree.deleteCurrent();
+                            if (res) {
+                                 var bp = Pman.Tab.BuilderPanel;
+                                 bp.redraw.defer(100,bp, [ true ]);
+                                
+                            }
+                            e.stopEvent();
+                        }
+                        
+                         
+                     });
+                 
                 }
             },
-            background : true,
-            fitToFrame : true,
-            region : 'center',
             title : "Customize",
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
-                center : {
+                north : {
                     xtype: 'LayoutRegion',
                     xns: Roo,
-                    titlebar : false,
-                    tabPosition : 'top'
+                    height : 26
+                },
+                west : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo,
+                    split : true,
+                    width : 255
+                },
+                center : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo
+                },
+                east : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo,
+                    collapsed : true,
+                    collapsible : true,
+                    split : true,
+                    title : "Palete",
+                    titlebar : true,
+                    width : 200
                 }
             }
         });
