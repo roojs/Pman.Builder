@@ -33,7 +33,7 @@ Pman.Tab.Builder = new Roo.util.Observable({
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
             xns: Roo,
-            title : "",
+            title : "Customize",
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
