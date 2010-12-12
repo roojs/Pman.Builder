@@ -189,7 +189,8 @@
                         },
                         {
                             "listeners": {
-                                "click": "function (_self, e)\n{\n    this.save();\n}"
+                                "click": "function (_self, e)\n{\n    this.save();\n}",
+                                "render": "function (_self)\n{\n\n}"
                             },
                             "text": "Save",
                             "xtype": "Button",
