@@ -59,10 +59,9 @@
                                         },
                                         {
                                             "*prop": "root",
+                                            "text": "Part",
                                             "xtype": "TreeNode",
-                                            "|xns": "Roo.tree",
-                                            "text": "",
-                                            "listeners": {}
+                                            "|xns": "Roo.tree"
                                         }
                                     ]
                                 }
