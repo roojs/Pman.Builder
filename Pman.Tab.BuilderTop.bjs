@@ -190,11 +190,18 @@
                         {
                             "listeners": {
                                 "click": "function (_self, e)\n{\n    this.save();\n}",
-                                "render": "function (_self)\n{\n\n}"
+                                "render": "function (_self)\n{\n   _this.saveBtn = this;\n}"
                             },
                             "text": "Save",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar"
+                            "|xns": "Roo.Toolbar",
+                            "items": [
+                                {
+                                    "|xns": "Roo.menu",
+                                    "xtype": "Menu",
+                                    "*prop": "menu"
+                                }
+                            ]
                         }
                     ]
                 }
