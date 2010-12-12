@@ -79,7 +79,9 @@
                                     "*prop": "store",
                                     "remoteSort": true,
                                     "xtype": "Store",
-                                    "|xns": "Roo.data"
+                                    "|xns": "Roo.data",
+                                    "sortInfo": "",
+                                    "listeners": {}
                                 }
                             ]
                         }
