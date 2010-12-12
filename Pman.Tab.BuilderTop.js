@@ -110,6 +110,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         displayField : 'app',
                         editable : false,
                         forceSelection : true,
+                        listWidth : 200,
                         loadingText : "Searching...",
                         queryParam : 'query[name]',
                         selectOnFocus : true,
@@ -117,8 +118,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         triggerAction : 'all',
                         typeAhead : true,
                         valueField : 'id',
-                        width : 100,
-                        listWidth : 0
+                        width : 100
                     }
                 ]
             }
