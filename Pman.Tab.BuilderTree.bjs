@@ -22,9 +22,10 @@
                         },
                         {
                             "*prop": "south",
+                            "split": true,
                             "xtype": "LayoutRegion",
                             "|xns": "Roo",
-                            "split": true,
+                            "height": 0,
                             "listeners": {}
                         },
                         {
