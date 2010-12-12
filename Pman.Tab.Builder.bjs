@@ -39,7 +39,9 @@
                             "split": true,
                             "width": 255,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo"
+                            "|xns": "Roo",
+                            "collapsible": true,
+                            "listeners": {}
                         }
                     ]
                 }
