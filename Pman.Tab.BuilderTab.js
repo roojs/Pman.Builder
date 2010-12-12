@@ -1,22 +1,23 @@
 //<script type="text/javascript">
 
-// Auto generated file - created by Builder Module - do not edit directly
+// Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
 
 
 // register the module first
 Pman.on('beforeload', function()
 {
-
-
     Pman.register({
-        modKey : '001-pman_tab_buildertab',
+        modKey : '001-Pman.Tab.BuilderTab',
         module : Pman.Tab.BuilderTab,
         region : 'center',
-        parent : Pman,
-        name : "Builder - Tab"
+        parent : false,
+        name : "Builder - Tab",
+        disabled : false, 
+        permname: '' 
     });
 });
+
 Pman.Tab.BuilderTab = new Roo.util.Observable({
 
     panel : false,
@@ -30,34 +31,30 @@ Pman.Tab.BuilderTab = new Roo.util.Observable({
         this.parentLayout = parentLayout;
 
         this.panel = parentLayout.addxtype({
-            xtype : 'NestedLayoutPanel',
-            background : true,
-            fitToFrame : true,
-            region : 'center',
+            xtype: 'NestedLayoutPanel',
+            xns: Roo,
             listeners : {
-                activate: function (_self)
+                activate : function (_self)
                 {
                    _self.layout.getRegion('center').showPanel(0)
                 }
             },
-            title : "Builder Kit",
+            background : true,
+            fitToFrame : true,
+            region : 'center',
+            title : "Customize",
             layout : {
-                xtype : 'BorderLayout',
+                xtype: 'BorderLayout',
+                xns: Roo,
                 center : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo,
                     titlebar : false,
                     tabPosition : 'top'
                 }
             }
         });
-       this.layout = this.panel.layout;
+        this.layout = this.panel.layout;
+
     }
 });
-/*
---SOURCE--
-QlpoNDFBWSZTWT8IJ7QAAP4fgFD3YBARD1QOv+/f7jABNtFBlU2k8TSfpTyTTJppoAADEICp5TAE0wTR
-gBGTEyYSKJoTT0JMhpsgQA0ZHowIvgMo6DW668foM1kozQlCGZISkIzPfQV4LQXBFwGm2mxDmQYzrZXp
-z3X6fnX3pXszsgxuAzydVLqZqkoaQTq+OjVYFz3yB6gxkynGtBEvbyLHYxoT8PY0VYZeu0Z+BTi1ujNu
-ilTeKdithB6I5cXRR9VjsKSgVHMOBFtMkvvplYcNRx0hK28J5k3mXLCxVUq6/OSnkE6m5El44jIbaF02
-EmDlWQJASN+zm5g2BPb1eiMNsDGUDP4EAZMh+r0CVotWXiBQ24CudmoNZxajG67GKapDCMiECHA6hcbA
-3G+4VbrC21GoMjk7b2VKH6QOq7C7kinChIH4QT2g
-*/
