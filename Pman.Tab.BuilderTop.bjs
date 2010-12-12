@@ -117,8 +117,10 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "xtype": "Item",
                                             "|xns": "Roo.menu",
-                                            "xtype": "Item"
+                                            "text": "",
+                                            "listeners": {}
                                         }
                                     ]
                                 }
