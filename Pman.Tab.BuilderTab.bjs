@@ -12,6 +12,7 @@
             "title": "Designer",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo",
+            "region": "",
             "items": [
                 {
                     "|xns": "Roo",
