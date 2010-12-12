@@ -34,7 +34,7 @@
                             "*prop": "center"
                         },
                         {
-                            "*prop": "west",
+                            "*prop": "east",
                             "split": true,
                             "width": 255,
                             "xtype": "LayoutRegion",
