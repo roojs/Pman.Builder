@@ -209,7 +209,7 @@
                                             "listeners": {
                                                 "click": "function (_self, e)\n{\n  _this.saveBtn.save(false,0);\n}"
                                             },
-                                            "icon": "rootURL + '/Pman/templates/images/save.gif'",
+                                            "|icon": "rootURL + '/Pman/templates/images/save.gif'",
                                             "text": "Save a copy as",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
