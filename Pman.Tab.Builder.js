@@ -33,13 +33,45 @@ Pman.Tab.Builder = new Roo.util.Observable({
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
             xns: Roo,
-            title : "Customize",
             listeners : {
                 activate : function (_self)
                 {
+                    if (_this.keyListener) {
+                        return;
+                    }
+                    _this.keyListener = true;
+                    
+                     Roo.get(document).on(   'keyup',  function(e) {
+                        if (!  _this.panel.active ) {
+                            return;
+                        }
+                         
+                        // check..
+                        if (!Pman.Tab.BuilderPanel.isMouseOver && !Pman.Tab.BuilderTree.isMouseOver) {
+                            return;
+                        }
+                       // console.log(e);
+                        //Roo.EventObject.DELETE,
+                        if (e.getCharCode() == Roo.EventObject.DELETE) {
+                            //  console.log('delete');
+                          
+                            var res = Pman.Tab.BuilderTree.deleteCurrent();
+                            if (res) {
+                                 var bp = Pman.Tab.BuilderPanel;
+                                 bp.redraw.defer(100,bp, [ true ]);
+                                
+                            }
+                            e.stopEvent();
+                        }
+                        
+                         
+                     });
                 
+                    
+                    
                 }
             },
+            title : "Customize",
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
