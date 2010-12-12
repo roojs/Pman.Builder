@@ -402,7 +402,9 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         {
                                            _this.saveBtn.save(
                                              function() {
-                                            
+                                                 Pman.Dialog.BuilderPreview({ id : _this.filesel.getValue() } ); 
+                                                    
+                                        
                                           } );
                                         }
                                     },
