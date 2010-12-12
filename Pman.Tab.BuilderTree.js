@@ -33,7 +33,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
             xns: Roo,
-            region : ''
+            region : 'west'
         });
         this.layout = this.panel.layout;
 
