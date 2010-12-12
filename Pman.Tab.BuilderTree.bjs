@@ -61,7 +61,7 @@
                                             "*prop": "root",
                                             "text": "Part",
                                             "xtype": "TreeNode",
-                                            "|": "function() {\n    \n}\n",
+                                            "|elConfig": "function() {\n    \n}\n",
                                             "|xns": "Roo.tree"
                                         }
                                     ]
