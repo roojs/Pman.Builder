@@ -31,6 +31,9 @@
                             "region": "center",
                             "xtype": "TreePanel",
                             "|xns": "Roo",
+                            "listeners": {
+                                "activate": "function (_self)\n{\n\n}"
+                            },
                             "items": [
                                 {
                                     "|xns": "Roo.tree",
