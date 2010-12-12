@@ -166,7 +166,21 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 xns: Roo.tree,
                                 text : "Part",
                                 elConfig : function() {
+                                    return  {
+                                         xtype : '*Module',
+                                            
+                                            app : 'TestApp',
+                                            // perm
+                                            // permtype
+                                            modkey : 0,
+                                            '|module' :  '',
+                                            region : 'center',
+                                            '|parent' : 'Pman',
+                                            name : "Module Name",
+                                            items: [] 
+                                
                                     
+                                    }
                                 }
                             }
                         }
