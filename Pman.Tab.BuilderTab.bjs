@@ -1,8 +1,9 @@
 {
-    "id": "roo-file-50",
+    "id": "roo-file-6",
     "name": "Pman.Tab.BuilderTab",
     "parent": "Pman.Tab.Builder",
     "title": "Pman.Tab.BuilderTab",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTab.bjs",
     "items": [
         {
             "listeners": {
