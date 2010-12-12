@@ -17,10 +17,9 @@
                     "items": [
                         {
                             "*prop": "north",
+                            "height": 26,
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "height": 0,
-                            "listeners": {}
+                            "|xns": "Roo"
                         },
                         {
                             "|xns": "Roo",
