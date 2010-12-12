@@ -197,6 +197,7 @@
                             "text": "Save",
                             "xtype": "Button",
                             "|xns": "Roo.Toolbar",
+                            "cls": "",
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
