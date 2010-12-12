@@ -58,8 +58,8 @@ Pman.Tab.Builder = new Roo.util.Observable({
                     collapsed : true,
                     collapsible : true,
                     split : true,
-                    width : 200,
-                    titlebar : true
+                    titlebar : true,
+                    width : 200
                 }
             }
         });
