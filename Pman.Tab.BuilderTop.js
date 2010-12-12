@@ -83,6 +83,24 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         }
                                     },
                                     text : "Edit"
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                            Pman.Dialog.BuilderAppEdit.show({
+                                                 id : 0
+                                            },function(data) {
+                                                if (data) {
+                                                   _this.modsel.setFromData(data);
+                                                }
+                                            });
+                                        
+                                        }
+                                    },
+                                    text : "Edit"
                                 }
                             ]
                         }
