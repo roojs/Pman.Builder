@@ -211,7 +211,8 @@
                                             },
                                             "text": "Save a copy as",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu"
+                                            "|xns": "Roo.menu",
+                                            "icon": ""
                                         },
                                         {
                                             "listeners": {
