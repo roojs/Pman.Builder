@@ -251,14 +251,21 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         store : {
                             xtype: 'Store',
                             xns: Roo.data,
-                            remoteSort : true,
-                            sortInfo : { field : 'name' , direction : 'ASC' },
                             listeners : {
                                 beforeload : function (_self, options)
                                 {
+                                     o.params = o.params || {}; 
+                                   // o.params.btype = 'FORM';
+                                    if (!_this.modsel.lastData || !_this.modsel.lastData.id) {
+                                        Roo.MessageBox.alert("Error", "Select Module");
+                                        return false;
+                                    }
+                                    o.params.app = _this.modsel.lastData.app;
                                 
                                 }
                             },
+                            remoteSort : true,
+                            sortInfo : { field : 'name' , direction : 'ASC' },
                             proxy : {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
