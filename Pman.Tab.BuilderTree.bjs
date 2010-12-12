@@ -38,6 +38,7 @@
                                 {
                                     "*prop": "tree",
                                     "containerScroll": true,
+                                    "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
                                     "|xns": "Roo.tree"
