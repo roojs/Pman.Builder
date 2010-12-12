@@ -32,7 +32,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
 
         this.panel = parentLayout.addxtype({
             xtype: 'ContentPanel',
-            xns: Roo
+            xns: Roo,
+            fitToFrame : true
         });
         this.layout = this.panel.layout;
 
