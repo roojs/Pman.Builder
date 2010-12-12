@@ -4,7 +4,12 @@
     "parent": "Pman",
     "title": "Pman.Tab.Builder",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.Builder.bjs",
-    "items": [],
+    "items": [
+        {
+            "|xns": "Roo",
+            "xtype": "NestedLayoutPanel"
+        }
+    ],
     "permname": "Builder",
     "modOrder": "750"
 }
