@@ -56,9 +56,9 @@ Pman.Tab.Builder = new Roo.util.Observable({
                     xtype: 'LayoutRegion',
                     xns: Roo,
                     collapsed : true,
+                    collapsible : true,
                     split : true,
-                    width : 255,
-                    collapsible : true
+                    width : 255
                 }
             }
         });
