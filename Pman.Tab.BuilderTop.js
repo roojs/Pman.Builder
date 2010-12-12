@@ -319,7 +319,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     },
                     {
                         xtype: 'Button',
-                        xns: Roo.Toolbar
+                        xns: Roo.Toolbar,
+                        text : ""
                     }
                 ]
             }
