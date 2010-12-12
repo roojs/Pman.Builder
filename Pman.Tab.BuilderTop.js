@@ -105,8 +105,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     {
                         xtype: 'ComboBox',
                         xns: Roo.form,
-                        selectOnFocus : true,
-                        allowBlank : true
+                        allowBlank : true,
+                        selectOnFocus : true
                     }
                 ]
             }
