@@ -42,6 +42,14 @@
                                             "text": "Edit",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n    Pman.Dialog.BuilderAppEdit.show({\n         id : 0\n    },function(data) {\n        if (data) {\n           _this.modsel.setFromData(data);\n        }\n    });\n\n}"
+                                            },
+                                            "text": "Edit",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
