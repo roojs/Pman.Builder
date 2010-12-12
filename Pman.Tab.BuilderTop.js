@@ -124,7 +124,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         store : {
                             xtype: 'Store',
                             xns: Roo.data,
-                            remoteSort : true
+                            remoteSort : true,
+                            sortInfo : ''
                         }
                     }
                 ]
