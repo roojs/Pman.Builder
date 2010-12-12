@@ -240,10 +240,9 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "text": "Auto redraw - OFF",
                                             "xtype": "Item",
-                                            "|xns": "Roo.menu",
-                                            "text": "",
-                                            "listeners": {}
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
