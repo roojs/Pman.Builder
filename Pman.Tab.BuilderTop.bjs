@@ -59,7 +59,9 @@
                             "allowBlank": true,
                             "selectOnFocus": true,
                             "xtype": "ComboBox",
-                            "|xns": "Roo.form"
+                            "|xns": "Roo.form",
+                            "width": 0,
+                            "listeners": {}
                         }
                     ]
                 }
