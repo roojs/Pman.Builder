@@ -190,7 +190,10 @@
                         {
                             "text": "Save",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar"
+                            "|xns": "Roo.Toolbar",
+                            "listeners": {
+                                "click": "function (_self, e)\n{\n\n}"
+                            }
                         }
                     ]
                 }
