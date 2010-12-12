@@ -128,6 +128,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                        // console.log(e.button);
                                                         _this.setCurrentNode(node);
                                 
+                                },
+                                contextmenu : function (node, e)
+                                {
+                                
                                 }
                             },
                             animate : false,
