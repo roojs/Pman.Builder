@@ -37,13 +37,12 @@
                             "items": [
                                 {
                                     "*prop": "tree",
+                                    "animate": false,
                                     "containerScroll": true,
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|xns": "Roo.tree",
-                                    "animate": true,
-                                    "listeners": {}
+                                    "|xns": "Roo.tree"
                                 }
                             ]
                         },
