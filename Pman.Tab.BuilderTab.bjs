@@ -1,1 +1,39 @@
-{"xtype":"*Module","app":"Builder","modkey":1,"|module":"Pman.Tab.BuilderTab","region":"center","|parent":"Pman","name":"Pman.Tab.BuilderTab","listeners":{},"items":[{"xtype":"NestedLayoutPanel","background":true,"fitToFrame":true,"region":"center","listeners":{"|activate":"function (_self)\n{\n   _self.layout.getRegion('center').showPanel(0)\n}"},"title":"Builder Kit","items":[{"*prop":"layout","xtype":"BorderLayout","items":[{"xtype":"*LayoutRegion","*prop":"center","titlebar":false,"listeners":{},"tabPosition":"top"}]}]}],"title":"Builder - Tab"}
+{
+    "id": "roo-file-47",
+    "name": "Pman.Tab.BuilderTab",
+    "parent": "",
+    "title": "Builder - Tab",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTab.bjs",
+    "items": [
+        {
+            "listeners": {
+                "|activate": "function (_self)\n{\n   _self.layout.getRegion('center').showPanel(0)\n}"
+            },
+            "background": true,
+            "fitToFrame": true,
+            "region": "center",
+            "title": "Customize",
+            "xtype": "NestedLayoutPanel",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "*prop": "layout",
+                    "xtype": "BorderLayout",
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "xtype": "LayoutRegion",
+                            "*prop": "center",
+                            "titlebar": false,
+                            "listeners": {},
+                            "tabPosition": "top",
+                            "|xns": "Roo"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "permname": "",
+    "modOrder": "001"
+}
