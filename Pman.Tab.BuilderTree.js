@@ -60,7 +60,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             xns: Roo.tree,
                             containerScroll : true,
                             enableDD : true,
-                            rootVisible : true
+                            rootVisible : true,
+                            animate : true
                         }
                     },
                     {
