@@ -334,10 +334,50 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         },
                         cls : 'x-btn-text-icon',
                         text : "Save",
-                        icon : rootURL + '/Pman/templates/images/save.gif',
                          : function() {
-                            
+                               // first see if first element has a name.. - we can not save otherwise..
+                                var t = Pman.Tab.BuilderTree.tree;
+                                if (!t.root.elConfig.name.length) {
+                                    Roo.MessageBox.alert("Error", "No name set for form");
+                                    return;
+                                }
+                             
+                                sid = (typeof(sid) == 'undefined') ?  (this.filesel.lastData ? this.filesel.lastData.id : 0) : sid;
+                                
+                                var js = Pman.Tab.BuilderTree.toJS();
+                                var json = Roo.encode(js);
+                               // console.log(js);
+                               // console.log(json);
+                                
+                                // check the select box to see if that has been set... - save it with that id..
+                                
+                                var _this = this;
+                                
+                                Pman.request({
+                                    url: baseURL + '/Roo/Builder.php',
+                                    method : 'POST',
+                                    params : {
+                                        json : json,
+                                        name : t.root.elConfig.name,
+                                        module : t.root.elConfig['|module'],
+                                        app : t.root.elConfig.app,
+                                        btype : 'FORM',
+                                        id : sid
+                                    }, 
+                                    success : function(data) {
+                                        // set the fileSel!!
+                                        console.log(data);
+                                        if (data) {
+                                            _this.filesel.setFromData(data);
+                                            if (cb) {
+                                                cb.call(_this,data);
+                                            }
+                                            _this.postCode(data);
+                                        }
+                                    }
+                                });
                         },
+                        icon : rootURL + '/Pman/templates/images/save.gif',
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,
