@@ -8,10 +8,9 @@
         {
             "background": true,
             "fitToFrame": true,
+            "region": "north",
             "xtype": "ContentPanel",
             "|xns": "Roo",
-            "region": "",
-            "listeners": {},
             "items": [
                 {
                     "|xns": "Roo",
