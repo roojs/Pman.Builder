@@ -56,6 +56,9 @@
                             ]
                         },
                         {
+                            "listeners": {
+                                "select": "function (combo, record, index)\n{\n    _this.filesel.reset();\n   _this.filesel.fireEvent('select', false);\n\n}"
+                            },
                             "allowBlank": true,
                             "alwaysQuery": true,
                             "displayField": "app",
@@ -74,9 +77,6 @@
                             "width": 100,
                             "xtype": "ComboBox",
                             "|xns": "Roo.form",
-                            "listeners": {
-                                "select": "function (combo, record, index)\n{\n\n}"
-                            },
                             "items": [
                                 {
                                     "*prop": "store",
