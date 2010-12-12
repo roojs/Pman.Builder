@@ -66,9 +66,7 @@ Pman.Tab.Builder = new Roo.util.Observable({
                         
                          
                      });
-                
-                    
-                    
+                 
                 }
             },
             title : "Customize",
