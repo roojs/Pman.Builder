@@ -223,8 +223,18 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         listeners : {
                             select : function (combo, record, index)
                             {
-                                _this.filesel.reset();
-                               _this.filesel.fireEvent('select', false);
+                               //cb.lastData = rec.data;
+                                var bt = Pman.Tab.BuilderTree;
+                                if (!rec) {
+                                    bt.clearAll();
+                                    bt.setCurrentNode(bt.tree.root,true);
+                                    var bp = Pman.Tab.BuilderPanel;
+                                    bp.redraw.defer(100,bp,[true]);
+                                    return;
+                                }
+                                
+                                bt.loadJSON.defer(10, bt, [rec.data.json]);
+                            
                             
                             },
                             render : function (_self)
