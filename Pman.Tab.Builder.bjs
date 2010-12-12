@@ -7,7 +7,14 @@
     "items": [
         {
             "|xns": "Roo",
-            "xtype": "NestedLayoutPanel"
+            "xtype": "NestedLayoutPanel",
+            "items": [
+                {
+                    "|xns": "Roo",
+                    "xtype": "BorderLayout",
+                    "*prop": "layout"
+                }
+            ]
         }
     ],
     "permname": "Builder",
