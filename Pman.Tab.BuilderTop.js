@@ -43,7 +43,11 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     {
                         xtype: 'Button',
                         xns: Roo.Toolbar,
-                        text : "Manage Modules"
+                        text : "Manage Modules",
+                        menu : {
+                            xtype: 'Menu',
+                            xns: Roo.menu
+                        }
                     }
                 ]
             }
