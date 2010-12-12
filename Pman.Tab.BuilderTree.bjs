@@ -61,7 +61,9 @@
                                             "*prop": "root",
                                             "text": "Part",
                                             "xtype": "TreeNode",
-                                            "|xns": "Roo.tree"
+                                            "|xns": "Roo.tree",
+                                            "|": "function() {\n    \n}\n",
+                                            "listeners": {}
                                         }
                                     ]
                                 }
