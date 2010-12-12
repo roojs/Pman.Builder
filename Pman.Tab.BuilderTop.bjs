@@ -6,6 +6,7 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTop.bjs",
     "items": [
         {
+            "background": true,
             "fitToFrame": true,
             "xtype": "ContentPanel",
             "|xns": "Roo"
