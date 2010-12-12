@@ -6,8 +6,9 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderTop.bjs",
     "items": [
         {
-            "|xns": "Roo",
-            "xtype": "ContentPanel"
+            "fitToFrame": true,
+            "xtype": "ContentPanel",
+            "|xns": "Roo"
         }
     ],
     "permname": "",
