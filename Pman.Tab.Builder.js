@@ -8,7 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
-        modKey : '001-Pman.Tab.Builder',
+        modKey : '899-Pman.Tab.Builder',
         module : Pman.Tab.Builder,
         region : 'center',
         parent : Pman,
