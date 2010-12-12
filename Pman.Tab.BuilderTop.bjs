@@ -78,7 +78,7 @@
                                 {
                                     "*prop": "store",
                                     "remoteSort": true,
-                                    "sortInfo": "{ field : 'app' , direction : 'asc' }",
+                                    "|sortInfo": "{ field : 'app' , direction : 'asc' }",
                                     "xtype": "Store",
                                     "|xns": "Roo.data"
                                 }
