@@ -18,7 +18,9 @@
                         {
                             "*prop": "north",
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo"
+                            "|xns": "Roo",
+                            "height": 0,
+                            "listeners": {}
                         },
                         {
                             "|xns": "Roo",
