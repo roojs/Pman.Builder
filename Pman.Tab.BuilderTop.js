@@ -332,8 +332,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                _this.saveBtn = this;
                             }
                         },
+                        cls : 'x-btn-text-icon',
                         text : "Save",
-                        cls : '',
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,
