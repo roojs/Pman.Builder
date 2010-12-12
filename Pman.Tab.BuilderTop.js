@@ -105,6 +105,14 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     {
                         xtype: 'ComboBox',
                         xns: Roo.form,
+                        listeners : {
+                            select : function (combo, record, index)
+                            {
+                                _this.filesel.reset();
+                               _this.filesel.fireEvent('select', false);
+                            
+                            }
+                        },
                         allowBlank : true,
                         alwaysQuery : true,
                         displayField : 'app',
@@ -121,12 +129,6 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         typeAhead : true,
                         valueField : 'id',
                         width : 100,
-                        listeners : {
-                            select : function (combo, record, index)
-                            {
-                            
-                            }
-                        },
                         store : {
                             xtype: 'Store',
                             xns: Roo.data,
