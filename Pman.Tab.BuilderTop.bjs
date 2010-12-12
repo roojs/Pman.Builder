@@ -20,7 +20,14 @@
                         {
                             "text": "Manage Modules",
                             "xtype": "Button",
-                            "|xns": "Roo.Toolbar"
+                            "|xns": "Roo.Toolbar",
+                            "items": [
+                                {
+                                    "|xns": "Roo.menu",
+                                    "xtype": "Menu",
+                                    "*prop": "menu"
+                                }
+                            ]
                         }
                     ]
                 }
