@@ -105,6 +105,10 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "|xns": "Roo.Toolbar",
+                            "xtype": "Button"
                         }
                     ]
                 }
