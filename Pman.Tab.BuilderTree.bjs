@@ -28,8 +28,10 @@
                             "|xns": "Roo"
                         },
                         {
+                            "xtype": "ContentPanel",
                             "|xns": "Roo",
-                            "xtype": "ContentPanel"
+                            "region": "",
+                            "listeners": {}
                         }
                     ]
                 }
