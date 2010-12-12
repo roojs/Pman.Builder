@@ -352,7 +352,10 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                          _this.saveBtn.save(false,0);
+                                           _this.saveBtn.save(
+                                             function() {
+                                            
+                                          } );
                                         }
                                     },
                                     text : "Show JSON"
