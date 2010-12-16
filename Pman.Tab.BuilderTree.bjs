@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-3",
+    "id": "roo-file-36",
     "name": "Pman.Tab.BuilderTree",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTree",
@@ -67,11 +67,6 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "region": "south",
-                            "xtype": "ContentPanel",
-                            "|xns": "Roo"
                         }
                     ]
                 }
