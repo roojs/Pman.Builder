@@ -33,12 +33,6 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
         this.panel = parentLayout.addxtype({
             xtype: 'GridPanel',
             xns: Roo,
-            title : "ris_location",
-            fitToframe : true,
-            fitContainer : true,
-            tableName : 'ris_location',
-            background : true,
-            region : 'center',
             listeners : {
                 activate : function() {
                     _this.panel = this;
@@ -47,6 +41,12 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     }
                 }
             },
+            background : true,
+            fitContainer : true,
+            fitToframe : true,
+            region : 'center',
+            tableName : 'ris_location',
+            title : "ris_location",
             grid : {
                 xtype: 'Grid',
                 xns: Roo.grid,
