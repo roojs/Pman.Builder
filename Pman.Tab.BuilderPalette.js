@@ -41,7 +41,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     }
                 }
             },
-            background : true,
+            background : false,
             fitContainer : true,
             fitToframe : true,
             region : 'center',
