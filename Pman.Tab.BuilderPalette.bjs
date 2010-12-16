@@ -55,15 +55,6 @@
                             ]
                         },
                         {
-                            "*prop": "footer",
-                            "xtype": "PagingToolbar",
-                            "pageSize": 25,
-                            "displayInfo": true,
-                            "displayMsg": "Displaying ris_location{0} - {1} of {2}",
-                            "emptyMsg": "No ris_location found",
-                            "|xns": "Roo"
-                        },
-                        {
                             "xtype": "ColumnModel",
                             "header": "Name",
                             "width": 200,
