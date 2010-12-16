@@ -13,7 +13,7 @@
             "fitContainer": true,
             "fitToframe": true,
             "region": "east",
-            "tableName": "ris_location",
+            "tableName": "palette",
             "title": "ris_location",
             "xtype": "GridPanel",
             "|xns": "Roo",
