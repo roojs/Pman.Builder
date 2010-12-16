@@ -4,7 +4,12 @@
     "parent": "Pman.Tab.BuilderTree",
     "title": "Pman.Tab.BuilderProps",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderProps.bjs",
-    "items": [],
+    "items": [
+        {
+            "|xns": "Roo",
+            "xtype": "GridPanel"
+        }
+    ],
     "permname": "",
     "modOrder": "001"
 }
