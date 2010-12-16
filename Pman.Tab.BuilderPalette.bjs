@@ -9,7 +9,7 @@
             "listeners": {
                 "|activate": "function() {\n    _this.panel = this;\n    if (_this.grid) {\n       _this.grid.footer.ds.load({})\n    }\n}"
             },
-            "background": true,
+            "background": false,
             "fitContainer": true,
             "fitToframe": true,
             "region": "center",
