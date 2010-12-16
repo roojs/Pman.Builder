@@ -78,7 +78,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                         xtype: 'HttpProxy',
                         xns: Roo.data,
                         method : 'GET',
-                        url : baseURL + '/Roo/ris_location.php'
+                        url : baseURL + '/Builder/Palette.php'
                     },
                     reader : {
                         xtype: 'JsonReader',
