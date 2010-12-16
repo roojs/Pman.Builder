@@ -32,7 +32,11 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
 
         this.panel = parentLayout.addxtype({
             xtype: 'GridPanel',
-            xns: Roo
+            xns: Roo,
+            grid : {
+                xtype: 'PropertyGrid',
+                xns: Roo.grid
+            }
         });
         this.layout = this.panel.layout;
 
