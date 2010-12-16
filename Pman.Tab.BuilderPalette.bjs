@@ -38,9 +38,9 @@
                             "items": [
                                 {
                                     "*prop": "proxy",
-                                    "xtype": "HttpProxy",
                                     "method": "GET",
-                                    "|url": "baseURL + '/Roo/ris_location.php'",
+                                    "xtype": "HttpProxy",
+                                    "|url": "baseURL + '/Builder/Palette.php'",
                                     "|xns": "Roo.data"
                                 },
                                 {
