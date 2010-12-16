@@ -44,7 +44,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
             background : false,
             fitContainer : true,
             fitToframe : true,
-            region : 'center',
+            region : 'east',
             tableName : 'ris_location',
             title : "ris_location",
             grid : {
