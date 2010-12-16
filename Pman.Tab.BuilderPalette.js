@@ -83,20 +83,13 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     reader : {
                         xtype: 'JsonReader',
                         xns: Roo.data,
-                        totalProperty : 'total',
-                        root : 'data',
                         id : 'id',
+                        root : 'data',
+                        totalProperty : 'total',
                         fields : [
-                            {
-                                'name': 'id',
-                                'type': 'int'
-                            },
+                            
                             {
                                 'name': 'name',
-                                'type': 'string'
-                            },
-                            {
-                                'name': 'country',
                                 'type': 'string'
                             }
                         ]
