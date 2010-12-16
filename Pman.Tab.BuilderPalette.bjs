@@ -1,10 +1,10 @@
 {
     "id": "roo-file-43",
     "name": "Pman.Tab.BuilderPalette",
-    "parent": "",
-    "title": "",
+    "parent": "Pman.Tab.BuilderTab",
+    "title": "Pman.Tab.BuilderPalette",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderPalette.bjs",
-    "items": false,
+    "items": [],
     "permname": "",
     "modOrder": "001"
 }
