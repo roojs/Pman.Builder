@@ -12,7 +12,7 @@
             "background": false,
             "fitContainer": true,
             "fitToframe": true,
-            "region": "center",
+            "region": "east",
             "tableName": "ris_location",
             "title": "ris_location",
             "xtype": "GridPanel",
