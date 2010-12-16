@@ -20,7 +20,7 @@
             "items": [
                 {
                     "listeners": {
-                        "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({})\n    }\n}"
+                        "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.getDataSource().load({})\n    }\n}"
                     },
                     "*prop": "grid",
                     "autoExpandColumn": "name",
