@@ -6,10 +6,9 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderProps.bjs",
     "items": [
         {
+            "region": "south",
             "xtype": "GridPanel",
             "|xns": "Roo",
-            "region": "",
-            "listeners": {},
             "items": [
                 {
                     "|xns": "Roo.grid",
