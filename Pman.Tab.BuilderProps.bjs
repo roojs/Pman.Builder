@@ -1,10 +1,10 @@
 {
     "id": "roo-file-44",
     "name": "Pman.Tab.BuilderProps",
-    "parent": "",
-    "title": "",
+    "parent": "Pman.Tab.BuilderTree",
+    "title": "Pman.Tab.BuilderProps",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderProps.bjs",
-    "items": false,
+    "items": [],
     "permname": "",
     "modOrder": "001"
 }
