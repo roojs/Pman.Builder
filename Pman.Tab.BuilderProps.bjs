@@ -7,7 +7,14 @@
     "items": [
         {
             "|xns": "Roo",
-            "xtype": "GridPanel"
+            "xtype": "GridPanel",
+            "items": [
+                {
+                    "|xns": "Roo.grid",
+                    "xtype": "PropertyGrid",
+                    "*prop": "grid"
+                }
+            ]
         }
     ],
     "permname": "",
