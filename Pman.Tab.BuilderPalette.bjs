@@ -14,7 +14,7 @@
             "fitToframe": true,
             "region": "east",
             "tableName": "palette",
-            "title": "ris_location",
+            "title": "palette",
             "xtype": "GridPanel",
             "|xns": "Roo",
             "items": [
