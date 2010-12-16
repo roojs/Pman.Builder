@@ -56,7 +56,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                         _this.grid = this; 
                         //_this.dialog = Pman.Dialog.FILL_IN
                         if (_this.panel.active) {
-                           this.footer.ds.load({})
+                           this.ds.load({})
                         }
                     }
                 },
