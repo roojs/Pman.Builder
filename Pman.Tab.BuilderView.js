@@ -36,7 +36,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             listeners : {
                 activate : function (_self)
                 {
-                
+                    _this.panel = _self;
                 }
             }
         });
