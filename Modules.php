@@ -15,7 +15,16 @@ class Pman_Builder_Modules extends Pman
     function get()
     {
         // should just list the modules..
+        $this->init();
+        $enabled =  array('Core') ;
+        $enabled = !empty($this->appModules) ?  array_merge($enabled, explode(',',  $this->appModules)) :  $enabled;
         
+        sort($enabled);
+        $ret = array();
+        foreach($enabled as $r) {
+            $ret[] = array('name' => $r);
+        }
+        $this->jdata($ret);
         
     }
   
