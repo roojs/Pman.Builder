@@ -179,7 +179,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	if (c.region)     { txt.push('<i>(' + c.region + ')</i>'); }
                                     if (c.dataIndex) { txt.push('[' + c.dataIndex+ ']'); }
                                     if (sr) txt.push('</s>');
-                            		return (txt.length == 0 ? "Element" : txt.join(" "));
+                            	return (txt.length == 0 ? "Element" : txt.join(" "));
                              
                               
                             },
