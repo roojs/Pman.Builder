@@ -49,7 +49,7 @@
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|clearAll": "function() {\n    \n}\n",
+                                    "|clearAll": "function() {\n    var rt = this.root;\n     if (rt.childNodes.length) {\n        rt.removeChild(rt.childNodes[0]);\n    }\n   \n    this.tree.root.elConfig  = Roo.apply({ }, this.getDefaultCfg());  \n    //var btop = Pman.Tab.BuilderTop;\n    //if (btop.modsel && btop.modsel.lastData) {\n    //    this.tree.root.elConfig.app = btop.modsel.lastData.app;\n    //}\n    \n    this.setCurrentNode(this.tree.root,true);\n\n}\n",
                                     "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
                                     "items": [
