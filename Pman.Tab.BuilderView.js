@@ -41,9 +41,60 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             region : 'center',
             title : "View",
-            redraw : function() {
-                
-            },
+            redraw : function(isAuto)
+                {
+                    
+                    // top level is not relivant
+            
+            //          var btop =  Pman.Tab.BuilderTop2;
+              //      if (isAuto && btop.redrawBtn  && !btop.redrawBtn.auto) {
+                //        return; /// auto redraw is turned off..
+                  //  }
+                    
+                    this.clearAll(isAuto);
+                    
+                    var cfg =  this.toJS();
+                    if (!cfg.items[0]) {
+                        return;
+                    }
+                    
+                    
+                    this.munge(cfg.items[0]);
+                    
+                    // we draw either a dialog or a tab..
+                    
+                    if (cfg.items[0].xtype == 'LayoutDialog') {
+                        
+                        cfg.items[0].modal = false;
+                        var xy  = Pman.Tab.BuilderPanel.panel.el.getXY();
+                        cfg.items[0].x = xy[0];
+                        cfg.items[0].y = xy[1];
+                        cfg.items[0].constraintoviewport = false;
+                    
+                        this.dialogroot = Roo.get( document.body).createChild();
+                         
+                        this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
+                        this.dialog.el.on('click', this.panelClick, this);
+                        this.dialog.show();
+                        return;
+                        
+                    }
+                    
+                         // force center region..
+                    cfg.items[0].region = 'center';
+                    cfg.items[0].background = false;
+                    
+                    this.panelroot = this.layout.addxtype(cfg.items[0]);
+                    
+                     
+                    //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
+                    
+                    if (this.panelroot.el) {
+                            this.panelroot.el.scrollTo('top', this.scroll.top);
+                            this.panelroot.el.scrollTo('left', this.scroll.left);
+                        
+                    }
+                },
             clearAll : function(isAuto) {
             //        this.renderObj = { isBuilder : true };
             
