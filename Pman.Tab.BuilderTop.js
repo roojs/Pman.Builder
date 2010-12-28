@@ -212,19 +212,19 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 
                                 
                                 
-                                var bt = Pman.Tab.BuilderTree;
+                                var bt = Pman.Tab.BuilderTree.treepanel.tree;
                                 
                                 
                                 if (!rec) {
-                                    bt.tree.clearAll();
-                                    bt.tree.setCurrentNode(bt.tree.root,true);
+                                    bt.clearAll();
+                                    bt.setCurrentNode(bt.tree.root,true);
                                     var bp = Pman.Tab.BuilderPanel;
                                     bp.panel.setContents("select Module/ Part ");
                                     return;
                                 }
                                 
                                 
-                                bt.tree.loadBJS(_this.modsel.getValue(), record.data.name)
+                                bt.loadBJS(_this.modsel.getValue(), record.data.name)
                             
                             
                             },
