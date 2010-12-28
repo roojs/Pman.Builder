@@ -32,7 +32,7 @@ class Pman_Builder_Parts extends Pman
         }
         $ret = array();
         foreach(glob($this->rootDir . '/Pman/'. $mod.'/*.bjs') as $bjs) {
-            $ret[] = array('name' => preg_replace('/\.bjs$/', '', $bjs));
+            $ret[] = array('name' => preg_replace('/\.bjs$/', '', basename($bjs)));
         }
         
         
