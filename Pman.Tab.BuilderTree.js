@@ -44,7 +44,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                         listeners : {
                             activate : function (_self)
                             {
-                                this.tree = _self.tree;
+                                _this.tree = _self.tree;
                                 if (_this.hasMouseEvent) {
                                     return;
                                 }
