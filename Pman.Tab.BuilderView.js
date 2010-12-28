@@ -139,7 +139,10 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             this.panelroot.el.scrollTo('left', this.scroll.left);
                         
                     }
-                }
+                },
+             : function() {
+                
+            }
         });
         this.layout = this.panel.layout;
 
