@@ -163,11 +163,11 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 var newConfig = {};
                                 
                                 for (var i in config) {
-                            	    if (typeof config[i] == 'object') {
-                            		    newConfig[i] = this.cloneConfig(config[i]);
-                            	    } else if (typeof config[i] != 'function') { // should this happen?
-                            		    newConfig[i] = config[i];
-                            	    }
+                                    if (typeof config[i] == 'object') {
+                                         newConfig[i] = this.cloneConfig(config[i]);
+                                    } else if (typeof config[i] != 'function') { // should this happen?
+                                         newConfig[i] = config[i];
+                                    }
                                 }
                                 return newConfig;
                             },
