@@ -30,11 +30,20 @@ class Pman_Builder_Parts extends Pman
         if (empty($mod) || !in_array($mod, $enabled)) {
             $this->jerr("Module not available");
         }
+        
+        
         $ret = array();
         foreach(glob($this->rootDir . '/Pman/'. $mod.'/*.bjs') as $bjs) {
-            $ret[] = array('name' => preg_replace('/\.bjs$/', '', basename($bjs)));
+            $n = preg_replace('/\.bjs$/', '', basename($bjs));
+            if (!empty($_REQUEST['part']) && $n == $_REQUEST['part']) {
+                // we do not really need to parse & send, but it's simpler..
+                $this->jok(json_decode(file_get_contents($bjs)))
+            }
+            $ret[] = array('name' =>$n );
         }
-        
+        if (!empty($_REQUEST['part'])) {
+            $this->jerr("invalid part");
+        }
         
         $this->jdata($ret);
         
