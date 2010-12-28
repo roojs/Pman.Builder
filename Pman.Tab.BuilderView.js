@@ -55,7 +55,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         this.dialogroot = false;
                     }
             },
-            munge : function() {
+            munge : function(cfg) {
                 var xitems = false;
                 if (cfg.items) {
                     xitems = cfg.items;
