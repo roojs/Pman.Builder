@@ -195,7 +195,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 //    this.tree.root.elConfig.app = btop.modsel.lastData.app;
                                 //}
                                 
-                                this.setCurrentNode(this.tree.root,true);
+                                this.setCurrentNode(this.root,true);
                             
                             },
                             defaultElConfig : function() {
