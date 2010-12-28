@@ -158,6 +158,24 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
+                             : function() {
+                                
+                            },
+                            clearAll : function() {
+                                var rt = this.root;
+                                 if (rt.childNodes.length) {
+                                    rt.removeChild(rt.childNodes[0]);
+                                }
+                               
+                                this.root.elConfig  = Roo.apply({ }, this.defaultElConfig());  
+                                //var btop = Pman.Tab.BuilderTop;
+                                //if (btop.modsel && btop.modsel.lastData) {
+                                //    this.tree.root.elConfig.app = btop.modsel.lastData.app;
+                                //}
+                                
+                                this.setCurrentNode(this.root,true);
+                            
+                            },
                             configToText : function(c) {
                                  
                             	var txt = [];
@@ -182,21 +200,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	return (txt.length == 0 ? "Element" : txt.join(" "));
                              
                               
-                            },
-                            clearAll : function() {
-                                var rt = this.root;
-                                 if (rt.childNodes.length) {
-                                    rt.removeChild(rt.childNodes[0]);
-                                }
-                               
-                                this.root.elConfig  = Roo.apply({ }, this.defaultElConfig());  
-                                //var btop = Pman.Tab.BuilderTop;
-                                //if (btop.modsel && btop.modsel.lastData) {
-                                //    this.tree.root.elConfig.app = btop.modsel.lastData.app;
-                                //}
-                                
-                                this.setCurrentNode(this.root,true);
-                            
                             },
                             defaultElConfig : function() {
                                 return {
