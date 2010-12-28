@@ -158,7 +158,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                             : function(config) {
+                            cloneConfig : function(config) {
                                 if (!config) { return null; }
                                 var newConfig = {};
                                 
