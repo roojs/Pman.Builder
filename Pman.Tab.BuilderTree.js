@@ -158,7 +158,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                             : function() {
+                            clearAll : function() {
                                 
                             },
                             renderer : function(n) { return n.text; },
