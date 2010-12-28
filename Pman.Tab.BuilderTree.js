@@ -284,7 +284,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 };
                             },
                             loadBJS : function(module, part) {
-                                
+                                var _t = this;
                                 new Pman.Request({
                                     url : baseURL + '/Builder/Parts.php',
                                     method : 'GET',
@@ -295,10 +295,11 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     success : function(res)         
                                     {
                                         // data is in.. 
-                                        this.loadTree(res.data);
+                                        _t.loadTree(res.data);
                                         
                                      
-                                    }
+                                    },
+                            
                                  })  
                                     
                                 
