@@ -158,6 +158,19 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
+                             : function() {
+                                return {
+                                   xtype : '*Module',
+                                    
+                                    module : 'TestApp',
+                                    part:   'Partname',
+                                    modkey : 0,
+                                    region : 'center',
+                                    parent : 'Pman',
+                                    name : 'Module Name',
+                                    items: [] 
+                                }
+                            },
                             clearAll : function() {
                                 var rt = this.root;
                                  if (rt.childNodes.length) {
@@ -174,9 +187,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             
                             },
                             renderer : function(n) { return n.text; },
-                             : function() {
-                                
-                            },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
