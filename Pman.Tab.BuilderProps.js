@@ -43,7 +43,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         _this.grid = grid;
                     }
                 },
-                setSourceFromNode : function() {
+                setSourceFromNode : function(config) {
                    
                         
                     var cfg = {};
