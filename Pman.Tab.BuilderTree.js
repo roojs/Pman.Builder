@@ -323,6 +323,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	}
                             
                             },
+                             : function() {
+                                
+                            },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
