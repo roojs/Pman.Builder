@@ -165,7 +165,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             
                                     var p = Pman.Tab.BuilderProps.grid;
                                     if (p) { //may not be ready yet..
-                                        Pman.Tab.BuilderProps.grid.setCurrrentNode(this.currentNode);
+                                        p.setCurrrentNode(this.currentNode);
                                     }
                                     
                                   
