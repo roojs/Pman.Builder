@@ -134,21 +134,21 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 contextmenu : function (node, e)
                                 {
                                     e.stopEvent();
-                                                        
-                                                        this.getSelectionModel().select(node);
-                                                         _this.setCurrentNode(node);
-                                                        var xt = node.elConfig.xtype;
-                                                        var altx= false;
-                                                        if (typeof(node.elConfig['*prop']) != 'undefined') {
-                                                            altx = node.parentNode.elConfig.xtype +'.' + node.elConfig['*prop'];
-                                                        }
-                                                        var mn = Pman.Tab.BuilderPalete.getMenu(xt,altx);
-                                                        
-                                                        
-                                                        if (mn) {
-                                                            mn.show(e.getTarget());
-                                                        }
-                                                        
+                                        
+                                        this.getSelectionModel().select(node);
+                                         _this.setCurrentNode(node);
+                                        var xt = node.elConfig.xtype;
+                                        var altx= false;
+                                        if (typeof(node.elConfig['*prop']) != 'undefined') {
+                                            altx = node.parentNode.elConfig.xtype +'.' + node.elConfig['*prop'];
+                                        }
+                                        var mn = Pman.Tab.BuilderPalete.getMenu(xt,altx);
+                                        
+                                        
+                                        if (mn) {
+                                            mn.show(e.getTarget());
+                                        }
+                                        
                                 
                                 
                                 }
