@@ -162,6 +162,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 
                                 new Pman.Request({
                                     url : baseURL + '/Builder/Parts.php',
+                                    method : 'GET',
                                     params : {
                                         module : module,
                                         part : part
