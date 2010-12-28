@@ -158,8 +158,27 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            setCurrentNode : function() {
-                                
+                            setCurrentNode : function(node) {
+                                    this.currentNode = node || this.root;
+                                    
+                                    //Pman.Tab.BuilderView.highlightElement(this.currentNode);
+                            
+                                    var p = Pman.Tab.BuilderProps.grid;
+                                    if (p) { //may not be ready yet..
+                                        Pman.Tab.BuilderProps.grid.setCurrrentNode(this.currentNode);
+                                    }
+                                    
+                                  
+                                    this.currentNode.setText(this.configToText(this.currentNode.elConfig));
+                                    
+                            		if (select) { //&& node !== this.tree.root) {
+                            			if (this.currentNode !== this.tree.root)  {
+                                            this.currentNode.ensureVisible();
+                                        }
+                                        this.currentNode.expand(false,false);
+                            			this.currentNode.select();
+                            		}
+                            
                             },
                             clearAll : function() {
                                 var rt = this.root;
