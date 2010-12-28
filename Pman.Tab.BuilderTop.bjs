@@ -182,7 +182,7 @@
                                             "root": "data",
                                             "totalProperty": "total",
                                             "xtype": "JsonReader",
-                                            "|fields": "[\n    {\n        'name': 'id',\n        'type': 'int'\n    },\n    {\n        'name': 'name',\n        'type': 'string'\n    },\n    {\n        'name': 'btype',\n        'type': 'string'\n    },\n    {\n        'name': 'json',\n        'type': 'string'\n    },\n    {\n        'name': 'app',\n        'type': 'string'\n    },\n    {\n        'name': 'module',\n        'type': 'string'\n    }\n]",
+                                            "|fields": "[\n   \n    {\n        'name': 'name',\n        'type': 'string'\n    } \n]",
                                             "|xns": "Roo.data"
                                         }
                                     ]
