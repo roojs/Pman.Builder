@@ -159,7 +159,19 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             enableDD : true,
                             rootVisible : true,
                             clearAll : function() {
+                                var rt = this.root;
+                                 if (rt.childNodes.length) {
+                                    rt.removeChild(rt.childNodes[0]);
+                                }
+                               
+                                this.tree.root.elConfig  = Roo.apply({ }, this.getDefaultCfg());  
+                                //var btop = Pman.Tab.BuilderTop;
+                                //if (btop.modsel && btop.modsel.lastData) {
+                                //    this.tree.root.elConfig.app = btop.modsel.lastData.app;
+                                //}
                                 
+                                this.setCurrentNode(this.tree.root,true);
+                            
                             },
                             renderer : function(n) { return n.text; },
                             sm : {
