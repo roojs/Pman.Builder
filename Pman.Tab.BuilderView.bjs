@@ -12,7 +12,7 @@
             "region": "center",
             "title": "View",
             "xtype": "ContentPanel",
-            "|": "function(isAuto) {\n//        this.renderObj = { isBuilder : true };\n\n        \n        if (this.panelroot) {\n            this.scroll = this.panelroot.el.getScroll();\n            this.layout.remove('center', this.panelroot);\n            this.panelroot = false;\n        }\n        if (this.dialogroot) {\n            this.dialogroot.remove();\n            this.dialogroot = false;\n        }\n}\n",
+            "|clearAll": "function(isAuto) {\n//        this.renderObj = { isBuilder : true };\n\n        \n        if (this.panelroot) {\n            this.scroll = this.panelroot.el.getScroll();\n            this.layout.remove('center', this.panelroot);\n            this.panelroot = false;\n        }\n        if (this.dialogroot) {\n            this.dialogroot.remove();\n            this.dialogroot = false;\n        }\n}\n",
             "|xns": "Roo"
         }
     ],
