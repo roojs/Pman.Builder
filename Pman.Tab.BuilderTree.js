@@ -172,7 +172,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         // data is in.. 
                                         this.loadTree(res.data);
                                         
-                                        Roo.log(data);
                                      
                                     }
                                  })  
