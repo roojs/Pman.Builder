@@ -169,7 +169,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     parent : 'Pman',
                                     name : 'Module Name',
                                     items: [] 
-                                }
+                                };
                             },
                             clearAll : function() {
                                 var rt = this.root;
