@@ -255,7 +255,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         Roo.MessageBox.alert("Error", "Select Module");
                                         return false;
                                     }
-                                    o.params.module = _this.modsel.modsel.getValue();
+                                    o.params.module = _this.modsel.getValue();
                                 
                                 }
                             },
