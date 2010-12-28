@@ -15,19 +15,19 @@ class Pman_Builder_Parts extends Pman
         
     }
     
-    function get($mod)
+    function get()
     {
         // should just list the enabled modules.. - in theory we can not create modules???
         
         // or should this be totally database related...
-        
+        $mod = empty($_REQUEST['module']) ? '' : $_REQUEST['module'];
         
         
         $this->init();
         $enabled =  array('Core') ;
         $enabled = !empty($this->appModules) ?  array_merge($enabled, explode(',',  $this->appModules)) :  $enabled;
         
-        if (!in_array($mod, $enabled)) {
+        if (empty($mod) || !in_array($mod, $enabled)) {
             $this->jerr("Module not available");
         }
         $ret = array();
