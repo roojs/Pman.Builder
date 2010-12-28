@@ -158,25 +158,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            loadBJS : function(module, part) {
-                                
-                                new Pman.Request({
-                                    url : baseURL + '/Builder/Parts.php',
-                                    method : 'GET',
-                                    params : {
-                                        module : module,
-                                        part : part
-                                    },
-                                    success : function(res)         
-                                    {
-                                        // data is in.. 
-                                        this.loadTree(res.data);
-                                        
-                                     
-                                    }
-                                 })  
-                                    
-                                
+                             : function() {
                                 
                             },
                             clearAll : function() {
@@ -232,6 +214,27 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     items: [] 
                                 };
                             },
+                            loadBJS : function(module, part) {
+                                
+                                new Pman.Request({
+                                    url : baseURL + '/Builder/Parts.php',
+                                    method : 'GET',
+                                    params : {
+                                        module : module,
+                                        part : part
+                                    },
+                                    success : function(res)         
+                                    {
+                                        // data is in.. 
+                                        this.loadTree(res.data);
+                                        
+                                     
+                                    }
+                                 })  
+                                    
+                                
+                                
+                            },
                             renderer : function(n) { return n.text; },
                             setCurrentNode : function(node,select) {
                                     this.currentNode = node || this.root;
@@ -254,9 +257,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         this.currentNode.select();
                             	}
                             
-                            },
-                             : function() {
-                                
                             },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
