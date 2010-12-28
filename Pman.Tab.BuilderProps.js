@@ -58,6 +58,9 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         
                     }
                     
+                },
+                 : function() {
+                    
                 }
             }
         });
