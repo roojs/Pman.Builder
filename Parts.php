@@ -37,7 +37,7 @@ class Pman_Builder_Parts extends Pman
             $n = preg_replace('/\.bjs$/', '', basename($bjs));
             if (!empty($_REQUEST['part']) && $n == $_REQUEST['part']) {
                 // we do not really need to parse & send, but it's simpler..
-                $this->jok(json_decode(file_get_contents($bjs)))
+                $this->jok(json_decode(file_get_contents($bjs)));
             }
             $ret[] = array('name' =>$n );
         }
