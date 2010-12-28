@@ -10,7 +10,8 @@
                 "activate": "function (_self)\n{\n    _this.panel = _self;\n}"
             },
             "xtype": "ContentPanel",
-            "|xns": "Roo"
+            "|xns": "Roo",
+            "title": ""
         }
     ],
     "permname": "",
