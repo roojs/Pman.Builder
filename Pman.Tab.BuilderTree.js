@@ -158,18 +158,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            defaultElConfig : function() {
-                                return {
-                                   xtype : '*Module',
-                                    
-                                    module : 'TestApp',
-                                    part:   'Partname',
-                                    modkey : 0,
-                                    region : 'center',
-                                    parent : 'Pman',
-                                    name : 'Module Name',
-                                    items: [] 
-                                };
+                             : function() {
+                                
                             },
                             clearAll : function() {
                                 var rt = this.root;
@@ -186,10 +176,20 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 this.setCurrentNode(this.tree.root,true);
                             
                             },
-                            renderer : function(n) { return n.text; },
-                             : function() {
-                                
+                            defaultElConfig : function() {
+                                return {
+                                   xtype : '*Module',
+                                    
+                                    module : 'TestApp',
+                                    part:   'Partname',
+                                    modkey : 0,
+                                    region : 'center',
+                                    parent : 'Pman',
+                                    name : 'Module Name',
+                                    items: [] 
+                                };
                             },
+                            renderer : function(n) { return n.text; },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
