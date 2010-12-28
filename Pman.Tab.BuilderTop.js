@@ -208,6 +208,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             select : function (combo, record, index)
                             {
                                //cb.lastData = rec.data;
+                               return;
                                 var bt = Pman.Tab.BuilderTree;
                                 if (!rec) {
                                     bt.clearAll();
