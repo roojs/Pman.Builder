@@ -208,16 +208,21 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             select : function (combo, record, index)
                             {
                                //cb.lastData = rec.data;
-                               return;
+                                
+                                
+                                
+                                
                                 var bt = Pman.Tab.BuilderTree;
+                                
+                                
                                 if (!rec) {
-                                    bt.clearAll();
-                                    bt.setCurrentNode(bt.tree.root,true);
+                                    bt.tree.clearAll();
+                                    bt.tree.setCurrentNode(bt.tree.root,true);
                                     var bp = Pman.Tab.BuilderPanel;
-                                    bp.redraw.defer(100,bp,[true]);
+                                    bp.panel.setContents("select Module/ Part ");
                                     return;
                                 }
-                                
+                            
                                 bt.loadJSON.defer(10, bt, [rec.data.json]);
                             
                             
