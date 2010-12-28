@@ -41,13 +41,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             region : 'center',
             title : "View",
-             : function() {
+             : function(isAuto) {
             //        this.renderObj = { isBuilder : true };
             
-                    if (isAuto && btop.redrawBtn  && !btop.redrawBtn.auto) {
-                        return; /// auto redraw is turned off..
-                    }
-                   
                     
                     if (this.panelroot) {
                         this.scroll = this.panelroot.el.getScroll();
