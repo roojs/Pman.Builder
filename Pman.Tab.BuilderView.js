@@ -41,6 +41,20 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             region : 'center',
             title : "View",
+            clearAll : function(isAuto) {
+            //        this.renderObj = { isBuilder : true };
+            
+                    
+                    if (this.panelroot) {
+                        this.scroll = this.panelroot.el.getScroll();
+                        this.layout.remove('center', this.panelroot);
+                        this.panelroot = false;
+                    }
+                    if (this.dialogroot) {
+                        this.dialogroot.remove();
+                        this.dialogroot = false;
+                    }
+            },
             munge : function() {
                 var xitems = false;
                 if (cfg.items) {
@@ -131,20 +145,6 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                 }
                     
                     
-            },
-            clearAll : function(isAuto) {
-            //        this.renderObj = { isBuilder : true };
-            
-                    
-                    if (this.panelroot) {
-                        this.scroll = this.panelroot.el.getScroll();
-                        this.layout.remove('center', this.panelroot);
-                        this.panelroot = false;
-                    }
-                    if (this.dialogroot) {
-                        this.dialogroot.remove();
-                        this.dialogroot = false;
-                    }
             },
             redraw : function(isAuto)
                 {
