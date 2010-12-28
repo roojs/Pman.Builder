@@ -12,8 +12,8 @@
             "region": "center",
             "title": "View",
             "xtype": "ContentPanel",
-            "|xns": "Roo",
-            "|": "function() {\n    \n}\n"
+            "|": "function() {\n//        this.renderObj = { isBuilder : true };\n\n        if (isAuto && btop.redrawBtn  && !btop.redrawBtn.auto) {\n            return; /// auto redraw is turned off..\n        }\n       \n        \n        if (this.panelroot) {\n            this.scroll = this.panelroot.el.getScroll();\n            this.layout.remove('center', this.panelroot);\n            this.panelroot = false;\n        }\n        if (this.dialogroot) {\n            this.dialogroot.remove();\n            this.dialogroot = false;\n        }\n}\n",
+            "|xns": "Roo"
         }
     ],
     "permname": "",
