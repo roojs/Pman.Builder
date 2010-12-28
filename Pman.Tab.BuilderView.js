@@ -42,7 +42,95 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             region : 'center',
             title : "View",
             munge : function() {
+                var xitems = false;
+                if (cfg.items) {
+                    xitems = cfg.items;
+                    delete cfg.items;
+                }
                 
+                if (typeof(cfg.background) != 'undefined') {
+                    cfg.background = false;
+                }
+                
+                
+                for(var p in cfg){
+                    // key is not string?!?!?!!?
+                    if (typeof(p) != 'string') {
+                        continue;
+                    }
+                    
+                    if (typeof(cfg[p]) == 'object') { // listeners!!!
+                        this.munge(cfg[p]);
+                        continue;
+                    }
+                    // SPECIAL - PIPE
+                    if (p.charAt(0) == '|') {
+                        
+                        if (!cfg[p].length) {
+                            delete cfg[p];
+                            continue;
+                        }
+                        try {
+                            var _tmp = false;
+                            var _this = this.renderObj; /// fake '_this' object..
+                            // stupid IE can not return objects evaluated..
+                            /**
+                             eval:var:_this  
+                             eval:var:_tmp 
+                            **/
+                            eval('_tmp =(' + cfg[p] + ')');
+                            cfg[p.substr(1)] = _tmp;
+                            //if (typeof(_tmp) == 'undefined') {
+                            //    alert(cfg[p]);
+                           // }
+                           
+                        } catch(e) {  console.log('Error evaluating: '  + cfg[p]); };
+                        delete cfg[p];
+                            
+                        
+                        continue;
+                    }
+                    // skip '*'
+                    if ((p.charAt(0) == '*') || (p.charAt(0) == '+')) {
+                        delete cfg[p];
+                        continue;
+                    }
+                    // normal..
+                      
+                }
+                // now for all the children.. (items)
+                if (xitems === false) {
+                    return;
+                }
+                cfg.items = [];
+                for (var i = 0; i < xitems.length; i++) {
+                    // if +builderhide set !!!! drop it!!
+                    
+                    
+                    var xi = xitems[i];
+                    if (typeof(xi['*prop']) != 'undefined') {
+                        var pr = xi['*prop'];
+                        this.munge(xi);
+                        // if prop is an array - then it's items are really the value..
+                        
+                        if (xi.xtype && xi.xtype  == 'Array') {
+                            cfg[pr] = xi.items;
+                        } else {
+                            cfg[pr] = xi;
+                        }
+                        
+                        
+                        continue;
+                    }
+                    this.munge(xi);
+                    cfg.items.push(xi);
+                }
+                
+                if (cfg.items.length == 0) {
+                    delete cfg.items;
+                }
+                    
+                    
             },
             clearAll : function(isAuto) {
             //        this.renderObj = { isBuilder : true };
