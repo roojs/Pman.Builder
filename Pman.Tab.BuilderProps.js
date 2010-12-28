@@ -40,7 +40,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                 listeners : {
                     render : function (grid)
                     {
-                    
+                        _this.grid = grid;
                     }
                 }
             }
