@@ -54,6 +54,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         this.dialogroot.remove();
                         this.dialogroot = false;
                     }
+            },
+             : function() {
+                
             }
         });
         this.layout = this.panel.layout;
