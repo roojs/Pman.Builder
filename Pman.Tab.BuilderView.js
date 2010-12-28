@@ -40,7 +40,10 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                 }
             },
             region : 'center',
-            title : "View"
+            title : "View",
+             : function() {
+                
+            }
         });
         this.layout = this.panel.layout;
 
