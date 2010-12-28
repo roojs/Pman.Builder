@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-44",
+    "id": "roo-file-164",
     "name": "Pman.Tab.BuilderProps",
     "parent": "Pman.Tab.BuilderTree",
     "title": "Pman.Tab.BuilderProps",
@@ -11,9 +11,12 @@
             "|xns": "Roo",
             "items": [
                 {
-                    "|xns": "Roo.grid",
+                    "*prop": "grid",
                     "xtype": "PropertyGrid",
-                    "*prop": "grid"
+                    "|xns": "Roo.grid",
+                    "listeners": {
+                        "render": "function (grid)\n{\n\n}"
+                    }
                 }
             ]
         }
