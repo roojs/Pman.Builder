@@ -218,8 +218,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 if (!rec) {
                                     bt.clearAll();
                                     bt.setCurrentNode(bt.root,true);
-                                    var bp = Pman.Tab.BuilderPanel;
-                                    bp.panel.setContents("select Module/ Part ");
+                                    var bv = Pman.Tab.BuilderView;
+                                    bv.panel.setContents("select Module/ Part ");
                                     return;
                                 }
                                 
