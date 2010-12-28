@@ -56,6 +56,7 @@
                                     "|renderer": "function(n) { return n.text; }",
                                     "|setCurrentNode": "function(node,select) {\n        this.currentNode = node || this.root;\n        \n        //Pman.Tab.BuilderView.highlightElement(this.currentNode);\n\n        var p = Pman.Tab.BuilderProps.grid;\n        if (p) { //may not be ready yet..\n            p.setCurrrentNode(this.currentNode);\n        }\n        \n      \n        this.currentNode.setText(this.configToText(this.currentNode.elConfig));\n        \n        if (select) { //&& node !== this.tree.root) {\n            if (this.currentNode !== this.tree.root)  {\n                     this.currentNode.ensureVisible();\n              }   \n             this.currentNode.expand(false,false);\n            this.currentNode.select();\n\t}\n\n}\n",
                                     "|xns": "Roo.tree",
+                                    "|": "function() {\n    \n}\n",
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
