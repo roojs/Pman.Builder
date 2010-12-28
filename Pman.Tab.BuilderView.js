@@ -66,7 +66,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     if (cfg.items[0].xtype == 'LayoutDialog') {
                         
                         cfg.items[0].modal = false;
-                        var xy  = Pman.Tab.BuilderPanel.panel.el.getXY();
+                        var xy  = this.panel.el.getXY();
                         cfg.items[0].x = xy[0];
                         cfg.items[0].y = xy[1];
                         cfg.items[0].constraintoviewport = false;
