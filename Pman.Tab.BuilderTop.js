@@ -224,7 +224,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 }
                                 
                                 
-                                bt.loadBJS(_this.modsel.getValue(), record.data.name)
+                                bt.loadBJS(_this.modsel.getValue(), rec.data.name)
                             
                             
                             },
