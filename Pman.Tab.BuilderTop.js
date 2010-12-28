@@ -247,7 +247,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             xtype: 'Store',
                             xns: Roo.data,
                             listeners : {
-                                beforeload : function (_self, options)
+                                beforeload : function (_self, o)
                                 {
                                      o.params = o.params || {}; 
                                    // o.params.btype = 'FORM';
