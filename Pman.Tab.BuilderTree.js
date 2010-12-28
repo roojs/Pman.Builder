@@ -329,7 +329,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     this.currentNode.setText(this.configToText(this.currentNode.elConfig));
                                     
                                     if (select) { //&& node !== this.tree.root) {
-                                        if (this.currentNode !== this.tree.root)  {
+                                        if (this.currentNode !== this.root)  {
                                                  this.currentNode.ensureVisible();
                                           }   
                                          this.currentNode.expand(false,false);
