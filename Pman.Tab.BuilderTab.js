@@ -69,6 +69,7 @@ Pman.Tab.BuilderTab = new Roo.util.Observable({
                  
                 }
             },
+            fitToFrame : false,
             region : 'center',
             title : "Designer",
             layout : {
