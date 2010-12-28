@@ -17,7 +17,8 @@
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
                     "|setCurrrentNode": "function(node) {\n   \n    \n    this.view.el.unmask();\n    \n    if (!node || !node.elConfig) {\n        this.currentNode = false;\n        this.setSource({});\n        this.view.el.mask('select a node');\n    } else {\n        this.currentNode = node;\n        this.setSource(this.currentNode.elConfig);\n        \n    }\n    \n}\n",
-                    "|xns": "Roo.grid"
+                    "|xns": "Roo.grid",
+                    "|": "function() {\n    \n}\n"
                 }
             ]
         }
