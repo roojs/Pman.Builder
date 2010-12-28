@@ -212,7 +212,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 
                                 
                                 
-                                var bt = Pman.Tab.BuilderTree.treepanel.tree;
+                                var bt = Pman.Tab.BuilderTree.tree;
                                 
                                 
                                 if (!rec) {
