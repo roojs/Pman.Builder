@@ -29,7 +29,7 @@
                         },
                         {
                             "listeners": {
-                                "activate": "function (_self)\n{\n    if (_this.hasMouseEvent) {\n        return;\n    }\n    _this.hasMouseEvent = true;\n     this.el.on('mouseover', function() { _this.isMouseOver= true; });\n    this.el.on('mouseout', function() { _this.isMouseOver = false; });\n       \n\n}"
+                                "activate": "function (_self)\n{\n    this.treepanel = _self;\n    if (_this.hasMouseEvent) {\n        return;\n    }\n    _this.hasMouseEvent = true;\n     this.el.on('mouseover', function() { _this.isMouseOver= true; });\n    this.el.on('mouseout', function() { _this.isMouseOver = false; });\n       \n\n}"
                             },
                             "region": "center",
                             "xtype": "TreePanel",
