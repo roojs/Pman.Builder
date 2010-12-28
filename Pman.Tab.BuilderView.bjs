@@ -12,7 +12,8 @@
             "region": "center",
             "title": "View",
             "xtype": "ContentPanel",
-            "|xns": "Roo"
+            "|xns": "Roo",
+            "|": "function() {\n    \n}\n"
         }
     ],
     "permname": "",
