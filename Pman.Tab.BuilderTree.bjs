@@ -49,7 +49,7 @@
                                     "enableDD": true,
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
-                                    "|": "function() {\n    \n}\n",
+                                    "|clearAll": "function() {\n    \n}\n",
                                     "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
                                     "items": [
