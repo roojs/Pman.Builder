@@ -39,7 +39,6 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     _this.panel = _self;
                 }
             },
-             : false,
             region : 'center',
             title : "View",
             clearAll : function(isAuto) {
