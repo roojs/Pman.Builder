@@ -159,7 +159,11 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             enableDD : true,
                             rootVisible : true,
                             loadTree : function(o) {
-                                
+                                this.clearAll();
+                                this.root.elConfig = o;
+                                this.root.setText(this.configToText(this.root.elConfig));
+                                this.appendNode(this.root, o);
+                            
                             },
                             clearAll : function() {
                                 var rt = this.root;
