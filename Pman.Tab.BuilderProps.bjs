@@ -16,7 +16,8 @@
                     },
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
-                    "|xns": "Roo.grid"
+                    "|xns": "Roo.grid",
+                    "|": "function() {\n    \n}\n"
                 }
             ]
         }
