@@ -90,11 +90,11 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     
                     if (!node || !node.elConfig) {
                         this.currentNode = false;
-                        this.setSource({});
+                        this.setSourceFromNode({});
                         this.view.el.mask('select a node');
                     } else {
                         this.currentNode = node;
-                        this.setSource(this.currentNode.elConfig);
+                        this.setSourceFromNode(this.currentNode.elConfig);
                         
                     }
                     
