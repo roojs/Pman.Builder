@@ -205,7 +205,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         xtype: 'ComboBox',
                         xns: Roo.form,
                         listeners : {
-                            select : function (combo, record, index)
+                            select : function (combo, rec, index)
                             {
                                //cb.lastData = rec.data;
                                 
