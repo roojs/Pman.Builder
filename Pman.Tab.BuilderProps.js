@@ -43,6 +43,9 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         _this.grid = grid;
                     }
                 },
+                 : function() {
+                    
+                },
                 setCurrrentNode : function(node) {
                    
                     
@@ -57,9 +60,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         this.setSource(this.currentNode.elConfig);
                         
                     }
-                    
-                },
-                 : function() {
                     
                 }
             }
