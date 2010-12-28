@@ -138,7 +138,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             xtype: 'Store',
                             xns: Roo.data,
                             remoteSort : true,
-                            sortInfo : { field : 'app' , direction : 'ASC' },
+                            sortInfo : { field : 'name' , direction : 'ASC' },
                             proxy : {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
