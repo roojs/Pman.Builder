@@ -311,7 +311,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 this.root.setText(this.configToText(this.root.elConfig));
                                 this.appendNode(this.root, o.items[0]);
                                 this.root.expand(true);
-                                Pman.Tab.BuilderView.panel.redraw()
+                                Pman.Tab.BuilderView.panel.redraw();
                                 this.setCurrentNode(this.root,true);
                             },
                             renderer : function(n) { return n.text; },
