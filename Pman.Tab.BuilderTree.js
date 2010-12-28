@@ -158,19 +158,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            cloneConfig : function(config) {
-                                if (!config) { return null; }
-                                var newConfig = {};
-                                
-                                for (var i in config) {
-                                    if (typeof config[i] == 'object') {
-                                         newConfig[i] = this.cloneConfig(config[i]);
-                                    } else if (typeof config[i] != 'function') { // should this happen?
-                                         newConfig[i] = config[i];
-                                    }
-                                }
-                                return newConfig;
-                            },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -244,6 +231,19 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 
                                 this.setCurrentNode(this.root,true);
                             
+                            },
+                            cloneConfig : function(config) {
+                                if (!config) { return null; }
+                                var newConfig = {};
+                                
+                                for (var i in config) {
+                                    if (typeof config[i] == 'object') {
+                                         newConfig[i] = this.cloneConfig(config[i]);
+                                    } else if (typeof config[i] != 'function') { // should this happen?
+                                         newConfig[i] = config[i];
+                                    }
+                                }
+                                return newConfig;
                             },
                             configToText : function(c) {
                                  
