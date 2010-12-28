@@ -41,36 +41,8 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             region : 'center',
             title : "View",
-            toJS : function(n) {
-                var bt = Pman.Tab.BuilderTree;
-                if (!n) {
-                    return this.toJS(bt.tree.root);
-                }
-            
-                var _this = this;
-                var ret = bt.cloneConfig(n.elConfig);
+             : function() {
                 
-                // flag to prevent rendering..
-                if ((typeof(ret['+buildershow']) != 'undefined') && !ret['+buildershow']) {
-                    return false;
-                }
-            
-                ret.id = typeof(ret.id) == 'undefined' ? 'builder-' + n.id : ret.id;
-            
-                if (n.childNodes.length) {
-                    ret.items = [];
-                    n.eachChild(function(cn) {
-                        var add = _this.toJS(cn);
-                        if (add === false) {
-                            return;
-                        }
-                        
-                        
-                        ret.items.push(add);
-                    });
-                        
-                }
-                return ret;
             },
             clearAll : function(isAuto) {
             //        this.renderObj = { isBuilder : true };
@@ -140,8 +112,36 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         
                     }
                 },
-             : function() {
+            toJS : function(n) {
+                var bt = Pman.Tab.BuilderTree;
+                if (!n) {
+                    return this.toJS(bt.tree.root);
+                }
+            
+                var _this = this;
+                var ret = bt.cloneConfig(n.elConfig);
                 
+                // flag to prevent rendering..
+                if ((typeof(ret['+buildershow']) != 'undefined') && !ret['+buildershow']) {
+                    return false;
+                }
+            
+                ret.id = typeof(ret.id) == 'undefined' ? 'builder-' + n.id : ret.id;
+            
+                if (n.childNodes.length) {
+                    ret.items = [];
+                    n.eachChild(function(cn) {
+                        var add = _this.toJS(cn);
+                        if (add === false) {
+                            return;
+                        }
+                        
+                        
+                        ret.items.push(add);
+                    });
+                        
+                }
+                return ret;
             }
         });
         this.layout = this.panel.layout;
