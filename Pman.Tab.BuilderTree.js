@@ -44,6 +44,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                         listeners : {
                             activate : function (_self)
                             {
+                                Roo.log("builder.treepanel activate");
                                 _this.tree = _self.tree;
                                 if (_this.hasMouseEvent) {
                                     return;
