@@ -54,6 +54,7 @@
                                     "|defaultElConfig": "function() {\n    return {\n       xtype : '*Module',\n        \n        module : 'TestApp',\n        part:   'Partname',\n        modkey : 0,\n        region : 'center',\n        parent : 'Pman',\n        name : 'Module Name',\n        items: [] \n    };\n}\n",
                                     "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
+                                    "|": "function() {\n    \n}\n",
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
