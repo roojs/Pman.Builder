@@ -51,6 +51,7 @@
                                     "xtype": "TreePanel",
                                     "|renderer": "function(n) { return n.text; }",
                                     "|xns": "Roo.tree",
+                                    "|": "function() {\n    \n}\n",
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
