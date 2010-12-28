@@ -11,12 +11,12 @@
             "|xns": "Roo",
             "items": [
                 {
+                    "listeners": {
+                        "render": "function (grid)\n{\n    _this.grid = grid;\n}"
+                    },
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
-                    "|xns": "Roo.grid",
-                    "listeners": {
-                        "render": "function (grid)\n{\n\n}"
-                    }
+                    "|xns": "Roo.grid"
                 }
             ]
         }
