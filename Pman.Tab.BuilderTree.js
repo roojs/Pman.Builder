@@ -44,11 +44,12 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                         listeners : {
                             activate : function (_self)
                             {
-                                Roo.log("builder.treepanel activate");
+                                
                                 _this.tree = _self.tree;
                                 if (_this.hasMouseEvent) {
                                     return;
                                 }
+                                
                                 _this.hasMouseEvent = true;
                                  this.el.on('mouseover', function() { _this.isMouseOver= true; });
                                 this.el.on('mouseout', function() { _this.isMouseOver = false; });
