@@ -10,7 +10,7 @@ Pman.on('beforeload', function()
     Pman.register({
         modKey : '001-Pman.Tab.BuilderProps',
         module : Pman.Tab.BuilderProps,
-        region : 'south',
+        region : 'center',
         parent : Pman.Tab.BuilderTree,
         name : "Pman.Tab.BuilderProps",
         disabled : false, 
@@ -36,7 +36,13 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
             region : 'south',
             grid : {
                 xtype: 'PropertyGrid',
-                xns: Roo.grid
+                xns: Roo.grid,
+                listeners : {
+                    render : function (grid)
+                    {
+                    
+                    }
+                }
             }
         });
         this.layout = this.panel.layout;
