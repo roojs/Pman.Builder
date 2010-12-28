@@ -158,14 +158,79 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            loadTree : function(o) {
-                                this.clearAll();
-                                this.root.elConfig = o;
-                                this.root.setText(this.configToText(this.root.elConfig));
-                                this.appendNode(this.root, o);
-                                this.root.expand(true);
-                                // Pman.Tab.BuilderView.render()
-                                this.setCurrentNodE(this.root,true);
+                             : function(parent, inConfig, markUndo) {
+                                
+                                    
+                                    var _this = this;
+                                    var items = [];
+                                    if (inConfig.items) { // loading!
+                                        items = inConfig.items;
+                                        delete inConfig.items;
+                                    }
+                            		var config = this.cloneConfig(inConfig);
+                                    if (!parent) {
+                            			parent = this.tree.root;
+                            		}
+                                    
+                                    
+                            		var canAppend = this.canAppend(parent,config);
+                            		if (canAppend !== true) {
+                                        console.log("Unable to add element " + canAppend);
+                            			Roo.Msg.alert("Unable to add element", canAppend);
+                            			return false;
+                            		}
+                                     
+                            		var id = this.getNewId();
+                                    
+                            		var newNode = new Roo.tree.TreeNode(
+                                        {
+                                                id:id,
+                                                text: this.configToText(config)
+                                        });
+                                        
+                                        
+                                     //?? delete stuff ? why??   
+                            		//for(var k in config) {
+                                    //    if (config[k]===null) { 
+                                    //        delete config[k]; 
+                                    //    }
+                                   // }
+                                    
+                                    
+                                    
+                                    //console.log(config);
+                            		newNode.elConfig = config;
+                                    //console.log(newNode);
+                                    
+                            		if (markUndo === true) {
+                            			Pman.Tab.Builder.markUndo("Add " + newNode.text);
+                            		}
+                                    // appends to our tree...
+                            		parent.appendChild(newNode);
+                                    
+                                    
+                                    if (items.length) {
+                                        Roo.each(items, function(i) {
+                                            _this.appendNode(newNode, i);
+                                        });
+                                        
+                                    }
+                                    
+                                    
+                                    /*
+                                    -- panels with panes...
+                            		if (items && items.length) {
+                            			for (var i = 0; i < items.length; i++) {
+                            					this.appendConfig(items[i], newNode, false);
+                            			}
+                            		}
+                            		if (opts.doUpdate !== false) {
+                            			this.updateForm(false, newNode);
+                            		}
+                                    */
+                            		return newNode;
+                            
+                            	 
                             },
                             clearAll : function() {
                                 var rt = this.root;
@@ -241,6 +306,15 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 
                                 
                             },
+                            loadTree : function(o) {
+                                this.clearAll();
+                                this.root.elConfig = o;
+                                this.root.setText(this.configToText(this.root.elConfig));
+                                this.appendNode(this.root, o);
+                                this.root.expand(true);
+                                // Pman.Tab.BuilderView.render()
+                                this.setCurrentNodE(this.root,true);
+                            },
                             renderer : function(n) { return n.text; },
                             setCurrentNode : function(node,select) {
                                     this.currentNode = node || this.root;
@@ -263,9 +337,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         this.currentNode.select();
                             	}
                             
-                            },
-                             : function() {
-                                
                             },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
