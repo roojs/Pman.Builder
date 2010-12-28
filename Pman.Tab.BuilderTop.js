@@ -251,7 +251,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 {
                                      o.params = o.params || {}; 
                                    // o.params.btype = 'FORM';
-                                    if (!_this.modsel.getValue()) {
+                                    if (!_this.modsel.getValue().length) {
                                         Roo.MessageBox.alert("Error", "Select Module");
                                         return false;
                                     }
