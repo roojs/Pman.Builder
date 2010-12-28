@@ -201,9 +201,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     }
                 },
             toJS : function(n) {
-                var bt = Pman.Tab.BuilderTree;
+                var bt = Pman.Tab.BuilderTree.tree;
                 if (!n) {
-                    return this.toJS(bt.tree.root);
+                    return this.toJS(bt.root);
                 }
             
                 var _this = this;
