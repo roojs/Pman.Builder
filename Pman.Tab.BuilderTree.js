@@ -158,7 +158,22 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            loadBJS : function() {
+                            loadBJS : function(module, part) {
+                                
+                                new Pman.Request({
+                                    url : baseURL + '/Builder/Parts.php',
+                                    params : {
+                                        module : module,
+                                        part : part
+                                    },
+                                    success : function(data)         
+                                    {
+                                        Roo.log(data);
+                                     
+                                    }
+                                 })  
+                                    
+                                
                                 
                             },
                             clearAll : function() {
