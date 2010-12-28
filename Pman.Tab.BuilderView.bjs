@@ -1,7 +1,7 @@
 {
     "id": "roo-file-166",
     "name": "Pman.Tab.BuilderView",
-    "parent": "Pman.Tab.BuilderView",
+    "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderView",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderView.bjs",
     "items": [],
