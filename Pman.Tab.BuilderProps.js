@@ -44,7 +44,44 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     }
                 },
                 setSource : function() {
+                   
+                        
+                    var cfg = {};
+                    for (var k in config) {
+                        //if (k.charAt(0) == '*') {
+                        //    continue; // dont show props..
+                        //}
+                        
+                        if (k  == 'listeners') {
+                            for (var kk in config[k]) {
+                                cfg['!' + kk ] = config[k][kk];
+                            }
+                            
+                            continue;
+                        }
+                        if (k  == 'items') {
+                            continue;
+                        }
+                        
+                        if (typeof config[k] == 'object') {
+                            
+                            try {
+                                var ec = Roo.encode(config[k]);
+                                cfg[k] = ec;
+                            } catch(e) {}
+                            continue;
+                        }
+                        cfg[k] = config[k];
+                    }
                     
+                    if (!cfg.xtype) {
+                        return;
+                    }
+                
+                    this.grid.setSource(cfg);
+                
+                    
+                      
                 },
                 setCurrrentNode : function(node) {
                    
