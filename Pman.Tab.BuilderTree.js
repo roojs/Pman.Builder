@@ -312,7 +312,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 this.appendNode(this.root, o);
                                 this.root.expand(true);
                                 // Pman.Tab.BuilderView.render()
-                                this.setCurrentNodE(this.root,true);
+                                this.setCurrentNode(this.root,true);
                             },
                             renderer : function(n) { return n.text; },
                             setCurrentNode : function(node,select) {
