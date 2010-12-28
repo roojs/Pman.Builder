@@ -164,7 +164,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     rt.removeChild(rt.childNodes[0]);
                                 }
                                
-                                this.tree.root.elConfig  = Roo.apply({ }, this.getDefaultCfg());  
+                                this.root.elConfig  = Roo.apply({ }, this.defaultElConfig());  
                                 //var btop = Pman.Tab.BuilderTop;
                                 //if (btop.modsel && btop.modsel.lastData) {
                                 //    this.tree.root.elConfig.app = btop.modsel.lastData.app;
