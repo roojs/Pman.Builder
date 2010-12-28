@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Pman.php';
+
 class Pman_Builder_Modules extends Pman
 {
   
