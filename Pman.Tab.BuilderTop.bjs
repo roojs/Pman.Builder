@@ -137,7 +137,7 @@
                         },
                         {
                             "listeners": {
-                                "select": "function (combo, record, index)\n{\n   //cb.lastData = rec.data;\n   return;\n    var bt = Pman.Tab.BuilderTree;\n    if (!rec) {\n        bt.clearAll();\n        bt.setCurrentNode(bt.tree.root,true);\n        var bp = Pman.Tab.BuilderPanel;\n        bp.redraw.defer(100,bp,[true]);\n        return;\n    }\n    \n    bt.loadJSON.defer(10, bt, [rec.data.json]);\n\n\n}",
+                                "select": "function (combo, record, index)\n{\n   //cb.lastData = rec.data;\n    \n    \n    \n    \n    var bt = Pman.Tab.BuilderTree;\n    \n    \n    if (!rec) {\n        bt.tree.clearAll();\n        bt.tree.setCurrentNode(bt.tree.root,true);\n        var bp = Pman.Tab.BuilderPanel;\n        bp.panel.setContents(\"select Module/ Part \");\n        return;\n    }\n\n    bt.loadJSON.defer(10, bt, [rec.data.json]);\n\n\n}",
                                 "render": "function (_self)\n{\n    _this.filesel = this;\n}"
                             },
                             "allowBlank": true,
