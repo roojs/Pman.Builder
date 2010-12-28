@@ -41,6 +41,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             region : 'center',
             title : "View",
+             : function() {
+                
+            },
             clearAll : function(isAuto) {
             //        this.renderObj = { isBuilder : true };
             
@@ -108,10 +111,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             this.panelroot.el.scrollTo('left', this.scroll.left);
                         
                     }
-                },
-             : function() {
-                
-            }
+                }
         });
         this.layout = this.panel.layout;
 
