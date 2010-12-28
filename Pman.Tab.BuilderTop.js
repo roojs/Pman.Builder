@@ -273,30 +273,11 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 root : 'data',
                                 totalProperty : 'total',
                                 fields : [
-                                    {
-                                        'name': 'id',
-                                        'type': 'int'
-                                    },
+                                   
                                     {
                                         'name': 'name',
                                         'type': 'string'
-                                    },
-                                    {
-                                        'name': 'btype',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'json',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'app',
-                                        'type': 'string'
-                                    },
-                                    {
-                                        'name': 'module',
-                                        'type': 'string'
-                                    }
+                                    } 
                                 ]
                             }
                         }
