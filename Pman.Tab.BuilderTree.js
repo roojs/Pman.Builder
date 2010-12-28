@@ -158,27 +158,30 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            setCurrentNode : function(node,select) {
-                                    this.currentNode = node || this.root;
+                             : function(c) {
+                                 
+                            		var txt = [];
+                            		c = c || {};
+                                    var sr = (typeof(c['+buildershow']) != 'undefined') &&  !c['+buildershow'] ? true : false;
+                                    if (sr) txt.push('<s>');
+                                    if (typeof(c['*prop']) != 'undefined')   { txt.push(c['*prop']+ ':'); }
+                            		if (c.xtype)      { txt.push(c.xtype); }
+                            		if (c.fieldLabel) { txt.push('[' + c.fieldLabel + ']'); }
+                            		if (c.boxLabel)   { txt.push('[' + c.boxLabel + ']'); }
                                     
-                                    //Pman.Tab.BuilderView.highlightElement(this.currentNode);
-                            
-                                    var p = Pman.Tab.BuilderProps.grid;
-                                    if (p) { //may not be ready yet..
-                                        p.setCurrrentNode(this.currentNode);
-                                    }
                                     
-                                  
-                                    this.currentNode.setText(this.configToText(this.currentNode.elConfig));
-                                    
-                                    if (select) { //&& node !== this.tree.root) {
-                                        if (this.currentNode !== this.tree.root)  {
-                                                 this.currentNode.ensureVisible();
-                                          }   
-                                         this.currentNode.expand(false,false);
-                                        this.currentNode.select();
-                            	}
-                            
+                            		if (c.layout)     { txt.push('<i>' + c.layout + '</i>'); }
+                            		if (c.title)      { txt.push('<b>' + c.title + '</b>'); }
+                                    if (c.header)    { txt.push('<b>' + c.header + '</b>'); }
+                                    if (c.legend)      { txt.push('<b>' + c.legend + '</b>'); }
+                            		if (c.text)       { txt.push('<b>' + c.text + '</b>'); }
+                                    if (c.name)       { txt.push('<b>' + c.name+ '</b>'); }
+                            		if (c.region)     { txt.push('<i>(' + c.region + ')</i>'); }
+                                    if (c.dataIndex) { txt.push('[' + c.dataIndex+ ']'); }
+                                    if (sr) txt.push('</s>');
+                            		return (txt.length == 0 ? "Element" : txt.join(" "));
+                             
+                              
                             },
                             clearAll : function() {
                                 var rt = this.root;
@@ -209,8 +212,27 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 };
                             },
                             renderer : function(n) { return n.text; },
-                             : function() {
-                                
+                            setCurrentNode : function(node,select) {
+                                    this.currentNode = node || this.root;
+                                    
+                                    //Pman.Tab.BuilderView.highlightElement(this.currentNode);
+                            
+                                    var p = Pman.Tab.BuilderProps.grid;
+                                    if (p) { //may not be ready yet..
+                                        p.setCurrrentNode(this.currentNode);
+                                    }
+                                    
+                                  
+                                    this.currentNode.setText(this.configToText(this.currentNode.elConfig));
+                                    
+                                    if (select) { //&& node !== this.tree.root) {
+                                        if (this.currentNode !== this.tree.root)  {
+                                                 this.currentNode.ensureVisible();
+                                          }   
+                                         this.currentNode.expand(false,false);
+                                        this.currentNode.select();
+                            	}
+                            
                             },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
