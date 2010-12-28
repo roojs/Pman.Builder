@@ -222,8 +222,9 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     bp.panel.setContents("select Module/ Part ");
                                     return;
                                 }
-                            
-                                bt.loadJSON.defer(10, bt, [rec.data.json]);
+                                
+                                
+                                bt.tree.loadBJS(_this.modsel.getValue(), record.data.name)
                             
                             
                             },
