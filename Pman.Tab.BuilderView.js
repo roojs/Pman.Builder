@@ -42,7 +42,22 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             region : 'center',
             title : "View",
              : function() {
-                
+            //        this.renderObj = { isBuilder : true };
+            
+                    if (isAuto && btop.redrawBtn  && !btop.redrawBtn.auto) {
+                        return; /// auto redraw is turned off..
+                    }
+                   
+                    
+                    if (this.panelroot) {
+                        this.scroll = this.panelroot.el.getScroll();
+                        this.layout.remove('center', this.panelroot);
+                        this.panelroot = false;
+                    }
+                    if (this.dialogroot) {
+                        this.dialogroot.remove();
+                        this.dialogroot = false;
+                    }
             }
         });
         this.layout = this.panel.layout;
