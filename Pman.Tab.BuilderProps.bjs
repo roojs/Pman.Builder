@@ -16,7 +16,7 @@
                     },
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
-                    "|": "function() {\n    \n}\n",
+                    "|setCurrrentNode": "function() {\n    \n}\n",
                     "|xns": "Roo.grid"
                 }
             ]
