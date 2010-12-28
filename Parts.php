@@ -1,6 +1,8 @@
 <?php
 // list of bjs files (or database ones later??)
 
+require_once 'Pman.php';
+
 class Pman_Builder_Parts extends Pman
 {
   
