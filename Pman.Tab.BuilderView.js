@@ -57,6 +57,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             munge : function(cfg, keyname) {
                 keyname = keyname || false;
+                
+                this.renderObj = this.renderObj || {};
+                
                 var xitems = false;
                 if (cfg.items) {
                     xitems = cfg.items;
@@ -103,9 +106,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             
                             eval('_tmp =(' + str + ')');
                             cfg[p.replace(/^\|/, '')] = _tmp;
-                            //if (typeof(_tmp) == 'undefined') {
-                            //    alert(cfg[p]);
-                           // }
+                            if (typeof(_tmp) == 'undefined') {
+                                alert(cfg[p]);
+                            }
                            
                         } catch(e) {  console.log('Error evaluating: '  + str); };
                         if (p.charAt(0) == '|' ) {
