@@ -41,6 +41,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     render : function (grid)
                     {
                         _this.grid = grid;
+                    },
+                    afteredit : function (e)
+                    {
+                    
                     }
                 },
                 setCurrrentNode : function(node) {
