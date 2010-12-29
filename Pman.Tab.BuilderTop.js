@@ -218,11 +218,12 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 if (!rec) {
                                     bt.clearAll();
                                     bt.setCurrentNode(bt.root,true);
-                                    var bv = Pman.Tab.BuilderView;
-                                    bv.panel.el.mask("select Module / Part");
+                                   // var bv = Pman.Tab.BuilderView;
+                                   Pman.Tab.BuilderView.panel.clearAll();
+                                   // bv.panel.el.mask("select Module / Part");
                                     return;
                                 }
-                                bv.panel.el.unmask();
+                                //bv.panel.el.unmask();
                                 
                                 bt.loadBJS(_this.modsel.getValue(), rec.data.name)
                             
