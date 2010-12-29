@@ -169,6 +169,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     
                 }
                 
+                if (typeof(cfg.id) != 'undefined') {
+                    cfg.id = 'pman-dyn-' + cfg.id;
+                }
                     
                     
             },
