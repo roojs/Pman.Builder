@@ -92,6 +92,13 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                              eval:var:_this  
                              eval:var:_tmp 
                             **/
+                            var str = cfg[p];
+                            if (str.match(/\s*function/)) {
+                                var btz = str.split('{');
+                                str = str.pop()  +'{ try {' + str.join('{') + 
+                                    ' catch (e) { Roo.log(e) } }';
+                            }
+                            
                             eval('_tmp =(' + cfg[p] + ')');
                             cfg[p.substr(1)] = _tmp;
                             //if (typeof(_tmp) == 'undefined') {
