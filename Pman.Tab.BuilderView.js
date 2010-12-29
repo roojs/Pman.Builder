@@ -271,7 +271,11 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
             },
             layout : {
                 xtype: 'BorderLayout',
-                xns: Roo
+                xns: Roo,
+                center : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo
+                }
             }
         });
         this.layout = this.panel.layout;
