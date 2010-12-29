@@ -227,7 +227,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     cfg.items[0].region = 'center';
                     cfg.items[0].background = false;
                     
-                    this.panelroot = _this.parentLayout.addxtype(cfg.items[0]);
+                    this.panelroot = this.layout.addxtype(cfg.items[0]);
                     
                      
                     //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
