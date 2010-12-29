@@ -34,9 +34,11 @@
                             "|xns": "Roo"
                         },
                         {
-                            "|xns": "Roo",
+                            "*prop": "center",
                             "xtype": "LayoutRegion",
-                            "*prop": "center"
+                            "|xns": "Roo",
+                            "tabPosition": "",
+                            "listeners": {}
                         },
                         {
                             "*prop": "east",
