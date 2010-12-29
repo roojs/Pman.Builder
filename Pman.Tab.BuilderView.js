@@ -134,7 +134,14 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         var pr = xi['*prop'];
                         this.munge(xi);
                         // if prop is an array - then it's items are really the value..
-                        
+                        if (pr.match(/\[\]$/)) {
+                            pr = pr.replace(/\[\]$/, '');
+                            if (typeof(cfg[pr]) == 'undefined') {
+                                cfg[pr] = [];
+                            }
+                            cfg[pr].push(xi);
+                            continue;
+                        }
                         if (xi.xtype && xi.xtype  == 'Array') {
                             cfg[pr] = xi.items;
                         } else {
