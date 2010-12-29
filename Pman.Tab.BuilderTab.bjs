@@ -35,10 +35,9 @@
                         },
                         {
                             "*prop": "center",
+                            "tabPosition": "top",
                             "xtype": "LayoutRegion",
-                            "|xns": "Roo",
-                            "tabPosition": "",
-                            "listeners": {}
+                            "|xns": "Roo"
                         },
                         {
                             "*prop": "east",
