@@ -25,6 +25,7 @@
                     "items": [
                         {
                             "*prop": "center",
+                            "alwaysShowTabs": true,
                             "tabPosition": "top",
                             "xtype": "LayoutRegion",
                             "|xns": "Roo"
