@@ -43,6 +43,22 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         _this.grid = grid;
                     }
                 },
+                setCurrrentNode : function(node) {
+                   
+                    
+                    this.view.el.unmask();
+                    
+                    if (!node || !node.elConfig) {
+                        this.currentNode = false;
+                        this.setSourceFromNode({});
+                        this.view.el.mask('select a node');
+                    } else {
+                        this.currentNode = node;
+                        this.setSourceFromNode(this.currentNode.elConfig);
+                        
+                    }
+                    
+                },
                 setSourceFromNode : function(config) {
                    
                         
@@ -82,22 +98,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                 
                     
                       
-                },
-                setCurrrentNode : function(node) {
-                   
-                    
-                    this.view.el.unmask();
-                    
-                    if (!node || !node.elConfig) {
-                        this.currentNode = false;
-                        this.setSourceFromNode({});
-                        this.view.el.mask('select a node');
-                    } else {
-                        this.currentNode = node;
-                        this.setSourceFromNode(this.currentNode.elConfig);
-                        
-                    }
-                    
                 }
             }
         });
