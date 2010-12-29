@@ -102,7 +102,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             
                             
                             eval('_tmp =(' + str + ')');
-                            cfg[p.substr(1)] = _tmp;
+                            cfg[p.replace(/^\|/, '')] = _tmp;
                             //if (typeof(_tmp) == 'undefined') {
                             //    alert(cfg[p]);
                            // }
