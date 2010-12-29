@@ -213,7 +213,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         this.dialogroot = Roo.get( document.body).createChild();
                          
                         this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
-                        this.dialog.el.on('click', this.panelClick, this);
+                      //  this.dialog.el.on('click', this.panelClick, this);
                         this.dialog.show();
                         return;
                         
