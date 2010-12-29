@@ -105,7 +105,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             //    alert(cfg[p]);
                            // }
                            
-                        } catch(e) {  console.log('Error evaluating: '  + cfg[p]); };
+                        } catch(e) {  console.log('Error evaluating: '  + str); };
                         delete cfg[p];
                             
                         
