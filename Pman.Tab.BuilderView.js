@@ -31,7 +31,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
         this.parentLayout = parentLayout;
 
         this.panel = parentLayout.addxtype({
-            xtype: 'ContentPanel',
+            xtype: 'NestedContentPanel',
             xns: Roo,
             listeners : {
                 activate : function (_self)
