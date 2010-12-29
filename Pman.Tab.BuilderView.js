@@ -218,7 +218,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         return;
                         
                     }
-                    
+                    // should we render this into a dialog???
                          // force center region..
                     cfg.items[0].region = 'center';
                     cfg.items[0].background = false;
