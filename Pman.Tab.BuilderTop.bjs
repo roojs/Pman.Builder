@@ -232,12 +232,12 @@
                             "xtype": "Separator"
                         },
                         {
+                            "listeners": {
+                                "click": "function (_self, e)\n{\n   Pman.Tab.BuilderView.panel.redraw();\n}"
+                            },
                             "text": "Redraw",
                             "xtype": "SplitButton",
                             "|xns": "Roo.Toolbar",
-                            "listeners": {
-                                "click": "function (_self, e)\n{\n\n}"
-                            },
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
