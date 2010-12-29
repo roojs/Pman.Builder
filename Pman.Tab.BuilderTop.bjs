@@ -235,6 +235,9 @@
                             "text": "Redraw",
                             "xtype": "SplitButton",
                             "|xns": "Roo.Toolbar",
+                            "listeners": {
+                                "click": "function (_self, e)\n{\n\n}"
+                            },
                             "items": [
                                 {
                                     "|xns": "Roo.menu",
