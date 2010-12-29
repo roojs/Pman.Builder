@@ -158,7 +158,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                 if (cfg.items.length == 0) {
                     delete cfg.items;
                 }
-                
+                // remove listeners if there are none..
                 if (typeof(cfg['listeners']) != 'undefined') {
                     var n =0;
                     for (var i in cfg.items[0].listeners) { n++; }
