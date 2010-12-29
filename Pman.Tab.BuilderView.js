@@ -268,6 +268,10 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         
                 }
                 return ret;
+            },
+            layout : {
+                xtype: 'BorderLayout',
+                xns: Roo
             }
         });
         this.layout = this.panel.layout;
