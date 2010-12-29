@@ -108,7 +108,9 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                            // }
                            
                         } catch(e) {  console.log('Error evaluating: '  + str); };
-                        delete cfg[p];
+                        if (p.charAt(0) == '|' ) {
+                            delete cfg[p];
+                        }
                             
                         
                         continue;
