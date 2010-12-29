@@ -275,6 +275,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                 center : {
                     xtype: 'LayoutRegion',
                     xns: Roo,
+                    alwaysShowTabs : true,
                     tabPosition : 'top'
                 }
             }
