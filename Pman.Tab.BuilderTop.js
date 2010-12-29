@@ -391,13 +391,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                     {
                         xtype: 'SplitButton',
                         xns: Roo.Toolbar,
-                        text : "Redraw",
                         listeners : {
                             click : function (_self, e)
                             {
-                            
+                               Pman.Tab.BuilderView.panel.redraw();
                             }
                         },
+                        text : "Redraw",
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,
