@@ -12,7 +12,8 @@
             "items": [
                 {
                     "listeners": {
-                        "render": "function (grid)\n{\n    _this.grid = grid;\n}"
+                        "render": "function (grid)\n{\n    _this.grid = grid;\n}",
+                        "afteredit": "function (e)\n{\n\n}"
                     },
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
