@@ -233,8 +233,8 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
                     
                     if (this.panelroot.el) {
-                            this.panelroot.el.scrollTo('top', this.scroll.top);
-                            this.panelroot.el.scrollTo('left', this.scroll.left);
+                            this.panelroot.el.scrollTo('top', 0);
+                            this.panelroot.el.scrollTo('left', 0);
                         
                     }
                 },
