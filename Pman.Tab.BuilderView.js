@@ -84,6 +84,12 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                             delete cfg[p];
                             continue;
                         }
+                        var str = cfg[p];
+                        if (str.match(/\s*function/)) {
+                            var btz = str.split('{');
+                            str = str.pop()  +'{ try {' + str.join('{') + 
+                                ' catch (e) { Roo.log(e) } }';
+                        }
                         try {
                             var _tmp = false;
                             var _this = this.renderObj; /// fake '_this' object..
@@ -92,12 +98,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                              eval:var:_this  
                              eval:var:_tmp 
                             **/
-                            var str = cfg[p];
-                            if (str.match(/\s*function/)) {
-                                var btz = str.split('{');
-                                str = str.pop()  +'{ try {' + str.join('{') + 
-                                    ' catch (e) { Roo.log(e) } }';
-                            }
+                            
                             
                             eval('_tmp =(' + str + ')');
                             cfg[p.substr(1)] = _tmp;
