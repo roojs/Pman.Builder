@@ -55,7 +55,8 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         this.dialogroot = false;
                     }
             },
-            munge : function(cfg) {
+            munge : function(cfg, keyname) {
+                keyname = keyname || false;
                 var xitems = false;
                 if (cfg.items) {
                     xitems = cfg.items;
@@ -74,11 +75,11 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     }
                     
                     if (typeof(cfg[p]) == 'object') { // listeners!!!
-                        this.munge(cfg[p]);
+                        this.munge(cfg[p], p);
                         continue;
                     }
                     // SPECIAL - PIPE
-                    if (p.charAt(0) == '|') {
+                    if (p.charAt(0) == '|' || keyname=='listeners') {
                         
                         if (!cfg[p].length) {
                             delete cfg[p];
