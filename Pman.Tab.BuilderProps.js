@@ -48,6 +48,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                        //this.currentNode.elConfig
                        
                        
+                    },
+                    cellclick : function (_self, rowIndex, columnIndex, e)
+                    {
+                    
                     }
                 },
                 setCurrrentNode : function(node) {
