@@ -133,17 +133,18 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                     return;
                                 }
                                 if (n[0] == '!') {
-                                        delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
+                                    delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
                                 } else {
                                     delete _this.grid.currentNode.elConfig[n];
                                 }
-                                    
-                                    _this.setCurrrentNode(_this.currentNode);
-                                    var bp = Pman.Tab.BuilderPanel;
-                                    bp.redraw.defer(100,bp, [true]);
-                                    _this.currentNode.setText(
-                                        Pman.Tab.BuilderTree.configToText(_this.currentNode.elConfig)
-                                    );
+                                // reloads      
+                                _this.grid.setCurrrentNode(_this.currentNode);
+                                var bp = Pman.Tab.BuilderPanel.panel;
+                                bp.redraw.defer(100,bp, [true]);
+                                // update the tree's 
+                                _this.currentNode.setText(
+                                    Pman.Tab.BuilderTree.tree.configToText(_this.currentNode.elConfig)
+                                );
                             }
                         },
                         text : "Delete Property / Event"
