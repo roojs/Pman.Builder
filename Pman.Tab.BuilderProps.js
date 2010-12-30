@@ -61,6 +61,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     beforeedit : function (e)
                     {
+                       Roo.log('beforeedit');
                        var key = e.record.data.name;
                        var val = e.record.data.value;
                        if (key.match(/^\|/) || key.match(/^\!/)) {
