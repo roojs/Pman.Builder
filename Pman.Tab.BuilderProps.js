@@ -49,9 +49,15 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                        
                        
                     },
-                    cellclick : function (_self, rowIndex, columnIndex, e)
+                    cellclick : function (_self, rowIndex, ci, e)
                     {
-                    
+                         if (ci != 0) {
+                            return;
+                        }
+                        //console.log(e);
+                        // click on left col..
+                        // show menu..
+                        _this.menu.show(e.getTarget(), 'tr');
                     }
                 },
                 setCurrrentNode : function(node) {
