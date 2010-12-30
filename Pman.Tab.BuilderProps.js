@@ -63,7 +63,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                     
                     },
-                    propertychange : function (grid, id, newval, oldval)
+                    propertychange : function (grid, id, v, oldval)
                     {
                         if (v == 'false') {
                             v = false;
