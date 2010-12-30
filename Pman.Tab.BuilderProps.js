@@ -70,7 +70,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 _this.grid.currentNode.elConfig[key] = d.value;
                                 _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
                                 _this.grid.fireEvent('propertychange', 
-                                    Pman.Tab.BuilderProps.grid, key, val, false
+                                    Pman.Tab.BuilderProps.grid, key, d.value, false
                                 );
                             });
                             e.cancel = true;
