@@ -28,12 +28,12 @@
                     "*prop": "menu",
                     "items": [
                         {
+                            "listeners": {
+                                "click": "function (_self, e)\n{\n     var rc = _this.grid.getSelectionModel().getSelectedCell();\n     var n = _this.grid.getDataSource().getAt(rc[0]).data.name;\n      if (n == 'xtype') {\n            return;\n        }\n        if (n[0] == '!') {\n                delete _this.currentNode.elConfig.listeners[n.substring(1)];\n        } else {\n            delete _this.currentNode.elConfig[n];\n        }\n        \n        _this.setCurrrentNode(_this.currentNode);\n        var bp = Pman.Tab.BuilderPanel;\n        bp.redraw.defer(100,bp, [true]);\n        _this.currentNode.setText(\n            Pman.Tab.BuilderTree.configToText(_this.currentNode.elConfig)\n        );\n}"
+                            },
                             "text": "Delete Property / Event",
                             "xtype": "Item",
-                            "|xns": "Roo.menu",
-                            "listeners": {
-                                "click": "function (_self, e)\n{\n\n}"
-                            }
+                            "|xns": "Roo.menu"
                         }
                     ]
                 }
