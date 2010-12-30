@@ -129,14 +129,14 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             {
                                  var rc = _this.grid.getSelectionModel().getSelectedCell();
                                  var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
-                                  if (n == 'xtype') {
-                                        return;
-                                    }
-                                    if (n[0] == '!') {
-                                            delete _this.currentNode.elConfig.listeners[n.substring(1)];
-                                    } else {
-                                        delete _this.currentNode.elConfig[n];
-                                    }
+                                 if (n == 'xtype') {
+                                    return;
+                                }
+                                if (n[0] == '!') {
+                                        delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
+                                } else {
+                                    delete _this.grid.currentNode.elConfig[n];
+                                }
                                     
                                     _this.setCurrrentNode(_this.currentNode);
                                     var bp = Pman.Tab.BuilderPanel;
