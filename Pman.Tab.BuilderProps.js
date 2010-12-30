@@ -62,6 +62,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     beforeedit : function (e)
                     {
                        Roo.log('beforeedit');
+                       Roo.log(e.record.data);
                        var key = e.record.data.name;
                        var val = e.record.data.value;
                        if (key.match(/^\|/) || key.match(/^\!/)) {
@@ -69,7 +70,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 _this.grid.currentNode.elConfig[key] = val;
                                 _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
                                 _this.grid.fireEvent('propertychange', 
-                                    Pman.Tab.BuilderProps.grid, false, val, false
+                                    Pman.Tab.BuilderProps.grid, key, val, false
                                 );
                             });
                             e.cancel = true;
