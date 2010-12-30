@@ -92,6 +92,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             v = true;
                         }
                         _this.grid.currentNode.elConfig[id] = v;
+                        _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
+                        
                         var bp = Pman.Tab.BuilderView.panel;
                         bp.redraw.defer(100,bp, [true]);
                         _this.grid.currentNode.setText(
