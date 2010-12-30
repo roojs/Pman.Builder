@@ -124,7 +124,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                         xtype: 'Item',
                         xns: Roo.menu,
-                        text : ""
+                        text : "Delete Property / Event'"
                     }
                 ]
             }
