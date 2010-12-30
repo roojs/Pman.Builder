@@ -40,9 +40,9 @@
                     ]
                 },
                 {
-                    "|xns": "Roo.menu",
+                    "*prop": "menu2",
                     "xtype": "Menu",
-                    "*prop": "menu",
+                    "|xns": "Roo.menu",
                     "items": [
                         {
                             "listeners": {
