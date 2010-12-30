@@ -139,7 +139,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 }
                                 // reloads      
                                 _this.grid.setCurrrentNode(_this.currentNode);
-                                var bp = Pman.Tab.BuilderPanel.panel;
+                                var bp = Pman.Tab.BuilderView.panel;
                                 bp.redraw.defer(100,bp, [true]);
                                 // update the tree's  text
                                 _this.currentNode.setText(
