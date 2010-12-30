@@ -58,6 +58,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         // click on left col..
                         // show menu..
                         _this.panel.menu.show(e.getTarget(), 'tr');
+                    },
+                    beforeedit : function (e)
+                    {
+                    
                     }
                 },
                 setCurrrentNode : function(node) {
