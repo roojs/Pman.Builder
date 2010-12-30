@@ -169,24 +169,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             click : function (_self, e)
                             {
                              
-                                 var rc = _this.grid.getSelectionModel().getSelectedCell();
-                                 var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
-                                 if (n == 'xtype') {
-                                    return;
-                                }
-                                if (n[0] == '!') {
-                                    delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
-                                } else {
-                                    delete _this.grid.currentNode.elConfig[n];
-                                }
-                                // reloads      
-                                _this.grid.setCurrrentNode(_this.grid.currentNode);
-                                var bp = Pman.Tab.BuilderView.panel;
-                                bp.redraw.defer(100,bp, [true]);
-                                // update the tree's  text
-                                _this.grid.currentNode.setText(
-                                    Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
-                                );
+                                // show a dialog to select property??
+                                // or should we add a line and get clever with pulldowns..
                             }
                         },
                         text : "Add Property"
@@ -204,24 +188,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             click : function (_self, e)
                             {
                              
-                                 var rc = _this.grid.getSelectionModel().getSelectedCell();
-                                 var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
-                                 if (n == 'xtype') {
-                                    return;
-                                }
-                                if (n[0] == '!') {
-                                    delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
-                                } else {
-                                    delete _this.grid.currentNode.elConfig[n];
-                                }
-                                // reloads      
-                                _this.grid.setCurrrentNode(_this.grid.currentNode);
-                                var bp = Pman.Tab.BuilderView.panel;
-                                bp.redraw.defer(100,bp, [true]);
-                                // update the tree's  text
-                                _this.grid.currentNode.setText(
-                                    Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
-                                );
+                                // show a dialog to select property??
+                                // or should we add a line and get clever with pulldowns..
                             }
                         },
                         text : "Add Property"
