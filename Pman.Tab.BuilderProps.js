@@ -65,6 +65,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                        var val = e.record.data.value;
                        if (key.match(/^\|/)) {
                             
+                            e.cancel = true;
+                            return;
                        }
                     },
                     propertychange : function (grid, id, v, oldval)
