@@ -166,7 +166,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         listeners : {
                             click : function (_self, e)
                             {
-                             var rc = _this.grid.getSelectionModel().getSelectedCell();
+                                 _this.grid.menu.hide();
+                                 var rc = _this.grid.getSelectionModel().getSelectedCell();
                                  var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
                                  if (n == 'xtype') {
                                     return;
