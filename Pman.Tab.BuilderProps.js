@@ -119,7 +119,13 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
             },
             menu : {
                 xtype: 'Menu',
-                xns: Roo.menu
+                xns: Roo.menu,
+                items : [
+                    {
+                        xtype: 'Item',
+                        xns: Roo.menu
+                    }
+                ]
             }
         });
         this.layout = this.panel.layout;
