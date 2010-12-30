@@ -61,7 +61,11 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     beforeedit : function (e)
                     {
-                    
+                       var key = e.record.data.name;
+                       var val = e.record.data.value;
+                       if (key.match(/^\|/)) {
+                            
+                       }
                     },
                     propertychange : function (grid, id, v, oldval)
                     {
