@@ -33,7 +33,6 @@
                             "listeners": {
                                 "activate": "function (_self)\n{\n\n}"
                             },
-                            "activate": "function (_self, e)\n{\n     var rc = _this.grid.getSelectionModel().getSelectedCell();\n     var n = _this.grid.getDataSource().getAt(rc[0]).data.name;\n     if (n == 'xtype') {\n        return;\n    }\n    if (n[0] == '!') {\n        delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];\n    } else {\n        delete _this.grid.currentNode.elConfig[n];\n    }\n    // reloads      \n    _this.grid.setCurrrentNode(_this.grid.currentNode);\n    var bp = Pman.Tab.BuilderView.panel;\n    bp.redraw.defer(100,bp, [true]);\n    // update the tree's  text\n    _this.currentNode.setText(\n        Pman.Tab.BuilderTree.tree.configToText(_this.currentNode.elConfig)\n    );\n}",
                             "text": "Delete Property / Event",
                             "xtype": "Item",
                             "|xns": "Roo.menu"
