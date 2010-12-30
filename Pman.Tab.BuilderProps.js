@@ -65,7 +65,18 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     propertychange : function (grid, id, newval, oldval)
                     {
-                    
+                        if (v == 'false') {
+                            v = false;
+                        }
+                        if (v == 'true') {
+                            v = true;
+                        }
+                        _this.currentNode.elConfig[id] = v;
+                        var bp = Pman.Tab.BuilderView.panel;
+                        bp.redraw.defer(100,bp, [true]);
+                        _this.currentNode.setText(
+                            Pman.Tab.BuilderTree.tree.configToText(_this.currentNode.elConfig)
+                        );
                     }
                 },
                 setCurrrentNode : function(node) {
