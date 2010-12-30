@@ -14,7 +14,7 @@
                     "listeners": {
                         "render": "function (grid)\n{\n    _this.grid = grid;\n}",
                         "afteredit": "function (e)\n{\n   // change this..\n   //this.currentNode.elConfig\n   \n   \n}",
-                        "cellclick": "function (_self, rowIndex, ci, e)\n{\n     if (ci != 0) {\n        return;\n    }\n    //console.log(e);\n    // click on left col..\n    // show menu..\n    _this.menu.show(e.getTarget(), 'tr');\n}"
+                        "cellclick": "function (_self, rowIndex, ci, e)\n{\n     if (ci != 0) {\n        return;\n    }\n    //console.log(e);\n    // click on left col..\n    // show menu..\n    _this.panel.menu.show(e.getTarget(), 'tr');\n}"
                     },
                     "*prop": "grid",
                     "xtype": "PropertyGrid",
