@@ -189,7 +189,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 );
                             }
                         },
-                        text : "Delete Property / Event"
+                        text : "Add Property"
                     }
                 ]
             },
@@ -224,7 +224,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 );
                             }
                         },
-                        text : "Delete Property / Event"
+                        text : "Add Property"
                     }
                 ]
             }
