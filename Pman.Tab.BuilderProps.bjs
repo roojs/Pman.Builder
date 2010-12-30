@@ -28,7 +28,7 @@
                     "*prop": "menu",
                     "items": [
                         {
-                            "text": "Delete Property / Event'",
+                            "text": "Delete Property / Event",
                             "xtype": "Item",
                             "|xns": "Roo.menu"
                         }
