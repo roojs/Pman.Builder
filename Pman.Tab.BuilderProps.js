@@ -44,7 +44,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     afteredit : function (e)
                     {
-                    
+                       // change this..
+                       //this.currentNode.elConfig
+                       
+                       
                     }
                 },
                 setCurrrentNode : function(node) {
