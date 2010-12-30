@@ -124,7 +124,13 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                         xtype: 'Item',
                         xns: Roo.menu,
-                        text : "Delete Property / Event"
+                        text : "Delete Property / Event",
+                        listeners : {
+                            click : function (_self, e)
+                            {
+                            
+                            }
+                        }
                     }
                 ]
             }
