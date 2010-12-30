@@ -184,6 +184,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 _this.currentNode.setText(
                                     Pman.Tab.BuilderTree.tree.configToText(_this.currentNode.elConfig)
                                 );
+                            },
+                            click : function (_self, e)
+                            {
+                            
                             }
                         },
                         text : "Delete Property / Event"
