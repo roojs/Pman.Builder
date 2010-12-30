@@ -99,6 +99,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         _this.grid.currentNode.setText(
                             Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
                         );
+                    },
+                    click : function (e)
+                    {
+                    
                     }
                 },
                 setCurrrentNode : function(node) {
