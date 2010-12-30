@@ -57,6 +57,9 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         //console.log(e);
                         // click on left col..
                         // show menu..
+                        // make sure it's initialized..
+                        _this.panel.menu = Roo.factory(_this.panel.menu);
+                        
                         _this.panel.menu.show(e.getTarget(), 'tr');
                     },
                     beforeedit : function (e)
