@@ -67,8 +67,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                        if (key.match(/^\|/) || key.match(/^\!/)) {
                             Pman.Dialog.BuilderSourceEdit.show( { value :  val }, function(d) {
                                 _this.grid.currentNode.elConfig[key] = val;
-                                 _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
-                                
+                                _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
+                                _this.grid.fireEvent('propertychange', 
+                                    Pman.Tab.BuilderProps.grid, false, val, false
+                                );
                             });
                             e.cancel = true;
                             return;
