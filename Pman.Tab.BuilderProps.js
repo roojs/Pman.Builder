@@ -163,6 +163,12 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                         xtype: 'Item',
                         xns: Roo.menu,
+                        listeners : {
+                            activate : function (_self)
+                            {
+                            
+                            }
+                        },
                         activate : 'function (_self, e)
 {
      var rc = _this.grid.getSelectionModel().getSelectedCell();
@@ -184,13 +190,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
         Pman.Tab.BuilderTree.tree.configToText(_this.currentNode.elConfig)
     );
 }',
-                        text : "Delete Property / Event",
-                        listeners : {
-                            activate : function (_self)
-                            {
-                            
-                            }
-                        }
+                        text : "Delete Property / Event"
                     }
                 ]
             }
