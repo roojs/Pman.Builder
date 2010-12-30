@@ -102,7 +102,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     contextmenu : function (e)
                     {
-                    
+                        
                     }
                 },
                 setCurrrentNode : function(node) {
