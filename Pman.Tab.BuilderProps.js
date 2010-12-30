@@ -63,7 +63,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                        var key = e.record.data.name;
                        var val = e.record.data.value;
-                       if (key.match(/^\|/)) {
+                       if (key.match(/^\|/) || key.match(/^\!/)) {
                             Pman.Dialog.BuilderSourceEdit.show( { value :  val }, function(d) {
                                 Roo.log(d.value);
                             });
