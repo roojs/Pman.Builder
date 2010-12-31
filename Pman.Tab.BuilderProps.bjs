@@ -55,7 +55,7 @@
                         },
                         {
                             "listeners": {
-                                "click": "function (_self, e)\n{\n \n    // show a dialog to select property??\n    // or should we add a line and get clever with pulldowns..\n    var ec = _this.grid.currentNode.elConfig;\n    Pman.Dialog.BuilderProps.show({\n            xtype : ec.xtype  || '',\n            xns: ec.xns || '',\n            list: 'event'\n    }, function (n,val) {\n        ec[n] = val || '';\n        _this.grid.setCurrrentNode(_this.grid.currentNode);\n        var bp = Pman.Tab.BuilderView.panel;\n        bp.redraw.defer(100,bp, [true]);\n        // update the tree's  text\n        _this.grid.currentNode.setText(\n            Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)\n        );\n    });\n}"
+                                "click": "function (_self, e)\n{\n \n    // show a dialog to select property??\n    // or should we add a line and get clever with pulldowns..\n    var ec = _this.grid.currentNode.elConfig;\n    Pman.Dialog.BuilderProps.show({\n            xtype : ec.xtype  || '',\n            xns: ec.xns || '',\n            list: 'event'\n    }, function (n,val) {\n        ec[n] = val || \"function() {\\n\\n}\";\n        _this.grid.setCurrrentNode(_this.grid.currentNode);\n        var bp = Pman.Tab.BuilderView.panel;\n        bp.redraw.defer(100,bp, [true]);\n        // update the tree's  text\n        _this.grid.currentNode.setText(\n            Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)\n        );\n    });\n}"
                             },
                             "text": "Add Event Handler",
                             "xtype": "Item",
