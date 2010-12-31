@@ -11,7 +11,7 @@
             "height": 170,
             "resizable": false,
             "title": "Add Property",
-            "width": 400,
+            "width": 600,
             "xtype": "LayoutDialog",
             "|xns": "Roo",
             "items": [
