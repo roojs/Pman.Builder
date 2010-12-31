@@ -30,18 +30,18 @@ Pman.Dialog.BuilderProp = {
         this.dialog = Roo.factory({
             xtype: 'LayoutDialog',
             xns: Roo,
+            listeners : {
+                show : function (_self)
+                {
+                   _this.data.ds.load();
+                }
+            },
             closable : false,
             collapsible : false,
             height : 600,
             resizable : false,
             title : "Add Property",
             width : 600,
-            listeners : {
-                show : function (_self)
-                {
-                
-                }
-            },
             items : [
                 {
                     xtype: 'GridPanel',
