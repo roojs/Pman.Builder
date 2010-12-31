@@ -48,14 +48,14 @@
                             "|xns": "Roo.grid",
                             "items": [
                                 {
+                                    "listeners": {
+                                        "beforeload": "function (_self, options)\n{\n    options.params = options.params || {};\n    options.params.xtype = this.data.xtype;\n    options.params.xns = this.data.xns;\n    \n}"
+                                    },
                                     "*prop": "dataSource",
                                     "remoteSort": false,
                                     "xtype": "Store",
                                     "|sortInfo": "{ field : 'name', direction: 'ASC' }",
                                     "|xns": "Roo.data",
-                                    "listeners": {
-                                        "beforeload": "function (_self, options)\n{\n\n}"
-                                    },
                                     "items": [
                                         {
                                             "*prop": "proxy",
