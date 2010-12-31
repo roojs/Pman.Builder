@@ -106,7 +106,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     },
                     contextmenu : function (e)
                     {
-                    
+                        // should we check e..??
+                        _this.panel.menu2 = Roo.factory(_this.panel.menu2);
+                        
+                        _this.panel.menu2.show(e.getTarget(), 'tr');
                     }
                 },
                 setCurrrentNode : function(node) {
