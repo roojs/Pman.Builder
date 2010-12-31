@@ -340,7 +340,7 @@ Pman.Dialog.BuilderProp = {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
                                 dataIndex : 'name',
-                                header : 'Ts',
+                                header : 'name',
                                 width : 75,
                                 renderer : function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }
                             },
