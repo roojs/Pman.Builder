@@ -38,11 +38,6 @@ Pman.Dialog.BuilderProp = {
             width : 400,
             items : [
                 {
-                    xtype: 'ContentPanel',
-                    xns: Roo,
-                    region : 'center'
-                },
-                {
                     xtype: 'GridPanel',
                     xns: Roo,
                     title : "AutoAuth",
