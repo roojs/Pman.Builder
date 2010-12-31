@@ -108,7 +108,7 @@
                 },
                 {
                     "listeners": {
-                        "click": "function (_self, e)\n{\n    // do some checks?\n     \n    \n    _this.dialog.el.mask(\"Saving\");\n    _this.form.doAction(\"submit\");\n\n}"
+                        "click": "function (_self, e)\n{\n    // do some checks?\n     var sel = _this.grid.getSelectionModel().getSelected();\n    if (!sel) {\n        Roo.MessageBox.alert(\"Error\", \"Select a property\");\n    }\n    \n    _this.callback(sel.data.name);\n   _this.dialog.hide();\n \n\n}"
                     },
                     "*prop": "buttons[]",
                     "text": "Add",
