@@ -57,8 +57,6 @@ Pman.Dialog.BuilderProp = {
                     grid : {
                         xtype: 'Grid',
                         xns: Roo.grid,
-                        autoExpandColumn : 'url',
-                        loadMask : true,
                         listeners : {
                             render : function() 
                             {
@@ -76,6 +74,8 @@ Pman.Dialog.BuilderProp = {
                                 }); 
                             }
                         },
+                        autoExpandColumn : 'desc',
+                        loadMask : true,
                         dataSource : {
                             xtype: 'Store',
                             xns: Roo.data,
