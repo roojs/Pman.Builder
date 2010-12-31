@@ -4,12 +4,7 @@
     "parent": "",
     "title": "",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderProp.bjs",
-    "items": [
-        {
-            "|xns": "Roo",
-            "xtype": "LayoutDialog"
-        }
-    ],
+    "items": [],
     "permname": "",
     "modOrder": "001"
 }
