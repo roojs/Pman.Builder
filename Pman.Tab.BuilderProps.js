@@ -220,6 +220,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         text : "Add Event Handler"
                     },
                     {
+                        xtype: 'Separator',
+                        xns: Roo.menu
+                    },
+                    {
                         xtype: 'Item',
                         xns: Roo.menu,
                         listeners : {
@@ -231,10 +235,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             }
                         },
                         text : "Add Property"
-                    },
-                    {
-                        xtype: 'Separator',
-                        xns: Roo.menu
                     }
                 ]
             }
