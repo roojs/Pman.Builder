@@ -53,6 +53,9 @@
                                     "xtype": "Store",
                                     "|sortInfo": "{ field : 'name', direction: 'ASC' }",
                                     "|xns": "Roo.data",
+                                    "listeners": {
+                                        "beforeload": "function (_self, options)\n{\n\n}"
+                                    },
                                     "items": [
                                         {
                                             "*prop": "proxy",
