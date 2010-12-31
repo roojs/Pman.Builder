@@ -235,6 +235,19 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     {
                         xtype: 'Separator',
                         xns: Roo.menu
+                    },
+                    {
+                        xtype: 'Item',
+                        xns: Roo.menu,
+                        listeners : {
+                            click : function (_self, e)
+                            {
+                             
+                                // show a dialog to select property??
+                                // or should we add a line and get clever with pulldowns..
+                            }
+                        },
+                        text : "Add Property"
                     }
                 ]
             }
