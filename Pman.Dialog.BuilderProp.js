@@ -321,7 +321,7 @@ Pman.Dialog.BuilderProp = {
                         
                         }
                     },
-                    text : "Save"
+                    text : "Add"
                 }
             ]
         });
