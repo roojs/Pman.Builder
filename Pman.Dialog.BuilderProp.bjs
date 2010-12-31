@@ -125,13 +125,13 @@
                                     "|xns": "Roo.grid"
                                 },
                                 {
-                                    "xtype": "ColumnModel",
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "desc",
                                     "header": "Checksum",
                                     "width": 200,
-                                    "dataIndex": "checksum",
+                                    "xtype": "ColumnModel",
                                     "|renderer": "function(v) { return String.format('{0}', v); }",
-                                    "|xns": "Roo.grid",
-                                    "*prop": "colModel[]"
+                                    "|xns": "Roo.grid"
                                 }
                             ]
                         }
