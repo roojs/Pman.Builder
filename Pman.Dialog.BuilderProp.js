@@ -284,7 +284,7 @@ Pman.Dialog.BuilderProp = {
                                 xns: Roo.grid,
                                 dataIndex : 'name',
                                 header : 'name',
-                                width : 75,
+                                width : 175,
                                 renderer : function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }
                             },
                             {
