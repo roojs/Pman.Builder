@@ -216,7 +216,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 // show a dialog to select property??
                                 // or should we add a line and get clever with pulldowns..
                                 var ec = _this.grid.currentNode.elConfig;
-                                Pman.Dialog.BuilderProps.show({
+                                Pman.Dialog.BuilderProp.show({
                                         xtype : ec.xtype  || '',
                                         xns: ec.xns || '',
                                         list: 'prop'
