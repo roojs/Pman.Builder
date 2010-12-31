@@ -32,7 +32,7 @@ Pman.Dialog.BuilderProp = {
             xns: Roo,
             closable : false,
             collapsible : false,
-            height : 170,
+            height : 300,
             resizable : false,
             title : "Add Property",
             width : 600,
