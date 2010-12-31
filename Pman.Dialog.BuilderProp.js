@@ -34,7 +34,7 @@ Pman.Dialog.BuilderProp = {
             collapsible : false,
             height : 170,
             resizable : false,
-            title : "Edit / Create AutoAuth",
+            title : "Add Property",
             width : 400,
             items : [
                 {
