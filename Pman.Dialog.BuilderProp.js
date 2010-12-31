@@ -40,20 +40,20 @@ Pman.Dialog.BuilderProp = {
                 {
                     xtype: 'GridPanel',
                     xns: Roo,
-                    title : "AutoAuth",
-                    fitToframe : true,
-                    fitContainer : true,
-                    tableName : 'AutoAuth',
-                    background : true,
-                    region : 'center',
                     listeners : {
                         activate : function() {
                             _this.panel = this;
-                            if (_this.grid) {
-                                _this.grid.footer.onClick('first');
-                            }
+                            //if (_this.grid) {
+                            //    _this.grid.ds.load({});
+                            //}
                         }
                     },
+                    background : true,
+                    fitContainer : true,
+                    fitToframe : true,
+                    region : 'center',
+                    tableName : 'AutoAuth',
+                    title : "AutoAuth",
                     grid : {
                         xtype: 'Grid',
                         xns: Roo.grid,
