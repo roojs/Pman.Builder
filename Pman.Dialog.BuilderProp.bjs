@@ -49,7 +49,7 @@
                             "items": [
                                 {
                                     "listeners": {
-                                        "beforeload": "function (_self, options)\n{\n    options.params = options.params || {};\n    options.params.xtype = this.data.xtype;\n    options.params.xns = this.data.xns;\n    \n}"
+                                        "beforeload": "function (_self, options)\n{\n    // we should cache this!!!\n    options.params = options.params || {};\n    options.params.xtype = this.data.xtype;\n    options.params.xns = this.data.xns;\n    \n}"
                                     },
                                     "*prop": "dataSource",
                                     "remoteSort": false,
