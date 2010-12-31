@@ -60,6 +60,10 @@
                             "text": "Add Property",
                             "xtype": "Item",
                             "|xns": "Roo.menu"
+                        },
+                        {
+                            "|xns": "Roo.menu",
+                            "xtype": "Separator"
                         }
                     ]
                 }
