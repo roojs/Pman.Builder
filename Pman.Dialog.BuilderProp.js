@@ -87,6 +87,7 @@ Pman.Dialog.BuilderProp = {
                             listeners : {
                                 beforeload : function (_self, options)
                                 {
+                                    // we should cache this!!!
                                     options.params = options.params || {};
                                     options.params.xtype = this.data.xtype;
                                     options.params.xns = this.data.xns;
