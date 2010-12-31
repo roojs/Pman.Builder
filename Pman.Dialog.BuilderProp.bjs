@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-59",
+    "id": "roo-file-6",
     "name": "Pman.Dialog.BuilderProp",
     "parent": "",
     "title": "",
@@ -27,7 +27,6 @@
                     "listeners": {
                         "|activate": "function() {\n    _this.panel = this;\n    //if (_this.grid) {\n    //    _this.grid.ds.load({});\n    //}\n}"
                     },
-                    "background": true,
                     "fitContainer": true,
                     "fitToframe": true,
                     "region": "center",
