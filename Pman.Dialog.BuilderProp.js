@@ -85,7 +85,7 @@ Pman.Dialog.BuilderProp = {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
                                 method : 'GET',
-                                url : baseURL + '/Roo/AutoAuth.php'
+                                url : baseURL + '/Builder/Prop.php'
                             },
                             reader : {
                                 xtype: 'JsonReader',
