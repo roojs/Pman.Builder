@@ -348,7 +348,7 @@ Pman.Dialog.BuilderProp = {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
                                 dataIndex : 'desc',
-                                header : 'Checksum',
+                                header : 'Description',
                                 width : 200,
                                 renderer : function(v) { return String.format('{0}', v); }
                             }
