@@ -100,10 +100,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
                         );
                     },
-                    click : function (e)
-                    {
-                    
-                    },
                     contextmenu : function (e)
                     {
                         // should we check e..??
