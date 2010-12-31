@@ -49,9 +49,9 @@
                             "items": [
                                 {
                                     "*prop": "dataSource",
-                                    "xtype": "Store",
                                     "remoteSort": true,
-                                    "|sortInfo": "{ field : 'url', direction: 'ASC' }",
+                                    "xtype": "Store",
+                                    "|sortInfo": "{ field : 'name', direction: 'ASC' }",
                                     "|xns": "Roo.data",
                                     "items": [
                                         {
