@@ -243,6 +243,21 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                              
                                 // show a dialog to select property??
                                 // or should we add a line and get clever with pulldowns..
+                                var ec = _this.grid.currentNode.elConfig;
+                                Pman.Dialog.BuilderProps.show({
+                                        xtype : ec.xtype  || '',
+                                        xns: ec.xns || '',
+                                        list: 'event'
+                                }, function (n,val) {
+                                    ec[n] = val || '';
+                                    _this.grid.setCurrrentNode(_this.grid.currentNode);
+                                    var bp = Pman.Tab.BuilderView.panel;
+                                    bp.redraw.defer(100,bp, [true]);
+                                    // update the tree's  text
+                                    _this.grid.currentNode.setText(
+                                        Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
+                                    );
+                                });
                             }
                         },
                         text : "Add Event Handler"
