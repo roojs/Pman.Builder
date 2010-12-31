@@ -85,7 +85,7 @@ Pman.Dialog.BuilderProp = {
                             xtype: 'Store',
                             xns: Roo.data,
                             remoteSort : true,
-                            sortInfo : { field : 'url', direction: 'ASC' },
+                            sortInfo : { field : 'name', direction: 'ASC' },
                             proxy : {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
