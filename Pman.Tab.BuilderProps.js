@@ -231,6 +231,10 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             }
                         },
                         text : "Add Property"
+                    },
+                    {
+                        xtype: 'Separator',
+                        xns: Roo.menu
                     }
                 ]
             }
