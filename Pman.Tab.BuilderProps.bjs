@@ -49,7 +49,7 @@
                             "listeners": {
                                 "click": "function (_self, e)\n{\n \n    // show a dialog to select property??\n    // or should we add a line and get clever with pulldowns..\n}"
                             },
-                            "text": "Add Event Handler",
+                            "text": "Add Property",
                             "xtype": "Item",
                             "|xns": "Roo.menu"
                         },
@@ -57,7 +57,7 @@
                             "listeners": {
                                 "click": "function (_self, e)\n{\n \n    // show a dialog to select property??\n    // or should we add a line and get clever with pulldowns..\n}"
                             },
-                            "text": "Add Property",
+                            "text": "Add Event Handler",
                             "xtype": "Item",
                             "|xns": "Roo.menu"
                         },
