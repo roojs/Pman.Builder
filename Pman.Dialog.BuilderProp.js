@@ -329,10 +329,14 @@ Pman.Dialog.BuilderProp = {
                         click : function (_self, e)
                         {
                             // do some checks?
-                             
+                             var sel = _this.grid.getSelectionModel().getSelected();
+                            if (!sel) {
+                                Roo.MessageBox.alert("Error", "Select a property");
+                            }
                             
-                            _this.dialog.el.mask("Saving");
-                            _this.form.doAction("submit");
+                            _this.callback(sel.data.name);
+                           _this.dialog.hide();
+                         
                         
                         }
                     },
