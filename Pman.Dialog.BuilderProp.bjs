@@ -21,17 +21,17 @@
                     "*prop": "center"
                 },
                 {
-                    "|xns": "Roo",
-                    "xtype": "GridPanel",
-                    "title": "AutoAuth",
-                    "fitToframe": true,
-                    "fitContainer": true,
-                    "tableName": "AutoAuth",
-                    "background": true,
-                    "region": "center",
                     "listeners": {
-                        "|activate": "function() {\n    _this.panel = this;\n    if (_this.grid) {\n        _this.grid.footer.onClick('first');\n    }\n}"
+                        "|activate": "function() {\n    _this.panel = this;\n    //if (_this.grid) {\n    //    _this.grid.ds.load({});\n    //}\n}"
                     },
+                    "background": true,
+                    "fitContainer": true,
+                    "fitToframe": true,
+                    "region": "center",
+                    "tableName": "AutoAuth",
+                    "title": "AutoAuth",
+                    "xtype": "GridPanel",
+                    "|xns": "Roo",
                     "items": [
                         {
                             "listeners": {
