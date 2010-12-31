@@ -84,14 +84,17 @@ Pman.Dialog.BuilderProp = {
                         dataSource : {
                             xtype: 'Store',
                             xns: Roo.data,
-                            remoteSort : false,
-                            sortInfo : { field : 'name', direction: 'ASC' },
                             listeners : {
                                 beforeload : function (_self, options)
                                 {
-                                
+                                    options.params = options.params || {};
+                                    options.params.xtype = this.data.xtype;
+                                    options.params.xns = this.data.xns;
+                                    
                                 }
                             },
+                            remoteSort : false,
+                            sortInfo : { field : 'name', direction: 'ASC' },
                             proxy : {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
