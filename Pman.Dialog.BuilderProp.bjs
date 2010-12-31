@@ -49,7 +49,7 @@
                             "items": [
                                 {
                                     "*prop": "dataSource",
-                                    "remoteSort": true,
+                                    "remoteSort": false,
                                     "xtype": "Store",
                                     "|sortInfo": "{ field : 'name', direction: 'ASC' }",
                                     "|xns": "Roo.data",
