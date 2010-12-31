@@ -217,7 +217,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 // or should we add a line and get clever with pulldowns..
                             }
                         },
-                        text : "Add Event Handler"
+                        text : "Add Property"
                     },
                     {
                         xtype: 'Item',
@@ -230,7 +230,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 // or should we add a line and get clever with pulldowns..
                             }
                         },
-                        text : "Add Property"
+                        text : "Add Event Handler"
                     },
                     {
                         xtype: 'Separator',
