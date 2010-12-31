@@ -6,6 +6,9 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderProp.bjs",
     "items": [
         {
+            "listeners": {
+                "show": "function (_self)\n{\n   _this.data.ds.load();\n}"
+            },
             "closable": false,
             "collapsible": false,
             "height": 600,
@@ -14,9 +17,6 @@
             "width": 600,
             "xtype": "LayoutDialog",
             "|xns": "Roo",
-            "listeners": {
-                "show": "function (_self)\n{\n\n}"
-            },
             "items": [
                 {
                     "|xns": "Roo",
