@@ -339,22 +339,6 @@ Pman.Dialog.BuilderProp = {
                             {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
-                                header : 'Id',
-                                width : 75,
-                                dataIndex : 'id',
-                                renderer : function(v) { return String.format('{0}', v); }
-                            },
-                            {
-                                xtype: 'ColumnModel',
-                                xns: Roo.grid,
-                                header : 'User',
-                                width : 75,
-                                dataIndex : 'user_id',
-                                renderer : function(v) { return String.format('{0}', v); }
-                            },
-                            {
-                                xtype: 'ColumnModel',
-                                xns: Roo.grid,
                                 header : 'Url',
                                 width : 200,
                                 dataIndex : 'url',
