@@ -70,15 +70,6 @@
                                     ]
                                 },
                                 {
-                                    "*prop": "footer",
-                                    "xtype": "PagingToolbar",
-                                    "pageSize": 25,
-                                    "displayInfo": true,
-                                    "displayMsg": "Displaying AutoAuth{0} - {1} of {2}",
-                                    "emptyMsg": "No AutoAuth found",
-                                    "|xns": "Roo"
-                                },
-                                {
                                     "*prop": "colModel[]",
                                     "dataIndex": "name",
                                     "header": "name",
