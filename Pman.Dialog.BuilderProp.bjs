@@ -34,14 +34,14 @@
                     },
                     "items": [
                         {
-                            "*prop": "grid",
-                            "xtype": "Grid",
-                            "autoExpandColumn": "url",
-                            "loadMask": true,
                             "listeners": {
                                 "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.footer.onClick('first');\n    }\n}",
                                 "|rowdblclick": "function (_self, rowIndex, e)\n{\n    if (!_this.dialog) return;\n    _this.dialog.show( this.getDataSource().getAt(rowIndex), function() {\n        _this.grid.footer.onClick('first');\n    }); \n}\n"
                             },
+                            "*prop": "grid",
+                            "autoExpandColumn": "desc",
+                            "loadMask": true,
+                            "xtype": "Grid",
                             "|xns": "Roo.grid",
                             "items": [
                                 {
