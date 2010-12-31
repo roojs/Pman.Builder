@@ -68,10 +68,9 @@ Pman.Dialog.BuilderProp = {
                             },
                             rowdblclick : function (_self, rowIndex, e)
                             {
-                                if (!_this.dialog) return;
-                                _this.dialog.show( this.getDataSource().getAt(rowIndex), function() {
-                                    _this.grid.footer.onClick('first');
-                                }); 
+                                 
+                                 _this.callback(this.getDataSource().getAt(rowIndex).data.name);
+                                 _this.dialog.hide(); 
                             }
                         },
                         autoExpandColumn : 'desc',
