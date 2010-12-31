@@ -117,24 +117,6 @@
                                 },
                                 {
                                     "xtype": "ColumnModel",
-                                    "header": "Id",
-                                    "width": 75,
-                                    "dataIndex": "id",
-                                    "|renderer": "function(v) { return String.format('{0}', v); }",
-                                    "|xns": "Roo.grid",
-                                    "*prop": "colModel[]"
-                                },
-                                {
-                                    "xtype": "ColumnModel",
-                                    "header": "User",
-                                    "width": 75,
-                                    "dataIndex": "user_id",
-                                    "|renderer": "function(v) { return String.format('{0}', v); }",
-                                    "|xns": "Roo.grid",
-                                    "*prop": "colModel[]"
-                                },
-                                {
-                                    "xtype": "ColumnModel",
                                     "header": "Url",
                                     "width": 200,
                                     "dataIndex": "url",
