@@ -36,6 +36,12 @@ Pman.Dialog.BuilderProp = {
             resizable : false,
             title : "Add Property",
             width : 600,
+            listeners : {
+                show : function (_self)
+                {
+                
+                }
+            },
             items : [
                 {
                     xtype: 'GridPanel',
