@@ -270,14 +270,6 @@ Pman.Dialog.BuilderProp = {
                                 ]
                             }
                         },
-                        footer : {
-                            xtype: 'PagingToolbar',
-                            xns: Roo,
-                            pageSize : 25,
-                            displayInfo : true,
-                            displayMsg : 'Displaying AutoAuth{0} - {1} of {2}',
-                            emptyMsg : 'No AutoAuth found'
-                        },
                         colModel : [
                             {
                                 xtype: 'ColumnModel',
