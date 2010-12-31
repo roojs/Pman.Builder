@@ -53,9 +53,9 @@
                                     "items": [
                                         {
                                             "*prop": "proxy",
-                                            "xtype": "HttpProxy",
                                             "method": "GET",
-                                            "|url": "baseURL + '/Roo/AutoAuth.php'",
+                                            "xtype": "HttpProxy",
+                                            "|url": "baseURL + '/Builder/Prop.php'",
                                             "|xns": "Roo.data"
                                         },
                                         {
