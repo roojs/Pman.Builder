@@ -249,7 +249,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                         xns: ec.xns || '',
                                         list: 'event'
                                 }, function (n,val) {
-                                    ec[n] = val || '';
+                                    ec[n] = val || "function() {\n\n}";
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
                                     var bp = Pman.Tab.BuilderView.panel;
                                     bp.redraw.defer(100,bp, [true]);
