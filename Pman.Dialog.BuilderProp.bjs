@@ -21,11 +21,6 @@
                     "*prop": "center"
                 },
                 {
-                    "region": "center",
-                    "xtype": "ContentPanel",
-                    "|xns": "Roo"
-                },
-                {
                     "|xns": "Roo",
                     "xtype": "GridPanel",
                     "title": "AutoAuth",
