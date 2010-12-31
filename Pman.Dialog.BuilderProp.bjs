@@ -127,7 +127,7 @@
                                 {
                                     "*prop": "colModel[]",
                                     "dataIndex": "desc",
-                                    "header": "Checksum",
+                                    "header": "Description",
                                     "width": 200,
                                     "xtype": "ColumnModel",
                                     "|renderer": "function(v) { return String.format('{0}', v); }",
