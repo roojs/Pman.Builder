@@ -54,7 +54,6 @@ Pman.Dialog.BuilderProp = {
                             //}
                         }
                     },
-                    background : true,
                     fitContainer : true,
                     fitToframe : true,
                     region : 'center',
