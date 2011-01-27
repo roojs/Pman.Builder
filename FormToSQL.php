@@ -159,9 +159,11 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->size = 11;
                 if ($o->name == 'id') {
                     $f->extra = "AUTO_INCREMENT PRIMARY KEY";
+                    $this->primary_key = $o->name;
                 } else {
                     $f->default = 0;
                 }
+                
                 array_unshift($this->cols, $f); 
                 break;
             default:
