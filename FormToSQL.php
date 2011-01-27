@@ -23,7 +23,14 @@ class Pman_Builder_FormToSQL extends Pman {
            }
         $o = json_decode(file_get_contents($file));
         $this->walk($o);
-        print_R($this->cols);
+        //print_R($this->cols);
+        
+        $b = explode('.', basename($file));
+        array_pop($b);
+        $tn = strtolower(preg_replace('/[A-Z]?/','\\$1_', array_pop($b)));
+        $tn = preg_replace('/^_+/', '', $tn);
+        $this->toSQL($tn);
+        
         die("DONE");
     }
     
@@ -161,10 +168,32 @@ class Pman_Builder_FormToSQL extends Pman {
                 continue;
             
         }
-        
-        
-        
+         
         
     }
+    function toSQL($tn)
+    {
+        
+        $out = "CREATE TABLE  $tn (\n" .
+        
+        foreach($this->cols as $i=> $f) {
+            $out .= $i ? ",\n"  : "";
+            
+            $out .= "    {$f->name} {$f->type}";
+            if (!empty($f->size)) {
+                $out .= "(". $f->size.")";
+            }
+            if (!empty($f->extra)) {
+                $out .= ' ' . $f->extra;
+            }
+            if (isset($f->default)) {
+                $out. = " DEFAULT ". $f->default;
+            }
+            
+        }
+        $out .= "\n);";
+        echo $out;
+    }
+    
     
 }
