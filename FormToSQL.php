@@ -59,6 +59,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $items[] = $oo;
                 continue;
             }
+            $this->flattenProps($oo);
             $o->{$oo->{'*prop'}} = $oo;
             
         }
