@@ -68,7 +68,8 @@ class Pman_Builder_FormToSQL extends Pman {
     
     function parse($o) 
     {
-        
+        require_once 'Services/JSON.php';
+        $s = new Services_JSON();
         if (empty($o->xtype) || empty($o->{'|xns'})) {
             return;
         }
@@ -90,7 +91,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 if ($o->store->xtype == 'SimpleStore') {
                     //print_R($o);exit;
                     var_dump($o->store->{'|data'});
-                    $data = json_decode($o->store->{'|data'}); 
+                    $data = $s->decode($o->store->{'|data'}); 
                     var_dump($data);exit;
                     $type = 'INT';
                     $len = 0;
