@@ -105,7 +105,8 @@ class Pman_Builder_FormToSQL extends Pman {
                     $f->name = $o->name; // hiddenname?
                     $f->type = $type;
                     $f->size = $len;
-                    
+                    $this->cols[] = $f;
+                    continue;
                 }
             
             
