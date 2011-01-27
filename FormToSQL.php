@@ -86,7 +86,10 @@ class Pman_Builder_FormToSQL extends Pman {
             
             case 'ComboBox':
                 if ($o->store->xtype == 'SimpleStore') {
-                    $data = json_decode($o->store->
+                    $data = json_decode($o->store->{'|data'}); 
+                    
+                    
+                    
                 }
             
             
