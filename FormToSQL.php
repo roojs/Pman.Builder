@@ -85,7 +85,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 break;
             
             case 'ComboBox':
-                print_r($o);exit;
+              //  print_r($o);exit;
                 if ($o->store->xtype == 'SimpleStore') {
                     $data = json_decode($o->store->{'|data'}); 
                     $type = 'INT';
