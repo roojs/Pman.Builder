@@ -174,7 +174,7 @@ class Pman_Builder_FormToSQL extends Pman {
     function toSQL($tn)
     {
         
-        $out = "CREATE TABLE  $tn (\n" .
+        $out = "CREATE TABLE  $tn (\n";
         
         foreach($this->cols as $i=> $f) {
             $out .= $i ? ",\n"  : "";
