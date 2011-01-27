@@ -50,7 +50,7 @@ class Pman_Builder_FormToSQL extends Pman {
         if (empty($o->xtype)) {
             return;
         }
-        print_R($o);
+        echo $o->xtype ."\n";
         
     }
     
