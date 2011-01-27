@@ -105,7 +105,7 @@ class Pman_Builder_FormToSQL extends Pman {
                     }
                     if ($type == 'VARCHAR') {
                         $len = min(255,max(8, pow(2, strlen(decbin(($len))))));
-                        $f->default = '';
+                        $f->default = "''";
                     } else {
                         $len = 11;
                         $f->default = 0;
