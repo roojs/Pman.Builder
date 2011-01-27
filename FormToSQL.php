@@ -61,7 +61,7 @@ class Pman_Builder_FormToSQL extends Pman {
             case 'TextField':
                 $f->name = $o->name;
                 $f->type = 'VARCHAR';
-                $f->size = min(8, pow(2, strlen(decbin($o->width-1)));
+                $f->size = min(8, pow(2, strlen(decbin($o->width-1))));
                 break;
             
             default:
