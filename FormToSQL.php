@@ -159,7 +159,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->type = 'INT';
                 $f->size = 11;
                 if ($o->name == 'id') {
-                    $f->extra = "NOT NULL AUTO_INCREMENT PRIMARY KEY";
+                    $f->extra = "NOT NULL AUTO_INCREMENT ";
                     $this->primary_key = $o->name;
                 } else {
                     $f->default = 0;
