@@ -31,7 +31,12 @@ class Pman_Builder_FormToSQL extends Pman {
         $tn = preg_replace('/^_+/', '', $tn);
         $this->toSQL($tn);
         $b= basename(dirname($file));
-        $this->toDO($b, $tn);
+        if (!empty($_SERVER['argv'][3]) {
+            $b= $_SERVER['argv'][3];
+           }
+        
+        $do = $this->toDO($b, $tn);
+        $file = dirname($file).'/DataObjects/'.$b.'.php';
         
         die("DONE");
     }
