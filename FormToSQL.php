@@ -184,7 +184,7 @@ class Pman_Builder_FormToSQL extends Pman {
             $out .= $i ? ",\n"  : "";
             
             $out .= "    ".str_pad($f->name, 30);
-            $sz = $f->type 
+            $sz = $f->type ;
             if (!empty($f->size)) {
                 $sz .= "(". $f->size.")";
             }
