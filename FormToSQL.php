@@ -185,7 +185,7 @@ class Pman_Builder_FormToSQL extends Pman {
         foreach($this->cols as $i=> $f) {
             $out .= $i ? ",\n"  : "";
             
-            $row = "    ".str_pad($f->name, 30);
+            $row = '';
             $sz = $f->type ;
             if (!empty($f->size)) {
                 $sz .= "(". $f->size.")";
@@ -198,7 +198,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $row .= " DEFAULT ". $f->default;
             }
             $this->cols[$i]->def = $row;
-            $out.=$row;
+            $out.=  "    ".str_pad($f->name, 30) . $row;
         }
         if ($this->primary_key) {
             $out .= ",\n    PRIMARY KEY (". $this->primary_key . ")";
