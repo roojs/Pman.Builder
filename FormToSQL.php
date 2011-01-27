@@ -23,6 +23,7 @@ class Pman_Builder_FormToSQL extends Pman {
            }
         $o = json_decode(file_get_contents($file));
         $this->walk($o);
+        print_R($this->cols);
         die("DONE");
     }
     
