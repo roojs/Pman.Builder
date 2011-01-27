@@ -39,8 +39,12 @@ class Pman_Builder_FormToSQL extends Pman {
         
         $dofile = dirname($file).'/DataObjects/'.ucfirst($b).'.php';
         if (!file_exists($dofile)) {
+            echo "WRITING  $dofile\n";
             file_put_contents($dofile, $do);
-        }
+        } else {
+            
+            echo "DELETE $dofile IF YOU WANT TO RECREATED IT..\n";
+           }
         
         die("DONE");
     }
