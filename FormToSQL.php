@@ -155,7 +155,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 } else {
                     $f->default = 0;
                 }
-                $this->cols[] = $f;
+                array_unshift($this->cols, $f); 
                 break;
             default:
                 continue;
