@@ -24,6 +24,9 @@ class Pman_Builder_FormToSQL extends Pman {
     function walk($o) 
     {
         
+        $this->parse($o);
+        
+        
         
         
         foreach($o as $k=>$v) {
@@ -41,6 +44,14 @@ class Pman_Builder_FormToSQL extends Pman {
         }
         
     }
-    
+    function parse($o) 
+    {
+        
+        if (empty($o->xtype)) {
+            return;
+        }
+        print_R($o);
+        
+    }
     
 }
