@@ -111,8 +111,18 @@ class Pman_Builder_FormToSQL extends Pman {
                     continue;
                 }
                 // otherwise it's a datasource based one...
-                
-            
+                // our 18N fields are a bit odd here...
+                if (preg_match('/i18n/i', $o->store->proxy->{'|url'})) {
+                    $f->name = isset($o->hiddenName) ? $o->hiddenName : $o->name; 
+                    $f->type = 'VARCHAR';
+                    $f->size = 8;
+                    $this->cols[] = $f;
+                    continue;
+                }
+                $f->name = isset($o->hiddenName) ? $o->hiddenName : $o->name; 
+                $f->type = 'INT';
+                $f->size = 11;
+                $this->cols[] = $f;
             
             
             
