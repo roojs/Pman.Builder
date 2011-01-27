@@ -27,7 +27,7 @@ class Pman_Builder_FormToSQL extends Pman {
         
         $b = explode('.', basename($file));
         array_pop($b);
-        $tn = strtolower(preg_replace('/[A-Z]?/','\\$1_', array_pop($b)));
+        $tn = strtolower(preg_replace('/[A-Z]?/','\\1_', array_pop($b)));
         $tn = preg_replace('/^_+/', '', $tn);
         $this->toSQL($tn);
         
