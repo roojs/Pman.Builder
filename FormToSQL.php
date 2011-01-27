@@ -16,6 +16,29 @@ class Pman_Builder_FormToSQL extends Pman {
     
     function get($file)
     {
+        $ar = json_decode(file_get_contents($file));
+        $this->walk($o);
+        
+    }
+    
+    function walk($o) 
+    {
+        
+        
+        
+        foreach($o as $k=>$v) {
+            if (is_array($v)) {
+                foreach($v as $oo) {
+                    $this->walk($o);
+                }
+                
+                continue;
+            }
+            if (is_object($v)) {
+                $this->walk($v);
+                continue;
+            }
+        }
         
     }
     
