@@ -30,7 +30,7 @@ class Pman_Builder_FormToSQL extends Pman {
         $tn = strtolower(preg_replace('/([A-Z])/','_$1', array_pop($b)));
         $tn = preg_replace('/^_+/', '', $tn);
         $this->toSQL($tn);
-        $b= basename(dirname($file)));
+        $b= basename(dirname($file));
         $this->toDO($b, $tn);
         
         die("DONE");
