@@ -18,7 +18,7 @@ class Pman_Builder_FormToSQL extends Pman {
     {
         $ar = json_decode(file_get_contents($file));
         $this->walk($o);
-        
+        die("DONE");
     }
     
     function walk($o) 
