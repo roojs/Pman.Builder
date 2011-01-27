@@ -50,9 +50,18 @@ class Pman_Builder_FormToSQL extends Pman {
     function parse($o) 
     {
         
-        if (empty($o->xtype)) {
+        if (empty($o->xtype) || empty($o->{'|xns'})) {
             return;
         }
+        if ($o->{'|xns'} != 'Roo.form') {
+            continue;
+        }
+        $name= $o->{'|xns'}.'.'. $o->xtype;
+        switch ($name) {
+            case "Roo.form"
+        }
+        
+        
         echo $o->xtype ."\n";
         
     }
