@@ -194,6 +194,10 @@ class Pman_Builder_FormToSQL extends Pman {
             }
             
         }
+        if ($this->primary_key) {
+            $out .= ",\n     PRIMARY KEY (". $f->primary_key . ")";
+        }
+        
         $out .= "\n);";
         echo $out;
     }
