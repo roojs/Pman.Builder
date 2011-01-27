@@ -108,6 +108,11 @@ class Pman_Builder_FormToSQL extends Pman {
                     $this->cols[] = $f;
                     continue;
                 }
+                // otherwise it's a datasource based one...
+                
+            
+            
+            
             
             
             
