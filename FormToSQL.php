@@ -14,7 +14,7 @@ class Pman_Builder_FormToSQL extends Pman {
         return true;
     }
     
-    function get($file)
+    function get()
     {
         print_R($_SERVER['argv']);exit;
         $ar = json_decode(file_get_contents($file));
