@@ -55,11 +55,11 @@ class Pman_Builder_FormToSQL extends Pman {
         }
         $items = array();
         foreach($o->items as $oo) {
-            if (!isset($oo->{'*props'})) {
+            if (!isset($oo->{'*prop'})) {
                 $items[] = $oo;
                 continue;
             }
-            $o->{$oo->{'*props'}} = $oo;
+            $o->{$oo->{'*prop'}} = $oo;
             
         }
         $o->items = $items;
