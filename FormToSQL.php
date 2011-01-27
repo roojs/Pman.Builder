@@ -136,6 +136,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->name = isset($o->hiddenName) ? $o->hiddenName : $o->name; 
                 $f->type = 'INT';
                 $f->size = 11;
+                $f->extra = "NOT NULL";
                 $f->default = 0;
                 $this->cols[] = $f;
                 continue;
