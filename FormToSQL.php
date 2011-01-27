@@ -56,9 +56,12 @@ class Pman_Builder_FormToSQL extends Pman {
         if ($o->{'|xns'} != 'Roo.form') {
             return;
         }
+        $f = new StdClass;
         switch ($o->xtype) {
             case 'TextField':
-                print_R($o);
+                $f->name = $o->name;
+                $f->type = 'VARCHAR';
+                $f->size = pow(2, strlen(decbin($o->width-1));
                 break;
             
             default:
