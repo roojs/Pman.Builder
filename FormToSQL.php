@@ -89,6 +89,7 @@ class Pman_Builder_FormToSQL extends Pman {
               //  print_r($o);exit;
                 if ($o->store->xtype == 'SimpleStore') {
                     $data = json_decode($o->store->{'|data'}); 
+                    print_R($data);
                     $type = 'INT';
                     $len = 0;
                     foreach($data as $row) {
