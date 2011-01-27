@@ -18,6 +18,9 @@ class Pman_Builder_FormToSQL extends Pman {
     {
         //print_R($_SERVER['argv']);exit;
         $file  = $_SERVER['argv'][2];
+        if (!file_exists($file)) {
+            die("file $file does not exist");
+           }
         $ar = json_decode(file_get_contents($file));
         $this->walk($o);
         die("DONE");
