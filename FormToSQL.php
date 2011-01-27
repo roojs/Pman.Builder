@@ -187,7 +187,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $out .= ' ' . $f->extra;
             }
             if (isset($f->default)) {
-                $out. = " DEFAULT ". $f->default;
+                $out .= " DEFAULT ". $f->default;
             }
             
         }
