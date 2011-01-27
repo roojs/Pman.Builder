@@ -238,5 +238,6 @@ require_once \'DB/DataObject.php\';
 }";
         echo "\n\n";
         echo $out;
+         echo "\n\n";
     }
 }
