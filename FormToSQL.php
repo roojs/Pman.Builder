@@ -29,15 +29,17 @@ class Pman_Builder_FormToSQL extends Pman {
         array_pop($b);
         $tn = strtolower(preg_replace('/([A-Z])/','_$1', array_pop($b)));
         $tn = preg_replace('/^_+/', '', $tn);
+        if (!empty($_SERVER['argv'][3])) {
+            $tn= $_SERVER['argv'][3];
+        }
+        
+        
         $this->toSQL($tn);
         $b= basename(dirname($file));
-        if (!empty($_SERVER['argv'][3])) {
-            $b= $_SERVER['argv'][3];
-        }
         
         $do = $this->toDO($b, $tn);
         
-        $dofile = dirname($file).'/DataObjects/'.ucfirst($b.$tn).'.php';
+        $dofile = dirname($file).'/DataObjects/'.$b.'/'. ucfirst($tn).'.php';
         if (!file_exists($dofile)) {
             echo "WRITING  $dofile\n";
             file_put_contents($dofile, $do);
