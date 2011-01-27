@@ -42,6 +42,7 @@ class Pman_Builder_FormToSQL extends Pman {
             echo "WRITING  $dofile\n";
             file_put_contents($dofile, $do);
         } else {
+            // should support AUTOCODE...
             echo "DELETE $dofile IF YOU WANT TO RECREATED IT..\n";
         }
         
