@@ -32,12 +32,10 @@ class Pman_Builder_FormToSQL extends Pman {
         $this->parse($o);
         
         
-        
-        
         foreach((array)$o as $k=>$v) {
             if (is_array($v)) {
                 foreach($v as $oo) {
-                    $this->walk($o);
+                    $this->walk($oo);
                 }
                 
                 continue;
