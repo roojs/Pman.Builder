@@ -30,6 +30,8 @@ class Pman_Builder_FormToSQL extends Pman {
         $tn = strtolower(preg_replace('/([A-Z])/','_$1', array_pop($b)));
         $tn = preg_replace('/^_+/', '', $tn);
         $this->toSQL($tn);
+        $b= basename(dirname($file)));
+        $this->toDO($b, $tn);
         
         die("DONE");
     }
@@ -183,19 +185,20 @@ class Pman_Builder_FormToSQL extends Pman {
         foreach($this->cols as $i=> $f) {
             $out .= $i ? ",\n"  : "";
             
-            $out .= "    ".str_pad($f->name, 30);
+            $row = "    ".str_pad($f->name, 30);
             $sz = $f->type ;
             if (!empty($f->size)) {
                 $sz .= "(". $f->size.")";
             }
-            $out .= "    ".str_pad($sz, 20);
+            $row .= "    ".str_pad($sz, 20);
             if (!empty($f->extra)) {
-                $out .= ' ' . $f->extra;
+                $row .= ' ' . $f->extra;
             }
             if (isset($f->default)) {
-                $out .= " DEFAULT ". $f->default;
+                $row .= " DEFAULT ". $f->default;
             }
-            
+            $this->cols[$i]->def = $row;
+            $out.=$row;
         }
         if ($this->primary_key) {
             $out .= ",\n    PRIMARY KEY (". $this->primary_key . ")";
@@ -205,5 +208,35 @@ class Pman_Builder_FormToSQL extends Pman {
         echo $out;
     }
     
+    function toDO($b,$tn)
+    {
+        $utn = ucfirst($tn);
+        $out = '<?php
+/**
+ * Table Definition for builder
+ */
+require_once \'DB/DataObject.php\';
+
+';
+        $out.="class Pman_$b_DataObjects_$utn extends DB_DataObject 
+{
+    ###START_AUTOCODE
+    /* the code below is auto generated do not remove the above tag */
+
+    public \$__table = '$tn';                         // table name
+";
+        foreach($this->cols as $f) {
+            $out .= '    public $' . str_pad($f->name,30 ). '// ' . $f->def;
+                
+       }
+       $out.="
     
+    /* the code above is auto generated do not remove the tag below */
+    ###END_AUTOCODE
+        
+        
+}";
+    
+        echo $out;
+    }
 }
