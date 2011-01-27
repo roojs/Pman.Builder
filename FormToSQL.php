@@ -123,7 +123,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->type = 'INT';
                 $f->size = 11;
                 $this->cols[] = $f;
-            
+                continue;
             
             
             
