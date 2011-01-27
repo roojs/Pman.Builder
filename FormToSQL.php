@@ -89,6 +89,7 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->name = $o->name;
                 $f->type = 'VARCHAR';
                 $f->default = "''";
+                 $f->extra = "NOT NULL";
                 $f->size = min(255,max(8, pow(2, strlen(decbin(($o->width/2)-1)))));
                 $this->cols[] = $f;
                 break;
