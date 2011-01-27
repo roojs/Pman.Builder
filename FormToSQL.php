@@ -70,9 +70,11 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->name = $o->name;
                 $f->type = 'INT';
                 
-                $f->size = 11
+                $f->size = 11;
                 if ($o->name == 'id') {
                     $f->extra = "AUTO_INCREMENT PRIMARY KEY",
+                } else {
+                    $f->default = 0;
                 }
                 $this->cols[] = $f;
                 break;
