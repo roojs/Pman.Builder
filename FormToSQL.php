@@ -218,7 +218,7 @@ class Pman_Builder_FormToSQL extends Pman {
 require_once \'DB/DataObject.php\';
 
 ';
-        $out.="class Pman_$b_DataObjects_$utn extends DB_DataObject 
+        $out.="class Pman_{$b}_DataObjects_$utn extends DB_DataObject 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
