@@ -29,7 +29,7 @@ class Pman_Builder_FormToSQL extends Pman {
     
     function walk($o) 
     {
-        
+        $this->flattenProps($o);
         $this->parse($o);
         
         
@@ -48,6 +48,23 @@ class Pman_Builder_FormToSQL extends Pman {
         }
         
     }
+    
+    function flattenProps($o) {
+        if (empty($o->items)) {
+            return;
+        }
+        $items = array();
+        foreach($o->items as $oo) {
+            if (!isset($oo->{'*props'})) {
+                $items[] = $oo;
+                continue;
+            }
+            $o->{$oo->{'*props'}} = $oo;
+            
+        }
+        $o->items = $items;
+    }
+    
     function parse($o) 
     {
         
@@ -66,6 +83,13 @@ class Pman_Builder_FormToSQL extends Pman {
                 $f->size = min(255,max(8, pow(2, strlen(decbin(($o->width/2)-1)))));
                 $this->cols[] = $f;
                 break;
+            
+            case 'ComboBox':
+                if ($o->store->xtype == 'SimpleStore') {
+                    $data = json_decode($o->store->
+                }
+            
+            
             
             case 'DateField':
             case 'NumberField':
