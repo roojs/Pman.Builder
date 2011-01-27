@@ -133,7 +133,11 @@ class Pman_Builder_FormToSQL extends Pman {
                 $this->cols[] = $f;
                 continue;
             
-            
+            case 'TextArea':
+                $f->name = $o->name;
+                $f->type = 'TEXT';
+                
+                $this->cols[] = $f;
             
             
             case 'DateField':
