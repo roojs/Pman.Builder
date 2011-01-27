@@ -62,11 +62,20 @@ class Pman_Builder_FormToSQL extends Pman {
             case 'TextField':
                 $f->name = $o->name;
                 $f->type = 'VARCHAR';
-                
+                $f->default = "''";
                 $f->size = min(255,max(8, pow(2, strlen(decbin(($o->width/2)-1)))));
                 $this->cols[] = $f;
                 break;
-            
+             case 'Hidden':
+                $f->name = $o->name;
+                $f->type = 'INT';
+                
+                $f->size = 11
+                if ($o->name == 'id') {
+                    $f->extra = "AUTO_INCREMENT PRIMARY KEY",
+                }
+                $this->cols[] = $f;
+                break;
             default:
                 continue;
             
