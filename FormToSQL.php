@@ -54,7 +54,7 @@ class Pman_Builder_FormToSQL extends Pman {
             return;
         }
         if ($o->{'|xns'} != 'Roo.form') {
-            continue;
+            return;
         }
         switch ($o->xtype) {
             case 'TextField':
