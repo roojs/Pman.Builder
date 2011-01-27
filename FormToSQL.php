@@ -69,10 +69,9 @@ class Pman_Builder_FormToSQL extends Pman {
              case 'Hidden':
                 $f->name = $o->name;
                 $f->type = 'INT';
-                
                 $f->size = 11;
                 if ($o->name == 'id') {
-                    $f->extra = "AUTO_INCREMENT PRIMARY KEY",
+                    $f->extra = "AUTO_INCREMENT PRIMARY KEY";
                 } else {
                     $f->default = 0;
                 }
