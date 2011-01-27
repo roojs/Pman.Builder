@@ -183,7 +183,7 @@ class Pman_Builder_FormToSQL extends Pman {
         foreach($this->cols as $i=> $f) {
             $out .= $i ? ",\n"  : "";
             
-            $out .= "    {$f->name} {$f->type}";
+            $out .= "    ".str_pad($f->name, 30) . ' '. str_pad( $f->type , 20);
             if (!empty($f->size)) {
                 $out .= "(". $f->size.")";
             }
