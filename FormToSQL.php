@@ -226,7 +226,7 @@ require_once \'DB/DataObject.php\';
     public \$__table = '$tn';                         // table name
 ";
         foreach($this->cols as $f) {
-            $out .= '    public $' . str_pad($f->name,30 ). '// ' . $f->def;
+            $out .= '    public $' . str_pad($f->name,30 ). '// ' . $f->def . "\n";
                 
        }
        $out.="
