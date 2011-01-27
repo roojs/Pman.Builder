@@ -87,8 +87,24 @@ class Pman_Builder_FormToSQL extends Pman {
             case 'ComboBox':
                 if ($o->store->xtype == 'SimpleStore') {
                     $data = json_decode($o->store->{'|data'}); 
-                    
-                    
+                    $type = 'INT';
+                    $len = 0;
+                    foreach($data as $row) {
+                        if (is_numeric($row[0])) {
+                            continue;
+                        }
+                        $type = 'VARCHAR';
+                        $len = strlen($row[0]);
+                          
+                    }
+                    if ($type == 'VARCHAR') {
+                        $len = min(255,max(8, pow(2, strlen(decbin(($len))))));
+                    } else {
+                        $len = 11;
+                    }
+                    $f->name = $o->name; // hiddenname?
+                    $f->type = $type;
+                    $f->size = $len;
                     
                 }
             
