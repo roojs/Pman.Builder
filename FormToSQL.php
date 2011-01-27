@@ -56,13 +56,18 @@ class Pman_Builder_FormToSQL extends Pman {
         if ($o->{'|xns'} != 'Roo.form') {
             continue;
         }
-        $name= $o->{'|xns'}.'.'. $o->xtype;
-        switch ($name) {
-            case "Roo.form"
+        switch ($o->xtype) {
+            case 'TextField':
+                print_R($o);
+                break;
+            
+            default:
+                continue;
+            
         }
         
         
-        echo $o->xtype ."\n";
+        
         
     }
     
