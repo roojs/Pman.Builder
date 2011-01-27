@@ -39,7 +39,7 @@ class Pman_Builder_FormToSQL extends Pman {
         
         $do = $this->toDO($b, $tn);
         
-        $dofile = dirname($file).'/DataObjects/'.$b.'/'. ucfirst($tn).'.php';
+        $dofile = dirname($file).'/DataObjects/'. ucfirst($tn).'.php';
         if (!file_exists($dofile)) {
             echo "WRITING  $dofile\n";
             file_put_contents($dofile, $do);
