@@ -34,7 +34,7 @@ class Pman_Builder_FormToSQL extends Pman {
         
         
         
-        foreach($o as $k=>$v) {
+        foreach((array)$o as $k=>$v) {
             if (is_array($v)) {
                 foreach($v as $oo) {
                     $this->walk($o);
