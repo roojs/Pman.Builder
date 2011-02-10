@@ -58,6 +58,15 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                         if (_this.panel.active) {
                            this.ds.load({})
                         }
+                    },
+                    rowclass : function (gridview, rowcfg)
+                    {
+                    
+                        // what is the currently selected element..
+                        if (rowcfg.rowIndex > 10) {
+                            rowcfg.rowClass = 'palete-hide';
+                        } 
+                            Roo.log(rowcfg);
                     }
                 },
                 autoExpandColumn : 'name',
