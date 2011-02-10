@@ -176,22 +176,25 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                            if (!_this.modsel.lastData || !_this.modsel.lastData.id) {
+                                            if (!_this.modsel.getValue()) {
                                                 Roo.MessageBox.alert("Error", "Select Module");
                                                 return false;
                                             }
                                             
-                                            _this.filesel.reset();
-                                            Pman.Tab.BuilderTree.clearAll();
-                                            Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
-                                            
-                                            var bp = Pman.Tab.BuilderPanel;
-                                            bp.redraw.defer(100,bp,[true]);
+                                            Pman.Dialog.BuilderPart.show( { id : 0 } , function(data) {
+                                                _this.filesel.reset();
+                                                _this.filesel.setfromdata(data);
+                                                Pman.Tab.BuilderTree.clearAll();
+                                                Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
+                                                
+                                                var bp = Pman.Tab.BuilderPanel;
+                                                bp.redraw.defer(100,bp,[true]);
+                                            });
                                         
                                         }
                                     },
-                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif',
-                                    text : "New Part"
+                                    text : "New Part",
+                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
                                 },
                                 {
                                     xtype: 'Item',
