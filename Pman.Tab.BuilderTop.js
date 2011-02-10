@@ -235,7 +235,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 }
                                 //bv.panel.el.unmask();
                                 
-                                bt.loadBJS(_this.modsel.getValue(), rec.data.name)
+                                bt.loadBJS(_this.modsel.getValue(), rec.data.id)
                             
                             
                             },
