@@ -121,7 +121,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         }
                                         return true;
                                     }  
-                                    console.log('can not drop ' + e.dropNode.elConfig.xtype + ' ontop of ' + np.elConfig.xtype);
+                                    Roo.log('can not drop ' + e.dropNode.elConfig.xtype + ' ontop of ' + np.elConfig.xtype);
                                     
                                     
                                     
