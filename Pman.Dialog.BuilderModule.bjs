@@ -34,7 +34,6 @@
                             "method": "POST",
                             "style": "margin:10px;",
                             "xtype": "Form",
-                            "|dialog": "function() {\n    \n}\n",
                             "|url": "baseURL + '/Roo/builder_modules.php'",
                             "|xns": "Roo.form",
                             "items": [
