@@ -38,7 +38,7 @@ class Pman_Builder_Palette extends Pman
                     
                     continue;
                 case 1:
-                    if (!isset($res[$l]) {
+                    if (!isset($res[$l])) {
                         $res[$l] = array(); 
                     }
                     foreach($left as $ll) {
