@@ -119,7 +119,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    if (!_this.modsel.getValue()) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    \n    Pman.Dialog.BuilderPart.show( { id : 0 } , function(data) {\n        _this.filesel.reset();\n        _this.filesel.setfromdata(data);\n        Pman.Tab.BuilderTree.clearAll();\n        Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);\n        \n        var bp = Pman.Tab.BuilderPanel;\n        bp.redraw.defer(100,bp,[true]);\n    });\n\n}"
+                                                "click": "function (_self, e)\n{\n    if (!_this.modsel.getValue()) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    \n    Pman.Dialog.BuilderPart.show( { id : 0 } , function(data) {\n        _this.filesel.reset();\n        if (!data.id) {\n            return;\n        }\n        _this.filesel.setfromdata(data);\n        Pman.Tab.BuilderTree.clearAll();\n        Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);\n        \n        var bp = Pman.Tab.BuilderPanel;\n        bp.redraw.defer(100,bp,[true]);\n    });\n\n}"
                                             },
                                             "text": "New Part",
                                             "xtype": "Item",
