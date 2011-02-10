@@ -29,6 +29,7 @@
                     "loadMask": true,
                     "xtype": "Grid",
                     "|xns": "Roo.grid",
+                    "enableDrag": true,
                     "items": [
                         {
                             "*prop": "dataSource",
