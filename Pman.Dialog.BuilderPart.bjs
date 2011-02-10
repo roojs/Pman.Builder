@@ -8,7 +8,7 @@
         {
             "closable": false,
             "collapsible": false,
-            "height": 140,
+            "height": 100,
             "resizable": false,
             "title": "Edit / Create builder_part",
             "width": 450,
