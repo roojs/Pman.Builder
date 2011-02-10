@@ -4,7 +4,89 @@
     "parent": "",
     "title": "",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderModule.bjs",
-    "items": false,
+    "items": [
+        {
+            "closable": false,
+            "collapsible": false,
+            "height": 140,
+            "resizable": false,
+            "title": "Edit / Create builder_modules",
+            "width": 400,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "|xns": "Roo",
+                    "xtype": "LayoutRegion",
+                    "*prop": "center"
+                },
+                {
+                    "region": "center",
+                    "xtype": "ContentPanel",
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "|xns": "Roo.form",
+                            "xtype": "Form",
+                            "listeners": {
+                                "|actioncomplete": "function(_self,action)\n{\n    if (action.type == 'setdata') {\n       //_this.dialog.el.mask(\"Loading\");\n       //this.load({ method: 'GET', params: { '_id' : _this.data.id }});\n       return;\n    }\n    if (action.type == 'load') {\n        _this.dialog.el.unmask();\n        return;\n    }\n    if (action.type =='submit') {\n    \n        _this.dialog.el.unmask();\n        _this.dialog.hide();\n    \n         if (_this.callback) {\n            _this.callback.call(_this, _this.form.getValues());\n         }\n         _this.form.reset();\n         return;\n    }\n}\n",
+                                "|rendered": "function (form)\n{\n    _this.form= form;\n}\n"
+                            },
+                            "method": "POST",
+                            "style": "margin:10px;",
+                            "|url": "baseURL + '/Roo/builder_modules.php'",
+                            "items": [
+                                {
+                                    "fieldLabel": "Name",
+                                    "name": "name",
+                                    "width": 200,
+                                    "|xns": "Roo.form",
+                                    "xtype": "TextField"
+                                },
+                                {
+                                    "fieldLabel": "Path",
+                                    "name": "path",
+                                    "width": 200,
+                                    "|xns": "Roo.form",
+                                    "xtype": "TextField"
+                                },
+                                {
+                                    "fieldLabel": "Public",
+                                    "name": "public",
+                                    "width": 75,
+                                    "|xns": "Roo.form",
+                                    "xtype": "TextField"
+                                },
+                                {
+                                    "name": "id",
+                                    "|xns": "Roo.form",
+                                    "xtype": "Hidden"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    _this.dialog.hide();\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Cancel",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    // do some checks?\n     \n    \n    _this.dialog.el.mask(\"Saving\");\n    _this.form.doAction(\"submit\");\n\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Save",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                }
+            ]
+        }
+    ],
     "permname": "",
     "modOrder": "001"
 }
