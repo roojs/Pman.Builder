@@ -60,7 +60,7 @@
                                             "*prop": "proxy",
                                             "method": "GET",
                                             "xtype": "HttpProxy",
-                                            "|url": "baseURL + '/Builder/Prop.php'",
+                                            "|url": "baseURL + '/Builder/Palette/Prop.php'",
                                             "|xns": "Roo.data"
                                         },
                                         {
