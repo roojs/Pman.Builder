@@ -139,7 +139,7 @@ Pman.Dialog.BuilderPart = {
                                 {
                                     xtype: 'Hidden',
                                     xns: Roo.form,
-                                    name : 'id'
+                                    name : 'module_id'
                                 },
                                 {
                                     xtype: 'Hidden',
