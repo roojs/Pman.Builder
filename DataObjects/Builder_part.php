@@ -55,9 +55,13 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     }
     function  writeEventFile($roo) 
     {
-        return;
-        $sp = ini_get('session.save_path')
-        $this->writeCopy(
+        
+        $sp = ini_get('session.save_path').'/Builder/'.date('Y/m');
+        if (!file_exists($sp)) {
+            mkdir($sp, 0755, true);
+        }
+        $fn = $sp .'/'. $this->id . '-'. $this->name . '-'. date('d-H-i-s') . '.bjs';
+        $this->writeCopy($fn, $roo);
     }
     
     
