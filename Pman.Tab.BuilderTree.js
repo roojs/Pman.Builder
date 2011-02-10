@@ -195,8 +195,12 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            nodeXtype : function() {
-                                
+                            nodeXtype : function(n) {
+                                 if (!n) {return ''; }
+                                var xt = n.elConfig.xtype ||  '';
+                                var xns= n.elConfig['|xns'] ||   '';
+                                xns += xns.length ? '.' : '';
+                                return xns + xt;
                             },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
