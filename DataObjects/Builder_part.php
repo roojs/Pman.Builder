@@ -92,6 +92,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
                 $x->toJSFile(json_decode($this->json))) ;
         return $path.'/'. $this->module.'.js';
     }
+    
     function toRooArray()
     {
         $ret = $this->toArray();
