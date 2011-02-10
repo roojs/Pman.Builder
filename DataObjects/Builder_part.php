@@ -37,7 +37,13 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
     }
     */
-    
+    function applyFilters($q, $au)
+    {
+        if (!empty($q['module_id'])) {
+            $m = DB_DataObject::factory('builder_modules');
+            $m->get($q['module_id']);
+            $m->syncParts();
+        }
     
     
 
