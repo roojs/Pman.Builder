@@ -26,7 +26,7 @@ class Pman_Builder_Palette extends Pman
         // use file..
         // get this directly from roo?
         
-        
+        print_R(FlexyFramework::get());exit;
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
         $res = array();
