@@ -58,6 +58,15 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                         if (_this.panel.active) {
                            this.ds.load({})
                         }
+                        if (_this.ss) {
+                            return;
+                        }
+                        _this.ss =   Roo.util.CSS.createStyleSheet(
+                    '.pman-builder-palete-hide { display: none; } ' + "\n" 
+                    , Roo.id())
+                        
+                        
+                        
                     },
                     rowclass : function (gridview, rowcfg)
                     {
