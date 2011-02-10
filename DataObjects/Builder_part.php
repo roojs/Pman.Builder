@@ -30,13 +30,14 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
-    function applySort($au, $sort, $dir, $cols) 
+    /*function applySort($au, $sort, $dir, $cols) 
     {
         // DB_DAtaObject::debugLevel(1);
         $this->orderBy( 'builder.app asc, builder.module asc');
         
         
     }
+    */
 
     
     function onInsert($req,$roo)
