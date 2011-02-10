@@ -85,7 +85,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                             }
                          );
                          Roo.log(cls);
-                         rowcfg.rowClass = cls;
+                        // rowcfg.rowClass = cls;
                         // what is the currently selected element..
                      
                     }
