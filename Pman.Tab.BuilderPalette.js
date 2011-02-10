@@ -76,10 +76,10 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                             sn = '*top';
                         }
                         var cls = 'pman-builder-palete-hide';
-                        var name  = rowcfg.record.data.name;
+                       
                      
                         Roo.each(rowcfg.record.json.parents, function(n) {
-                            if (n == name || n.split(':').shift() == name) 
+                            if (n == sn || n.split(':').shift() == sn) 
                                 cls = '';
                                 return true;
                             }
