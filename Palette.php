@@ -15,7 +15,7 @@ class Pman_Builder_Palette extends Pman
             return $this->roousage();
         }
     
-    
+    }
     function roousage() // list of what elements, can have what as children..
     {
         
