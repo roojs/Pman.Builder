@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-176",
+    "id": "roo-file-44",
     "name": "Pman.Dialog.BuilderPart",
     "parent": "",
     "title": "",
@@ -93,13 +93,6 @@
                                 {
                                     "fieldLabel": "Name",
                                     "name": "name",
-                                    "width": 200,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
-                                    "fieldLabel": "Json",
-                                    "name": "json",
                                     "width": 200,
                                     "|xns": "Roo.form",
                                     "xtype": "TextField"
