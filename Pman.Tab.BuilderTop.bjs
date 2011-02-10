@@ -173,7 +173,7 @@
                                             "*prop": "proxy",
                                             "method": "GET",
                                             "xtype": "HttpProxy",
-                                            "|url": "baseURL + '/Builder/Parts.php'",
+                                            "|url": "baseURL + '/Roo/Builder_parts.php'",
                                             "|xns": "Roo.data"
                                         },
                                         {
