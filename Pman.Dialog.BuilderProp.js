@@ -33,7 +33,7 @@ Pman.Dialog.BuilderProp = {
             listeners : {
                 show : function (_self)
                 {
-                   _this.data.ds.load();
+                   _this.data.ds.load({});
                 }
             },
             closable : false,
