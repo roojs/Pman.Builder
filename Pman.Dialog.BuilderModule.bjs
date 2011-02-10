@@ -36,6 +36,7 @@
                             "xtype": "Form",
                             "|url": "baseURL + '/Roo/builder_modules.php'",
                             "|xns": "Roo.form",
+                            "|": "function() {\n    \n}\n",
                             "items": [
                                 {
                                     "fieldLabel": "Name",
