@@ -54,7 +54,7 @@
                                     "fieldLabel": "Public",
                                     "name": "public",
                                     "width": 75,
-                                    "xtype": "CheckBox",
+                                    "xtype": "Checkbox",
                                     "|xns": "Roo.form"
                                 },
                                 {
