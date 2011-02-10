@@ -76,13 +76,14 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                             sn = '*top';
                         }
                         var cls = 'pman-builder-palete-hide';
-                        var name  = rowconfig.record.data.name;
-                        Roo.each(rowconfig.record.data.parents, function(n) {
+                        var name  = rowcfg.record.data.name;
+                        Roo.each(rowcfg.record.data.parents, function(n) {
                             if (n == name || n.split(':').shift() == name) 
                                 cls = '';
                                 return true;
                             }
                          );
+                         rowcfg.rowClass = cls;
                         // what is the currently selected element..
                      
                     }
