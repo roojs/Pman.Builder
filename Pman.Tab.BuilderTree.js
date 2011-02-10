@@ -85,8 +85,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         var xar = data.name.split('.');
                                 
                                         var cfg = {
-                                            '|xns' : xar.shift(),
-                                            'xtype' : xar.join('.')
+                                            'xtype' : xar.pop(),
+                                            '|xns' : xar.join('.')
+                                            
                                         };
                                         if (_this.dragProp.length > 1) {
                                             cfg['*prop'] = _this.dragProp;
