@@ -133,7 +133,7 @@ Pman.Dialog.BuilderPart = {
                                     xns: Roo.form,
                                     fieldLabel : 'Name',
                                     name : 'name',
-                                    width : 200
+                                    width : 300
                                 },
                                 {
                                     xtype: 'Hidden',
