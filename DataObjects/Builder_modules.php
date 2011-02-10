@@ -61,6 +61,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         $files = $this->scanDir();
         $d = DB_DataObject::factory('builder_part');
         $d->module_id = $this->id;
+        DB_DataObject::debugLevel(!);
         $cur = $d->fetchAll();
         foreach($cur  as $d) {
             if (isset($files[$d->name]) && strtotime($d->updated) < $files[$d->name]) {
