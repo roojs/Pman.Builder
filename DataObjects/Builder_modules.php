@@ -33,4 +33,21 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         return true;
     }
     
+    
+    function scanDir() // return name => mtime for files in path..
+    {
+        
+        // list of bjs files...
+        // or should this be totally database related...
+        if (empty($this->path ) || !file_exists($this->path)) {
+            return array();
+        }
+        
+        $ret = array();
+        foreach(glob($this->path. '/*.bjs') as $bjs) {
+            $n = preg_replace('/\.bjs$/', '', basename($bjs));
+            
+            $ret[$n] = filemtime($bjs);
+        }
+         
 }
