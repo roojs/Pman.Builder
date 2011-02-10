@@ -61,12 +61,20 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     },
                     rowclass : function (gridview, rowcfg)
                     {
-                    
+                        var sn = Pman.Tab.BuilderTree.tree.selNodeType();
+                        if (!sn) {
+                            sn = '*top';
+                        }
+                        var cls = 'palete-hide';
+                        var name  = rowconfig.record.data.name;
+                        Roo.each(rowconfig.record.data.parents, function(n) {
+                            if (n == name || n.split(':').shift() == name) 
+                                cls = '';
+                                return true;
+                            }
+                         );
                         // what is the currently selected element..
-                        if (rowcfg.rowIndex > 10) {
-                            rowcfg.rowClass = 'palete-hide';
-                        } 
-                            Roo.log(rowcfg);
+                     
                     }
                 },
                 autoExpandColumn : 'name',
