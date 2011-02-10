@@ -101,8 +101,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
             $x = new Pman_Builder_Code();
             $ret['code'] = $x->toJSFile(json_decode($this->json), $this->json);
         }
-        
-        
+         
         return $ret;
     }
 }
