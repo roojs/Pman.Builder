@@ -99,7 +99,7 @@ Pman.Dialog.BuilderProp = {
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
                                 method : 'GET',
-                                url : baseURL + '/Builder/Prop.php'
+                                url : baseURL + '/Builder/Palette/Prop.php'
                             },
                             reader : {
                                 xtype: 'JsonReader',
