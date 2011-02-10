@@ -231,6 +231,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     items = inConfig.items;
                                     delete inConfig.items;
                                 }
+                                
                                 var config = this.cloneConfig(inConfig);
                                 
                                 if (!parent) {
