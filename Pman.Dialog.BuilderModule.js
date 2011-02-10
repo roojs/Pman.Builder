@@ -32,7 +32,7 @@ Pman.Dialog.BuilderModule = {
             xns: Roo,
             closable : false,
             collapsible : false,
-            height : 140,
+            height : 240,
             resizable : false,
             title : "Edit / Create builder_modules",
             width : 400,
