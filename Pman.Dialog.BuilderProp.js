@@ -120,7 +120,7 @@ Pman.Dialog.BuilderProp = {
                                 dataIndex : 'name',
                                 header : 'name',
                                 width : 175,
-                                renderer : function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }
+                                renderer : function(v) { return String.format('{0}', v ? v : ''); }
                             },
                             {
                                 xtype: 'ColumnModel',
