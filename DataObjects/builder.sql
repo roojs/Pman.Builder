@@ -33,6 +33,9 @@ CREATE TABLE `builder_modules` (
   `public` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 );
+ALTER TABLE  `builder_modules` ADD COLUMN `database_dsn` VARCHAR(254)  NOT NULL DEFAULT '';
+
+
 CREATE TABLE `builder`.`builder_part` (
   `id` int(11)  NOT NULL AUTO_INCREMENT,
   `module_id` int(11)  NOT NULL,
