@@ -157,6 +157,13 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 {
                                     Roo.log('nodedragover');
                                      Roo.log(e);
+                                     // e.cancel..
+                                     // if we have within the same tree:
+                                       // dropNode (the node being dragged !!important!!) 
+                                       // point: below, append
+                                       // target - node 
+                                       
+                                   
                                 }
                             },
                             animate : false,
