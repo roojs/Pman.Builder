@@ -295,7 +295,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     success : function(res)         
                                     {
                                         // data is in.. 
-                                        
+                                        Roo.log(res);
                                         _t.loadTree(JSON.parse(res.data.json));
                                         
                                      
