@@ -25,7 +25,7 @@
                     },
                     "*prop": "grid",
                     "autoExpandColumn": "name",
-                    "ddGroup": "palete",
+                    "ddGroup": "component",
                     "enableDrag": true,
                     "loadMask": true,
                     "xtype": "Grid",
