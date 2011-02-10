@@ -58,7 +58,6 @@ Pman.Dialog.BuilderProp = {
                     fitContainer : true,
                     fitToframe : true,
                     region : 'center',
-                    tableName : 'AutoAuth',
                     title : "AutoAuth",
                     grid : {
                         xtype: 'Grid',
