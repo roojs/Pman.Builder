@@ -91,7 +91,7 @@
                                             "*prop": "proxy",
                                             "method": "GET",
                                             "xtype": "HttpProxy",
-                                            "|url": "baseURL + '/Roo/Builder_Modules.php'",
+                                            "|url": "baseURL + '/Roo/Builder_modules.php'",
                                             "|xns": "Roo.data"
                                         },
                                         {
