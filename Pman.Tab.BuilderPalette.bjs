@@ -21,7 +21,7 @@
                 {
                     "listeners": {
                         "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({})\n    }\n    if (_this.ss) {\n        return;\n    }\n    _this.ss =   Roo.util.CSS.createStyleSheet(\n'.pman-builder-palete-hide { display: none; } ' + \"\\n\" \n, Roo.id())\n    \n    \n    \n}",
-                        "rowclass": "function (gridview, rowcfg)\n{\n    var sn = Pman.Tab.BuilderTree.tree.currentNodeType();\n    Roo.log(sn);\n    if (!sn) {\n        sn = '*top';\n    }\n    var cls = 'pman-builder-palete-hide';\n    var name  = rowcfg.record.data.name;\n    Roo.each(rowcfg.record.data.parents, function(n) {\n        if (n == name || n.split(':').shift() == name) \n            cls = '';\n            return true;\n        }\n     );\n     rowcfg.rowClass = cls;\n    // what is the currently selected element..\n \n}"
+                        "rowclass": "function (gridview, rowcfg)\n{\n    var sn = Pman.Tab.BuilderTree.tree.currentNodeType();\n    Roo.log(rowconfig);\n    if (!sn) {\n        sn = '*top';\n    }\n    var cls = 'pman-builder-palete-hide';\n    var name  = rowcfg.record.data.name;\n    return;\n    Roo.each(rowcfg.record.data.parents, function(n) {\n        if (n == name || n.split(':').shift() == name) \n            cls = '';\n            return true;\n        }\n     );\n     rowcfg.rowClass = cls;\n    // what is the currently selected element..\n \n}"
                     },
                     "*prop": "grid",
                     "autoExpandColumn": "name",
