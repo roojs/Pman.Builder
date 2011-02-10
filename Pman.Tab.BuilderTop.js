@@ -273,7 +273,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         return false;
                                     }
                                     o.params.module_id = _this.modsel.getValue();
-                                
+                                    o.params._columns = 'id,name';
                                 }
                             },
                             remoteSort : true,
