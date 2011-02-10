@@ -13,6 +13,8 @@ CREATE TABLE  `builder` (
 ALTER TABLE `builder` ADD COLUMN `app` VARCHAR(64)  NOT NULL DEFAULT '';
 ALTER TABLE `builder` ADD COLUMN `module` VARCHAR(128)  NOT NULL DEFAULT '';
 
+#-- depreciated..
+
 CREATE TABLE `builder_app` (
   `id` int(11)  NOT NULL AUTO_INCREMENT,
   `app` varchar(64)  NOT NULL,
@@ -35,3 +37,11 @@ CREATE TABLE  `translations` (
 );
 
 ALTER TABLE translations ADD INDEX qlookup (module, tfile, tlang, tkey);
+
+CREATE TABLE `builder_modules` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `path` varchar(254) NOT NULL,
+  `public` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+);
