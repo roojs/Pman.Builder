@@ -34,9 +34,9 @@
                             "method": "POST",
                             "style": "margin:10px;",
                             "xtype": "Form",
+                            "|": "function() {\n    \n}\n",
                             "|url": "baseURL + '/Roo/builder_modules.php'",
                             "|xns": "Roo.form",
-                            "|": "function() {\n    \n}\n",
                             "items": [
                                 {
                                     "fieldLabel": "Name",
