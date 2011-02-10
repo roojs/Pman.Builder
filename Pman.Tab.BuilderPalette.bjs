@@ -21,7 +21,7 @@
                 {
                     "listeners": {
                         "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({})\n    }\n}",
-                        "rowclass": "function (gridview, rowcfg)\n{\n    var sn = Pman.Tab.BuilderTree.tree.selNodeType();\n    if (!sn) {\n        sn = '*top';\n    }\n    var cls = 'palete-hide';\n    var name  = rowconfig.record.data.name;\n    Roo.each(rowconfig.record.data.parents, function(n) {\n        if (n == name || n.split(':').shift() == name) \n            cls = '';\n            return true;\n        }\n     );\n    // what is the currently selected element..\n \n}"
+                        "rowclass": "function (gridview, rowcfg)\n{\n    var sn = Pman.Tab.BuilderTree.tree.selNodeType();\n    if (!sn) {\n        sn = '*top';\n    }\n    var cls = 'pman-builder-palete-hide';\n    var name  = rowconfig.record.data.name;\n    Roo.each(rowconfig.record.data.parents, function(n) {\n        if (n == name || n.split(':').shift() == name) \n            cls = '';\n            return true;\n        }\n     );\n    // what is the currently selected element..\n \n}"
                     },
                     "*prop": "grid",
                     "autoExpandColumn": "name",
