@@ -209,16 +209,20 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         cfg.items[0].x = xy[0];
                         cfg.items[0].y = xy[1];
                         cfg.items[0].constraintoviewport = false;
-                    
+                        
                         this.dialogroot = Roo.get( document.body).createChild();
-                         
-                        this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
-                      //  this.dialog.el.on('click', this.panelClick, this);
-                        this.dialog.show();
-                        var dlg = this.dialog;
-                        (function () {
-                            dlg.moveTo(xy[0], xy[1]);
-                        }).defer(100);
+                        try { 
+                            this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
+                          //  this.dialog.el.on('click', this.panelClick, this);
+                            this.dialog.show();
+                            var dlg = this.dialog;
+                            (function () {
+                                dlg.moveTo(xy[0], xy[1]);
+                            }).defer(100);
+                        } catch(e) {
+                            Roo.log("Error rendering: " + e.toString());
+                            Roo.log(e);
+                        }
                         return;
                         
                     }
@@ -227,9 +231,13 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     cfg.items[0].region = 'center';
                     cfg.items[0].background = false;
                     
-                    this.panelroot = this.layout.addxtype(cfg.items[0]);
+                    try {
+                        this.panelroot = this.layout.addxtype(cfg.items[0]);
                     
-                     
+                    } catch(e) {
+                        Roo.log("Error rendering: " + e.toString());
+                        Roo.log(e);
+                    }
                     //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
                     
                     if (this.panelroot.el) {
