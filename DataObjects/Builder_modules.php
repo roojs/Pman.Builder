@@ -50,5 +50,21 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             $ret[$n] = filemtime($this->path. '/'. $bjs);
         }
         return $ret;
-         
+    }
+    
+    function syncParts()
+    {
+        $ar = $this->scanDir();
+        $d = DB_DataObject::factory('builder_parts');
+        $d->module_id = $this->id;
+        $d->fetchAll();
+        foreach($d as $k=>$v) {
+           
+        }
+        
+        
+        
+    }
+    
+    
 }
