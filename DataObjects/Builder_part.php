@@ -25,9 +25,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     public $name;                            // string(128)  not_null
     public $json;                            // blob(-1)  not_null blob
     public $module_id;                           // string(16)  not_null
-    public $app;                             // string(64)  not_null
-    public $module;                          // string(128)  not_null
-
+ 
     
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
