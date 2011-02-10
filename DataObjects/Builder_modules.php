@@ -49,5 +49,6 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             
             $ret[$n] = filemtime($this->path. '/'. $bjs);
         }
+        return $ret;
          
 }
