@@ -158,6 +158,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
+                             : function() {
+                                
+                            },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -337,9 +340,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         this.currentNode.select();
                             	}
                             
-                            },
-                             : function() {
-                                
                             },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
