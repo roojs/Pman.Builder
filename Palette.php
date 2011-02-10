@@ -16,7 +16,9 @@ class Pman_Builder_Palette extends Pman
         }
         // list of properties or events.
         // gets xns+xtype+list
+        $ff = HTML_FlexyFramework::get();
         
+        $lines = file($ff->rootDir . '/roojs1/docs/json/roodata.json');
         // 
         
     }
@@ -25,9 +27,8 @@ class Pman_Builder_Palette extends Pman
         
         // use file..
         // get this directly from roo?
-        $ff = HTML_FlexyFramework::get();
         
-        $lines = file($ff->rootDir . '/roojs1/docs/json/roodata.json');
+        $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
         $res = array();
         $left = array();
