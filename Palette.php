@@ -17,12 +17,16 @@ class Pman_Builder_Palette extends Pman
         // list of properties or events.
         // gets xns+xtype+list
         
+        // 
         
     }
     function roousage() // list of what elements, can have what as children..
     {
         
         // use file..
+        // get this directly from roo?
+        
+        
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
         $res = array();
