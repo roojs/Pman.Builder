@@ -81,15 +81,15 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     
                                         // form palete...
                                         var data  = e.source.dragData.selections[0].data;
-                                        var nar = data.name.split(':')
+                                
                                         var xar = nar[0].split('.');
                                 
                                         var cfg = {
                                             '|xns' : xar.shift(),
                                             'xtype' : xar.join('.')
                                         };
-                                        if (nar.length > 1) {
-                                            cfg['*prop'] = nar[1];
+                                        if (_this.dragProp.length > 1) {
+                                            cfg['*prop'] = _this.dragProp;
                                         }
                                         // at this point it should of a set of options...
                                         this.appendNode(e.target, cfg, e.point);
