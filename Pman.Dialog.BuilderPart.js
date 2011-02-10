@@ -35,7 +35,7 @@ Pman.Dialog.BuilderPart = {
             height : 140,
             resizable : false,
             title : "Edit / Create builder_part",
-            width : 500,
+            width : 450,
             items : [
                 {
                     xtype: 'ContentPanel',
