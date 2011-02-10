@@ -26,14 +26,29 @@ class Pman_Builder_Palette extends Pman
             if (preg_match('/left:$/', $l)) {
                 $s = 0;
                 $left = array();
-                
+               
             }
             if (preg_match('/right:$/', $l)) {
                 $s = 1;
                 continue;
             }
-            switch($s) 
-            
+            switch($s) {
+                case 0:
+                    $left[] = $l;
+                    
+                    continue;
+                case 1:
+                    if (!isset($res[$l]) {
+                        $res[$l] = array(); 
+                    }
+                    foreach($left as $ll) {
+                        $res[$l][$ll] = true; 
+                    }
+                    continue;
+                default:
+                    continue;
+            }
+            print_R($res);exit;
             
         }
     }
