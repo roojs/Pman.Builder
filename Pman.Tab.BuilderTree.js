@@ -344,7 +344,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                          this.currentNode.expand(false,false);
                                         this.currentNode.select();
                             	}
-                            	Pman.Tab.BuilderPalette.grid.view.refresh()
+                            	// update palete..
+                            	Pman.Tab.BuilderPalette.grid.view.refresh();
                             
                             },
                             sm : {
