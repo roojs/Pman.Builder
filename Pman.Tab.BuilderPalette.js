@@ -71,6 +71,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     rowclass : function (gridview, rowcfg)
                     {
                         var sn = Pman.Tab.BuilderTree.tree.currentNodeType();
+                        Roo.log(sn);
                         if (!sn) {
                             sn = '*top';
                         }
