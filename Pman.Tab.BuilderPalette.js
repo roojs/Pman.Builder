@@ -129,7 +129,11 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                         dataIndex : 'name',
                         renderer : function(v) { return String.format('{0}', v); }
                     }
-                ]
+                ],
+                sm : {
+                    xtype: 'RowSelectionModel',
+                    xns: Roo.grid
+                }
             }
         });
         this.layout = this.panel.layout;
