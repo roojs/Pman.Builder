@@ -91,7 +91,7 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     }
                 },
                 autoExpandColumn : 'name',
-                ddGroup : 'palete',
+                ddGroup : 'component',
                 enableDrag : true,
                 loadMask : true,
                 dataSource : {
