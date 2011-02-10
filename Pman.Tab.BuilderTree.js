@@ -272,8 +272,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             },
                             currentNodeType : function() {
                                 if (!this.currentNode) {return ''; }
-                                var xt = typeof(this.currentNode.xtype) == 'string' ? this.currentNode.xtype : '';
-                                var xns= typeof(this.currentNode['|xns']) == 'string' ? this.currentNode['|xns'] :  '';
+                                var xt = this.currentNode.xtype ||  '';
+                                var xns= this.currentNode['|xns'] ||   '';
                                 xns += xns.length ? '.' : '';
                                 return xns + xt;
                              
