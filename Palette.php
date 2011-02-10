@@ -20,7 +20,9 @@ class Pman_Builder_Palette extends Pman
             if (!strlen(trim($l))){
                 continue;
             }
-            
+            if (preg_match('/:$/', $l)) {
+                $left = $l;
+            }
             
         }
     }
