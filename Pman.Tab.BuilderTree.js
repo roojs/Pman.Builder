@@ -61,7 +61,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             xtype: 'TreePanel',
                             xns: Roo.tree,
                             listeners : {
-                                beforenodedrop : function (dropEvent)
+                                beforenodedrop : function (e)
                                 
                                 {
                                   /*tree - The TreePanel
