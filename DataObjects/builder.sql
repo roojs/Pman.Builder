@@ -33,3 +33,11 @@ CREATE TABLE `builder_modules` (
   `public` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 );
+CREATE TABLE `builder`.`builder_part` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+  `module_id` int(11)  NOT NULL,
+  `name` varchar(254)  NOT NULL,
+  `json` longtext  NOT NULL,
+  PRIMARY KEY (`id`)
+)
+ENGINE = MyISAM;
