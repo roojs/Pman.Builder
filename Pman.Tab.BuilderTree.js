@@ -297,8 +297,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     url : baseURL + '/Roo/Builder_part.php',
                                     method : 'GET',
                                     params : {
-                                       
-                                        id : part
+                                       _id : part
                                     },
                                     success : function(res)         
                                     {
