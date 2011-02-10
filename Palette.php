@@ -14,7 +14,10 @@ class Pman_Builder_Palette extends Pman
         if (empty($sub)) {
             return $this->roousage();
         }
-    
+        // list of properties or events.
+        
+        
+        
     }
     function roousage() // list of what elements, can have what as children..
     {
