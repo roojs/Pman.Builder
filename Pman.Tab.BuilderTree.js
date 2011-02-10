@@ -222,7 +222,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            appendNode : function(parent, inConfig, markUndo) {
+                            appendNode : function(parent, inConfig, point) {
                                 
                                     
                              
@@ -247,8 +247,26 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 //Pman.Tab.Builder.markUndo("Add " + newNode.text);
                                 //
                                     // appends to our tree...
-                                parent.appendChild(newNode);
-                                
+                                    
+                                switch(point||'') {
+                                    case 'before':
+                                        parent.parentNode.insertBefore(newNode, parent);
+                                        break;
+                                    case 'after':
+                                        // if it's the last node.. then we append..
+                                        var ix = parent.parentNode.indexOf(parent);
+                                        if (parent.parentNode.childNodes.length == (ix + 1)) {
+                                             parent.appendChild(newNode);
+                                             break;
+                                        }
+                                        
+                                        break;
+                                    
+                                    case 'append':
+                                    default:    
+                                        parent.appendChild(newNode);
+                                        break;
+                                }
                                     
                                 if (items.length) {
                                     Roo.each(items, function(i) {
