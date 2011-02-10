@@ -33,6 +33,7 @@ Pman.Dialog.BuilderModule = {
             closable : false,
             collapsible : false,
             height : 180,
+            modal : true,
             resizable : false,
             title : "Edit / Create builder_modules",
             width : 400,
