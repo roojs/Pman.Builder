@@ -158,14 +158,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            currentNodeType : function() {
-                                if (this.currentNode) {return ''; }
-                                var xt = this.currentNode.xtype || '';
-                                var xns= this.currentNode['xns'] || '';
-                                xns += xns.length ? '.' : '';
-                                return xns + xt;
-                             
-                            },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -277,6 +269,14 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	return (txt.length == 0 ? "Element" : txt.join(" "));
                              
                               
+                            },
+                            currentNodeType : function() {
+                                if (this.currentNode) {return ''; }
+                                var xt = this.currentNode['xtype'] || '';
+                                var xns= this.currentNode['xns'] || '';
+                                xns += xns.length ? '.' : '';
+                                return xns + xt;
+                             
                             },
                             defaultElConfig : function() {
                                 return {
