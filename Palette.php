@@ -9,8 +9,16 @@ class Pman_Builder_Palette extends Pman
         return true;
     }
     
-    function get()
+    function get($sub)
     {
+        if (empty($sub)) {
+            return $this->roousage();
+        }
+    
+    
+    function roousage() // list of what elements, can have what as children..
+    {
+        
         // use file..
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
