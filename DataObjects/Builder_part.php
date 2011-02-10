@@ -42,33 +42,22 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     
     function onInsert($req,$roo)
     {
-        if (!empty($req['gitpath']) && !empty($this->module)) {
-            $this->writeCopy($req['gitpath'],$roo);
-        }
+        // write it to a file... use date time...  - which should hopefully be the same as the
+        //event that was created..
+        $this->writeEventFile($roo);
+        
     }
     function onUpdate($old , $req, $roo)
     {
-        if (!empty($req['gitpath']) && !empty($this->module)) {
-            $file = $this->writeCopy($req['gitpath'], $roo);
-            $this->gitCommit($file );
-        }
+         $this->writeEventFile();
         
         
     }
-    function gitCommit($file )
+    function  writeEventFile($roo) 
     {
-        $n = basename($file);
-        $dir = dirname($file);
-        chdir($dir);
-        if ($this->_new_file) {
-            $cmd = "git add " . escapeshellarg($n);
-            `$cmd`;
-        }
-        
-        $cmd = "git commit -m 'commit by builder' " . escapeshellarg($n);
-        `$cmd`;
-        $cmd = "git push";
-        `$cmd`;
+        return;
+        $sp = ini_get('session.save_path')
+        $this->writeCopy(
     }
     
     
