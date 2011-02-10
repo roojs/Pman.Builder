@@ -205,11 +205,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     }
                                      
                                    
-                                },
-                                dragdrop : function (_self, node, dd, e)
-                                {
-                                    Roo.log("Drag Drop");
-                                    Roo.log(e);
                                 }
                             },
                             animate : false,
