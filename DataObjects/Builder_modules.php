@@ -74,7 +74,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         // we do not delete anything...
         // next create stuff..
         foreach($files as $f=>$mt) {
-            $d = DB_DataObject::factory('builder_parts');
+            $d = DB_DataObject::factory('builder_part');
             $d->name = $f;
             $d->json = file_get_contents($this->path. '/'. $f . '.bjs');
             $d->updated = date('Y-m-d H:i:s', $mt);
