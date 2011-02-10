@@ -217,6 +217,23 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
+                             : function(node)
+                                {
+                                    var cfg = this.cloneConfig(node.elConfig);
+                                    
+                                    var newNode = new Roo.tree.TreeNode(
+                                    {
+                                            id: Roo.id(),
+                                            text: this.configToText(cfg)
+                                    });
+                                    newNode.elConfig = cfg;
+                                    node.eachChild(function(n) {
+                                        newNode.appendChild(this.dupeNode(n));
+                                    },this);
+                                    
+                                    return newNode;
+                                        
+                                },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -409,9 +426,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	Pman.Tab.BuilderPalette.grid.getSelectionModel().clearSelections();
                             	Pman.Tab.BuilderPalette.grid.view.refresh();
                             
-                            },
-                             : function() {
-                                
                             },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
