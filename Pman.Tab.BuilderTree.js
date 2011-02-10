@@ -410,6 +410,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	Pman.Tab.BuilderPalette.grid.view.refresh();
                             
                             },
+                             : function() {
+                                
+                            },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
