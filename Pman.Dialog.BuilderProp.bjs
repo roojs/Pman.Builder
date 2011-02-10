@@ -7,7 +7,7 @@
     "items": [
         {
             "listeners": {
-                "show": "function (_self)\n{\n   _this.data.ds.load();\n}"
+                "show": "function (_self)\n{\n   _this.data.ds.load({});\n}"
             },
             "closable": false,
             "collapsible": false,
