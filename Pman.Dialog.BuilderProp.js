@@ -90,7 +90,7 @@ Pman.Dialog.BuilderProp = {
                                     options.params = options.params || {};
                                     options.params.xtype = this.data.xtype;
                                     options.params.xns = this.data.xns;
-                                    
+                                    options.params.list = this.data.list;    
                                 }
                             },
                             remoteSort : false,
