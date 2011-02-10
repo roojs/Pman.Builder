@@ -136,13 +136,6 @@ Pman.Dialog.BuilderPart = {
                                     width : 200
                                 },
                                 {
-                                    xtype: 'TextField',
-                                    xns: Roo.form,
-                                    fieldLabel : 'Json',
-                                    name : 'json',
-                                    width : 200
-                                },
-                                {
                                     xtype: 'Hidden',
                                     xns: Roo.form,
                                     name : 'id'
