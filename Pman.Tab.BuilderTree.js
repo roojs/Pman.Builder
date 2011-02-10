@@ -185,7 +185,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         var drop_xtype = drop_rec.data.name;
                                         var ok_parents = drop_rec.json.parents;
                                         Roo.log("TEST PARENTS: " + ok_parents.join(', '));
-                                        var new_parent = this.nodeXtype((e.point == 'append') ? e.target.parentNode :  e.target);
+                                        var new_parent = this.nodeXtype((e.point == 'append') ? e.target :  e.target.parentNode);
                                         Roo.log("NEW PARENT: " + e.point + " = " + new_parent);
                                         
                                         // see if the new_parent is actually in the list of ok_parents
