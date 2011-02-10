@@ -116,13 +116,16 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                         
                                 
                                 },
-                                nodedrop : function (dropEvent)
+                                nodedrop : function (e)
                                 {
+                                    
+                                    Roo.log("Node Drop");
+                                    return;
                                     e.dropNode.setText(
-                                                _this.configToText(e.dropNode.elConfig)
-                                                );
-                                                var bp = Pman.Tab.BuilderPanel;
-                                                bp.redraw.defer(1000, bp, [true]);
+                                        _this.configToText(e.dropNode.elConfig)
+                                        );
+                                        var bp = Pman.Tab.BuilderPanel;
+                                        bp.redraw.defer(1000, bp, [true]);
                                 
                                 },
                                 click : function (node, e)
