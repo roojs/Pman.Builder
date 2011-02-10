@@ -38,7 +38,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n \n    if (!_this.modsel.lastData || !_this.modsel.lastData.id) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    Pman.Dialog.BuilderAppEdit.show( _this.modsel.lastData ,function(data) {\n        if (data) {\n            _this.modsel.setFromData(data);\n        }\n    });\n\n}"
+                                                "click": "function (_self, e)\n{\n \n    if (!_this.modsel.lastData || !_this.modsel.lastData.id) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    Pman.Dialog.BuilderModule.show( _this.modsel.lastData ,function(data) {\n        if (data) {\n            _this.modsel.setFromData(data);\n        }\n    });\n\n}"
                                             },
                                             "text": "Edit",
                                             "xtype": "Item",
