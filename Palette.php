@@ -55,7 +55,7 @@ class Pman_Builder_Palette extends Pman
         foreach($res as $k=>$v) {
             $ret[] = array( 
                 'name' => $k,
-                'parents' => json_encode(array_keys($v))
+                'parents' =>  array_keys($v) 
             );
         }
         $this->jdata($ret);
