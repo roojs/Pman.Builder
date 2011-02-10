@@ -29,11 +29,11 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    Pman.Dialog.BuilderAppEdit.show({\n         id : 0\n    },function(data) {\n        if (data) {\n           _this.modsel.setFromData(data);\n        }\n    });\n\n}"
+                                                "click": "function (_self, e)\n{\n    Pman.Dialog.BuilderModule.show({\n         id : 0\n    },function(data) {\n        if (data) {\n           _this.modsel.setFromData(data);\n        }\n    });\n\n}"
                                             },
-                                            "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
                                             "text": "Create",
                                             "xtype": "Item",
+                                            "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
                                             "|xns": "Roo.menu"
                                         },
                                         {
