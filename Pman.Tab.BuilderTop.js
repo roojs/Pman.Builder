@@ -181,7 +181,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                 return false;
                                             }
                                             
-                                            Pman.Dialog.BuilderPart.show( { id : 0 } , function(data) {
+                                            Pman.Dialog.BuilderPart.show( { id : 0, module_id: _this.modsel.getValue() } , function(data) {
                                                 _this.filesel.reset();
                                                 if (!data.id) {
                                                     return;
