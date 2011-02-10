@@ -59,7 +59,7 @@ class Pman_Builder_Palette extends Pman
             );
         }
         $this->jdata($ret);
-        echo '<PRE>';print_R($ret);exit;
+        //echo '<PRE>';print_R($ret);exit;
     }
     
 }
