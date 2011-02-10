@@ -218,8 +218,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 var ec = _this.grid.currentNode.elConfig;
                                 Pman.Dialog.BuilderProp.show({
                                         xtype : ec.xtype  || '',
-                                        xns: ec.xns || '',
-                                        list: 'prop'
+                                        xns: ec['|xns'] || '',
+                                        list: 'props'
                                 }, function (n,val) {
                                     ec[n] = val || '';
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
