@@ -192,7 +192,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                 return true;
                                             }
                                         });
-                                 
+                                        return;
                                         
                                     }
                                      
