@@ -250,7 +250,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 //Pman.Tab.Builder.markUndo("Add " + newNode.text);
                                 //
                                     // appends to our tree...
-                                    
+                                console.log("APPEND NODE: " + point);    
                                 switch(point) {
                                     case 'before':
                                         parent.parentNode.insertBefore(newNode, parent);
