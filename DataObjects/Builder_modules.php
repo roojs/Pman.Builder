@@ -4,12 +4,12 @@
  */
 require_once 'DB/DataObject.php';
 
-class Pman_Builder_DataObjects_Builder_app extends DB_DataObject 
+class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject 
 {
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'builder_app';                     // table name
+    public $__table = 'builder_modules';                     // table name
     public $id;                              // int(11)  not_null primary_key auto_increment
     public $name;                             // string(64)  not_null
     public $path;                          // string(128)  not_null
