@@ -59,7 +59,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     function syncParts()
     {
         $files = $this->scanDir();
-        $d = DB_DataObject::factory('builder_parts');
+        $d = DB_DataObject::factory('builder_part');
         $d->module_id = $this->id;
         $cur = $d->fetchAll();
         foreach($cur  as $d) {
