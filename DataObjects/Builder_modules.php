@@ -66,7 +66,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         foreach($cur  as $d) {
             if (isset($files[$d->name]) && strtotime($d->updated) < $files[$d->name]) {
                 //file mtime is greater than db. -- replace!
-                $d->json = file_get_contents($this->path. '/'. $name . '.bjs');
+                $d->json = file_get_contents($this->path. '/'. $d->name . '.bjs');
                 $d->update();
                 // do not need to create it...
                 unset($files[$d->name]);
