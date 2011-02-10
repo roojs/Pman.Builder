@@ -32,7 +32,7 @@ Pman.Dialog.BuilderPart = {
             xns: Roo,
             closable : false,
             collapsible : false,
-            height : 100,
+            height : 120,
             resizable : false,
             title : "Edit / Create builder_part",
             width : 450,
