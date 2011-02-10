@@ -80,56 +80,6 @@ Pman.Dialog.BuilderPart = {
                             url : baseURL + '/Roo/builder_part.php',
                             items : [
                                 {
-                                    xtype: 'ComboBox',
-                                    xns: Roo.form,
-                                    allowBlank : 'false',
-                                    editable : 'false',
-                                    emptyText : "Select builder_modules",
-                                    forceSelection : true,
-                                    listWidth : 400,
-                                    loadingText : "Searching...",
-                                    minChars : 2,
-                                    pageSize : 20,
-                                    qtip : "Select builder_modules",
-                                    selectOnFocus : true,
-                                    triggerAction : 'all',
-                                    typeAhead : true,
-                                    width : 300,
-                                    tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>',
-                                    queryParam : 'query[name]',
-                                    fieldLabel : 'Module',
-                                    valueField : 'id',
-                                    displayField : 'name',
-                                    hiddenName : 'module_id',
-                                    name : 'module_id_name',
-                                    store : {
-                                        xtype: 'Store',
-                                        xns: Roo.data,
-                                        remoteSort : true,
-                                        sortInfo : { direction : 'ASC', field: 'id' },
-                                        listeners : {
-                                            beforeload : function (_self, o){
-                                                o.params = o.params || {};
-                                                // set more here
-                                            }
-                                        },
-                                        proxy : {
-                                            xtype: 'HttpProxy',
-                                            xns: Roo.data,
-                                            method : 'GET',
-                                            url : baseURL + '/Roo/builder_modules.php'
-                                        },
-                                        reader : {
-                                            xtype: 'JsonReader',
-                                            xns: Roo.data,
-                                            id : 'id',
-                                            root : 'data',
-                                            totalProperty : 'total',
-                                            fields : [{"name":"id","type":"int"},{"name":"name","type":"string"}]
-                                        }
-                                    }
-                                },
-                                {
                                     xtype: 'TextField',
                                     xns: Roo.form,
                                     fieldLabel : 'Part name',
