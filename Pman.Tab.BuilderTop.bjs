@@ -161,7 +161,7 @@
                             "items": [
                                 {
                                     "listeners": {
-                                        "beforeload": "function (_self, o)\n{\n     o.params = o.params || {}; \n   // o.params.btype = 'FORM';\n    if (!_this.modsel.getValue().length) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    o.params.module = _this.modsel.getValue();\n\n}"
+                                        "beforeload": "function (_self, o)\n{\n     o.params = o.params || {}; \n   // o.params.btype = 'FORM';\n    if (!_this.modsel.getValue()) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    o.params.module_id = _this.modsel.getValue();\n\n}"
                                     },
                                     "*prop": "store",
                                     "remoteSort": true,
