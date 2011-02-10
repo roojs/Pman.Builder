@@ -63,6 +63,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             listeners : {
                                 beforenodedrop : function (e)
                                 {
+                                    // nodedragover handles the allow/disallow..
+                                    
                                     /*
                                     tree - The TreePanel
                                     target - The node being targeted for the drop
@@ -73,23 +75,21 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     dropNode - Drop node(s) provided by the source OR you can supply node(s) to be inserted by setting them on this object.
                                     cancel - Set this to true to cancel the drop.
                                     */
-                                    Roo.log(e);
+                                    var np = e.point == 'append' ? e.target : e.parent.target ; // new parent
+                                      
                                     if (!e.tree || !e.dropNode) {
+                                    
+                                        // form palete...
+                                        
+                                    
+                                    
+                                    
+                                    
+                                    
                                         console.log('no tree or dropNode');
                                         return; // fixme drop of elements from palete..
                                     }
-                                    var np = false; // new parent
-                                    
-                                    switch (e.point) {
-                                        case 'above':
-                                        case 'below':
-                                            np = e.target.parentNode;
-                                            break;
-                                        case 'append':
-                                            np = e.target;
-                                            break;
-                                    }
-                                    
+                                
                                     // always drop onto own parent
                                     if (np == e.dropNode.parentNode) {
                                         if (e.rawEvent.ctrlKey) {
@@ -97,6 +97,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         }
                                         return true;
                                     }
+                                    // can append has to use palete...
+                                    // this code should be in nodedragover.
+                                    
                                    if (_this.canAppend(np, e.dropNode.elConfig)) {
                                         if (e.rawEvent.ctrlKey) {
                                             e.dropNode = _this.dupeNode(e.dropNode);
