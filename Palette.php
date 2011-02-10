@@ -18,7 +18,8 @@ class Pman_Builder_Palette extends Pman
         // gets xns+xtype+list
         $ff = HTML_FlexyFramework::get();
         
-        $lines = file($ff->rootDir . '/roojs1/docs/json/roodata.json');
+        $data = json_decode(file_get_contents(($ff->rootDir . '/roojs1/docs/json/roodata.json'));
+        echo '<PRE>';print_r($data);exit;
         // 
         
     }
