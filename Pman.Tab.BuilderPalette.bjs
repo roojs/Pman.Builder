@@ -26,10 +26,10 @@
                     "*prop": "grid",
                     "autoExpandColumn": "name",
                     "ddGroup": "palete",
+                    "enableDrag": true,
                     "loadMask": true,
                     "xtype": "Grid",
                     "|xns": "Roo.grid",
-                    "enableDrag": true,
                     "items": [
                         {
                             "*prop": "dataSource",
