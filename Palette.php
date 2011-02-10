@@ -18,8 +18,12 @@ class Pman_Builder_Palette extends Pman
         // gets xns+xtype+list
         $ff = HTML_FlexyFramework::get();
         
+        $cls = $_REQUEST['xns'] . '.' . $_REQUEST['xtype'];
+        
         $data = json_decode(file_get_contents($ff->rootDir . '/roojs1/docs/json/roodata.json'));
-        echo '<PRE>';print_r($data);exit;
+        
+        $this->jdata($data->data->{ $cls } -> [ $_REQUEST['list'] ] );
+              
         // 
         
     }
