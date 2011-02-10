@@ -13,6 +13,9 @@ class Pman_Builder_Palette extends Pman
     {
         // use file..
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
+        $s = -1;
+        $res = array()
+        $left = array();
         foreach($lines as $l) {
             
             $l = preg_replace('#//.*#', '', $l);
@@ -20,9 +23,16 @@ class Pman_Builder_Palette extends Pman
             if (!strlen(trim($l))){
                 continue;
             }
-            if (preg_match('/:$/', $l)) {
-                $left = $l;
+            if (preg_match('/left:$/', $l)) {
+                $s = 0;
+                $left = array()
             }
+            if (preg_match('/right:$/', $l)) {
+                $s = 1;
+                continue;
+            }
+            switch($s) 
+            
             
         }
     }
