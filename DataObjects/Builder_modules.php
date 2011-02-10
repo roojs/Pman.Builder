@@ -22,6 +22,8 @@ class Pman_Builder_DataObjects_Builder_app extends DB_DataObject
 
     function beforeDelete()
     {
+        return;
+        // fixme - check builder components.
         $x = DB_DataObject::factory('Builder');
         $x->app = $this->app;
         if ($x->count()) {
