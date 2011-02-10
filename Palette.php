@@ -12,7 +12,17 @@ class Pman_Builder_Palette extends Pman
     function get()
     {
         // use file..
-        
+        $lines = file(dirname(__FILE__).'/RooUsage.txt');
+        foreach($lines as $l) {
+            
+            $l = preg_replace('#//.*#', '', $l);
+            $l = trim($l);
+            if (!strlen(trim($l))){
+                continue;
+            }
+            
+            
+        }
     }
     
 }
