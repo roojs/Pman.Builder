@@ -93,7 +93,7 @@ Pman.Dialog.BuilderModule = {
                                     width : 200
                                 },
                                 {
-                                    xtype: 'TextField',
+                                    xtype: 'Checkbox',
                                     xns: Roo.form,
                                     fieldLabel : 'Public',
                                     name : 'public',
