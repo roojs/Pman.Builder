@@ -101,6 +101,11 @@
                                     "name": "id",
                                     "|xns": "Roo.form",
                                     "xtype": "Hidden"
+                                },
+                                {
+                                    "name": "id",
+                                    "|xns": "Roo.form",
+                                    "xtype": "Hidden"
                                 }
                             ]
                         }
