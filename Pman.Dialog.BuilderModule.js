@@ -81,6 +81,9 @@ Pman.Dialog.BuilderModule = {
                             method : 'POST',
                             style : 'margin:10px;',
                             url : baseURL + '/Roo/builder_modules.php',
+                             : function() {
+                                
+                            },
                             items : [
                                 {
                                     xtype: 'TextField',
