@@ -51,17 +51,27 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         }
         return $ret;
     }
-    
+    /**
+     * This updates the contents of a DataObjects with the file contents if they are newer..
+     * 
+     * 
+     */
     function syncParts()
     {
-        $ar = $this->scanDir();
+        $files = $this->scanDir();
         $d = DB_DataObject::factory('builder_parts');
         $d->module_id = $this->id;
-        $d->fetchAll();
-        foreach($d as $k=>$v) {
-           
+        $cur = $d->fetchAll();
+        foreach($cur  as $d) {
+            if (isset($files[$d->name]) && strtotime($d->updated) < $files[$d->name]) {
+                //file mtime is greater than db. -- replace!
+                $d->json = file_get_contents($this->path. '/'. $name . '.bjs');
+                $d->update();
+                // do not need to create it...
+                unset($files[$d->name]);
+            }
         }
-        
+          
         
         
     }
