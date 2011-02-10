@@ -62,56 +62,57 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             xns: Roo.tree,
                             listeners : {
                                 beforenodedrop : function (e)
-                                
                                 {
-                                  /*tree - The TreePanel
-                                                        target - The node being targeted for the drop
-                                                        data - The drag data from the drag source
-                                                        point - The point of the drop - append, above or below
-                                                        source - The drag source
-                                                        rawEvent - Raw mouse event
-                                                        dropNode - Drop node(s) provided by the source OR you can supply node(s) to be inserted by setting them on this object.
-                                                        cancel - Set this to true to cancel the drop.*/
-                                                        
-                                                        if (!e.tree || !e.dropNode) {
-                                                            console.log('no tree or dropNode');
-                                                            return; // fixme drop of elements from palete..
-                                                        }
-                                                        var np = false; // new parent
-                                                        
-                                                        switch (e.point) {
-                                                            case 'above':
-                                                            case 'below':
-                                                                np = e.target.parentNode;
-                                                                break;
-                                                            case 'append':
-                                                                np = e.target;
-                                                                break;
-                                                        }
-                                                        
-                                                        // always drop onto own parent
-                                                        if (np == e.dropNode.parentNode) {
-                                                            if (e.rawEvent.ctrlKey) {
-                                                                e.dropNode = _this.dupeNode(e.dropNode);
-                                                            }
-                                                            return true;
-                                                        }
+                                    /*
+                                    tree - The TreePanel
+                                    target - The node being targeted for the drop
+                                    data - The drag data from the drag source
+                                    point - The point of the drop - append, above or below
+                                    source - The drag source
+                                    rawEvent - Raw mouse event
+                                    dropNode - Drop node(s) provided by the source OR you can supply node(s) to be inserted by setting them on this object.
+                                    cancel - Set this to true to cancel the drop.
+                                    */
+                                    Roo.log(e);
+                                    if (!e.tree || !e.dropNode) {
+                                        console.log('no tree or dropNode');
+                                        return; // fixme drop of elements from palete..
+                                    }
+                                    var np = false; // new parent
+                                    
+                                    switch (e.point) {
+                                        case 'above':
+                                        case 'below':
+                                            np = e.target.parentNode;
+                                            break;
+                                        case 'append':
+                                            np = e.target;
+                                            break;
+                                    }
+                                    
+                                    // always drop onto own parent
+                                    if (np == e.dropNode.parentNode) {
+                                        if (e.rawEvent.ctrlKey) {
+                                            e.dropNode = _this.dupeNode(e.dropNode);
+                                        }
+                                        return true;
+                                    }
                                    if (_this.canAppend(np, e.dropNode.elConfig)) {
-                                                            if (e.rawEvent.ctrlKey) {
-                                                                e.dropNode = _this.dupeNode(e.dropNode);
-                                                                  
-                                                                if (np.elConfig.xtype == 'GridEditor') {
-                                                                    e.dropNode.elConfig['*prop'] = 'field';
-                                                                }
-                                                                
-                                                            }
-                                                            return true;
-                                                        }  
-                                                        console.log('can not drop ' + e.dropNode.elConfig.xtype + ' ontop of ' + np.elConfig.xtype);
-                                                        
-                                                        
-                                                        
-                                                        return false;
+                                        if (e.rawEvent.ctrlKey) {
+                                            e.dropNode = _this.dupeNode(e.dropNode);
+                                              
+                                            if (np.elConfig.xtype == 'GridEditor') {
+                                                e.dropNode.elConfig['*prop'] = 'field';
+                                            }
+                                            
+                                        }
+                                        return true;
+                                    }  
+                                    console.log('can not drop ' + e.dropNode.elConfig.xtype + ' ontop of ' + np.elConfig.xtype);
+                                    
+                                    
+                                    
+                                    return false;
                                                         
                                 
                                 },
