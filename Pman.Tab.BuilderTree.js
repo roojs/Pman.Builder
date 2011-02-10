@@ -174,11 +174,11 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     
                                     if (!e.dropNode) {
                                         // drag from palete..
-                                        if (!e.target.source.dragData.selection.length) {
+                                        if (!e.source.dragData.selection.length) {
                                             e.cancel = true;
                                             return;
                                         }
-                                        var drop_rec = e.target.source.dragData.selection[0];
+                                        var drop_rec = e.source.dragData.selection[0];
                                         var drop_xtype = drop_rec.data.name;
                                         var ok_parents = drop_rec.json.parents;
                                         
