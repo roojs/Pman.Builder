@@ -58,7 +58,7 @@ class Pman_Builder_Palette extends Pman
                 'parents' => json_encode(array_keys($v))
             );
         }
-        echo '<PRE>';print_R($et);exit;
+        echo '<PRE>';print_R($ret);exit;
     }
     
 }
