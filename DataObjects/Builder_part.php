@@ -20,7 +20,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     ###START_AUTOCODE
     /* the code below is auto generated do not remove the above tag */
 
-    public $__table = 'builder';                         // table name
+    public $__table = 'builder_part';                         // table name
     public $id;                              // int(11)  not_null primary_key auto_increment
     public $name;                            // string(128)  not_null
     public $json;                            // blob(-1)  not_null blob
