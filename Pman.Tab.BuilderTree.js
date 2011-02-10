@@ -205,7 +205,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 },
                                 dragdrop : function (_self, node, dd, e)
                                 {
-                                
+                                    Roo.log("Drag Drop");
+                                    Roo.log(e);
                                 }
                             },
                             animate : false,
@@ -213,13 +214,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            nodeXtype : function(n) {
-                                 if (!n) {return ''; }
-                                var xt = n.elConfig.xtype ||  '';
-                                var xns= n.elConfig['|xns'] ||   '';
-                                xns += xns.length ? '.' : '';
-                                return xns + xt;
-                            },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -379,6 +373,13 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 this.root.expand(true);
                                 Pman.Tab.BuilderView.panel.redraw();
                                 this.setCurrentNode(this.root,true);
+                            },
+                            nodeXtype : function(n) {
+                                 if (!n) {return ''; }
+                                var xt = n.elConfig.xtype ||  '';
+                                var xns= n.elConfig['|xns'] ||   '';
+                                xns += xns.length ? '.' : '';
+                                return xns + xt;
                             },
                             renderer : function(n) { return n.text; },
                             setCurrentNode : function(node,select) {
