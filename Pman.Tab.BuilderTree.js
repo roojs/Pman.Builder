@@ -163,6 +163,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                        // point: below, append
                                        // target - node 
                                     // for palete
+                                        // dropNode = false;
+                                        
                                         // target.dragData.selection[..] 
                                    
                                 }
