@@ -61,7 +61,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
             mkdir($sp, 0755, true);
         }
         $fn = $sp .'/'. $this->id . '-'. $this->name . '-'. date('d-H-i-s') . '.bjs';
-        $this->writeCopy($fn, $roo);
+        file_put_contents($fn $this->json);
     }
     
     
