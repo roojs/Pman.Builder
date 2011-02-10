@@ -58,7 +58,7 @@ Pman.Dialog.BuilderProp = {
                     fitContainer : true,
                     fitToframe : true,
                     region : 'center',
-                    title : "AutoAuth",
+                    title : "Props",
                     grid : {
                         xtype: 'Grid',
                         xns: Roo.grid,
