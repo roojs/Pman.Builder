@@ -51,7 +51,14 @@ class Pman_Builder_Palette extends Pman
             
             
         }
-        echo '<PRE>';print_R($res);exit;
+        $ret = array();
+        foreach($res as $k=>$v) {
+            $ret[] = array( 
+                'name' => $k,
+                'parents' => json_encode(array_keys($v))
+            );
+        }
+        echo '<PRE>';print_R($et);exit;
     }
     
 }
