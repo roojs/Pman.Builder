@@ -93,7 +93,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         }
                                         // at this point it should of a set of options...
                                         this.appendNode(e.target, cfg, e.point);
-                                     
+                                         Pman.Tab.BuilderView.panel.redraw();
                                         return; // fixme drop of elements from palete..
                                     }
                                 
