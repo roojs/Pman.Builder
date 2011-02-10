@@ -26,7 +26,7 @@ class Pman_Builder_Palette extends Pman
     {
         
         // use file..
-        // get this directly from roo?
+        // this is our hand made file at present.. shared with app.Builders code.
         
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
