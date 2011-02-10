@@ -52,6 +52,7 @@ class Pman_Builder_Palette extends Pman
             
         }
         $ret = array();
+        ksort($res);
         foreach($res as $k=>$v) {
             $ret[] = array( 
                 'name' => $k,
