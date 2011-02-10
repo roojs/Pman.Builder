@@ -186,10 +186,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         Roo.log("NEW PARENT: " + new_parent);
                                         
                                         // see if the new_parent is actually in the list of ok_parents
-                                        n.cancel = true;
+                                        e.cancel = true;
                                         Roo.each(ok_parents,function(n) {
                                             if (n == new_parent || n.split(':').shift() == new_parent) {
-                                                n.cancel = false;
+                                                e.cancel = false;
                                                 return true;
                                             }
                                         });
