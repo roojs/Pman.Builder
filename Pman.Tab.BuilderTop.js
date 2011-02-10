@@ -181,17 +181,21 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                 return false;
                                             }
                                             
-                                            Pman.Dialog.BuilderPart.show( { id : 0, module_id: _this.modsel.getValue() } , function(data) {
-                                                _this.filesel.reset();
-                                                if (!data.id) {
-                                                    return;
-                                                }
-                                                _this.filesel.setfromdata(data);
-                                                Pman.Tab.BuilderTree.clearAll();
-                                                Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
-                                                
-                                                var bp = Pman.Tab.BuilderPanel;
-                                                bp.redraw.defer(100,bp,[true]);
+                                            Pman.Dialog.BuilderPart.show( {
+                                                     id : 0, 
+                                                     module_id: _this.modsel.getValue() 
+                                                 } ,
+                                                 function(data) {
+                                                    _this.filesel.reset();
+                                                    if (!data.id) {
+                                                        return;
+                                                    }
+                                                    _this.filesel.setfromdata(data);
+                                                    Pman.Tab.BuilderTree.clearAll();
+                                                    Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
+                                                    
+                                                    var bp = Pman.Tab.BuilderPanel;
+                                                    bp.redraw.defer(100,bp,[true]);
                                             });
                                         
                                         }
