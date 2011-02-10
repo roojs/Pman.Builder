@@ -93,9 +93,9 @@
                                 {
                                     "fieldLabel": "Name",
                                     "name": "name",
-                                    "width": 200,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
+                                    "width": 300,
+                                    "xtype": "TextField",
+                                    "|xns": "Roo.form"
                                 },
                                 {
                                     "name": "id",
