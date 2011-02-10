@@ -71,6 +71,9 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                 // do not need to create it...
                 unset($files[$d->name]);
             }
+            if (isset($files[$d->name])) {
+                continue;
+            }
         }
         // we do not delete anything...
         // next create stuff..
