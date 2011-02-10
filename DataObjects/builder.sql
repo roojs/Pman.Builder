@@ -26,16 +26,6 @@ ALTER TABLE builder_app CHANGE COLUMN davwrite davwrite int(2)  NOT NULL DEFAULT
 ALTER TABLE builder_app ADD COLUMN `gitpath` varchar(255)  NOT NULL DEFAULT '';
 
 
-CREATE TABLE  `translations` (
-  `id` int(11)  NOT NULL AUTO_INCREMENT,
-  `module` varchar(64)  NOT NULL,
-  tfile varchar(128) NOT NULL,
-  tlang varchar(8)  NOT NULL,
-  tkey varchar(32)  NOT NULL,
-  tval longtext  NOT NULL,
-  PRIMARY KEY (`id`)
-);
-
 ALTER TABLE translations ADD INDEX qlookup (module, tfile, tlang, tkey);
 
 CREATE TABLE `builder_modules` (
