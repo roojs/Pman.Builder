@@ -49,9 +49,10 @@ class Pman_Builder_Palette extends Pman
                 default:
                     continue;
             }
-            print_R($res);exit;
+            
             
         }
+        print_R($res);exit;
     }
     
 }
