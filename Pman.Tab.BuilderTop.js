@@ -54,7 +54,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                            Pman.Dialog.BuilderAppEdit.show({
+                                            Pman.Dialog.BuilderModule.show({
                                                  id : 0
                                             },function(data) {
                                                 if (data) {
@@ -64,8 +64,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         
                                         }
                                     },
-                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif',
-                                    text : "Create"
+                                    text : "Create",
+                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
                                 },
                                 {
                                     xtype: 'Item',
