@@ -72,7 +72,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                 unset($files[$d->name]);
             }
             if (isset($files[$d->name])) {
-                continue;
+                unset($files[$d->name]); 
             }
         }
         // we do not delete anything...
