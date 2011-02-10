@@ -92,7 +92,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             cfg['*prop'] = nar[1];
                                         }
                                         // at this point it should of a set of options...
-                                        np.appendNode(cfg);
+                                        this.appendNode(np, cfg);
                                      
                                         return; // fixme drop of elements from palete..
                                     }
