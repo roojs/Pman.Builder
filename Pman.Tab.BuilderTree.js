@@ -80,27 +80,36 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     if (!e.tree || !e.dropNode) {
                                     
                                         // form palete...
-                                        
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        console.log('no tree or dropNode');
+                                        var data  = e.source.dragData.selections[0].data;
+                                        var nar = data.name.split(':')
+                                        var xar = nar[0].split('.');
+                                
+                                        var cfg = {
+                                            '|xns' : xar.pop(),
+                                            'xtype' : xar.join('.')
+                                        };
+                                        if (nar.length > 1) {
+                                            cfg['*prop'] = nar[1];
+                                        }
+                                        // at this point it should of a set of options...
+                                        np.appendNode(cfg);
+                                     
                                         return; // fixme drop of elements from palete..
                                     }
                                 
                                     // always drop onto own parent
                                     if (np == e.dropNode.parentNode) {
                                         if (e.rawEvent.ctrlKey) {
-                                            e.dropNode = _this.dupeNode(e.dropNode);
+                                            e.dropNode = this.dupeNode(e.dropNode);
                                         }
                                         return true;
                                     }
                                     // can append has to use palete...
                                     // this code should be in nodedragover.
                                     
-                                   if (_this.canAppend(np, e.dropNode.elConfig)) {
+                                    
+                                    
+                                    if (_this.canAppend(np, e.dropNode.elConfig)) {
                                         if (e.rawEvent.ctrlKey) {
                                             e.dropNode = _this.dupeNode(e.dropNode);
                                               
@@ -212,24 +221,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            dupeNode : function(node)
-                                {
-                                    var cfg = this.cloneConfig(node.elConfig);
-                                    
-                                    var newNode = new Roo.tree.TreeNode(
-                                    {
-                                            id: Roo.id(),
-                                            text: this.configToText(cfg)
-                                    });
-                                    
-                                    newNode.elConfig = cfg;
-                                    node.eachChild(function(n) {
-                                        newNode.appendChild(this.dupeNode(n));
-                                    },this);
-                                    
-                                    return newNode;
-                                        
-                                },
                             appendNode : function(parent, inConfig, markUndo) {
                                 
                                     
@@ -359,6 +350,24 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     items: [] 
                                 };
                             },
+                            dupeNode : function(node)
+                                {
+                                    var cfg = this.cloneConfig(node.elConfig);
+                                    
+                                    var newNode = new Roo.tree.TreeNode(
+                                    {
+                                            id: Roo.id(),
+                                            text: this.configToText(cfg)
+                                    });
+                                    
+                                    newNode.elConfig = cfg;
+                                    node.eachChild(function(n) {
+                                        newNode.appendChild(this.dupeNode(n));
+                                    },this);
+                                    
+                                    return newNode;
+                                        
+                                },
                             loadBJS : function(module, part) {
                                 var _t = this;
                                 new Pman.Request({
