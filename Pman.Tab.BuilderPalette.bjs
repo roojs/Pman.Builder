@@ -28,6 +28,7 @@
                     "loadMask": true,
                     "xtype": "Grid",
                     "|xns": "Roo.grid",
+                    "ddGroup": "",
                     "items": [
                         {
                             "*prop": "dataSource",
