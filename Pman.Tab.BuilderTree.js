@@ -255,7 +255,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     case 'before':
                                         parent.parentNode.insertBefore(newNode, parent);
                                         break;
-                                    case 'after':
+                                    case 'above':
                                         // if it's the last node.. then we append..
                                         var ix = parent.parentNode.indexOf(parent) + 1;
                                         if (parent.parentNode.childNodes.length == ix) {
