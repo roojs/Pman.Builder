@@ -20,7 +20,8 @@
             "items": [
                 {
                     "listeners": {
-                        "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({})\n    }\n}"
+                        "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({})\n    }\n}",
+                        "rowclass": "function (gridview, rowcfg)\n{\n\n    // what is the currently selected element..\n    if (rowcfg.rowIndex > 10) {\n        rowcfg.rowClass = 'palete-hide';\n    } \n        Roo.log(rowcfg);\n}"
                     },
                     "*prop": "grid",
                     "autoExpandColumn": "name",
