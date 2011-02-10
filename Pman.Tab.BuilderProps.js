@@ -246,8 +246,8 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                 var ec = _this.grid.currentNode.elConfig;
                                 Pman.Dialog.BuilderProp.show({
                                         xtype : ec.xtype  || '',
-                                        xns: ec.xns || '',
-                                        list: 'event'
+                                        xns: ec['|xns'] || '',
+                                        list: 'events'
                                 }, function (n,val) {
                                     ec[n] = val || "function () {\n\n}";
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
