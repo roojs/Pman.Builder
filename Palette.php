@@ -15,7 +15,7 @@ class Pman_Builder_Palette extends Pman
             return $this->roousage();
         }
         // list of properties or events.
-        
+        // gets xns+xtype
         
         
     }
