@@ -98,9 +98,9 @@
                                     "|xns": "Roo.form"
                                 },
                                 {
-                                    "name": "id",
-                                    "|xns": "Roo.form",
-                                    "xtype": "Hidden"
+                                    "name": "module_id",
+                                    "xtype": "Hidden",
+                                    "|xns": "Roo.form"
                                 },
                                 {
                                     "name": "id",
