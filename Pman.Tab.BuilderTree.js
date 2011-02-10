@@ -164,8 +164,22 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                        // target - node 
                                     // for palete
                                         // dropNode = false;
-                                        
+                                        // grid = the grid...
                                         // target.dragData.selection[..] 
+                                   
+                                    
+                                    // we can only check parents... (we in theory can check dupe properties.. but let's ignore that for the time being.)
+                                    
+                                    // ok off we go.
+                                    
+                                    if (!e.dropNode) {
+                                        // drag from palete..
+                                        
+                                        
+                                        
+                                        
+                                    }
+                                     
                                    
                                 }
                             },
