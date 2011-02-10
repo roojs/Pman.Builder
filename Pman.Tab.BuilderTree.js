@@ -226,6 +226,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             id: Roo.id(),
                                             text: this.configToText(cfg)
                                     });
+                                    
                                     newNode.elConfig = cfg;
                                     node.eachChild(function(n) {
                                         newNode.appendChild(this.dupeNode(n));
