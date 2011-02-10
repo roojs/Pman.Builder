@@ -14,7 +14,7 @@ class Pman_Builder_Palette extends Pman
         // use file..
         $lines = file(dirname(__FILE__).'/RooUsage.txt');
         $s = -1;
-        $res = array()
+        $res = array();
         $left = array();
         foreach($lines as $l) {
             
