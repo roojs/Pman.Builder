@@ -132,7 +132,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b></div>',
                         triggerAction : 'all',
                         typeAhead : true,
-                        valueField : 'name',
+                        valueField : 'id',
                         width : 100,
                         store : {
                             xtype: 'Store',
