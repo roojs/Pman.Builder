@@ -182,10 +182,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         var drop_xtype = drop_rec.data.name;
                                         var ok_parents = drop_rec.json.parents;
                                         
-                                        var new_parent = '';
-                                        if (e.point == 'append') {
-                                            new_parent = this.nodeXtype(e.target);
-                                        }
+                                        var new_parent = this.nodeXtype((e.point == 'append') ? e.target.parentNode :  e.target);
                                         
                                         
                                     }
