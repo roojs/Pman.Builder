@@ -80,7 +80,7 @@ Pman.Dialog.BuilderModule = {
                             },
                             method : 'POST',
                             style : 'margin:10px;',
-                             : function() {
+                            dialog : function() {
                                 
                             },
                             url : baseURL + '/Roo/builder_modules.php',
