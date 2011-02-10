@@ -152,6 +152,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         
                                 
                                 
+                                },
+                                nodedragover : function (dragOverEvent)
+                                {
+                                
                                 }
                             },
                             animate : false,
