@@ -88,9 +88,9 @@ Pman.Dialog.BuilderProp = {
                                 {
                                     // we should cache this!!!
                                     options.params = options.params || {};
-                                    options.params.xtype = this.data.xtype;
-                                    options.params.xns = this.data.xns;
-                                    options.params.list = this.data.list;    
+                                    options.params.xtype = _this.data.xtype;
+                                    options.params.xns = _this.data.xns;
+                                    options.params.list = _this.data.list;    
                                 }
                             },
                             remoteSort : false,
