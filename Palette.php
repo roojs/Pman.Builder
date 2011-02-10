@@ -9,5 +9,10 @@ class Pman_Builder_Palette extends Pman
         return true;
     }
     
+    function get()
+    {
+        // use file..
+        
+    }
     
 }
