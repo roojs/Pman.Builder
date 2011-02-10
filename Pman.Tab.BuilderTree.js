@@ -107,7 +107,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     // can append has to use palete...
                                     // this code should be in nodedragover.
                                     
-                                    
+                                    Roo.log("move checks need moving");
+                                    return;
                                     
                                     if (_this.canAppend(np, e.dropNode.elConfig)) {
                                         if (e.rawEvent.ctrlKey) {
