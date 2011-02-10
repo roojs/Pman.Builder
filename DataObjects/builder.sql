@@ -36,7 +36,7 @@ CREATE TABLE `builder_modules` (
 ALTER TABLE  `builder_modules` ADD COLUMN `database_dsn` VARCHAR(254)  NOT NULL DEFAULT '';
 
 
-CREATE TABLE `builder`.`builder_part` (
+CREATE TABLE  `builder_part` (
   `id` int(11)  NOT NULL AUTO_INCREMENT,
   `module_id` int(11)  NOT NULL,
   `name` varchar(254)  NOT NULL,
@@ -44,3 +44,5 @@ CREATE TABLE `builder`.`builder_part` (
   PRIMARY KEY (`id`)
 )
 ENGINE = MyISAM;
+
+ALTER TABLE builder_part ADD COLUMN updated DATETIME;
