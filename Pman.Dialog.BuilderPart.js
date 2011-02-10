@@ -131,7 +131,7 @@ Pman.Dialog.BuilderPart = {
                                 {
                                     xtype: 'TextField',
                                     xns: Roo.form,
-                                    fieldLabel : 'Part Name',
+                                    fieldLabel : 'Part name',
                                     name : 'name',
                                     width : 300
                                 },
