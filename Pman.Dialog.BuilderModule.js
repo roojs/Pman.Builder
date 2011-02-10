@@ -75,6 +75,7 @@ Pman.Dialog.BuilderModule = {
                                 },
                                 rendered : function (form)
                                 {
+                                    this.dialog = _this.dialog;
                                     _this.form= form;
                                 }
                             },
