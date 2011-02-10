@@ -91,7 +91,7 @@
                                     ]
                                 },
                                 {
-                                    "fieldLabel": "Name",
+                                    "fieldLabel": "Part Name",
                                     "name": "name",
                                     "width": 300,
                                     "xtype": "TextField",
