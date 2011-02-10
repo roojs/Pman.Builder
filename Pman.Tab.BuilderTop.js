@@ -183,6 +183,9 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                             
                                             Pman.Dialog.BuilderPart.show( { id : 0 } , function(data) {
                                                 _this.filesel.reset();
+                                                if (!data.id) {
+                                                    return;
+                                                }
                                                 _this.filesel.setfromdata(data);
                                                 Pman.Tab.BuilderTree.clearAll();
                                                 Pman.Tab.BuilderTree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
