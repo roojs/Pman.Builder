@@ -39,6 +39,7 @@ Pman.Dialog.BuilderProp = {
             closable : false,
             collapsible : false,
             height : 600,
+            modal : true,
             resizable : false,
             title : "Add Property",
             width : 600,
