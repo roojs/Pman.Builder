@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-158",
+    "id": "roo-file-165",
     "name": "Pman.Tab.BuilderTop",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTop",
@@ -91,7 +91,7 @@
                                             "*prop": "proxy",
                                             "method": "GET",
                                             "xtype": "HttpProxy",
-                                            "|url": "baseURL + '/Builder/Modules.php'",
+                                            "|url": "baseURL + '/Roo/Builder_Modules.php'",
                                             "|xns": "Roo.data"
                                         },
                                         {
