@@ -110,7 +110,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             select : function (combo, record, index)
                             {
                                 _this.filesel.reset();
-                               _this.filesel.fireEvent('select', false);
+                                _this.filesel.fireEvent('select', false);
                             
                             },
                             render : function (_self)
