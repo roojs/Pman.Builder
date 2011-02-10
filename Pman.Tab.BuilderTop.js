@@ -78,7 +78,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                 Roo.MessageBox.alert("Error", "Select Module");
                                                 return false;
                                             }
-                                            Pman.Dialog.BuilderAppEdit.show( _this.modsel.lastData ,function(data) {
+                                            Pman.Dialog.BuilderModule.show( _this.modsel.lastData ,function(data) {
                                                 if (data) {
                                                     _this.modsel.setFromData(data);
                                                 }
