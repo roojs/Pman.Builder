@@ -236,15 +236,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 if (!parent) {
                             	parent = this.root;
                                 }
-                                    
-                                    
-                                //var canAppend = this.canAppend(parent,config);
-                                //if (canAppend !== true) {
-                                //    console.log("Unable to add element " + canAppend);
-                                //	Roo.Msg.alert("Unable to add element", canAppend);
-                                //		return false;
-                               //		}
-                                     
+                                      
                                 var newNode = new Roo.tree.TreeNode({
                                         text: this.configToText(config)
                                 });
