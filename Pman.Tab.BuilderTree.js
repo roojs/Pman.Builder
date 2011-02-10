@@ -82,7 +82,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         // form palete...
                                         var data  = e.source.dragData.selections[0].data;
                                 
-                                        var xar = nar[0].split('.');
+                                        var xar = data.name.split('.');
                                 
                                         var cfg = {
                                             '|xns' : xar.shift(),
