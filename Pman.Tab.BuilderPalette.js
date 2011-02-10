@@ -71,12 +71,13 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     rowclass : function (gridview, rowcfg)
                     {
                         var sn = Pman.Tab.BuilderTree.tree.currentNodeType();
-                        Roo.log(sn);
+                        Roo.log(rowconfig);
                         if (!sn) {
                             sn = '*top';
                         }
                         var cls = 'pman-builder-palete-hide';
                         var name  = rowcfg.record.data.name;
+                        return;
                         Roo.each(rowcfg.record.data.parents, function(n) {
                             if (n == name || n.split(':').shift() == name) 
                                 cls = '';
