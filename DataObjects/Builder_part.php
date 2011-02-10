@@ -95,6 +95,8 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     function toRooArray()
     {
         $ret = $this->toArray();
+        return $ret;
+        /*
         // update return the code.!!!
         if (isset($_SERVER["REQUEST_METHOD"]) &&  $_SERVER["REQUEST_METHOD"] == 'POST') {
             require_once 'Pman/Builder/Code.php';
@@ -103,5 +105,6 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         }
          
         return $ret;
+        */
     }
 }
