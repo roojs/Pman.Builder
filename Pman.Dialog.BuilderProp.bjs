@@ -31,7 +31,6 @@
                     "fitContainer": true,
                     "fitToframe": true,
                     "region": "center",
-                    "tableName": "AutoAuth",
                     "title": "AutoAuth",
                     "xtype": "GridPanel",
                     "|xns": "Roo",
