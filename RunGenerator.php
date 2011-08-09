@@ -33,8 +33,9 @@ class Pman_Builder_RunGenerator extends Pman
         
         'update-files' => array(
             'short' => 'f',
-            'min' => 0,
+            'min' => 1,
             'max' => 99,
+            'default' => false
             'desc' => 'Files to update, eg. -f pman.ini -f Mtrack_wiki.php ' 
         ),
         
