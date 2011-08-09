@@ -12,6 +12,32 @@ require_once 'Pman.php';
 class Pman_Builder_RunGenerator extends Pman
 {     
     var $cli = false;
+    
+    
+    static $cli_description  = "Creates Database Tables for modules"
+    
+    static $cli_opts  = array(
+        'test' => array(
+            'short' => 't',
+            'min' => 1,
+            'max' => 1,
+            //'default' => 0, -- no default if it is required..
+            'desc' => 'A test argument that has to be set..'  
+        ),
+        
+        
+        
+        
+    );
+    
+    
+    
+    
+    
+    
+    
+    
+    
     function getAuth() {
         
         $o = PEAR::getStaticProperty('HTML_FlexyFramework', 'options');
