@@ -71,7 +71,8 @@ class Pman_Builder_RunGenerator extends Pman
     function get($args,$opts)
     {
         
-        print_R($opts);
+        print_R($opts); exit;
+        
         require_once 'Pman/Builder/Generator.php';
         ini_set('pcre.backtrack_limit', 2000000);
         ini_set('pcre.recursion_limit', 2000000);
