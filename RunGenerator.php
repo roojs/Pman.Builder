@@ -35,7 +35,7 @@ class Pman_Builder_RunGenerator extends Pman
             'short' => 'f',
             'min' => 1,
             'max' => 99,
-            'default' => false
+            'default' => false,
             'desc' => 'Files to update, eg. -f pman.ini -f Mtrack_wiki.php ' 
         ),
         
