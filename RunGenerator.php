@@ -14,7 +14,7 @@ class Pman_Builder_RunGenerator extends Pman
     var $cli = false;
     
     
-    static   = "Creates Database Tables for modules";
+    static $cli_desc  = "Creates Database Tables for modules";
     
     static $cli_opts  = array(
         'module' => array(
