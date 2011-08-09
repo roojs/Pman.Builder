@@ -14,15 +14,28 @@ class Pman_Builder_RunGenerator extends Pman
     var $cli = false;
     
     
-    static $cli_description  = "Creates Database Tables for modules"
+    static $cli_description  = "Creates Database Tables for modules";
     
     static $cli_opts  = array(
-        'test' => array(
-            'short' => 't',
+        'module' => array(
+            'short' => 'm',
             'min' => 1,
             'max' => 1,
-            //'default' => 0, -- no default if it is required..
-            'desc' => 'A test argument that has to be set..'  
+            'default' => '',
+            'desc' => 'Module to Generate'  
+        ),
+        'update-db' => array(
+            'short' => 'd',
+            'min' => 0,
+            'max' => 0,
+            'desc' => 'Flag to just run database updates'  
+        ),
+        
+        'update-files' => array(
+            'short' => 'f',
+            'min' => 0,
+            'max' => 99,
+            'desc' => 'Files to update, eg. -f pman.ini -f Mtrack_wiki.php ' 
         ),
         
         
@@ -55,8 +68,10 @@ class Pman_Builder_RunGenerator extends Pman
         return true;
     }
      
-    function get($args)
+    function get($args,$opts)
     {
+        
+        print_R($opts);
         require_once 'Pman/Builder/Generator.php';
         ini_set('pcre.backtrack_limit', 2000000);
         ini_set('pcre.recursion_limit', 2000000);
