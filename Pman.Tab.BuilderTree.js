@@ -399,7 +399,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         _t.loadTree(JSON.parse(res.data.json));
                                         
                                      
-                                    },
+                                    }
                             
                                  })  
                                     
