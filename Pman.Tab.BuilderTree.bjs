@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-38",
+    "id": "roo-file-31",
     "name": "Pman.Tab.BuilderTree",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTree",
@@ -57,7 +57,7 @@
                                     "|currentNodeType": "function() {\n    return this.nodeXtype(this.currentNode);\n \n}\n",
                                     "|defaultElConfig": "function() {\n    return {\n       xtype : '*Module',\n        \n        module : 'TestApp',\n        part:   'Partname',\n        modkey : 0,\n        region : 'center',\n        parent : 'Pman',\n        name : 'Module Name',\n        items: [] \n    };\n}\n",
                                     "|dupeNode": " function(node)\n    {\n        var cfg = this.cloneConfig(node.elConfig);\n        \n        var newNode = new Roo.tree.TreeNode(\n        {\n                id: Roo.id(),\n                text: this.configToText(cfg)\n        });\n        \n        newNode.elConfig = cfg;\n        node.eachChild(function(n) {\n            newNode.appendChild(this.dupeNode(n));\n        },this);\n        \n        return newNode;\n            \n    }",
-                                    "|loadBJS": "function(module, part) {\n    var _t = this;\n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_part.php',\n        method : 'GET',\n        params : {\n           _id : part\n        },\n        success : function(res)         \n        {\n            // data is in.. \n            Roo.log(res);\n            _t.loadTree(JSON.parse(res.data.json));\n            \n         \n        },\n\n     })  \n        \n    \n    \n}\n",
+                                    "|loadBJS": "function(module, part) {\n    var _t = this;\n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_part.php',\n        method : 'GET',\n        params : {\n           _id : part\n        },\n        success : function(res)         \n        {\n            // data is in.. \n            Roo.log(res);\n            _t.loadTree(JSON.parse(res.data.json));\n            \n         \n        }\n\n     })  \n        \n    \n    \n}\n",
                                     "|loadTree": "function(o) {\n    this.clearAll();\n    this.root.elConfig = o;\n    this.root.setText(this.configToText(this.root.elConfig));\n    this.appendNode(this.root, o.items[0]);\n    this.root.expand(true);\n    Pman.Tab.BuilderView.panel.redraw();\n    this.setCurrentNode(this.root,true);\n}\n",
                                     "|nodeXtype": "function(n) {\n     if (!n) {return ''; }\n    var xt = n.elConfig.xtype ||  '';\n    var xns= n.elConfig['|xns'] ||   '';\n    xns += xns.length ? '.' : '';\n    return xns + xt;\n}\n",
                                     "|renderer": "function(n) { return n.text; }",
