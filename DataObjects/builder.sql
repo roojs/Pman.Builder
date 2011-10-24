@@ -24,5 +24,8 @@ CREATE TABLE  builder_part (
 ALTER TABLE builder_part ADD COLUMN module_id int(11)  NOT NULL;
 ALTER TABLE builder_part ADD COLUMN   name varchar(254)  NOT NULL;
 ALTER TABLE builder_part ADD COLUMN   json longtext  NOT NULL;
+ALTER TABLE builder_part SET json longtext  NOT NULL;
+ALTER TABLE builder_part CHANGE COLUMN SET json SET DEFAULT '';
+
 
 ALTER TABLE builder_part ADD COLUMN updated DATETIME ;
