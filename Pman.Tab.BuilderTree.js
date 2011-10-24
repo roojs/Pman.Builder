@@ -8,6 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
+        part :  ["Builder","Tree"],
         modKey : '001-Pman.Tab.BuilderTree',
         module : Pman.Tab.BuilderTree,
         region : 'center',
