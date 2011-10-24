@@ -58,7 +58,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    new Pman.Request({\n        method : 'GET',\n        url : baseURL + '/Roo/Builder_modules.php',\n        params : 'query[_sync]',\n        success : function() {\n            Roo.MessageBox.alert(\"Re-syned modules\");\n        }\n    });\n}"
+                                                "click": "function (_self, e)\n{\n    new Pman.Request({\n        method : 'GET',\n        url : baseURL + '/Roo/Builder_modules.php',\n        params : 'query[_sync]',\n        success : function() {\n            Roo.MessageBox.alert(\"Done\", \"Re-syned modules\");\n        }\n    });\n}"
                                             },
                                             "text": "Sync",
                                             "xtype": "Item",
