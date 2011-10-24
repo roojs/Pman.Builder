@@ -1,1 +1,117 @@
-{"xtype":"*Module","app":"Builder","modkey":0,"|module":"Pman.Dialog.BuilderAppEdit","name":"Pman.Dialog.BuilderAppEdit","listeners":{},"items":[{"xtype":"LayoutDialog","background":true,"width":500,"height":"200","title":"Edit \/ Create Module","listeners":{"|show":"function (_self)\n{\n   _this.dialog = _self;\n}"},"closable":false,"collapsible":false,"resizable":false,"|xns":"Roo","modal":true,"items":[{"xtype":"*LayoutRegion","*prop":"center","titlebar":false,"listeners":{}},{"xtype":"ContentPanel","background":true,"fitToFrame":true,"region":"center","listeners":{},"items":[{"xtype":"Form","style":"margin: 5px","|url":"baseURL + '\/Roo\/Builder_app.php'","method":"POST","listeners":{"|actionfailed":"function (_self, action)\n{\n    _this.dialog.el.unmask();\n    Pman.standardActionFailed(_self, action);\n}\n","|actioncomplete":"function (_self, action)\n{\n   if (action.type == 'submit') {\n      _this.dialog.el.unmask();\n     _this.dialog.hide();\n   \n    if (_this.callback) {\n       _this.callback.call(_this, _this.form.getValues());\n    }\n    _this.form.reset();\n     }\n}\n","|rendered":"function (_self)\n{\n    _this.form = _self;\n}\n"},"items":[{"name":"id","xtype":"Hidden"},{"name":"app","fieldLabel":"Module","width":200,"xtype":"TextField","listeners":{}},{"name":"davurl","fieldLabel":"Webdav URL","width":350,"xtype":"TextField","listeners":{},"vtype":"url"},{"name":"davwrite","fieldLabel":"Write to WebDav","xtype":"Checkbox","allowDecimals":false,"listeners":{},"boxLabel":"Check to enable PUT to Dav after save","inputValue":"1"},{"name":"gitpath","fieldLabel":"Git Path","width":350,"xtype":"TextField","listeners":{}}]}]},{"xtype":"Array","*prop":"buttons","listeners":{},"items":[{"xtype":"Button","|xns":"Roo","text":"Cancel","listeners":{"|click":"function (_self, e)\n{\n     _this.form.reset();\n     _this.dialog.hide();\n}"}},{"xtype":"Button","|xns":"Roo","text":"OK","listeners":{"|click":"function (_self, e)\n{\n    _this.dialog.el.mask(\"Saving\");\n     _this.form.doAction('submit');\n    \n}"}}]}]}],"title":"Edit Module Details"}
+{
+    "id": "roo-file-72",
+    "name": "Pman.Dialog.BuilderAppEdit",
+    "parent": "",
+    "title": "Edit Module Details",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderAppEdit.bjs",
+    "items": [
+        {
+            "listeners": {
+                "|show": "function (_self)\n{\n   _this.dialog = _self;\n}"
+            },
+            "background": true,
+            "closable": false,
+            "collapsible": false,
+            "height": 200,
+            "modal": true,
+            "resizable": false,
+            "title": "Edit / Create Module",
+            "width": 500,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "xtype": "LayoutRegion",
+                    "*prop": "center",
+                    "titlebar": false,
+                    "listeners": {},
+                    "|xns": "Roo"
+                },
+                {
+                    "xtype": "ContentPanel",
+                    "background": true,
+                    "fitToFrame": true,
+                    "region": "center",
+                    "listeners": {},
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "xtype": "Form",
+                            "style": "margin: 5px",
+                            "|url": "baseURL + '/Roo/Builder_app.php'",
+                            "method": "POST",
+                            "listeners": {
+                                "|actionfailed": "function (_self, action)\n{\n    _this.dialog.el.unmask();\n    Pman.standardActionFailed(_self, action);\n}\n",
+                                "|actioncomplete": "function (_self, action)\n{\n   if (action.type == 'submit') {\n      _this.dialog.el.unmask();\n     _this.dialog.hide();\n   \n    if (_this.callback) {\n       _this.callback.call(_this, _this.form.getValues());\n    }\n    _this.form.reset();\n     }\n}\n",
+                                "|rendered": "function (_self)\n{\n    _this.form = _self;\n}\n"
+                            },
+                            "|xns": "Roo.form",
+                            "items": [
+                                {
+                                    "name": "id",
+                                    "xtype": "Hidden",
+                                    "|xns": "Roo.form"
+                                },
+                                {
+                                    "name": "app",
+                                    "fieldLabel": "Module",
+                                    "width": 200,
+                                    "xtype": "TextField",
+                                    "listeners": {},
+                                    "|xns": "Roo.form"
+                                },
+                                {
+                                    "name": "davurl",
+                                    "fieldLabel": "Webdav URL",
+                                    "width": 350,
+                                    "xtype": "TextField",
+                                    "listeners": {},
+                                    "vtype": "url",
+                                    "|xns": "Roo.form"
+                                },
+                                {
+                                    "name": "davwrite",
+                                    "fieldLabel": "Write to WebDav",
+                                    "xtype": "Checkbox",
+                                    "allowDecimals": false,
+                                    "listeners": {},
+                                    "boxLabel": "Check to enable PUT to Dav after save",
+                                    "inputValue": "1",
+                                    "|xns": "Roo.form"
+                                },
+                                {
+                                    "name": "gitpath",
+                                    "fieldLabel": "Git Path",
+                                    "width": 350,
+                                    "xtype": "TextField",
+                                    "listeners": {},
+                                    "|xns": "Roo.form"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "xtype": "Button",
+                    "|xns": "Roo",
+                    "text": "Cancel",
+                    "listeners": {
+                        "|click": "function (_self, e)\n{\n     _this.form.reset();\n     _this.dialog.hide();\n}"
+                    },
+                    "*prop": "buttons[]"
+                },
+                {
+                    "xtype": "Button",
+                    "|xns": "Roo",
+                    "text": "OK",
+                    "listeners": {
+                        "|click": "function (_self, e)\n{\n    _this.dialog.el.mask(\"Saving\");\n     _this.form.doAction('submit');\n    \n}"
+                    },
+                    "*prop": "buttons[]"
+                }
+            ]
+        }
+    ],
+    "permname": "",
+    "modOrder": "001"
+}
