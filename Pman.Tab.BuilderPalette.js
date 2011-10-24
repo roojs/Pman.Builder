@@ -8,6 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
+        part :  ["Builder","Palette"],
         modKey : '001-Pman.Tab.BuilderPalette',
         module : Pman.Tab.BuilderPalette,
         region : 'center',
