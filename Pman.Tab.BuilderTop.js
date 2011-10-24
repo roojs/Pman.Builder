@@ -8,6 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
+        part :  ["Builder","Top"],
         modKey : '001-Pman.Tab.BuilderTop',
         module : Pman.Tab.BuilderTop,
         region : 'center',
@@ -99,6 +100,10 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         }
                                     },
                                     text : "Delete"
+                                },
+                                {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
                                 }
                             ]
                         }
