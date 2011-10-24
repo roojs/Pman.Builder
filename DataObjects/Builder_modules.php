@@ -34,6 +34,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             
             // use the basic builder modules for this project based on configurion.
             // what do we have..
+            DB_DataObject::DebugLevel(1);
             $x = DB_DataObject::factory('builder_modules');
             $modpaths = $x->fetchAll('name', 'path');
             
