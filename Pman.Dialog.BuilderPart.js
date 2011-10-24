@@ -50,7 +50,7 @@ Pman.Dialog.BuilderPart = {
                                 actioncomplete : function(_self,action)
                                 {
                                     if (action.type == 'setdata') {
-                                        if (_this.data.id) {   
+                                        if (_this.data.id * 1) {   
                                             this.load({ method: 'GET', params: { '_id' : _this.data.id }});
                                             return;
                                         }
