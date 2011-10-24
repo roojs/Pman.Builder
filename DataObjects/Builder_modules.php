@@ -51,7 +51,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                         'path' => $ff->baseDir .'/'. $m,
                         'public' => 0,
                     ));
-                    
+                    $x->insert();
                     
                     
                 }
