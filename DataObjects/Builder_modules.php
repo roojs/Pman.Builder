@@ -40,8 +40,8 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             
             // use the basic builder modules for this project based on configurion.
             $ff = HTML_FlexyFramework::get();
-            $mods = $ff->enable;
-            print_R($mods);exit;
+            //$mods = $ff->modsEnab;
+            echo '<PRE>';print_R($ff);exit;
             
             
             
