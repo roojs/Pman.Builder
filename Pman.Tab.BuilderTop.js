@@ -115,6 +115,9 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                 method : 'GET',
                                                 url : baseURL + '/Roo/Builder_modules.php',
                                                 params : 'query[_sync]',
+                                                success : function() {
+                                                    Roo.MessageBox.alert("Re-syned modules");
+                                                }
                                             });
                                         }
                                     },
