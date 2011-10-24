@@ -114,7 +114,9 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                             new Pman.Request({
                                                 method : 'GET',
                                                 url : baseURL + '/Roo/Builder_modules.php',
-                                                params : 'query[_sync]',
+                                                params : {
+                                                    'query[_sync]' : 1
+                                                },
                                                 success : function() {
                                                     Roo.MessageBox.alert("Done", "Re-syned modules");
                                                 }
