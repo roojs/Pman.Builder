@@ -57,6 +57,9 @@
                                             "xtype": "Separator"
                                         },
                                         {
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n    new Pman.Request({\n        method : 'GET',\n        url : baseURL + '/Roo/Builder_modules.php',\n        params : 'query[_sync]',\n    });\n}"
+                                            },
                                             "text": "Sync",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"

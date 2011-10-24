@@ -108,6 +108,16 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 {
                                     xtype: 'Item',
                                     xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                            new Pman.Request({
+                                                method : 'GET',
+                                                url : baseURL + '/Roo/Builder_modules.php',
+                                                params : 'query[_sync]',
+                                            });
+                                        }
+                                    },
                                     text : "Sync"
                                 }
                             ]
