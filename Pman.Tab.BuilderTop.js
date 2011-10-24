@@ -107,7 +107,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 },
                                 {
                                     xtype: 'Item',
-                                    xns: Roo.menu
+                                    xns: Roo.menu,
+                                    text : "Sync"
                                 }
                             ]
                         }
