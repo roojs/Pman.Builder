@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-44",
+    "id": "roo-file-74",
     "name": "Pman.Dialog.BuilderPart",
     "parent": "",
     "title": "",
@@ -10,7 +10,7 @@
             "collapsible": false,
             "height": 120,
             "resizable": false,
-            "title": "Edit / Create builder_part",
+            "title": "Edit / Create Part",
             "width": 450,
             "xtype": "LayoutDialog",
             "|xns": "Roo",

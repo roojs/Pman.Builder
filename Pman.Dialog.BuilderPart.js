@@ -34,7 +34,7 @@ Pman.Dialog.BuilderPart = {
             collapsible : false,
             height : 120,
             resizable : false,
-            title : "Edit / Create builder_part",
+            title : "Edit / Create Part",
             width : 450,
             items : [
                 {
