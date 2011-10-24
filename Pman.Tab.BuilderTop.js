@@ -326,7 +326,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         }
                     },
                     {
-                        xtype: 'Button',
+                        xtype: 'SplitButton',
                         xns: Roo.Toolbar,
                         listeners : {
                             click : function (_self, e)
@@ -340,6 +340,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                         },
                         cls : 'x-btn-text-icon',
                         text : "Save",
+                        icon : rootURL + '/Pman/templates/images/save.gif',
                         save : function() {
                                // first see if first element has a name.. - we can not save otherwise..
                                 var t = Pman.Tab.BuilderTree.tree;
@@ -348,42 +349,41 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     return;
                                 }
                              
-                                sid = (typeof(sid) == 'undefined') ?  (this.filesel.lastData ? this.filesel.lastData.id : 0) : sid;
+                               var  sid = (typeof(sid) == 'undefined') ? 
+                                     (Pman.Tab.BuilderTop.filesel.lastData ? Pman.Tab.BuilderTop.filesel.lastData.id : 0) : sid;
                                 
-                                var js = Pman.Tab.BuilderTree.toJS();
+                        
+                                var js = Pman.Tab.BuilderTree.tree.toJS();
                                 var json = Roo.encode(js);
                                // console.log(js);
                                // console.log(json);
                                 
                                 // check the select box to see if that has been set... - save it with that id..
                                 
-                                var _this = this;
+                                //var _this = this;
                                 
                                 Pman.request({
-                                    url: baseURL + '/Roo/Builder.php',
+                                    url: baseURL + '/Roo/Builder_part.php',
                                     method : 'POST',
                                     params : {
                                         json : json,
-                                        name : t.root.elConfig.name,
-                                        module : t.root.elConfig['|module'],
-                                        app : t.root.elConfig.app,
-                                        btype : 'FORM',
+                                        name : js.name,
+                                        module_id : _this.modsel.getValue(),
                                         id : sid
                                     }, 
                                     success : function(data) {
                                         // set the fileSel!!
                                         console.log(data);
-                                        if (data) {
-                                            _this.filesel.setFromData(data);
-                                            if (cb) {
-                                                cb.call(_this,data);
-                                            }
-                                            _this.postCode(data);
-                                        }
+                                        //if (data) {
+                                        //    _this.filesel.setFromData(data);
+                        //                    if (cb) {
+                        //                        cb.call(_this,data);
+                          //                  }
+                        //                    _this.postCode(data);
+                        //                }
                                     }
                                 });
                         },
-                        icon : rootURL + '/Pman/templates/images/save.gif',
                         menu : {
                             xtype: 'Menu',
                             xns: Roo.menu,

@@ -8,6 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
+        part :  ["Builder","Props"],
         modKey : '001-Pman.Tab.BuilderProps',
         module : Pman.Tab.BuilderProps,
         region : 'center',

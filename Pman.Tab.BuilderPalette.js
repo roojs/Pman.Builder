@@ -125,9 +125,9 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     {
                         xtype: 'ColumnModel',
                         xns: Roo.grid,
+                        dataIndex : 'name',
                         header : 'Name',
                         width : 200,
-                        dataIndex : 'name',
                         renderer : function(v) { return String.format('{0}', v); }
                     }
                 ],

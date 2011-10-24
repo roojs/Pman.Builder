@@ -8,6 +8,7 @@
 Pman.on('beforeload', function()
 {
     Pman.register({
+        part :  ["Builder","View"],
         modKey : '001-Pman.Tab.BuilderView',
         module : Pman.Tab.BuilderView,
         region : 'center',
@@ -225,6 +226,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                         }
                         return;
                         
+                        
                     }
                     // should we render this into a dialog???
                          // force center region..
@@ -240,7 +242,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     }
                     //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
                     
-                    if (this.panelroot.el) {
+                    if (this.panelroot && this.panelroot.el) {
                             this.panelroot.el.scrollTo('top', 0);
                             this.panelroot.el.scrollTo('left', 0);
                         

@@ -22,6 +22,7 @@ class Pman_Builder_Palette extends Pman
         
         $data = json_decode(file_get_contents($ff->rootDir . '/roojs1/docs/json/roodata.json'));
         
+         
         $this->jdata($data->data->{ $cls } -> {$_REQUEST['list'] } );
               
         // 
@@ -80,6 +81,10 @@ class Pman_Builder_Palette extends Pman
                 'parents' =>  array_keys($v) 
             );
         }
+        
+       // echo '<PRE>';print_r($ret);
+       
+        
         $this->jdata($ret);
         //echo '<PRE>';print_R($ret);exit;
     }

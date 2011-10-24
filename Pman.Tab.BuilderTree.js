@@ -47,6 +47,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             {
                                 
                                 _this.tree = _self.tree;
+                                _this.menu = _self.menu;
+                            
                                 if (_this.hasMouseEvent) {
                                     return;
                                 }
@@ -94,8 +96,13 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             cfg['*prop'] = _this.dragProp;
                                         }
                                         // at this point it should of a set of options...
-                                        this.appendNode(e.target, cfg, e.point);
-                                         Pman.Tab.BuilderView.panel.redraw();
+                                        
+                                        Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
+                                
+                                        
+                                            this.appendNode(e.target, cfg, e.point);
+                                             Pman.Tab.BuilderView.panel.redraw();
+                                         })
                                         return; // fixme drop of elements from palete..
                                     }
                                 
@@ -148,6 +155,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                       e.preventDefault();
                                                        // console.log(e.button);
                                         this.setCurrentNode(node);
+                                        
+                                    
+                                        
                                 
                                 },
                                 contextmenu : function (node, e)
@@ -155,7 +165,12 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     e.stopEvent();
                                         
                                         this.getSelectionModel().select(node);
-                                         _this.setCurrentNode(node);
+                                         this.setCurrentNode(node);
+                                         
+                                              _this.menu = Roo.factory(_this.menu);
+                                    
+                                            _this.menu.show(node.ui.textNode, 'tr');
+                                         return;
                                         var xt = node.elConfig.xtype;
                                         var altx= false;
                                         if (typeof(node.elConfig['*prop']) != 'undefined') {
@@ -199,6 +214,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         var drop_rec = e.source.dragData.selections[0];
                                         var drop_xtype = drop_rec.data.name;
                                         var ok_parents = drop_rec.json.parents;
+                                        
                                         Roo.log("TEST PARENTS: " + ok_parents.join(', '));
                                         var new_parent = this.nodeXtype((e.point == 'append') ? e.target :  e.target.parentNode);
                                         Roo.log("NEW PARENT: " + e.point + " = " + new_parent);
@@ -206,13 +222,16 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         // see if the new_parent is actually in the list of ok_parents
                                         e.cancel = true;
                                         _this.dragProp = '';
-                                        Roo.each(ok_parents,function(n) {
+                                        
+                                        Roo.each(ok_parents, function(n) {
                                             if (n == new_parent || n.split(':').shift() == new_parent) {
+                                                Roo.log("got match!");
                                                 e.cancel = false;
                                                 _this.dragProp = (n == new_parent) ?  '' : n.split(':').pop();
                                                 return true;
                                             }
                                         });
+                                
                                         // done all the checks...
                                         return;
                                         
@@ -356,7 +375,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             },
                             defaultElConfig : function() {
                                 return {
-                                   xtype : '*Module',
+                                   xtype : '*top',
                                     
                                     module : 'TestApp',
                                     part:   'Partname',
@@ -366,6 +385,26 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     name : 'Module Name',
                                     items: [] 
                                 };
+                            },
+                            deleteCurrent : function() {
+                                if (this.currentNode == this.root) {
+                                    return false;
+                                }
+                                var cfg = this.currentNode.elConfig;
+                                // things that can not be deleted...
+                               
+                                
+                                var pn = this.currentNode.parentNode;
+                                
+                                
+                                var ix = pn.indexOf(this.currentNode);
+                              //  console.log(ix);
+                                pn.removeChild(this.currentNode);
+                                if (pn.childNodes.length) {
+                                    ix = Math.min(pn.childNodes.length-1, ix);
+                                }
+                                this.setCurrentNode(pn.childNodes.length ? pn.childNodes[ix] : pn  ,true);
+                                return true;
                             },
                             dupeNode : function(node)
                                 {
@@ -397,6 +436,17 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     {
                                         // data is in.. 
                                         Roo.log(res);
+                                        
+                                        if (!res.data.json.length) {
+                                            var cfg = _t.defaultElConfig();
+                                            cfg.name = Pman.Tab.BuilderTop.filesel.lastData.name;
+                                            cfg.part = Pman.Tab.BuilderTop.filesel.lastData.name;
+                                            cfg.module = '';
+                                            _t.loadTree(cfg);
+                                            return;
+                                        
+                                        }
+                                        
                                         _t.loadTree(JSON.parse(res.data.json));
                                         
                                      
@@ -449,6 +499,24 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             	Pman.Tab.BuilderPalette.grid.view.refresh();
                             
                             },
+                            toJS : function(n)
+                            {
+                                if (!n) {
+                                    return this.toJS(this.root);
+                                }
+                                var _this = this;
+                                var ret = this.cloneConfig(n.elConfig);
+                                if (n.childNodes.length) {
+                                    ret.items = [];
+                                    n.eachChild(function(cn) {
+                                        ret.items.push(_this.toJS(cn));
+                                    });
+                                        
+                                }
+                                return ret;
+                                  
+                                 
+                            },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
@@ -459,7 +527,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 text : "Part",
                                 elConfig : function() {
                                     return  {
-                                         xtype : '*Module',
+                                         xtype : '*top',
                                             
                                             app : 'TestApp',
                                             // perm
@@ -475,6 +543,36 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     }
                                 }
                             }
+                        },
+                        menu : {
+                            xtype: 'Menu',
+                            xns: Roo.menu,
+                            items : [
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self)
+                                        {
+                                            Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete that node?",
+                                                function(r) {
+                                                    if (r!='yes') {
+                                                        return;
+                                                    }
+                                                    _this.tree.deleteCurrent();
+                                                }
+                                            );
+                                                
+                                        }
+                                    },
+                                    text : "Delete Node"
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    text : "Save as template"
+                                }
+                            ]
                         }
                     }
                 ],

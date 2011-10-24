@@ -17,41 +17,25 @@ class Pman_Builder_ERM extends Pman
         
        }
     
-    function get()
+    function get($tbl)
     {
+        
+        
         //echo '<PRE>';
+        global $_DB_DATAOBJECT;
+        // DB_DataObject::debugLevel(1);
         $tq = DB_DataObject::factory('Person');
-        $tq->query('SHOW TABLES');
-         
-        $table = array();
-        while ($tq->fetch()) {
-            $v = array_values($tq->toArray());
-            $tables[$v[0]] = array();
-        }
-        //print_r($tables);
-        //DB_DataObject::debugLevel(1);
-        foreach($tables as $t=>$a) {
-            $tq = DB_DataObject::factory('Person');
-            $tq->query('DESCRIBE  `' . $t . '`');
-            while ($tq->fetch()) {
-                $av = $tq->toArray();
-                $av['Null'] = ($av['Null'] == "NO") ? "NOT NULL" : ""; 
-                $av['Key'] = strlen($av['Key'] ) ?  "KEYS(". $av['Key'] . ")" : "";
-                $v = array_values($av);
-                
-                $n  =  array_shift($v);
-                $tables[$t][$n] = trim(implode(" " , $v));
-                
-            }
-            
-        
-        
-        }
-        //print_r($tables);
-        
-        // load links..
-        $tq = DB_DataObject::factory('Person');
+        $tq->table();
         $tq->links();
+        $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
+        
+        if (empty($tbl)) {
+            $this->jdata(array_keys($tables));
+        }
+        
+        
+        $tq = DB_DataObject::factory('Person');
+        
         //print_r($GLOBALS['_DB_DATAOBJECT']['LINKS'][$tq->_database]);
         $links = $GLOBALS['_DB_DATAOBJECT']['LINKS'][$tq->_database];
         foreach($links as $t=>$ar) {
