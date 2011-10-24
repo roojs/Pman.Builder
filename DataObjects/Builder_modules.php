@@ -34,6 +34,22 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     }
     
     
+    function applyFilters($q, $au)
+    {
+        if (!empty($q['query']['_sync'])) {
+            
+            // use the basic builder modules for this project based on configurion.
+            $ff = HTML_FlexyFramework::get();
+            $mods = $ff->enable;
+            print_R($mods);exit;
+            
+            
+            
+        }
+    }
+     
+    
+    
     function scanDir() // return name => mtime for files in path..
     {
         
