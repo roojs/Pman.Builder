@@ -55,9 +55,6 @@ Pman.Dialog.BuilderAppEdit = {
                         {
                             xtype: 'Form',
                             xns: Roo.form,
-                            style : 'margin: 5px',
-                            url : baseURL + '/Roo/Builder_app.php',
-                            method : 'POST',
                             listeners : {
                                 actionfailed : function (_self, action)
                                 {
@@ -81,6 +78,9 @@ Pman.Dialog.BuilderAppEdit = {
                                     _this.form = _self;
                                 }
                             },
+                            method : 'POST',
+                            style : 'margin: 5px',
+                            url : baseURL + '/Roo/Builder_app.php',
                             items : [
                                 {
                                     xtype: 'Hidden',
