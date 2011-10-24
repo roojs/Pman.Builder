@@ -24,13 +24,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     {
         return;
         // fixme - check builder components.
-        $x = DB_DataObject::factory('Builder');
-        $x->app = $this->app;
-        if ($x->count()) {
-            $this->err = "Modules exist with this name!";
-            return false;
-        }
-        return true;
+        
     }
     
     
@@ -39,8 +33,34 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         if (!empty($q['query']['_sync'])) {
             
             // use the basic builder modules for this project based on configurion.
+            // what do we have..
+            $x = DB_DataObject::factory('builder_modules');
+            $modpaths = $x->fetchAll('name', 'path');
+            
             $ff = HTML_FlexyFramework::get();
-            //$mods = $ff->modsEnab;
+            
+            
+            foreach($ff->enableArray as $m) {
+                if (isset($modpaths[$m])) {
+                    continue;
+                }
+                if (file_exists($ff->baseDir .'/'. $m)) {
+                    $x = DB_DataObject::factory('builder_modules');
+                    $x->setFrom(array(
+                        'name' =>$m,
+                        'path' => $ff->baseDir .'/'. $m,
+                        'public' => 0,
+                    ));
+                    
+                    
+                    
+                }
+                
+                
+                
+                
+            } 
+            //$mods = $ff->enableArray;
             echo '<PRE>';print_R($ff);exit;
             
             
