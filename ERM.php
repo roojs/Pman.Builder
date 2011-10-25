@@ -144,7 +144,7 @@ class Pman_Builder_ERM extends Pman
                 'table' => $tn,
                 'column' => $pref . $k,
                 'columnshort' => $k,
-                'ctype' => $types[$tn][$k],,
+                'ctype' => $types[$tn][$k], // should always work!
                 'desc' => isset($cache[$tn][$k]) ? $cache[$tn][$k] : '',
             );
         }
