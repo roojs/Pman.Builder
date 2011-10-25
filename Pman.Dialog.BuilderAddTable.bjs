@@ -171,7 +171,7 @@
                 },
                 {
                     "listeners": {
-                        "click": "function (_self, e)\n{\n     var ret = Roo.apply({ cols : [], cols_ex: [] },  _this.data);\n     \n     _this.grid.ds.each(function(r) {\n     \n        if (r.data.use*1) {\n                ret.cols.push(r.data);\n        }\n         if (r.data.use_ex*1) {\n             ret.cols_ex.push( r.data.column );\n         }\n\n     })\n     \n     _this.callback(ret);\n     _this.dialog.hide();\n\n}"
+                        "click": "function (_self, e)\n{\n     var ret = Roo.apply({ cols : [], cols_ex: [] },  _this.data);\n     \n     _this.grid.ds.each(function(r) {\n     \n        if (r.data.use*1) {\n                ret.cols.push(r.data);\n        }\n         if (r.data.use_ex*1) {\n             ret.cols_ex.push( r.data.column );\n         }\n\n     });\n     \n     _this.callback(ret);\n     _this.dialog.hide();\n\n}"
                     },
                     "*prop": "buttons[]",
                     "text": "Next",

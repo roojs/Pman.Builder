@@ -258,7 +258,7 @@ Pman.Dialog.BuilderAddTable = {
                                      ret.cols_ex.push( r.data.column );
                                  }
                         
-                             })
+                             });
                              
                              _this.callback(ret);
                              _this.dialog.hide();
