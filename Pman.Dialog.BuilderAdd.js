@@ -131,7 +131,7 @@ Pman.Dialog.BuilderAdd = {
                                
                                function(data) {
                                     _this.dialog.hide();
-                                    var cls = data['|ns'] + '.' + data['xtype'];
+                                    var cls = data['|xns'] + '.' + data['xtype'];
                                     
                                     var res = Pman.Builder[cls](data);
                                     
