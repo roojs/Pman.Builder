@@ -127,7 +127,7 @@ class Pman_Builder_ERM extends Pman
                 $cache[$tn][$dd->name] = $dd->desc;
             }
             
-            
+            $defs =  $dd->databaseConnection()->tableInfo($quotedTable);
             
             
         }
