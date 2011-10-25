@@ -96,7 +96,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             cfg['*prop'] = _this.dragProp;
                                         }
                                         // at this point it should of a set of options...
-                                         var cls = cfg['|ns'] + '.' + cfg['xtype'];
+                                         var cls = cfg['|xns'] + '.' + cfg['xtype'];
                                             
                                 
                                         if (typeof(Pman.Builder[cls]) != 'undefined') {
