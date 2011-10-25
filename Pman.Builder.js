@@ -240,12 +240,14 @@ Pman.Builder = {
         
         // some special kludges..
         // remove table prefix..
-        var c = rcfg.column;
-        if (c.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
-            c = c.substring(rcfg.table.length+1);
+        var desc = rcfg.column;
+        if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+            desc = desc.substring(rcfg.table.length+1);
         }
-        if (!c.length) {
-            c = rcfg.column;
+        desc = desc.replace(/_id$/, '');
+        
+        if (!desc.length) {
+            desc = rcfg.column;
         }
         
         
