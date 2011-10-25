@@ -210,18 +210,7 @@ Pman.Dialog.BuilderAddTable = {
                                 width : 50,
                                 renderer : function(v) {
                                 
-                                    v = v*1;
-                                
-                                        
-                                
-                                        if ((v & 8) > 0 && (v & 4) > 0) return 'DATETIME';
-                                        if ((v & 8) > 0)  return 'TIME';
-                                        if ((v & 4) > 0)  return 'DATE';        
-                                        if ((v & 16) > 0)  return 'BOOL';                
-                                        if ((v & 2) > 0)  return 'STRING';                
-                                        if ((v & 1) > 0) return 'NUMBER';                
-                                        return v;
-                                
+                                   return v;
                                  }
                             },
                             {

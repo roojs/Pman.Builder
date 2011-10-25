@@ -144,7 +144,7 @@
                                     "header": "Type",
                                     "width": 50,
                                     "xtype": "ColumnModel",
-                                    "|renderer": "function(v) {\n\n    v = v*1;\n\n        \n\n        if ((v & 8) > 0 && (v & 4) > 0) return 'DATETIME';\n        if ((v & 8) > 0)  return 'TIME';\n        if ((v & 4) > 0)  return 'DATE';        \n        if ((v & 16) > 0)  return 'BOOL';                \n        if ((v & 2) > 0)  return 'STRING';                \n        if ((v & 1) > 0) return 'NUMBER';                \n        return v;\n\n }",
+                                    "|renderer": "function(v) {\n\n   return v;\n }",
                                     "|xns": "Roo.grid"
                                 },
                                 {
