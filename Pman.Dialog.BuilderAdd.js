@@ -140,8 +140,10 @@ Pman.Dialog.BuilderAdd = {
                                 return;
                             }
                            
+                            // otherwise, call back with template??
+                           
                              _this.dialog.hide();
-                             _this.callback(_this.form.getValues());
+                             _this.callback(_this.data);
                         }
                     },
                     text : "OK"
