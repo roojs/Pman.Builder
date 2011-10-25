@@ -105,6 +105,7 @@ class Pman_Builder_ERM extends Pman
     function createRet($do, $pref='')
     {
         static  $cache = array();
+        static  $types= array();
         $tn = $do->tableName();
 
         
@@ -125,6 +126,10 @@ class Pman_Builder_ERM extends Pman
             while($dd->fetch()) {
                 $cache[$tn][$dd->name] = $dd->desc;
             }
+            
+            
+            
+            
         }
        
        
