@@ -12,32 +12,32 @@
 Pman.Builder = {
  
     typemap : {
-            'bool' : 'boolean',
-            
-            'date' : 'date',
-            'datetime' : 'date',
-            'time' : 'string', //bogus
-            
-            'int' : 'int',
-            'int4' : 'int',
-            'bigint' : 'int',
-            'tinyint' : 'int',
-            'smallint' : 'int',
-            'timestamp' : 'number',
-            
-            'double' : 'float',
-            'decimal' : 'float',
-            'float' : 'float',
-            
-            'char' : 'string',
-            'varchar' : 'string',
-            'text' : 'string',
-            'longtext' : 'string',
-            'tinytext' : 'string',
-            'mediumtext' : 'string',
-            'enum' : 'string',
-            
-            'blob' : 'string'
+        'bool' : 'boolean',
+        
+        'date' : 'date',
+        'datetime' : 'date',
+        'time' : 'string', //bogus
+        
+        'int' : 'int',
+        'int4' : 'int',
+        'bigint' : 'int',
+        'tinyint' : 'int',
+        'smallint' : 'int',
+        'timestamp' : 'number',
+        
+        'double' : 'float',
+        'decimal' : 'float',
+        'float' : 'float',
+        
+        'char' : 'string',
+        'varchar' : 'string',
+        'text' : 'string',
+        'longtext' : 'string',
+        'tinytext' : 'string',
+        'mediumtext' : 'string',
+        'enum' : 'string',
+        
+        'blob' : 'string'
     },
     /**
      * auto builders..
@@ -209,11 +209,12 @@ Pman.Builder = {
 
          
         Roo.each(cfg.cols, function(cc) {
+            var ty = typeof(this.typemap[cc.ctype]) == 'undefined' ? 'string' : this.typemap[cc.ctype];
             if (cc.ctype == 'string' ) {
                 fields.push(cc.column);
                 return;
             }
-            fields.push({ name : cc.column, type : cc.ctype} );
+            fields.push({ name : cc.column, type : this.typemap[cc.ctype]} );
         });
         
         
@@ -235,14 +236,15 @@ Pman.Builder = {
     'Roo.grid.ColumnModel' : function(rcfg)
     {
         // simple version to start with..
-        
+        var ty = typeof(this.typemap[rcfg.ctype]) == 'undefined' ? 'string' : this.typemap[rcfg.ctype];
+           
        
         return {
             "xtype": "ColumnModel",
             "header": rcfg.desc.length ? rcfg.desc : rcfg.column,
-            "width":  rcfg.ctype == 'string' ? 200 : 75,
+            "width":  ty == 'string' ? 200 : 75,
             "dataIndex": rcfg.column,
-            "|renderer": rcfg.ctype != 'date' ? 
+            "|renderer": ty != 'date' ? 
                     "function(v) { return String.format('{0}', v); }" :
                     "function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }" , // special for date
             "|xns": "Roo.grid",
