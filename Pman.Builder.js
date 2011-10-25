@@ -240,7 +240,8 @@ Pman.Builder = {
         
         // some special kludges..
         // remove table prefix..
-        var desc = rcfg.column;
+        
+        var desc = rcfg.columnshort;
         if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
             desc = desc.substring(rcfg.table.length+1);
         }
