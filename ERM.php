@@ -29,34 +29,118 @@ class Pman_Builder_ERM extends Pman
         $tq->links();
         $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
         
-        if (empty($tbl)) {
-            $this->jdata(array_keys($tables));
+        if (!isset($_GET['table'])) {
+            $ret = array();
+            $t = array_keys($tables);
+            sort($t);
+            
+            // for postgres we can get descriptions - this should just fail in Mysql..
+            $desc= array();
+           // DB_DataObjecT::DebugLevel(1);
+            $tq = DB_DataObject::factory('Person');
+            $tq->query( "
+                select relname, obj_description( oid) as desc FROM pg_catalog.pg_class");
+            while ($tq->fetch()) {
+                $desc[$tq->relname] = $tq->desc;
+            }
+
+            
+            
+            
+            
+            
+            foreach( $t as $k) {
+                if (preg_match('/__keys$/', $k)) {
+                    continue;
+                }
+                $ret[] = array(
+                        'name' => $k,
+                        'desc' => isset($desc[$k]) ? $desc[$k] : ''
+                    );
+            }
+            $this->jdata($ret);
         }
+        // this part is to find the table definition...
         
-        
-        $tq = DB_DataObject::factory('Person');
-        
-        //print_r($GLOBALS['_DB_DATAOBJECT']['LINKS'][$tq->_database]);
-        $links = $GLOBALS['_DB_DATAOBJECT']['LINKS'][$tq->_database];
-        foreach($links as $t=>$ar) {
-            foreach($ar as $k=>$ex) {
-                $links[$t][$k] = explode(":", $ex);
+        $do = DB_DataObject::factory($_GET['table']);
+        $links = $do->links();
+        $cols = $do->table();
+        $dos = array();
+       //    echo '<PRE>';print_R($links);
+        foreach($links as $k=>$v) {
+            $kv = explode(':', $v);
+            //print_R($kv);
+            $dos[$k]= DB_DataObject::factory($kv[0]);
+            if (!is_a($dos[$k], 'DB_DataObject')) {
+                echo '<PRE>'; print_r($dos[$k]);
             }
         }
-        $this->jdata(array(
-            'tables' =>$tables,
-            'links' => $links
-        ));
+        
+      
+        $desc =   $this->createRet($do);
+       // echo '<PRE>';print_R($desc);
+        $ret = array();
+        foreach($cols as $c => $ty) {
+            $ret[] = $desc[$c];
+            if (!isset($links[$c])) {
+                continue;
+            }
+            // colname_{remotename}_{col}
+            $kv = explode(':', $links[$c]);
+            $ar = $this->createRet($dos[$c], $c . '_' . $kv[1] . '_');
+            foreach($ar as $cn => $r) {
+                $ret[] = $r;
+            }
             
-       // print_r($links);
-        require_once 'Services/JSON.php';
-        $json = new Services_JSON();
-        echo "var tables = " .$json->encode( $tables) . "\n";
-        echo "var links = " .$json->encode( $links) . "\n";
+            
+        }
+       // echo '<PRE>';print_R($ret);
+        
+        $this->jdata($ret); 
         
         
         
-        exit;
+        
+    }
+    function createRet($do, $pref='')
+    {
+        static  $cache = array();
+        $tn = $do->tableName();
+
+        
+        if (!isset($desc[$tn])) {
+            $desc[$tn] = array();
+            $dd = clone($do);
+            
+           // DB_DataObject::DebugLevel(1);
+            $dd->query("SELECT
+                    c.column_name as name,
+                    pgd.description as desc
+                FROM pg_catalog.pg_statio_all_tables as st
+                    inner join pg_catalog.pg_description pgd on (pgd.objoid=st.relid)
+                    inner join information_schema.columns c on (pgd.objsubid=c.ordinal_position and c.table_schema=st.schemaname and c.table_name=st.relname)
+                WHERE
+                    c.table_schema = 'public' and c.table_name = '{$tn}'
+            ");
+            while($dd->fetch()) {
+                $cache[$tn][$dd->name] = $dd->desc;
+            }
+        }
+       
+       
+       
+        $ret = array();
+        foreach($do->table() as $k=>$ty) {
+            $ret[$k] = array(
+                'table' => $tn,
+                'column' => $pref . $k,
+                'columnshort' => $k,
+                'ctype' => $ty,
+                'desc' => isset($cache[$tn][$k]) ? $cache[$tn][$k] : '',
+            );
+        }
+        return $ret;
+        
         
         
         
