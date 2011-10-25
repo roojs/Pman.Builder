@@ -96,13 +96,19 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             cfg['*prop'] = _this.dragProp;
                                         }
                                         // at this point it should of a set of options...
-                                        
-                                        Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
+                                         var cls = cfg['|ns'] + '.' + cfg['xtype'];
+                                            
                                 
-                                        
-                                            this.appendNode(e.target, cfg, e.point);
-                                             Pman.Tab.BuilderView.panel.redraw();
-                                         })
+                                        if (typeof(Pman.Builder[cls]) != 'undefined') {
+                                            Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
+                                
+                                            
+                                                this.appendNode(e.target, cfg, e.point);
+                                                 Pman.Tab.BuilderView.panel.redraw();
+                                             })
+                                         } else {
+                                             this.appendNode(e.target, cfg, e.point);
+                                         }
                                         return; // fixme drop of elements from palete..
                                     }
                                 
