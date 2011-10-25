@@ -271,7 +271,7 @@ Pman.Dialog.BuilderAddTable = {
                         
                              })
                              
-                             
+                             this.callback(ret);
                              
                         
                         }
