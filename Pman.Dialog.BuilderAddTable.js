@@ -251,10 +251,10 @@ Pman.Dialog.BuilderAddTable = {
                              
                              _this.grid.ds.each(function(r) {
                              
-                                if (r.data.use) {
+                                if (r.data.use*1) {
                                         ret.cols.push(r.data);
                                 }
-                                 if (r.data.use_ex) {
+                                 if (r.data.use_ex*1) {
                                      ret.cols_ex.push( r.data.column );
                                  }
                         
