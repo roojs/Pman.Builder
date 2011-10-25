@@ -127,7 +127,11 @@ class Pman_Builder_ERM extends Pman
                 $cache[$tn][$dd->name] = $dd->desc;
             }
             
-            $defs =  $dd->getDatabaseConnection()->tableInfo($do->tableName());
+            $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
+            $types[$tn] = array();
+            foreach($defs as $c) {
+                $types[$tn][$c['name']] = $c['type'];
+            }
             echo '<PRE>';print_r($defs);
             
         }
