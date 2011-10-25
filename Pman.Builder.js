@@ -206,15 +206,15 @@ Pman.Builder = {
         
         
        
-
+        var _t  = this;
          
         Roo.each(cfg.cols, function(cc) {
-            var ty = typeof(this.typemap[cc.ctype]) == 'undefined' ? 'string' : this.typemap[cc.ctype];
+            var ty = typeof(_t.typemap[cc.ctype]) == 'undefined' ? 'string' : _t.typemap[cc.ctype];
             if (cc.ctype == 'string' ) {
                 fields.push(cc.column);
                 return;
             }
-            fields.push({ name : cc.column, type : this.typemap[cc.ctype]} );
+            fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
         });
         
         
