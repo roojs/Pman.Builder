@@ -78,6 +78,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     dropNode - Drop node(s) provided by the source OR you can supply node(s) to be inserted by setting them on this object.
                                     cancel - Set this to true to cancel the drop.
                                     */
+                                    
+                                    var _t = this;
                                     var np = e.point == 'append' ? e.target : e.target.parentNode ; // new parent
                                       
                                     if (!e.tree || !e.dropNode) {
@@ -103,7 +105,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
                                 
                                             
-                                                this.appendNode(e.target, fdata , e.point);
+                                                _t.appendNode(e.target, fdata , e.point);
                                 
                                              });
                                              return;
