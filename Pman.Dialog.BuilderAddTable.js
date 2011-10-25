@@ -258,7 +258,7 @@ Pman.Dialog.BuilderAddTable = {
                     listeners : {
                         click : function (_self, e)
                         {
-                             var ret = Roo.apply({},  _this.data);
+                             var ret = Roo.apply({ cols : [], cols_ex: [] },  _this.data);
                              
                              _this.grid.ds.each(function(r) {
                              
