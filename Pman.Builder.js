@@ -255,7 +255,7 @@ Pman.Builder = {
        
         return {
             "xtype": "ColumnModel",
-            "header": rcfg.desc.length ? rcfg.desc : c,
+            "header": rcfg.desc.length ? rcfg.desc : desc,
             "width":  ty == 'string' ? 200 : 75,
             "dataIndex": rcfg.column,
             "|renderer": ty != 'date' ? 
