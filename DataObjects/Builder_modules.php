@@ -126,6 +126,32 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         
     }
+    /**
+     * get the git configuration...
+     * @return {Array|false} false if it can not find path..
+     */
+    function gitDir()
+    {
+        // using the path determine 
+        $path = $this->path;
+        while (!file_exist($path.'/.git')) {
+            $path = dirname($path);
+            if ($path == '/') {
+                return false;
+            }
+        }
+        $gpath = $path.'/.git';
+        
+        $sub = substring($this->path, strlen($path) + 1);
+        chdir($this->path);
+        $path = `git config --get remote.origin.url`;
+        
+        
+        
+        
+        
+    }
+    
     
     
 }
