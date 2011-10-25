@@ -35,7 +35,7 @@ Pman.Builder = {
         
         var colmodel = []
         Roo.each(cfg.cols, function(cc) {
-            colmodel.push( _t['Roo.grid.ColumnModel'](cc));
+            colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
         })
         
        return {
