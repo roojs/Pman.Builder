@@ -132,7 +132,7 @@ class Pman_Builder_ERM extends Pman
             foreach($defs as $c) {
                 $types[$tn][$c['name']] = $c['type'];
             }
-            echo '<PRE>';print_r($defs);
+            //echo '<PRE>';print_r($defs);
             
         }
        
