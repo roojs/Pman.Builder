@@ -72,7 +72,10 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
             mkdir($sp, 0755, true);
         }
         $fn = $sp .'/'. $this->id . '-'. $this->name . '-'. date('d-H-i-s') . '.bjs';
-        file_put_contents($fn , $this->json);
+        require_once 'Services/JSON.php';
+        $json = Services_JSON::stringify(json_decode($this->json), null, 4);
+        
+        file_put_contents($fn , $json);
     }
     
     

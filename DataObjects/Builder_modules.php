@@ -143,26 +143,75 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         //$gpath = $path.'/.git';
         
         $sub = substring($this->path, strlen($path) + 1);
+        
+        require_once 'System.php';
+        $git = System::which('git');
+        
         chdir($this->path);
-        $url = trim(`git config --get remote.origin.url`);
+        
+        $url = trim(`$git config --get remote.origin.url`);
         
         return array(
             'url' => $url,
-            'path' => $path
+            'path' => $sub
         );
         
     }
     
-    function gitClone()
+    function gitWorking($url)
     {
         $pg = HTML_FlexyFramwork::get()->page;
+         $working = ini_get('session.save_path'). '/' .
+                urlencode($pg->authUser->email) . '-' .
+                urlencode($url);
+        
+        require_once 'System.php';
+        $git = System::which('git');
+        
+        if (file_exists($working)) {
+            chdir($working);
+            
+            `$git pull`;
+            return $working;
+                
+        }
+        // might take some time..
+        chdir (ini_get('session.save_path'));
+        $cmd = "$git clone ". escapeshellarg($url) ." " . basename($working);
+        `$cmd`;
+        return $working;
+    }
+    
+    
+    function gitCommit($file,$data)
+    {
         $gd = $this->gitDir();
-        $working = $pg->authUser->email;
+        if (!$gd) {
+            return false;
+        }
+        $working = $this->getWorking($gd['url']);
+        chdir($working);
+        $path = strlen($gd['path']) ? $gd['path'] . '/' : '';
+        $target = $working.'/'.$path . $file;
+        $exist = file_exists($target);
+        file_put_contents($working.'/'.$path . $file, $data);
+        
+        require_once 'System.php';
+        $git = System::which('git');
+       
+        chdir($working);
+        if (!$exist) {
+            $cmd = "$git add {$path}{$file}";
+            `$cmd`;
+        }
+        
+        $cmd = "$git commit -m 'Commit from online editor' {$path}{$file}";
+        `$cmd`;
+        `git push`;
         
         
         
     }
-    
     
     
     
