@@ -140,18 +140,29 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                 return false;
             }
         }
-        $gpath = $path.'/.git';
+        //$gpath = $path.'/.git';
         
         $sub = substring($this->path, strlen($path) + 1);
         chdir($this->path);
-        $url = `git config --get remote.origin.url`;
+        $url = trim(`git config --get remote.origin.url`);
         
+        return array(
+            'url' => $url,
+            'path' => $path
+        );
         
-        
+    }
+    
+    function gitClone()
+    {
+        $pg = HTML_FlexyFramwork::get()->page;
+        $gd = $this->gitDir();
+        $working = $pg->authUser->email;
         
         
         
     }
+    
     
     
     
