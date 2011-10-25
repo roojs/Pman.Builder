@@ -1,6 +1,7 @@
 //<script type="text/javascript">
 
-// Auto generated file - created by Builder Module - do not edit directly
+// Auto generated file - created by app.Builder.js- do not edit directly (at present!)
+
 Pman.Dialog.BuilderSourceEdit = {
 
     dialog : false,
@@ -14,10 +15,12 @@ Pman.Dialog.BuilderSourceEdit = {
 
         this.callback = cb;
         this.data = data;
-        this.dialog.show();
-        this.form.reset();
-        this.form.setValues(data);
-
+        this.dialog.show(this.data._el);
+        if (this.form) {
+           this.form.reset();
+           this.form.setValues(data);
+           this.form.fireEvent('actioncomplete', this.form,  { type: 'setdata', data: data });
+        }
 
     },
 
@@ -25,13 +28,14 @@ Pman.Dialog.BuilderSourceEdit = {
     {
         var _this = this;
         this.dialog = Roo.factory({
-            xtype : 'LayoutDialog',
+            xtype: 'LayoutDialog',
+            xns: Roo,
             background : true,
             width : 400,
             height : 500,
             collapsible : false,
             listeners : {
-                show: function (dlg)
+                show : function (dlg)
                 {
                     _this.dialog = dlg;
                     _this.dialog.layout.getRegion('south').collapse();
@@ -59,33 +63,35 @@ Pman.Dialog.BuilderSourceEdit = {
             },
             closable : false,
             title : "Source Code Edit",
-            xns: Roo,
             modal : true,
             items : [
                 {
-                    xtype : 'ContentPanel',
+                    xtype: 'ContentPanel',
+                    xns: Roo,
                     background : true,
                     fitToFrame : true,
                     region : 'center',
                     items : [
                         {
-                            xtype : 'Form',
+                            xtype: 'Form',
+                            xns: Roo.form,
                             labelAlign : 'top',
                             listeners : {
-                                rendered: function (form)
+                                rendered : function (form)
                                 {
                                    _this.form = form;
                                 }
                             },
                             items : [
                                 {
+                                    xtype: 'TextArea',
+                                    xns: Roo.form,
                                     name : 'value',
-                                    fieldLabel : "Enter Code for Function or Property",
-                                    xtype : 'TextArea',
+                                    fieldLabel : 'Enter Code for Function or Property',
                                     width : 360,
                                     height : 100,
                                     listeners : {
-                                        specialkey: function (f, e)
+                                        specialkey : function (f, e)
                                         {
                                             
                                             function addStr(v) {
@@ -130,20 +136,25 @@ Pman.Dialog.BuilderSourceEdit = {
                     ]
                 },
                 {
-                    xtype : 'ContentPanel',
+                    xtype: 'ContentPanel',
+                    xns: Roo,
                     background : true,
                     fitToFrame : true,
                     region : 'south',
-                    title : "Help \/ Manual"
+                    title : "Help / Manual"
                 }
             ],
             center : {
+                xtype: 'LayoutRegion',
+                xns: Roo,
                 titlebar : false
             },
             south : {
+                xtype: 'LayoutRegion',
+                xns: Roo,
                 titlebar : true,
                 listeners : {
-                    resized: function (_self, newSize)
+                    resized : function (_self, newSize)
                     {
                         var sz = _this.dialog.size;
                         _this.form.findField('value').setSize(sz.width-30, sz.height- newSize  - 100);
@@ -151,11 +162,11 @@ Pman.Dialog.BuilderSourceEdit = {
                            _this.help.setSize(sz.width-25, newSize-28);
                         }
                     },
-                    collapsed: function (_self)
+                    collapsed : function (_self)
                     {
                         this.fireEvent('resized', this, 20);
                     },
-                    expanded: function (_self)
+                    expanded : function (_self)
                     {
                        this.fireEvent('resized', this, this.getBox().height);
                     }
@@ -163,15 +174,15 @@ Pman.Dialog.BuilderSourceEdit = {
                 height : 300,
                 collapsible : true,
                 split : true,
-                collapsedTitle : 'Help \/ Manual'
+                collapsedTitle : 'Help / Manual'
             },
             buttons : [
                 {
-                    xtype : 'Button',
+                    xtype: 'Button',
                     xns: Roo,
                     text : "Cancel",
                     listeners : {
-                        click: function (_self, e)
+                        click : function (_self, e)
                         {
                         
                             _this.dialog.hide();
@@ -179,18 +190,18 @@ Pman.Dialog.BuilderSourceEdit = {
                     }
                 },
                 {
-                    xtype : 'Button',
+                    xtype: 'Button',
                     xns: Roo,
-                    text : "OK",
                     listeners : {
-                        click: function (_self, e)
+                        click : function (_self, e)
                         {
                             _this.callback.call(_this, {
                                value : _this.form.findField('value').getValue()
                             });
                             _this.dialog.hide();
                         }
-                    }
+                    },
+                    text : "OK"
                 }
             ]
         });
