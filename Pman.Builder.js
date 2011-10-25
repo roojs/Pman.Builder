@@ -233,10 +233,10 @@ Pman.Builder = {
        
         return {
             "xtype": "ColumnModel",
-            "header": r.desc.length ? r.desc : r.column,
-            "width":  row.ctype == 'string' ? 200 : 75,
-            "dataIndex": row.column,
-            "|renderer": row.ctype != 'date' ? 
+            "header": rcfg.desc.length ? rcfg.desc : rcfg.column,
+            "width":  rcfg.ctype == 'string' ? 200 : 75,
+            "dataIndex": rcfg.column,
+            "|renderer": rcfg.ctype != 'date' ? 
                     "function(v) { return String.format('{0}', v); }" :
                     "function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }" , // special for date
             "|xns": "Roo.grid",
