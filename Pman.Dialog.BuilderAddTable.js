@@ -259,6 +259,11 @@ Pman.Dialog.BuilderAddTable = {
                                  }
                         
                              });
+                             
+                             if (!ret.cols_ex.length) {
+                                Roo.MessageBox.alert("Error", "Select at least one Display/expand col");
+                                return;
+                            }
                              Roo.log(ret);
                              _this.callback(ret);
                              _this.dialog.hide();
