@@ -258,11 +258,21 @@ Pman.Dialog.BuilderAddTable = {
                     listeners : {
                         click : function (_self, e)
                         {
-                            // do some checks?
+                             var ret = Roo.apply({},  _this.data);
                              
-                            
-                            _this.dialog.el.mask("Saving");
-                            _this.form.doAction("submit");
+                             _this.grid.ds.each(function(r) {
+                             
+                                if (r.data.use) {
+                                        ret.cols.push(r.data);
+                                }
+                                 if (r.data.use_ex) {
+                                     ret.cols_ex.push( r.data.column );
+                                 }
+                        
+                             })
+                             
+                             
+                             
                         
                         }
                     },
