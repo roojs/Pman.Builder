@@ -11,7 +11,34 @@
 
 Pman.Builder = {
  
- 
+    typemap : {
+            'bool' : 'boolean',
+            
+            'date' : 'date',
+            'datetime' : 'date',
+            'time' : 'string', //bogus
+            
+            'int' : 'int',
+            'int4' : 'int',
+            'bigint' : 'int',
+            'tinyint' : 'int',
+            'smallint' : 'int',
+            'timestamp' : 'number',
+            
+            'double' : 'float',
+            'decimal' : 'float',
+            'float' : 'float',
+            
+            'char' : 'string',
+            'varchar' : 'string',
+            'text' : 'string',
+            'longtext' : 'string',
+            'tinytext' : 'string',
+            'mediumtext' : 'string',
+            'enum' : 'string',
+            
+            'blob' : 'string'
+    },
     /**
      * auto builders..
      * @param {Object} cfg the configuration
@@ -178,34 +205,7 @@ Pman.Builder = {
         var fields = [];
         
         
-        var map = {
-            'bool' : 'boolean',
-            
-            'date' : 'date',
-            'datetime' : 'date',
-            'time' : 'string', //bogus
-            
-            'int' : 'int',
-            'int4' : 'int',
-            'bigint' : 'int',
-            'tinyint' : 'int',
-            'smallint' : 'int',
-            'timestamp' : 'number',
-            
-            'double' : 'float',
-            'decimal' : 'float',
-            'float' : 'float',
-            
-            'char' : 'string',
-            'varchar' : 'string',
-            'text' : 'string',
-            'longtext' : 'string',
-            'tinytext' : 'string',
-            'mediumtext' : 'string',
-            'enum' : 'string',
-            
-            'blob' : 'string'
-        };
+       
 
          
         Roo.each(cfg.cols, function(cc) {
