@@ -237,11 +237,22 @@ Pman.Builder = {
     {
         // simple version to start with..
         var ty = typeof(this.typemap[rcfg.ctype]) == 'undefined' ? 'string' : this.typemap[rcfg.ctype];
-           
+        
+        // some special kludges..
+        // remove table prefix..
+        var c = rcfg.column;
+        if (c.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+            c = c.substring(rcfg.table.length+1);
+        }
+        if (!c.length) {
+            c = rcfg.column;
+        }
+        
+        
        
         return {
             "xtype": "ColumnModel",
-            "header": rcfg.desc.length ? rcfg.desc : rcfg.column,
+            "header": rcfg.desc.length ? rcfg.desc : c,
             "width":  ty == 'string' ? 200 : 75,
             "dataIndex": rcfg.column,
             "|renderer": ty != 'date' ? 
