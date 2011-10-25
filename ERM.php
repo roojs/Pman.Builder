@@ -128,7 +128,7 @@ class Pman_Builder_ERM extends Pman
             }
             
             $defs =  $dd->getDatabaseConnection()->tableInfo($do->tableName());
-            
+            print_r($defs);
             
         }
        
