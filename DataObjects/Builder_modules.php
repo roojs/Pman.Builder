@@ -144,7 +144,8 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         $sub = substring($this->path, strlen($path) + 1);
         chdir($this->path);
-        $path = `git config --get remote.origin.url`;
+        $url = `git config --get remote.origin.url`;
+        
         
         
         
