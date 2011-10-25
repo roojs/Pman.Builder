@@ -198,7 +198,6 @@ Pman.Builder = {
             'enum' : 'string',
             'timestamp' : 'number',
             'blob' : 'text'
-            
         }
 
          
