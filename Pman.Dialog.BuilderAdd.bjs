@@ -1,0 +1,121 @@
+{
+    "id": "roo-file-230",
+    "name": "Pman.Dialog.BuilderAdd",
+    "parent": "",
+    "title": "Pman.Dialog.BuilderAdd",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderAdd.bjs",
+    "items": [
+        {
+            "closable": false,
+            "height": 170,
+            "modal": true,
+            "resizable": false,
+            "title": "Add Node",
+            "width": 400,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "region": "center",
+                    "xtype": "ContentPanel",
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "listeners": {
+                                "rendered": "function (form)\n{\n  _this.form  = form;\n}",
+                                "actioncomplete": "function (_self, action)\n{\n     if (action.type == 'setdata') {\n         // check if element can be templated or databased..\n         \n          \n     }\n}"
+                            },
+                            "xtype": "Form",
+                            "|xns": "Roo.form",
+                            "items": [
+                                {
+                                    "labelWidth": 140,
+                                    "legend": "Do you want to create the element :",
+                                    "style": "width:350px",
+                                    "xtype": "FieldSet",
+                                    "|xns": "Roo.form",
+                                    "items": [
+                                        {
+                                            "fieldLabel": "From Template",
+                                            "name": "template",
+                                            "xtype": "ComboBox",
+                                            "|xns": "Roo.form",
+                                            "items": [
+                                                {
+                                                    "|xns": "Roo.data",
+                                                    "xtype": "Store",
+                                                    "*prop": "store"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "allowBlank": true,
+                                            "alwaysQuery": true,
+                                            "displayField": "name",
+                                            "fieldLabel": "From Database Table",
+                                            "listWidth": 400,
+                                            "name": "table",
+                                            "tpl": "<div class=\"x-grid-cell-text x-btn button\"><b>{name}</b> {desc}</div>",
+                                            "triggerAction": "all",
+                                            "xtype": "ComboBox",
+                                            "|xns": "Roo.form",
+                                            "items": [
+                                                {
+                                                    "|xns": "Roo.data",
+                                                    "xtype": "Store",
+                                                    "*prop": "store",
+                                                    "items": [
+                                                        {
+                                                            "*prop": "proxy",
+                                                            "method": "GET",
+                                                            "xtype": "HttpProxy",
+                                                            "|url": "baseURL + '/Builder/ERM.php'",
+                                                            "|xns": "Roo.data"
+                                                        },
+                                                        {
+                                                            "*prop": "reader",
+                                                            "root": "data",
+                                                            "totalProperty": "total",
+                                                            "xtype": "JsonReader",
+                                                            "|fields": "[  'name' , 'desc' ]\n  ",
+                                                            "|xns": "Roo.data"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "|xns": "Roo",
+                    "xtype": "LayoutRegion",
+                    "*prop": "center"
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    var vals = _this.form.getValues();\n   if (vals.table.length) {\n      Pman.Dialog.BuilderAddTable.show( \n       Roo.apply({  table : vals.table } , _this.data),  \n       \n       function(data) {\n            _this.dialog.hide();\n            var cls = data['|ns'] + '.' + data['xtype'];\n            \n            var res = Pman.Builder[cls](data);\n            \n           _this.callback(res); \n       });\n        return;\n    }\n   \n     _this.dialog.hide();\n     _this.callback(_this.form.getValues());\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "OK",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n   _this.dialog.hide();\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Cancel",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                }
+            ]
+        }
+    ],
+    "permname": "",
+    "modOrder": "001"
+}

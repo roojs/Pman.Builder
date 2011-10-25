@@ -1,0 +1,186 @@
+{
+    "id": "roo-file-231",
+    "name": "Pman.Dialog.BuilderAddTable",
+    "parent": "",
+    "title": "",
+    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderAddTable.bjs",
+    "items": [
+        {
+            "listeners": {
+                "show": "function (_self)\n{\n    _this.grid.ds.load({});\n}"
+            },
+            "closable": false,
+            "collapsible": false,
+            "height": 500,
+            "resizable": false,
+            "title": "Select columns to use",
+            "width": 700,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
+            "items": [
+                {
+                    "|xns": "Roo",
+                    "xtype": "LayoutRegion",
+                    "*prop": "center"
+                },
+                {
+                    "listeners": {
+                        "|activate": "function() {\n    _this.panel = this;\n    if (_this.grid) {\n        _this.grid.ds.load({});\n    }\n}"
+                    },
+                    "background": false,
+                    "fitContainer": true,
+                    "fitToframe": true,
+                    "region": "center",
+                    "tableName": "Images",
+                    "title": "Images",
+                    "xtype": "GridPanel",
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "listeners": {
+                                "|render": "function() \n{\n    _this.grid = this; \n    //_this.dialog = Pman.Dialog.FILL_IN\n    if (_this.panel.active) {\n       this.ds.load({});\n    }\n}",
+                                "cellclick": "function (_self, ri, ci , e)\n{\n   if (ci > 1) {return; }\n   \n    var rec = this.ds.getAt(ri);\n    var di = this.cm.getDataIndex(ci);\n    rec.set(di, (rec.data[di] * 1) ? 0 : 1);\n     rec.commit();\n     \n      \n      \n}"
+                            },
+                            "*prop": "grid",
+                            "autoExpandColumn": "desc",
+                            "loadMask": true,
+                            "xtype": "Grid",
+                            "|xns": "Roo.grid",
+                            "items": [
+                                {
+                                    "listeners": {
+                                        "beforeload": "function (_self, options)\n{\n    if (typeof(_this.data) == 'undefined') {\n        return false;\n    \n    }\n    options.params = options.params || {};\n    options.params.table = _this.data.table;\n}"
+                                    },
+                                    "*prop": "dataSource",
+                                    "remoteSort": true,
+                                    "xtype": "Store",
+                                    "|sortInfo": "{ field : 'filename', direction: 'ASC' }",
+                                    "|xns": "Roo.data",
+                                    "items": [
+                                        {
+                                            "*prop": "proxy",
+                                            "method": "GET",
+                                            "xtype": "HttpProxy",
+                                            "|url": "baseURL + '/Builder/ERM.php'",
+                                            "|xns": "Roo.data"
+                                        },
+                                        {
+                                            "*prop": "reader",
+                                            "id": "id",
+                                            "root": "data",
+                                            "totalProperty": "total",
+                                            "xtype": "JsonReader",
+                                            "|fields": "[\n    { name: 'use', type: 'int'} , \n    { name: 'use_ex', type: 'int'}, \n    'table', 'column', 'ctype', 'desc', 'columnshort'\n]",
+                                            "|xns": "Roo.data"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "*prop": "toolbar",
+                                    "xtype": "Toolbar",
+                                    "|xns": "Roo",
+                                    "items": [
+                                        {
+                                            "listeners": {
+                                                "|click": "function()\n{\n    \n}\n"
+                                            },
+                                            "cls": "x-btn-text-icon",
+                                            "text": "Add",
+                                            "xtype": "Button",
+                                            "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
+                                            "|xns": "Roo.Toolbar"
+                                        },
+                                        {
+                                            "listeners": {
+                                                "|click": "function()\n{\n    // Pman.genericDelete(_this, 'Images'); \n}\n        "
+                                            },
+                                            "cls": "x-btn-text-icon",
+                                            "text": "Delete",
+                                            "xtype": "Button",
+                                            "|icon": "rootURL + '/Pman/templates/images/trash.gif'",
+                                            "|xns": "Roo.Toolbar"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "use",
+                                    "header": "Use",
+                                    "width": 50,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v) {  \n    var state = v> 0 ?  '-checked' : '';\n\n    return '<img class=\"x-grid-check-icon' + state + '\" src=\"' + Roo.BLANK_IMAGE_URL + '\"/>';\n}",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "use_ex",
+                                    "header": "Display/Expand",
+                                    "width": 100,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v) {  \n    var state = v> 0 ?  '-checked' : '';\n\n    return '<img class=\"x-grid-check-icon' + state + '\" src=\"' + Roo.BLANK_IMAGE_URL + '\"/>';\n                \n }",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "table",
+                                    "header": "Table",
+                                    "width": 100,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v) { return String.format('{0}', v); }",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "column",
+                                    "header": "Column",
+                                    "width": 150,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v,x,r) { \n    if (r.data.table == _this.data.table) {\n    \n        return String.format('{0}', v); \n    }\n    return String.format('.....{0}', r.data.columnshort); \n}",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "ctype",
+                                    "header": "Type",
+                                    "width": 50,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v) {\n\n    v = v*1;\n\n        \n\n        if ((v & 8) > 0 && (v & 4) > 0) return 'DATETIME';\n        if ((v & 8) > 0)  return 'TIME';\n        if ((v & 4) > 0)  return 'DATE';        \n        if ((v & 16) > 0)  return 'BOOL';                \n        if ((v & 2) > 0)  return 'STRING';                \n        if ((v & 1) > 0) return 'NUMBER';                \n        return v;\n\n }",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "colModel[]",
+                                    "dataIndex": "desc",
+                                    "header": "Description",
+                                    "width": 200,
+                                    "xtype": "ColumnModel",
+                                    "|renderer": "function(v) { return String.format('{0}', v); }",
+                                    "|xns": "Roo.grid"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    _this.dialog.hide();\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Cancel",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    // do some checks?\n     \n    \n    _this.dialog.el.mask(\"Saving\");\n    _this.form.doAction(\"submit\");\n\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Next",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                }
+            ]
+        }
+    ],
+    "permname": "",
+    "modOrder": "001"
+}
