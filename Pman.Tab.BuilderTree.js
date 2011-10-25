@@ -103,7 +103,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
                                 
                                             
-                                                this.appendNode(e.target, cfg, e.point);
+                                                this.appendNode(e.target, fdata , e.point);
                                 
                                              })
                                              return;
