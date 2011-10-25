@@ -179,16 +179,23 @@ Pman.Builder = {
         
         
         var map = {
+            'bool' : 'boolean',
+            
             'date' : 'date',
             'datetime' : 'date',
             'time' : 'string', //bogus
+            
             'int' : 'int',
+            'int4' : 'int',
             'bigint' : 'int',
-            'double' : 'float',
             'tinyint' : 'int',
             'smallint' : 'int',
+            'timestamp' : 'number',
+            
+            'double' : 'float',
             'decimal' : 'float',
             'float' : 'float',
+            
             'char' : 'string',
             'varchar' : 'string',
             'text' : 'string',
@@ -196,8 +203,8 @@ Pman.Builder = {
             'tinytext' : 'string',
             'mediumtext' : 'string',
             'enum' : 'string',
-            'timestamp' : 'number',
-            'blob' : 'text'
+            
+            'blob' : 'string'
         };
 
          
