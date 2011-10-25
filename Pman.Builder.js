@@ -198,7 +198,7 @@ Pman.Builder = {
             'enum' : 'string',
             'timestamp' : 'number',
             'blob' : 'text'
-        }
+        };
 
          
         Roo.each(cfg.cols, function(cc) {
