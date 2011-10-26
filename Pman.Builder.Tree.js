@@ -443,7 +443,7 @@ Pman.Builder.Tree = {
            
        }
         
-    }
+    },
     save : function() 
     {
        // first see if first element has a name.. - we can not save otherwise..
