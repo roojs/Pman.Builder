@@ -110,54 +110,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 },
                                 nodedragover : function (e)
                                 {
-                                    Roo.log('nodedragover');
-                                     Roo.log(e);
-                                     // e.cancel..
-                                     // if we have within the same tree:
-                                       // dropNode (the node being dragged !!important!!) 
-                                       // point: below, append
-                                       // target - node 
-                                    // for palete
-                                        // dropNode = false;
-                                        // grid = the grid...
-                                        // source.dragData.selections[..] 
-                                   
                                     
-                                    // we can only check parents... (we in theory can check dupe properties.. but let's ignore that for the time being.)
-                                    
-                                    // ok off we go.
-                                    
-                                    if (!e.dropNode) {
-                                        // drag from palete..
-                                        if (!e.source.dragData.selections.length) {
-                                            e.cancel = true;
-                                            return;
-                                        }
-                                        var drop_rec = e.source.dragData.selections[0];
-                                        var drop_xtype = drop_rec.data.name;
-                                        var ok_parents = drop_rec.json.parents;
-                                        
-                                        Roo.log("TEST PARENTS: " + ok_parents.join(', '));
-                                        var new_parent = this.nodeXtype((e.point == 'append') ? e.target :  e.target.parentNode);
-                                        Roo.log("NEW PARENT: " + e.point + " = " + new_parent);
-                                        
-                                        // see if the new_parent is actually in the list of ok_parents
-                                        e.cancel = true;
-                                        _this.dragProp = '';
-                                        
-                                        Roo.each(ok_parents, function(n) {
-                                            if (n == new_parent || n.split(':').shift() == new_parent) {
-                                                Roo.log("got match!");
-                                                e.cancel = false;
-                                                _this.dragProp = (n == new_parent) ?  '' : n.split(':').pop();
-                                                return true;
-                                            }
-                                        });
-                                
-                                        // done all the checks...
-                                        return;
-                                        
-                                    }
+                                        return Pman.Builder.Tree.handleDragOver(e);      
+                                 
                                      
                                    
                                 }
