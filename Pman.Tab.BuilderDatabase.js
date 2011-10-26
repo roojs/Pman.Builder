@@ -11,7 +11,7 @@ Pman.on('beforeload', function()
         part :  ["Builder","Database"],
         modKey : '001-Pman.Tab.BuilderDatabase',
         module : Pman.Tab.BuilderDatabase,
-        region : '',
+        region : 'center',
         parent : false,
         name : "unnamed module",
         disabled : false, 
@@ -33,8 +33,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
 
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
-            xns: Roo,
-            region : ''
+            xns: Roo
         });
         this.layout = this.panel.layout;
 

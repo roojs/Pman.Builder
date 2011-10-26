@@ -1,12 +1,11 @@
 {
-    "id": "roo-file-192",
+    "id": "roo-file-91",
     "name": "Pman.Tab.BuilderDatabase",
     "parent": "",
     "title": "",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderDatabase.bjs",
     "items": [
         {
-            "region": "",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo"
         }
