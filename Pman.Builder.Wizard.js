@@ -213,20 +213,22 @@ Pman.Builder.Wizard = {
     {
         var jreader = _t['Roo.data.Reader'](cfg);
         return  {
-             "*prop": "dataSource",
-             "xtype": "Store",
-              remoteSort : true,
-             '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
-             "|xns": "Roo.data",
-             "items": [
-                 
-                 {
-                     "*prop": "proxy",
-                     "xtype": "HttpProxy",
-                     "method": "GET",
-                     "|url": "baseURL + '/Roo/" +cfg.table + ".php'",
-                     "|xns": "Roo.data"
-                 },
-                 jreader
-             ]
+            
+            "xtype": "Store",
+            "|xns": "Roo.data",             
+             remoteSort : true,
+            '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
+            "items": [
+                {
+                    "*prop": "proxy",
+                    "xtype": "HttpProxy",
+                    "method": "GET",
+                    "|url": "baseURL + '/Roo/" +cfg.table + ".php'",
+                    "|xns": "Roo.data"
                 },
+                jreader
+            ]
+        };
+    
+    }
+}
