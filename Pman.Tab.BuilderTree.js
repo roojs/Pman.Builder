@@ -166,8 +166,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                 Roo.MessageBox.alert("Sorry", "No wizard exists for " + str);
                                                 return;
                                             }
-                                           
-                                           
+                                            
+                                            Pman.Builder[str+'-edit'](Pman.Builder.Tree.currentNode);
                                            
                                            
                                                 
