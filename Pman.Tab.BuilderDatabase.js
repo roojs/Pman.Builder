@@ -55,7 +55,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                         fitContainer : true,
                         fitToframe : true,
                         region : 'center',
-                        tableName : 'Images',
+                        tableName : 'Tables',
                         title : "Tables",
                         grid : {
                             xtype: 'Grid',

@@ -29,7 +29,7 @@
                             "fitContainer": true,
                             "fitToframe": true,
                             "region": "center",
-                            "tableName": "Images",
+                            "tableName": "Tables",
                             "title": "Tables",
                             "xtype": "GridPanel",
                             "|xns": "Roo",
