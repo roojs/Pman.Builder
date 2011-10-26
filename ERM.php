@@ -53,6 +53,10 @@ class Pman_Builder_ERM extends Pman
                 if (preg_match('/__keys$/', $k)) {
                     continue;
                 }
+                $do = DB_DataObject::factory($k);
+                if (!is_a($do,'DB_DataObject')) {
+                    continue;
+                }
                 $ret[] = array(
                         'name' => $k,
                         'desc' => isset($desc[$k]) ? $desc[$k] : ''
