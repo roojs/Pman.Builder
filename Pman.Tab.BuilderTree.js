@@ -66,86 +66,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             listeners : {
                                 beforenodedrop : function (e)
                                 {
-                                    // nodedragover handles the allow/disallow..
                                     
-                                    /*
-                                    tree - The TreePanel
-                                    target - The node being targeted for the drop
-                                    data - The drag data from the drag source
-                                    point - The point of the drop - append, above or below
-                                    source - The drag source
-                                    rawEvent - Raw mouse event
-                                    dropNode - Drop node(s) provided by the source OR you can supply node(s) to be inserted by setting them on this object.
-                                    cancel - Set this to true to cancel the drop.
-                                    */
-                                    
-                                    var _t = this;
-                                    var np = e.point == 'append' ? e.target : e.target.parentNode ; // new parent
-                                      
-                                    if (!e.tree || !e.dropNode) {
-                                    
-                                        // form palete...
-                                        var data  = e.source.dragData.selections[0].data;
-                                
-                                        var xar = data.name.split('.');
-                                
-                                        var cfg = {
-                                            'xtype' : xar.pop(),
-                                            '|xns' : xar.join('.')
-                                            
-                                        };
-                                        if (_this.dragProp.length > 1) {
-                                            cfg['*prop'] = _this.dragProp;
-                                        }
-                                        // at this point it should of a set of options...
-                                         var cls = cfg['|xns'] + '.' + cfg['xtype'];
-                                            
-                                
-                                        if (typeof(Pman.Builder[cls]) != 'undefined') {
-                                            Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
-                                
-                                            
-                                                _t.appendNode(e.target, fdata , e.point);
-                                
-                                             });
-                                             return;
-                                         }
-                                         this.appendNode(e.target, cfg, e.point);
-                                          Pman.Tab.BuilderView.panel.redraw();
-                                         
-                                        return; // fixme drop of elements from palete..
-                                    }
-                                
-                                    // always drop onto own parent
-                                    if (np == e.dropNode.parentNode) {
-                                        if (e.rawEvent.ctrlKey) {
-                                            e.dropNode = this.dupeNode(e.dropNode);
-                                        }
-                                        return true;
-                                    }
-                                    // can append has to use palete...
-                                    // this code should be in nodedragover.
-                                    
-                                    Roo.log("move checks need moving");
-                                    return;
-                                    
-                                    if (_this.canAppend(np, e.dropNode.elConfig)) {
-                                        if (e.rawEvent.ctrlKey) {
-                                            e.dropNode = _this.dupeNode(e.dropNode);
-                                              
-                                            if (np.elConfig.xtype == 'GridEditor') {
-                                                e.dropNode.elConfig['*prop'] = 'field';
-                                            }
-                                            
-                                        }
-                                        return true;
-                                    }  
-                                    Roo.log('can not drop ' + e.dropNode.elConfig.xtype + ' ontop of ' + np.elConfig.xtype);
-                                    
-                                    
-                                    
-                                    return false;
-                                                        
+                                    Pman.Builder.Tree.handleDropNode(e);      
                                 
                                 },
                                 click : function (node, e)
