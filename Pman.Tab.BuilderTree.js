@@ -67,7 +67,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 beforenodedrop : function (e)
                                 {
                                     
-                                    Pman.Builder.Tree.handleDropNode(e);      
+                                    return Pman.Builder.Tree.handleDropNode(e);      
                                 
                                 },
                                 click : function (node, e)
