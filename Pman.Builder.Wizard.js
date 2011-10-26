@@ -111,7 +111,6 @@ Pman.Builder.Wizard = {
         if (old !== false) {
             cfg.cols_ex = [ old.autoExpandColumn ];
             cfg.cols = [];
-            var old_ds = {};
             var old_cols = [];
             var old_items = [];
             Roo.each(old.items, function(cc) {
