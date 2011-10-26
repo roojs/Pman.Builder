@@ -460,6 +460,7 @@ Pman.Builder.JsRender.prototype =  {
      */
     pathToPart : function()
     {
+         
         var dir = File.basename(File.dirname(this.path));
         var modname = dir.split('.').pop();
         
