@@ -162,12 +162,12 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         {
                                             
                                             var str = Pman.Builder.Tree.currentNodeType();
-                                            if (typeof(Pman.Builder.Wizard[str]) == 'Undefined') {
+                                            if (typeof(Pman.Builder.Wizard[str]) == 'undefined') {
                                                 Roo.MessageBox.alert("Sorry", "No wizard exists for " + str);
                                                 return;
                                             }
                                             var cn = Pman.Builder.Tree.currentNode;
-                                            if (typeof(cn.elConfig['.builderCfg']) == 'Undefined') {
+                                            if (typeof(cn.elConfig['.builderCfg']) == 'undefined') {
                                                 Roo.MessageBox.alert("Sorry", "No configuration exists for " + str);
                                                 return;
                                             }
