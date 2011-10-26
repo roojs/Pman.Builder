@@ -60,8 +60,6 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                         grid : {
                             xtype: 'Grid',
                             xns: Roo.grid,
-                            autoExpandColumn : 'filename',
-                            loadMask : true,
                             listeners : {
                                 render : function() 
                                 {
@@ -79,6 +77,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     }); 
                                 }
                             },
+                            autoExpandColumn : 'table',
+                            loadMask : true,
                             dataSource : {
                                 xtype: 'Store',
                                 xns: Roo.data,
