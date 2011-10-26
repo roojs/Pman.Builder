@@ -352,7 +352,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                      (Pman.Tab.BuilderTop.filesel.lastData ? Pman.Tab.BuilderTop.filesel.lastData.id : 0) : sid;
                                 
                         
-                                var js = Pman.Tab.BuilderTree.tree.toJS();
+                                var js = Pman.Builder.Tree.toJS();
                                 var json = Roo.encode(js);
                                // console.log(js);
                                // console.log(json);
