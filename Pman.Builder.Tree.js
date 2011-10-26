@@ -444,7 +444,53 @@ Pman.Builder.Tree = {
        }
         
     }
-    
+    save : function() 
+    {
+       // first see if first element has a name.. - we can not save otherwise..
+        var t = Pman.Tab.BuilderTree.tree;
+        if (!t.root.elConfig.name.length) {
+            Roo.MessageBox.alert("Error", "No name set for form");
+            return;
+        }
+     
+        var  sid = (typeof(sid) == 'undefined') ? 
+             (Pman.Tab.BuilderTop.filesel.lastData ? Pman.Tab.BuilderTop.filesel.lastData.id : 0) : sid;
+        
+
+        var js = this.toJS();
+        var render = new Pman.Builder.JsRender(js); 
+         
+        // console.log(js);
+        // console.log(json);
+        
+        // check the select box to see if that has been set... - save it with that id..
+        
+        //var _this = this;
+        
+        Pman.request({
+            url: baseURL + '/Roo/Builder_part.php',
+            method : 'POST',
+            params : {
+                json : Roo.encode(js, null, 4),
+                js : render.toSource(),
+                name : js.name,
+                module_id : _this.modsel.getValue(),
+                id : sid
+            }, 
+            success : function(data) {
+                // set the fileSel!!
+                console.log(data);
+                //if (data) {
+                //    _this.filesel.setFromData(data);
+//                    if (cb) {
+//                        cb.call(_this,data);
+  //                  }
+//                    _this.postCode(data);
+//                }
+            }
+        });
+}
+
     
     
 }
