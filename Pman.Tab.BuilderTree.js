@@ -122,13 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            nodeXtype : function(n) {
-                                 if (!n) {return ''; }
-                                var xt = n.elConfig.xtype ||  '';
-                                var xns= n.elConfig['|xns'] ||   '';
-                                xns += xns.length ? '.' : '';
-                                return xns + xt;
-                            },
                             renderer : function(n) { return n.text; },
                             setCurrentNode : function(node,select) {
                                     this.currentNode = node || this.root;
