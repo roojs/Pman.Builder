@@ -228,7 +228,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n       Pman.Builder.Tree.save(\n     function() {\n         Pman.Dialog.BuilderViewCode.show({ id : _this.filesel.getValue() } ); \n            \n\n  } );\n}"
+                                                "click": "function (_self, e)\n{\n   Pman.Builder.Tree.save(\n     function() {\n         Pman.Dialog.BuilderViewCode.show({ id : _this.filesel.getValue() } ); \n            \n\n  } );\n}"
                                             },
                                             "text": "Show JSON",
                                             "xtype": "Item",
