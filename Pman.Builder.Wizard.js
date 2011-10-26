@@ -91,40 +91,8 @@ Pman.Builder.Wizard = {
     {
    
         var _t = this;
-        old = old || false;
-        
-        if (old !== false) {
-            cfg.cols_ex = [ old.autoExpandColumn ];
-            cfg.cols = [];
-            var old_cols = [];
-            var old_items = [];
-            Roo.each(old.items, function(cc) {
-                var xt = Pman.Builder.Tree.nodeXtype(cc);
-                switch(xt) {
-                    case 'Roo.grid.ColumnModel':
-                        var ncfg = {};
-                        _t['Roo.grid.ColumnModel'](ncfg, cc, true);
-                        old_cols.push(cc);
-                        cfg.cols.push(cfg);
-                        return;
-                    
-                    case 'Roo.data.Store':
-                        _t['Roo.data.Store'](cfg, cc, true);
-                        return;
-                    
-                    default:
-                        old_items.push(cc);
-                        
-                }
-            });
-            
-            if (parse_only) { 
-                return false;
-            }
-        
-        
-        }
-        
+        old = old || {};
+ 
         
         
         var colmodel = []
