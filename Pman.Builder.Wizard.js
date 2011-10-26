@@ -273,5 +273,37 @@ Pman.Builder.Wizard = {
     },
     
     
+    'Roo.grid.ColumnModel' : function(rcfg, old)
+    {
+        // simple version to start with..
+        var ty = typeof(this.typemap[rcfg.ctype]) == 'undefined' ? 'string' : this.typemap[rcfg.ctype];
+        
+        // some special kludges..
+        // remove table prefix..
+        
+        var desc = rcfg.columnshort;
+        if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+            desc = desc.substring(rcfg.table.length+1);
+        }
+        desc = desc.replace(/_id$/, '');
+        
+        if (!desc.length) {
+            desc = rcfg.column;
+        }
+        
+        
+       
+        return {
+            "xtype": "ColumnModel",
+            "header": rcfg.desc.length ? rcfg.desc : desc,
+            "width":  ty == 'string' ? 200 : 75,
+            "dataIndex": rcfg.column,
+            "|renderer": ty != 'date' ? 
+                    "function(v) { return String.format('{0}', v); }" :
+                    "function(v) { return String.format('{0}', v ? v.format('d/M/Y') : ''); }" , // special for date
+            "|xns": "Roo.grid",
+            "*prop": "colModel[]"
+        };
+    }
     
 }
