@@ -99,7 +99,7 @@
                                         {
                                             "*prop": "colModel[]",
                                             "dataIndex": "table",
-                                            "header": "Filename",
+                                            "header": "Table",
                                             "width": 200,
                                             "xtype": "ColumnModel",
                                             "|renderer": "function(v) { return String.format('{0}', v); }",
