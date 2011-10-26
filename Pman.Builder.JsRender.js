@@ -4,12 +4,13 @@
  *
  * usage:
  *
- *   render = new Pman.Builder.JsRender({
-    
-    
-    });
+<pre><code>
+   render = new Pman.Builder.JsRender(
+          Pman.Builder.Tree.toJS()
+     );
     
     var source = render.toSource();
+</code></pre>    
  * 
  * @cfg {Array} items - the array of items..
  * @cfg {String} name - eg. Pman.Tab.XXXXyyyyy
