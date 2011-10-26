@@ -57,13 +57,8 @@ Pman.Builder.Wizard = {
     {
         
         var _t = this;
-        var jreader = _t['Roo.data.Reader'](cfg);
-        
-        var colmodel = []
-        Roo.each(cfg.cols, function(cc) {
-            colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
-        })
-        
+         
+     
         
         var gi = _t['Roo.grid.Grid'](cfg);
         gi['*prop'] = 'grid';
@@ -89,14 +84,14 @@ Pman.Builder.Wizard = {
     {
    
         var _t = this;
-        var jreader = _t['Roo.data.Reader'](cfg);
-        
+         
         var colmodel = []
         Roo.each(cfg.cols, function(cc) {
             colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
         })
         
         var ds = _t['Roo.data.Store'](cfg);
+        ds['*prop'] = 'dataSource';
         
         return  {
             "xtype": "Grid",
@@ -212,23 +207,26 @@ Pman.Builder.Wizard = {
             ].concat( colmodel)
         };
     },
+    
+    
     'Roo.data.Store' : function(cfg)
     {
-        {
-                    "*prop": "dataSource",
-                    "xtype": "Store",
-                     remoteSort : true,
-                    '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
-                    "|xns": "Roo.data",
-                    "items": [
-                        
-                        {
-                            "*prop": "proxy",
-                            "xtype": "HttpProxy",
-                            "method": "GET",
-                            "|url": "baseURL + '/Roo/" +cfg.table + ".php'",
-                            "|xns": "Roo.data"
-                        },
-                        jreader
-                    ]
+        var jreader = _t['Roo.data.Reader'](cfg);
+        return  {
+             "*prop": "dataSource",
+             "xtype": "Store",
+              remoteSort : true,
+             '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
+             "|xns": "Roo.data",
+             "items": [
+                 
+                 {
+                     "*prop": "proxy",
+                     "xtype": "HttpProxy",
+                     "method": "GET",
+                     "|url": "baseURL + '/Roo/" +cfg.table + ".php'",
+                     "|xns": "Roo.data"
+                 },
+                 jreader
+             ]
                 },
