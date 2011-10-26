@@ -464,7 +464,9 @@ Pman.Builder.JsRender.prototype =  {
         
         var modname = this.name.split('.').pop();
         
-        return modname.match(/([A-Z][a-z]+)/g);
+        var ret = modname.match(/([A-Z][a-z]+)/g);
+        var mm = ret.shift();
+        return [ mm, ret.join('')];
         
         //return [ modname , npart];
         
