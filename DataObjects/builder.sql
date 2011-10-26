@@ -16,8 +16,7 @@ ALTER TABLE  builder_modules ADD COLUMN database_dsn VARCHAR(254)  NOT NULL DEFA
 
 
 CREATE TABLE  builder_part (
-  id int(11)  NOT NULL AUTO_INCREMENT,
-  
+  id int(11)  NOT NULL AUTO_INCREMENT,  
   PRIMARY KEY (id)
 );
 
