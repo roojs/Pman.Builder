@@ -160,12 +160,15 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self)
                                         {
+                                            
+                                           
+                                           
                                             Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete that node?",
                                                 function(r) {
                                                     if (r!='yes') {
                                                         return;
                                                     }
-                                                    _this.tree.deleteCurrent();
+                                                    Pman.Builder.Tree.deleteCurrent();
                                                 }
                                             );
                                                 
