@@ -167,7 +167,9 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                 return;
                                             }
                                             
-                                            Pman.Builder[str+'-edit'](Pman.Builder.Tree.currentNode);
+                                            var cfg = Roo.decode(Pman.Builder.Tree.currentNode.elConfig['.builderCfg']);
+                                            
+                                            
                                            
                                            
                                                 
