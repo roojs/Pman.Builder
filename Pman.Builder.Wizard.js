@@ -1,8 +1,9 @@
 /**
  * Code for wizards
  *
- * properties are [Roo.grid.grid]
- * and [Roo.grid.grid-edit]
+ * properties are
+ * [Roo.grid.grid] << convert a cfg into a table.
+ * [Roo.grid.grid-edit] << create a config from a tree.
  *
  *
  */
