@@ -87,7 +87,7 @@ Pman.Builder.Wizard = {
         };
     },
     
-    'Roo.grid.Grid' : function(cfg, old, parse_only)
+    'Roo.grid.Grid' : function(cfg, old)
     {
    
         var _t = this;
