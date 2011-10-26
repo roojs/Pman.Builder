@@ -132,7 +132,11 @@ Pman.Builder.Wizard = {
                         old_items.push(cc);
                         
                 }
-            })
+            });
+            
+            if (parse_only) { 
+                return false;
+            }
         
         
         }
