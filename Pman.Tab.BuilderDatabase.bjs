@@ -6,7 +6,6 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderDatabase.bjs",
     "items": [
         {
-            "region": "",
             "xtype": "NestedLayoutPanel",
             "|xns": "Roo"
         }
