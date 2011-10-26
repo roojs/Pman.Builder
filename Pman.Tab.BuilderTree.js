@@ -176,6 +176,25 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 {
                                     xtype: 'Item',
                                     xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self)
+                                        {
+                                            Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete that node?",
+                                                function(r) {
+                                                    if (r!='yes') {
+                                                        return;
+                                                    }
+                                                    _this.tree.deleteCurrent();
+                                                }
+                                            );
+                                                
+                                        }
+                                    },
+                                    text : "Delete Node"
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
                                     text : "Save as template"
                                 }
                             ]

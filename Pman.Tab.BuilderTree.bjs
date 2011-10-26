@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-95",
+    "id": "roo-file-84",
     "name": "Pman.Tab.BuilderTree",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTree",
@@ -71,6 +71,14 @@
                                     "xtype": "Menu",
                                     "*prop": "menu",
                                     "items": [
+                                        {
+                                            "listeners": {
+                                                "click": "function (_self)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete that node?\",\n        function(r) {\n            if (r!='yes') {\n                return;\n            }\n            _this.tree.deleteCurrent();\n        }\n    );\n        \n}"
+                                            },
+                                            "text": "Delete Node",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
+                                        },
                                         {
                                             "listeners": {
                                                 "click": "function (_self)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete that node?\",\n        function(r) {\n            if (r!='yes') {\n                return;\n            }\n            _this.tree.deleteCurrent();\n        }\n    );\n        \n}"
