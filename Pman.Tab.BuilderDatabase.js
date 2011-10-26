@@ -33,7 +33,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
 
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
-            xns: Roo
+            xns: Roo,
+            region : ''
         });
         this.layout = this.panel.layout;
 
