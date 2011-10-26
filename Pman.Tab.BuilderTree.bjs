@@ -50,7 +50,6 @@
                                     "rootVisible": true,
                                     "xtype": "TreePanel",
                                     "|renderer": "function(n) { return n.text; }",
-                                    "|toJS": " function(n)\n{\n    if (!n) {\n        return this.toJS(this.root);\n    }\n    var _this = this;\n    var ret = this.cloneConfig(n.elConfig);\n    if (n.childNodes.length) {\n        ret.items = [];\n        n.eachChild(function(cn) {\n            ret.items.push(_this.toJS(cn));\n        });\n            \n    }\n    return ret;\n      \n     \n}",
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {

@@ -123,24 +123,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             enableDD : true,
                             rootVisible : true,
                             renderer : function(n) { return n.text; },
-                            toJS : function(n)
-                            {
-                                if (!n) {
-                                    return this.toJS(this.root);
-                                }
-                                var _this = this;
-                                var ret = this.cloneConfig(n.elConfig);
-                                if (n.childNodes.length) {
-                                    ret.items = [];
-                                    n.eachChild(function(cn) {
-                                        ret.items.push(_this.toJS(cn));
-                                    });
-                                        
-                                }
-                                return ret;
-                                  
-                                 
-                            },
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
