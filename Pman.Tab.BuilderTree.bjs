@@ -80,6 +80,10 @@
                                             "|xns": "Roo.menu"
                                         },
                                         {
+                                            "|xns": "Roo.menu",
+                                            "xtype": "Separator"
+                                        },
+                                        {
                                             "listeners": {
                                                 "click": "function (_self)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete that node?\",\n        function(r) {\n            if (r!='yes') {\n                return;\n            }\n            _this.tree.deleteCurrent();\n        }\n    );\n        \n}"
                                             },

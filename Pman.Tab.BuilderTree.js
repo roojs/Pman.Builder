@@ -174,6 +174,10 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     text : "Delete Node"
                                 },
                                 {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
+                                },
+                                {
                                     xtype: 'Item',
                                     xns: Roo.menu,
                                     listeners : {
