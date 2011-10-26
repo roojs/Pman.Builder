@@ -125,7 +125,7 @@ Pman.Builder.Wizard = {
                         return;
                     
                     case 'Roo.data.Store':
-                        _t['Roo.data.Store'](old_ds, cc, true);
+                        _t['Roo.data.Store'](cfg, cc, true);
                         return;
                     
                     default:
@@ -250,8 +250,12 @@ Pman.Builder.Wizard = {
     },
     
     
-    'Roo.data.Store' : function(cfg)
+    'Roo.data.Store' : function(cfg, old, parse_only)
     {
+        
+        
+        
+        
         var jreader = _t['Roo.data.Reader'](cfg);
         return  {
             
