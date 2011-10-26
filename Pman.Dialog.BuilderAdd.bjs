@@ -97,7 +97,7 @@
                 },
                 {
                     "listeners": {
-                        "click": "function (_self, e)\n{\n    var vals = _this.form.getValues();\n   if (vals.table.length) {\n      Pman.Dialog.BuilderAddTable.show( \n       Roo.apply({  table : vals.table } , _this.data),  \n       \n       function(data) {\n            _this.dialog.hide();\n            var cls = data['|xns'] + '.' + data['xtype'];\n            \n            var res = Pman.Builder[cls](data);\n            \n           _this.callback(res); \n       });\n        return;\n    }\n   \n    // otherwise, call back with template??\n   \n     _this.dialog.hide();\n     _this.callback(_this.data);\n}"
+                        "click": "function (_self, e)\n{\n    var vals = _this.form.getValues();\n   if (vals.table.length) {\n      Pman.Dialog.BuilderAddTable.show( \n       Roo.apply({  table : vals.table } , _this.data),  \n       \n       function(data) {\n            _this.dialog.hide();\n            var cls = data['|xns'] + '.' + data['xtype'];\n            \n            var res = Pman.Builder.Wizard[cls](data);\n            \n           _this.callback(res); \n       });\n        return;\n    }\n   \n    // otherwise, call back with template??\n   \n     _this.dialog.hide();\n     _this.callback(_this.data);\n}"
                     },
                     "*prop": "buttons[]",
                     "text": "OK",

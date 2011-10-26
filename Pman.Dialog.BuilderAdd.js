@@ -133,7 +133,7 @@ Pman.Dialog.BuilderAdd = {
                                     _this.dialog.hide();
                                     var cls = data['|xns'] + '.' + data['xtype'];
                                     
-                                    var res = Pman.Builder[cls](data);
+                                    var res = Pman.Builder.Wizard[cls](data);
                                     
                                    _this.callback(res); 
                                });
