@@ -203,7 +203,7 @@
                         },
                         {
                             "listeners": {
-                                "click": "function (_self, e)\n{\n    this.save();\n}",
+                                "click": "function (_self, e)\n{\n    Pman.Builder.Tree.save();\n}",
                                 "render": "function (_self)\n{\n   _this.saveBtn = this;\n}"
                             },
                             "cls": "x-btn-text-icon",
