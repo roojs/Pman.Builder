@@ -185,7 +185,7 @@ Pman.Builder.Tree = {
         return true;
     },
     dupeNode : function(node)
-        {
+    {
             var cfg = this.cloneConfig(node.elConfig);
             
             var newNode = new Roo.tree.TreeNode(
@@ -202,7 +202,8 @@ Pman.Builder.Tree = {
             return newNode;
                 
     },
-    loadBJS : function(module, part) {
+    loadBJS : function(module, part)
+    {
         var _t = this;
         new Pman.Request({
             url : baseURL + '/Roo/Builder_part.php',
