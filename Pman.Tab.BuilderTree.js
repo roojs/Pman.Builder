@@ -161,16 +161,15 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                         click : function (_self)
                                         {
                                             
+                                            var str = Pman.Builder.Tree.currentNodeType();
+                                            if (typeof(Pman.Builder[str]) == 'Undefined') {
+                                                Roo.MessageBox.alert("Sorry", "No wizard exists for " + str);
+                                                return;
+                                            }
                                            
                                            
-                                            Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete that node?",
-                                                function(r) {
-                                                    if (r!='yes') {
-                                                        return;
-                                                    }
-                                                    Pman.Builder.Tree.deleteCurrent();
-                                                }
-                                            );
+                                           
+                                           
                                                 
                                         }
                                     },

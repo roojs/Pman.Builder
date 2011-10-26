@@ -73,7 +73,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self)\n{\n    \n   \n   \n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete that node?\",\n        function(r) {\n            if (r!='yes') {\n                return;\n            }\n            Pman.Builder.Tree.deleteCurrent();\n        }\n    );\n        \n}"
+                                                "click": "function (_self)\n{\n    \n    var str = Pman.Builder.Tree.currentNodeType();\n    if (typeof(Pman.Builder[str]) == 'Undefined') {\n        Roo.MessageBox.alert(\"Sorry\", \"No wizard exists for \" + str);\n        return;\n    }\n   \n   \n   \n   \n        \n}"
                                             },
                                             "text": "Edit Using Wizard",
                                             "xtype": "Item",
