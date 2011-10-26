@@ -162,6 +162,9 @@ Pman.Builder.Tree = {
     },
     deleteCurrent : function()
     {
+        
+        var tree = Pman.Tab.BuilderTree.tree;
+        
         if (this.currentNode == tree.root) {
             return false;
         }
