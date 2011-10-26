@@ -125,24 +125,6 @@
                                         },
                                         {
                                             "xtype": "ColumnModel",
-                                            "header": "Title",
-                                            "width": 200,
-                                            "dataIndex": "title",
-                                            "|renderer": "function(v) { return String.format('{0}', v); }",
-                                            "|xns": "Roo.grid",
-                                            "*prop": "colModel[]"
-                                        },
-                                        {
-                                            "xtype": "ColumnModel",
-                                            "header": "Credit",
-                                            "width": 200,
-                                            "dataIndex": "credit",
-                                            "|renderer": "function(v) { return String.format('{0}', v); }",
-                                            "|xns": "Roo.grid",
-                                            "*prop": "colModel[]"
-                                        },
-                                        {
-                                            "xtype": "ColumnModel",
                                             "header": "Source",
                                             "width": 200,
                                             "dataIndex": "source",
