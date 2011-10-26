@@ -237,7 +237,7 @@ Pman.Builder.Tree = {
         var tree = Pman.Tab.BuilderTree.tree;
         this.clearAll();
         tree.root.elConfig = o;
-        if (typeof(o.xtype) == 'undefined')) {
+        if (typeof(o.xtype) == 'undefined') {
             o.xtype = '*top';
         }
         tree.root.setText(this.configToText(tree.root.elConfig));
