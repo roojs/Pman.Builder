@@ -122,26 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            deleteCurrent : function() {
-                                if (this.currentNode == this.root) {
-                                    return false;
-                                }
-                                var cfg = this.currentNode.elConfig;
-                                // things that can not be deleted...
-                               
-                                
-                                var pn = this.currentNode.parentNode;
-                                
-                                
-                                var ix = pn.indexOf(this.currentNode);
-                              //  console.log(ix);
-                                pn.removeChild(this.currentNode);
-                                if (pn.childNodes.length) {
-                                    ix = Math.min(pn.childNodes.length-1, ix);
-                                }
-                                this.setCurrentNode(pn.childNodes.length ? pn.childNodes[ix] : pn  ,true);
-                                return true;
-                            },
                             dupeNode : function(node)
                                 {
                                     var cfg = this.cloneConfig(node.elConfig);
