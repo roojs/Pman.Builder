@@ -346,8 +346,7 @@ Pman.Builder.Tree = {
     
             if (typeof(Pman.Builder.Wizard[cls]) != 'undefined') {
                 Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
-    
-                
+     
                     _t.appendNode(e.target, fdata , e.point);
     
                  });
