@@ -9,7 +9,9 @@
  * My initial idea was to parse the existing nodes, to generate the cfg.
  * -- this is far too complicated..
  * -- let's go back to the idea of storing the config on the relivant nodes.
- * -- 
+ * -- The downside is that if you modify the children, then the wizard will
+ *    not know about those columns. etc..
+ *    
  * 
  *
  */
@@ -74,16 +76,16 @@ Pman.Builder.Wizard = {
             '|xns' : 'Roo',
             xtype : "GridPanel",
             '.buildercfg' : Roo.encode(cfg),
-            "title": cfg.table,
-            "fitToframe": true,
-            "fitContainer": true,
-            "tableName": cfg.table,
-            "background": true,
-            "region" : 'center',
-            "listeners": {
+            title : cfg.table,
+            fitToframe : true,
+            fitContainer : true,
+            tableName: cfg.table,
+            background: true,
+            region : 'center',
+            listeners : {
                 "|activate": "function() {\n    _this.panel = this;\n    if (_this.grid) {\n        _this.grid.footer.onClick('first');\n    }\n}"
             },
-            "items": [ gi ]
+            items: [ gi ]
             
         };
     },
@@ -106,6 +108,7 @@ Pman.Builder.Wizard = {
         
         return  {
             "xtype": "Grid",
+            '.builderCfg' : cfg,
             "autoExpandColumn": cfg.cols_ex[0],
             "loadMask": true,
             "listeners": {
