@@ -206,25 +206,19 @@ Pman.Builder.Wizard = {
     },
     
     
-    'Roo.data.Store' : function(cfg, old, parse_only)
+    'Roo.data.Store' : function(cfg, old)
     {
         var _t = this;
         old = old || false;
-        
-        if (old !== false) {
-            _t['Roo.data.Reader'](cfg, old, true);
-             
-            if (parse_only) { 
-                return false;
-            }
-        }
+      
         
         
         var jreader = _t['Roo.data.Reader'](cfg);
         return  {
             
             "xtype": "Store",
-            "|xns": "Roo.data",             
+            "|xns": "Roo.data",
+             '.builderCfg' : cfg,
              remoteSort : true,
             '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
             "items": [
