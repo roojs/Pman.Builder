@@ -168,7 +168,7 @@ Pman.Builder.JsRender.prototype =  {
             if (!isArray) {
                 // set the key to be quoted with singel quotes..
                 var leftv = i[0] == '|' ? i.substring(1) : i;
-                if (Lang.isKeyword(leftv) || Lang.isBuiltin(leftv)) {
+                if (Pman.Builder.Lang.isKeyword(leftv) || Pman.Builder.Lang.isBuiltin(leftv)) {
                     left = "'" + leftv + "'";
                 } else if (leftv.match(/[^A-Z_]+/i)) { // not plain a-z... - quoted.
                     var val = JSON.stringify(leftv);
