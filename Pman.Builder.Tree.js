@@ -472,7 +472,7 @@ Pman.Builder.Tree = {
             method : 'POST',
             params : {
                 json : Roo.encode(js, null, 4),
-                js : render.toSource(),
+                jsource : render.toSource(),
                 name : js.name,
                 module_id : _this.modsel.getValue(),
                 id : sid
