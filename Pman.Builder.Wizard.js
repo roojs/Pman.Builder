@@ -213,7 +213,7 @@ Pman.Builder.Wizard = {
       
         
         
-        var jreader = _t['Roo.data.Reader'](cfg);
+        var jreader = _t['Roo.data.JsonReader'](cfg);
         return  {
             
             "xtype": "Store",
@@ -236,7 +236,7 @@ Pman.Builder.Wizard = {
     },
     
         
-    'Roo.data.Reader' : function(cfg)
+    'Roo.data.JsonReader' : function(cfg)
     {
         // simple version to start with..
         
