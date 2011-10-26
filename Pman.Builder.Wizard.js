@@ -60,7 +60,7 @@ Pman.Builder.Wizard = {
     {
         
         var _t = this;
-        var cfg = incfg|| {};
+        var cfg = incfg || {};
         old = old || false;
         
         if (old !== false) {
