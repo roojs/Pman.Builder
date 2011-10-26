@@ -348,12 +348,12 @@ Pman.Builder.Tree = {
                     _t.appendNode(e.target, fdata , e.point);
     
                  });
-                 return;
+                 return false;
              }
              this.appendNode(e.target, cfg, e.point);
               Pman.Tab.BuilderView.panel.redraw();
              
-            return; // fixme drop of elements from palete..
+            return false; // fixme drop of elements from palete..
         }
     
         // always drop onto own parent
@@ -367,7 +367,7 @@ Pman.Builder.Tree = {
         // this code should be in nodedragover.
         
         Roo.log("move checks need moving");
-        return;
+        return false;
         
         if (_this.canAppend(np, e.dropNode.elConfig)) {
             if (e.rawEvent.ctrlKey) {
