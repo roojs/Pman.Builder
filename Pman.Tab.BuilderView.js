@@ -255,7 +255,7 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                 }
             
                 var _this = this;
-                var ret = bt.cloneConfig(n.elConfig);
+                var ret = Pman.Builder.Tree.cloneConfig(n.elConfig);
                 
                 // flag to prevent rendering..
                 if ((typeof(ret['+buildershow']) != 'undefined') && !ret['+buildershow']) {
