@@ -256,7 +256,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                     bp.redraw.defer(100,bp, [true]);
                                     // update the tree's  text
                                     _this.grid.currentNode.setText(
-                                        Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
+                                        Pman.Builder.Tree.configToText(_this.grid.currentNode.elConfig)
                                     );
                                 });
                             }
