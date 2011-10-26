@@ -122,24 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            dupeNode : function(node)
-                                {
-                                    var cfg = this.cloneConfig(node.elConfig);
-                                    
-                                    var newNode = new Roo.tree.TreeNode(
-                                    {
-                                            id: Roo.id(),
-                                            text: this.configToText(cfg)
-                                    });
-                                    
-                                    newNode.elConfig = cfg;
-                                    node.eachChild(function(n) {
-                                        newNode.appendChild(this.dupeNode(n));
-                                    },this);
-                                    
-                                    return newNode;
-                                        
-                                },
                             loadBJS : function(module, part) {
                                 var _t = this;
                                 new Pman.Request({
