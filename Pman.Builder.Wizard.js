@@ -56,24 +56,26 @@ Pman.Builder.Wizard = {
         -- builds up 'cfg'
      * 
      */
-   'Roo.GridPanel' : function(incfg, old)
+   'Roo.GridPanel' : function(cfg, old, parse_only)
     {
         
         var _t = this;
-        var cfg = incfg || {};
+        
         old = old || false;
         
         if (old !== false) {
-            
+            parse_only = parse_only || false;
             // parse the old data, and generate a cfg.
-            cfg.table = old.tableName;
+            if (parse_only) { 
+                cfg.table = old.tableName;
+            }
             // assume items[0] is the grid..
             
-            var gcfg = _t['Roo.grid.Grid'](cfg, old.items[0]);
-            Roo.applyIf(cfg, gcfg); // only set stuff that is not already done.
+            _t['Roo.grid.Grid'](cfg, old.items[0], parse_only);
             
-            if (incfg == false) { 
-                return cfg;
+            
+            if (parse_only) { 
+                return false;
             }
             
         }
