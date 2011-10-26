@@ -122,27 +122,9 @@
                                         },
                                         {
                                             "xtype": "ColumnModel",
-                                            "header": "Mimetype",
-                                            "width": 200,
-                                            "dataIndex": "mimetype",
-                                            "|renderer": "function(v) { return String.format('{0}', v); }",
-                                            "|xns": "Roo.grid",
-                                            "*prop": "colModel[]"
-                                        },
-                                        {
-                                            "xtype": "ColumnModel",
                                             "header": "Width",
                                             "width": 75,
                                             "dataIndex": "width",
-                                            "|renderer": "function(v) { return String.format('{0}', v); }",
-                                            "|xns": "Roo.grid",
-                                            "*prop": "colModel[]"
-                                        },
-                                        {
-                                            "xtype": "ColumnModel",
-                                            "header": "Height",
-                                            "width": 75,
-                                            "dataIndex": "height",
                                             "|renderer": "function(v) { return String.format('{0}', v); }",
                                             "|xns": "Roo.grid",
                                             "*prop": "colModel[]"
