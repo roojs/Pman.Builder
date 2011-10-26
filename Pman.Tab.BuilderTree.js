@@ -122,39 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            loadBJS : function(module, part) {
-                                var _t = this;
-                                new Pman.Request({
-                                    url : baseURL + '/Roo/Builder_part.php',
-                                    method : 'GET',
-                                    params : {
-                                       _id : part
-                                    },
-                                    success : function(res)         
-                                    {
-                                        // data is in.. 
-                                        Roo.log(res);
-                                        
-                                        if (!res.data.json.length) {
-                                            var cfg = _t.defaultElConfig();
-                                            cfg.name = Pman.Tab.BuilderTop.filesel.lastData.name;
-                                            cfg.part = Pman.Tab.BuilderTop.filesel.lastData.name;
-                                            cfg.module = '';
-                                            _t.loadTree(cfg);
-                                            return;
-                                        
-                                        }
-                                        
-                                        _t.loadTree(JSON.parse(res.data.json));
-                                        
-                                     
-                                    }
-                            
-                                 })  
-                                    
-                                
-                                
-                            },
                             loadTree : function(o) {
                                 this.clearAll();
                                 this.root.elConfig = o;
