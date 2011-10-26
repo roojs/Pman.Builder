@@ -12,8 +12,8 @@ Pman.on('beforeload', function()
         modKey : '001-Pman.Tab.BuilderDatabase',
         module : Pman.Tab.BuilderDatabase,
         region : 'center',
-        parent : false,
-        name : "unnamed module",
+        parent : Pman.Tab.Builder,
+        name : "Pman.Tab.BuilderDatabase",
         disabled : false, 
         permname: '' 
     });

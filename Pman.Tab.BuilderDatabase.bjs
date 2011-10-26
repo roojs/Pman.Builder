@@ -1,8 +1,8 @@
 {
     "id": "roo-file-91",
     "name": "Pman.Tab.BuilderDatabase",
-    "parent": "",
-    "title": "",
+    "parent": "Pman.Tab.Builder",
+    "title": "Pman.Tab.BuilderDatabase",
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderDatabase.bjs",
     "items": [
         {
