@@ -123,31 +123,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             enableDD : true,
                             rootVisible : true,
                             renderer : function(n) { return n.text; },
-                            setCurrentNode : function(node,select) {
-                                    this.currentNode = node || this.root;
-                                    
-                                    //Pman.Tab.BuilderView.highlightElement(this.currentNode);
-                            
-                                    var p = Pman.Tab.BuilderProps.grid;
-                                    if (p) { //may not be ready yet..
-                                        p.setCurrrentNode(this.currentNode);
-                                    }
-                                    
-                                  
-                                    this.currentNode.setText(this.configToText(this.currentNode.elConfig));
-                                    
-                                    if (select) { //&& node !== this.tree.root) {
-                                        if (this.currentNode !== this.root)  {
-                                                 this.currentNode.ensureVisible();
-                                          }   
-                                         this.currentNode.expand(false,false);
-                                        this.currentNode.select();
-                            	}
-                            	// update palete..
-                            	Pman.Tab.BuilderPalette.grid.getSelectionModel().clearSelections();
-                            	Pman.Tab.BuilderPalette.grid.view.refresh();
-                            
-                            },
                             toJS : function(n)
                             {
                                 if (!n) {
