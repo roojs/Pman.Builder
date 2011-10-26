@@ -108,7 +108,7 @@ Pman.Builder.Wizard = {
         
         return  {
             "xtype": "Grid",
-            '.builderCfg' : cfg,
+            '.builderCfg' :  Roo.encode(cfg),
             "autoExpandColumn": cfg.cols_ex[0],
             "loadMask": true,
             "listeners": {
@@ -218,7 +218,7 @@ Pman.Builder.Wizard = {
             
             "xtype": "Store",
             "|xns": "Roo.data",
-             '.builderCfg' : cfg,
+             '.builderCfg' :  Roo.encode(cfg),
              remoteSort : true,
             '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
             "items": [
@@ -264,7 +264,7 @@ Pman.Builder.Wizard = {
             xtype : "JsonReader",
             totalProperty : "total",
             root : "data",
-             '.builderCfg' : cfg,
+            '.builderCfg' :  Roo.encode(cfg),
             '*prop' : "reader",
             id : 'id', // maybe no..
          
