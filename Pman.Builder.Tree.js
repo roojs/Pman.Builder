@@ -473,7 +473,7 @@ Pman.Builder.Tree = {
             params : {
                 json : Roo.encode(js, null, 4),
                 jsource : render.toSource(),
-                name : js.name,
+                name :   js.name,
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
             }, 
