@@ -122,19 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            defaultElConfig : function() {
-                                return {
-                                   xtype : '*top',
-                                    
-                                    module : 'TestApp',
-                                    part:   'Partname',
-                                    modkey : 0,
-                                    region : 'center',
-                                    parent : 'Pman',
-                                    name : 'Module Name',
-                                    items: [] 
-                                };
-                            },
                             deleteCurrent : function() {
                                 if (this.currentNode == this.root) {
                                     return false;
