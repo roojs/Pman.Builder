@@ -125,11 +125,11 @@ Pman.Builder.Wizard = {
                         return;
                     
                     case 'Roo.data.Store':
-                        
                         _t['Roo.data.Store'](old_ds, cc, true);
-                        
                         return;
-                        
+                    
+                    default:
+                        old_items.push(cc);
                         
                 }
             })
