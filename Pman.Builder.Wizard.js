@@ -237,7 +237,7 @@ Pman.Builder.Wizard = {
     },
     
         
-    'Roo.data.JsonReader' : function(cfg)
+    'Roo.data.JsonReader' : function(cfg, old)
     {
         // simple version to start with..
         
