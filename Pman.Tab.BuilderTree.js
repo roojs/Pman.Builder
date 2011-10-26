@@ -171,7 +171,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                 
                                         }
                                     },
-                                    text : "Delete Node"
+                                    text : "Edit Using Wizard"
                                 },
                                 {
                                     xtype: 'Separator',
