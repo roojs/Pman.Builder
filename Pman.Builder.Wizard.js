@@ -76,7 +76,7 @@ Pman.Builder.Wizard = {
         return {
             '|xns' : 'Roo',
             xtype : "GridPanel",
-            '.buildercfg' : Roo.encode(cfg),
+            '.builderCfg' : Roo.encode(cfg),
             title : cfg.table,
             fitToframe : true,
             fitContainer : true,
