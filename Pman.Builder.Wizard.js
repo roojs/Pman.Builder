@@ -111,7 +111,7 @@ Pman.Builder.Wizard = {
         if (old !== false) {
             cfg.cols_ex = [ old.autoExpandColumn ];
             cfg.cols = [];
-            var old_ds = false;
+            var old_ds = {};
             var old_cols = [];
             var old_items = [];
             Roo.each(old.items, function(cc) {
@@ -122,13 +122,12 @@ Pman.Builder.Wizard = {
                         _t['Roo.grid.ColumnModel'](ncfg, cc, true);
                         old_cols.push(cc);
                         cfg.cols.push(cfg);
-                        
                         return;
                     
                     case 'Roo.data.Store':
-                        var ncfg = {};
-                        _t['Roo.grid.ColumnModel'](ncfg, cc, true);
-                        old_cols.push(ncfg);
+                        
+                        _t['Roo.data.Store'](old_ds, cc, true);
+                        
                         return;
                         
                         
