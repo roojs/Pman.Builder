@@ -91,7 +91,7 @@ Pman.Builder.Wizard = {
         })
         
         var ds = _t['Roo.data.Store'](cfg);
-        ds['*prop'] = 'dataSource';
+        dataSource['*prop'] = 'dataSource';
         
         return  {
             "xtype": "Grid",
@@ -117,24 +117,7 @@ Pman.Builder.Wizard = {
             "|xns": "Roo.grid",
 
             "items": [
-                {
-                    "*prop": "dataSource",
-                    "xtype": "Store",
-                     remoteSort : true,
-                    '|sortInfo' : "{ field : '" +  cfg.cols_ex[0]  +  "', direction: 'ASC' }", 
-                    "|xns": "Roo.data",
-                    "items": [
-                        
-                        {
-                            "*prop": "proxy",
-                            "xtype": "HttpProxy",
-                            "method": "GET",
-                            "|url": "baseURL + '/Roo/" +cfg.table + ".php'",
-                            "|xns": "Roo.data"
-                        },
-                        jreader
-                    ]
-                },
+                dataSource,
                 {
                     "*prop": "footer",
                     "xtype": "PagingToolbar",
