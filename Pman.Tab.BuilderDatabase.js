@@ -43,12 +43,6 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                     {
                         xtype: 'GridPanel',
                         xns: Roo,
-                        title : "Images",
-                        fitToframe : true,
-                        fitContainer : true,
-                        tableName : 'Images',
-                        background : true,
-                        region : 'center',
                         listeners : {
                             activate : function() {
                                 _this.panel = this;
@@ -57,6 +51,12 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 }
                             }
                         },
+                        background : true,
+                        fitContainer : true,
+                        fitToframe : true,
+                        region : 'center',
+                        tableName : 'Images',
+                        title : "Tables",
                         grid : {
                             xtype: 'Grid',
                             xns: Roo.grid,

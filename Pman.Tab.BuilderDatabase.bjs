@@ -22,17 +22,17 @@
                             "*prop": "center"
                         },
                         {
-                            "|xns": "Roo",
-                            "xtype": "GridPanel",
-                            "title": "Images",
-                            "fitToframe": true,
-                            "fitContainer": true,
-                            "tableName": "Images",
-                            "background": true,
-                            "region": "center",
                             "listeners": {
                                 "|activate": "function() {\n    _this.panel = this;\n    if (_this.grid) {\n        _this.grid.footer.onClick('first');\n    }\n}"
                             },
+                            "background": true,
+                            "fitContainer": true,
+                            "fitToframe": true,
+                            "region": "center",
+                            "tableName": "Images",
+                            "title": "Tables",
+                            "xtype": "GridPanel",
+                            "|xns": "Roo",
                             "items": [
                                 {
                                     "listeners": {
