@@ -140,6 +140,9 @@ Pman.Builder.Wizard = {
         
         
         }
+        
+        
+        
         var colmodel = []
         Roo.each(cfg.cols, function(cc) {
             colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
