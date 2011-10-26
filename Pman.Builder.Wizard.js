@@ -90,7 +90,7 @@ Pman.Builder.Wizard = {
             colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
         })
         
-        var ds = _t['Roo.data.Store'](cfg);
+        var dataSource = _t['Roo.data.Store'](cfg);
         dataSource['*prop'] = 'dataSource';
         
         return  {
