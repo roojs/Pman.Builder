@@ -152,7 +152,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 {
                                       e.preventDefault();
                                                        // console.log(e.button);
-                                        this.setCurrentNode(node);
+                                        Pman.BuilderTree.setCurrentNode(node);
                                         
                                     
                                         
