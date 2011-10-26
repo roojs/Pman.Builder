@@ -67,6 +67,7 @@ Pman.Builder.Wizard = {
    'Roo.GridPanel' : function(cfg, old)
     {
     
+        var _t = this;
         old = old || {};
 
         var gi = _t['Roo.grid.Grid'](cfg);
