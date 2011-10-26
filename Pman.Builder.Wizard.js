@@ -245,15 +245,7 @@ Pman.Builder.Wizard = {
        
         var _t = this;
         old = old || false;
-        
-        if (old !== false) {
-            
-             
-            if (parse_only) { 
-                return false;
-            }
-        }
-        
+       
         var fields = [];
 
         Roo.each(cfg.cols, function(cc) {
@@ -272,6 +264,7 @@ Pman.Builder.Wizard = {
             xtype : "JsonReader",
             totalProperty : "total",
             root : "data",
+             '.builderCfg' : cfg,
             '*prop' : "reader",
             id : 'id', // maybe no..
          
