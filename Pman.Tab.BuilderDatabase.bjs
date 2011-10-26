@@ -54,9 +54,9 @@
                                             "items": [
                                                 {
                                                     "*prop": "proxy",
-                                                    "xtype": "HttpProxy",
                                                     "method": "GET",
-                                                    "|url": "baseURL + '/Roo/Images.php'",
+                                                    "xtype": "HttpProxy",
+                                                    "|url": "baseURL + '/Builder/ERM.php'",
                                                     "|xns": "Roo.data"
                                                 },
                                                 {

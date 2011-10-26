@@ -88,7 +88,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     xtype: 'HttpProxy',
                                     xns: Roo.data,
                                     method : 'GET',
-                                    url : baseURL + '/Roo/Images.php'
+                                    url : baseURL + '/Builder/ERM.php'
                                 },
                                 reader : {
                                     xtype: 'JsonReader',
