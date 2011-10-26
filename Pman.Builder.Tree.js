@@ -344,7 +344,7 @@ Pman.Builder.Tree = {
              var cls = cfg['|xns'] + '.' + cfg['xtype'];
                 
     
-            if (typeof(Pman.Builder[cls]) != 'undefined') {
+            if (typeof(Pman.Builder.Wizard[cls]) != 'undefined') {
                 Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
     
                 
