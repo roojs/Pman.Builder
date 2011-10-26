@@ -64,11 +64,11 @@ Pman.Builder.Wizard = {
         old = old || false;
         
         if (old !== false) {
-            parse_only = parse_only || false;
+            
             // parse the old data, and generate a cfg.
-            if (parse_only) { 
-                cfg.table = old.tableName;
-            }
+            
+            cfg.table = cfg.table || old.tableName;
+            
             // assume items[0] is the grid..
             
             _t['Roo.grid.Grid'](cfg, old.items[0], parse_only);
