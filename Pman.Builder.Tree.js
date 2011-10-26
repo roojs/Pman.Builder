@@ -432,7 +432,8 @@ Pman.Builder.Tree = {
                    _t.dragProp = (n == new_parent) ?  '' : n.split(':').pop();
                    return true;
                }
-           });
+               return false;
+            });
    
            // done all the checks...
            return;
