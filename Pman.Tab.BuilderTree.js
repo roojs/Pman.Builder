@@ -122,10 +122,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                             ddGroup : 'component',
                             enableDD : true,
                             rootVisible : true,
-                            currentNodeType : function() {
-                                return this.nodeXtype(this.currentNode);
-                             
-                            },
                             defaultElConfig : function() {
                                 return {
                                    xtype : '*top',
