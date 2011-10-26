@@ -191,7 +191,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                     if (r!='yes') {
                                                         return;
                                                     }
-                                                    _this.tree.deleteCurrent();
+                                                   Pman.Builder.Tree.deleteCurrent();
                                                 }
                                             );
                                                 
