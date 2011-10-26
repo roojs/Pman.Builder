@@ -6,6 +6,12 @@
  * [Roo.grid.grid-edit] << create a config from a tree.
  *
  *
+ * My initial idea was to parse the existing nodes, to generate the cfg.
+ * -- this is far too complicated..
+ * -- let's go back to the idea of storing the config on the relivant nodes.
+ * -- 
+ * 
+ *
  */
 
 
@@ -56,38 +62,17 @@ Pman.Builder.Wizard = {
         -- builds up 'cfg'
      * 
      */
-   'Roo.GridPanel' : function(cfg, old, parse_only)
+   'Roo.GridPanel' : function(cfg, old)
     {
         
-        var _t = this;
-        
-        old = old || false;
-        
-        if (old !== false) {
-            
-            // parse the old data, and generate a cfg.
-            
-            cfg.table = cfg.table || old.tableName;
-            
-            // assume items[0] is the grid..
-            
-            _t['Roo.grid.Grid'](cfg, old.items[0], parse_only);
-            
-            
-            if (parse_only) { 
-                return false;
-            }
-            
-        }
-        
-     
-        
+         
         var gi = _t['Roo.grid.Grid'](cfg);
         gi['*prop'] = 'grid';
         
         return {
             '|xns' : 'Roo',
             xtype : "GridPanel",
+            '.buildercfg' : Roo.encode(cfg),
             "title": cfg.table,
             "fitToframe": true,
             "fitContainer": true,
@@ -282,5 +267,52 @@ Pman.Builder.Wizard = {
             ]
         };
     
-    }
+    },
+    
+        
+    'Roo.data.Reader' : function(cfg)
+    {
+        // simple version to start with..
+        
+        
+        
+       
+        var _t = this;
+        old = old || false;
+        
+        if (old !== false) {
+            
+             
+            if (parse_only) { 
+                return false;
+            }
+        }
+        
+        var fields = [];
+
+        Roo.each(cfg.cols, function(cc) {
+            var ty = typeof(_t.typemap[cc.ctype]) == 'undefined' ? 'string' : _t.typemap[cc.ctype];
+            if (cc.ctype == 'string' ) {
+                fields.push(cc.column);
+                return;
+            }
+            fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
+        });
+        
+        
+       return { 
+        
+            '|xns' : 'Roo.data',
+            xtype : "JsonReader",
+            totalProperty : "total",
+            root : "data",
+            '*prop' : "reader",
+            id : 'id', // maybe no..
+         
+            '|fields' :  JSON.stringify(fields, null,4).replace(/"/g,"'")
+        };
+    },
+    
+    
+    
 }
