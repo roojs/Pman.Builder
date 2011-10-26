@@ -72,8 +72,9 @@ Pman.Builder.Wizard = {
             var gcfg = _t['Roo.grid.Grid'](cfg, old.items[0]);
             Roo.applyIf(cfg, gcfg); // only set stuff that is not already done.
             
-            
-            return cfg;
+            if (incfg == false) { 
+                return cfg;
+            }
             
         }
         
