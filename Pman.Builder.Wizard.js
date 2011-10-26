@@ -295,6 +295,7 @@ Pman.Builder.Wizard = {
        
         return {
             "xtype": "ColumnModel",
+            '.builderCfg' : Roo.encode(rcfg),
             "header": rcfg.desc.length ? rcfg.desc : desc,
             "width":  ty == 'string' ? 200 : 75,
             "dataIndex": rcfg.column,
