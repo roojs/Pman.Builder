@@ -279,9 +279,9 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 {
                                     xtype: 'ColumnModel',
                                     xns: Roo.grid,
+                                    dataIndex : 'table',
                                     header : 'Filename',
                                     width : 200,
-                                    dataIndex : 'filename',
                                     renderer : function(v) { return String.format('{0}', v); }
                                 }
                             ]
