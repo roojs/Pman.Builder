@@ -98,7 +98,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         var bp = Pman.Tab.BuilderView.panel;
                         bp.redraw.defer(100,bp, [true]);
                         _this.grid.currentNode.setText(
-                            Pman.Tab.BuilderTree.tree.configToText(_this.grid.currentNode.elConfig)
+                            Pman.Builder.Tree.configToText(_this.grid.currentNode.elConfig)
                         );
                     },
                     contextmenu : function (e)
