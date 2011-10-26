@@ -251,8 +251,16 @@ Pman.Builder.Wizard = {
     
     'Roo.data.Store' : function(cfg, old, parse_only)
     {
+        var _t = this;
+        old = old || false;
         
-        
+        if (old !== false) {
+            _t['Roo.data.Reader'](cfg, old, true);
+             
+            if (parse_only) { 
+                return false;
+            }
+        }
         
         
         var jreader = _t['Roo.data.Reader'](cfg);
