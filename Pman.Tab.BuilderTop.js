@@ -218,9 +218,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                     _this.filesel.setfromdata(data);
                                                     Pman.Builder.Tree.clearAll();
                                                     Pman.Builder.Tree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
-                                                    
-                                                    var bp = Pman.Tab.BuilderPanel;
-                                                    bp.redraw.defer(100,bp,[true]);
+                                                     
+                                                    Pman.Tab.BuilderPanel.redraw.defer(100,Pman.Tab.BuilderPanel,[true]);
                                             });
                                         
                                         }
