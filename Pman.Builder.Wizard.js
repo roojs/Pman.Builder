@@ -102,11 +102,22 @@ Pman.Builder.Wizard = {
         };
     },
     
-    'Roo.grid.Grid' : function(cfg)
+    'Roo.grid.Grid' : function(cfg, old, parse_only)
     {
    
         var _t = this;
-         
+        old = old || false;
+        
+        if (old !== false) {
+            cfg.cols_ex = [ old.autoExpandColumn ];
+            
+            Roo.each(old.items, function(cc) {
+                
+                
+            })
+        
+        
+        }
         var colmodel = []
         Roo.each(cfg.cols, function(cc) {
             colmodel.push( _t['Roo.grid.ColumnModel'](cc) );
