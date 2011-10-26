@@ -9,7 +9,7 @@ Pman.on('beforeload', function()
 {
     Pman.register({
         part :  ["Builder","Database"],
-        modKey : '001-Pman.Tab.BuilderDatabase',
+        modKey : '999-Pman.Tab.BuilderDatabase',
         module : Pman.Tab.BuilderDatabase,
         region : 'center',
         parent : Pman.Tab.Builder,
