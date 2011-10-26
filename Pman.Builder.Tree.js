@@ -13,7 +13,7 @@
 Pman.Builder.Tree = {
     
     currentNode: faalse,
-    
+
     
     appendNode : function(parent, inConfig, point) {
                                 
