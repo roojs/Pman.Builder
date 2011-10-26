@@ -235,7 +235,7 @@ Pman.Builder.Tree = {
     loadTree : function(o)
     {
         var tree = Pman.Tab.BuilderTree.tree;
-        tree.clearAll();
+        this.clearAll();
         tree.root.elConfig = o;
         tree.root.setText(this.configToText(tree.root.elConfig));
         this.appendNode(tree.root, o.items[0]);
