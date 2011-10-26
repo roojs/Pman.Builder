@@ -64,8 +64,8 @@ Pman.Builder.Wizard = {
      */
    'Roo.GridPanel' : function(cfg, old)
     {
-        
-                 old = old || {};
+    
+        old = old || {};
 
         var gi = _t['Roo.grid.Grid'](cfg);
         gi['*prop'] = 'grid';
