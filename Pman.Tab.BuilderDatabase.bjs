@@ -86,7 +86,7 @@
                                             "items": [
                                                 {
                                                     "listeners": {
-                                                        "|click": "function()\n{\n    if (!_this.dialog) return;\n    _this.dialog.show( { id : 0 } , function() {\n        _this.grid.footer.onClick('first');\n   }); \n}\n"
+                                                        "|click": "function()\n{\n    Roo.MessageBox.alert(\"Updating\", \"Updating the cache\");\n    new Pman.Request({\n        url : baseURL + '/Core/RefreshDatabaseCache',\n        method : 'GET',\n        success : function() {\n            Roo.MessageBox.hide();\n        }\n    });\n}\n"
                                                     },
                                                     "cls": "x-btn-text-icon",
                                                     "text": "Refresh Schema",

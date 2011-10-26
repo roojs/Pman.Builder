@@ -263,10 +263,14 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                         listeners : {
                                             click : function()
                                             {
-                                                if (!_this.dialog) return;
-                                                _this.dialog.show( { id : 0 } , function() {
-                                                    _this.grid.footer.onClick('first');
-                                               }); 
+                                                Roo.MessageBox.alert("Updating", "Updating the cache");
+                                                new Pman.Request({
+                                                    url : baseURL + '/Core/RefreshDatabaseCache',
+                                                    method : 'GET',
+                                                    success : function() {
+                                                        Roo.MessageBox.hide();
+                                                    }
+                                                });
                                             }
                                         },
                                         cls : 'x-btn-text-icon',
