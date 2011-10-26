@@ -38,7 +38,7 @@
                                 {
                                     "listeners": {
                                         "beforenodedrop": "function (e)\n{\n    \n    return Pman.Builder.Tree.handleDropNode(e);      \n\n}",
-                                        "click": "function (node, e)\n{\n      e.preventDefault();\n                       // console.log(e.button);\n        Pman.BuilderTree.setCurrentNode(node);\n        \n    \n        \n\n}",
+                                        "click": "function (node, e)\n{\n      e.preventDefault();\n                       // console.log(e.button);\n        Pman.Builder.Tree.setCurrentNode(node);\n        \n    \n        \n\n}",
                                         "contextmenu": "function (node, e)\n{\n    e.stopEvent();\n        \n    this.getSelectionModel().select(node);\n     Pman.Builder.Tree.setCurrentNode(node);\n     \n          _this.menu = Roo.factory(_this.menu);\n\n        _this.menu.show(node.ui.textNode, 'tr');\n     return;\n     \n     /*\n    var xt = node.elConfig.xtype;\n    var altx= false;\n    if (typeof(node.elConfig['*prop']) != 'undefined') {\n        altx = node.parentNode.elConfig.xtype +'.' + node.elConfig['*prop'];\n    }\n    var mn = Pman.Tab.BuilderPalete.getMenu(xt,altx);\n    \n    \n    if (mn) {\n        mn.show(e.getTarget());\n    }\n    \n */\n\n}",
                                         "nodedragover": "function (e)\n{\n    \n        return Pman.Builder.Tree.handleDragOver(e);      \n \n     \n   \n}   \n    "
                                     },
