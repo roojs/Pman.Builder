@@ -232,51 +232,59 @@ Pman.Builder.Tree = {
         
         
     },
-    loadTree : function(o) {
-        this.clearAll();
-        this.root.elConfig = o;
-        this.root.setText(this.configToText(this.root.elConfig));
-        this.appendNode(this.root, o.items[0]);
-        this.root.expand(true);
+    loadTree : function(o)
+    {
+        var tree = Pman.Tab.BuilderTree.tree;
+        tree.clearAll();
+        tree.root.elConfig = o;
+        tree.root.setText(this.configToText(tree.root.elConfig));
+        this.appendNode(tree.root, o.items[0]);
+        tree.root.expand(true);
         Pman.Tab.BuilderView.panel.redraw();
-        this.setCurrentNode(this.root,true);
-        },
-        nodeXtype : function(n) {
-         if (!n) {return ''; }
+        this.setCurrentNode(tree.root,true);
+    },
+    nodeXtype : function(n)
+    {
+        var tree = Pman.Tab.BuilderTree.tree;
+        if (!n) {return ''; }
         var xt = n.elConfig.xtype ||  '';
         var xns= n.elConfig['|xns'] ||   '';
         xns += xns.length ? '.' : '';
         return xns + xt;
-        },
-        setCurrentNode : function(node,select) {
-            this.currentNode = node || this.root;
-            
-            //Pman.Tab.BuilderView.highlightElement(this.currentNode);
+    },
+    setCurrentNode : function(node,select)
+    {
+        var tree = Pman.Tab.BuilderTree.tree;
         
-            var p = Pman.Tab.BuilderProps.grid;
-            if (p) { //may not be ready yet..
-                p.setCurrrentNode(this.currentNode);
-            }
+        this.currentNode = node || tree.root;
             
-          
-            this.currentNode.setText(this.configToText(this.currentNode.elConfig));
-            
-            if (select) { //&& node !== this.tree.root) {
-                if (this.currentNode !== this.root)  {
-                         this.currentNode.ensureVisible();
-                  }   
-                 this.currentNode.expand(false,false);
-                this.currentNode.select();
+        //Pman.Tab.BuilderView.highlightElement(this.currentNode);
+    
+        var p = Pman.Tab.BuilderProps.grid;
+        if (p) { //may not be ready yet..
+            p.setCurrrentNode(this.currentNode);
+        }
+        
+      
+        this.currentNode.setText(this.configToText(this.currentNode.elConfig));
+        
+        if (select) { //&& node !== this.tree.root) {
+            if (this.currentNode !== tree.root)  {
+                     this.currentNode.ensureVisible();
+              }   
+             this.currentNode.expand(false,false);
+            this.currentNode.select();
         }
         // update palete..
         Pman.Tab.BuilderPalette.grid.getSelectionModel().clearSelections();
         Pman.Tab.BuilderPalette.grid.view.refresh();
         
-        },
-        toJS : function(n)
-        {
+    },
+    toJS : function(n)
+    {
         if (!n) {
-            return this.toJS(this.root);
+            var tree = Pman.Tab.BuilderTree.tree;
+            return this.toJS(tree.root);
         }
         var _this = this;
         var ret = this.cloneConfig(n.elConfig);
@@ -290,7 +298,7 @@ Pman.Builder.Tree = {
         return ret;
           
          
-        },
+    },
     
     
 }
