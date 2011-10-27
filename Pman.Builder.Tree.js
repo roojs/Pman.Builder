@@ -160,6 +160,20 @@ Pman.Builder.Tree = {
             items: [] 
         };
     },
+    
+    replaceCurrentNode : function(cfg)
+    {
+        var tree = Pman.Tab.BuilderTree.tree;
+
+        if (this.currentNode == tree.root) {
+            return false;
+        }
+        var pn = this.currentNode.parentNode;
+        
+         var ix = pn.indexOf(this.currentNode);
+        
+    },
+    
     deleteCurrent : function()
     {
         
@@ -174,7 +188,7 @@ Pman.Builder.Tree = {
         
         var pn = this.currentNode.parentNode;
         
-        
+        // work out if we make the next or parent the 'current node'
         var ix = pn.indexOf(this.currentNode);
         //  console.log(ix);
         pn.removeChild(this.currentNode);
