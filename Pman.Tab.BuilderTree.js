@@ -171,9 +171,23 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                 Roo.MessageBox.alert("Sorry", "No configuration exists for " + str);
                                                 return;
                                             }
+                                            
+                                            
                                             var cfg = Roo.decode(cn.elConfig['.builderCfg']);
                                             Roo.log(cfg);
-                                            
+                                            Pman.Dialog.BuilderAddTable.show( 
+                                                cfg,       
+                                               function(data) {
+                                        
+                                                    var cls = data['|xns'] + '.' + data['xtype'];
+                                                    
+                                                    var res = Pman.Builder.Wizard[cls](data); // with old..
+                                                    
+                                        
+                                               });
+                                        
+                                           
+                                            // otherwise, call back with template??
                                             
                                            
                                            
