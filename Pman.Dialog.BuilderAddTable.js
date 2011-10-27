@@ -39,6 +39,7 @@ Pman.Dialog.BuilderAddTable = {
             closable : false,
             collapsible : false,
             height : 500,
+            modal : true,
             resizable : false,
             title : "Select columns to use",
             width : 700,
