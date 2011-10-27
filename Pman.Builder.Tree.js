@@ -47,6 +47,7 @@ Pman.Builder.Tree = {
         switch(point) {
             case 'above':
                 parent.parentNode.insertBefore(newNode, parent);
+                parent.parentNode.expand(true);
                 break;
             case 'below':
                 // if it's the last node.. then we append..
@@ -57,11 +58,13 @@ Pman.Builder.Tree = {
                 }
                 var bef = parent.parentNode.childNodes[ix];
                 parent.parentNode.insertBefore(newNode, bef);
+                parent.parentNode.expand(true);
                 break;
             
             case 'append':
             default:    
                 parent.appendChild(newNode);
+                parent.expand(true);
                 break;
         }
             
