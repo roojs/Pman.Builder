@@ -99,6 +99,12 @@ Pman.Dialog.BuilderAddTable = {
                                     }
                                     options.params = options.params || {};
                                     options.params.table = _this.data.table;
+                                },
+                                load : function (_self, records, options)
+                                {
+                                        // after load, if we have configuration already, overlay that 
+                                        
+                                        
                                 }
                             },
                             remoteSort : true,
