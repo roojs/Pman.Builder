@@ -182,7 +182,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                     var cls = data['|xns'] + '.' + data['xtype'];
                                                     
                                                     var res = Pman.Builder.Wizard[cls](data); // with old..
-                                                    
+                                                     Pman.Builder.Tree.replaceCurrentNode( res );
+                                        
                                          
                                                }
                                             );
