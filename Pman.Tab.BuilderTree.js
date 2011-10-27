@@ -177,14 +177,15 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             Roo.log(cfg);
                                             Pman.Dialog.BuilderAddTable.show( 
                                                 cfg,       
-                                               function(data) {
+                                                function(data) {
                                         
                                                     var cls = data['|xns'] + '.' + data['xtype'];
                                                     
                                                     var res = Pman.Builder.Wizard[cls](data); // with old..
                                                     
-                                        
-                                               });
+                                         
+                                               }
+                                            );
                                         
                                            
                                             // otherwise, call back with template??
