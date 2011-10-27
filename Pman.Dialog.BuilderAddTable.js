@@ -104,11 +104,23 @@ Pman.Dialog.BuilderAddTable = {
                                 load : function (_self, records, options)
                                 {
                                     // after load, if we have configuration already, overlay that 
-                                    if (typeof(this.data.cols) == 'undefined') {
+                                    if (typeof(_this.data.cols) == 'undefined') {
                                         return;
                                     }
-                                       
-                                        
+                                    var cmap = {}
+                                    Roo.each(_this.data.cols, function (col) {
+                                        cmap[col.column] = col;
+                                    
+                                    });
+                                    Roo.each(records, function (col) {
+                                        if (typeof(cmap[col.data.column]) == 'undefined') {
+                                            return;
+                                        }
+                                        col.set('use', cmap[col.data.column].use);
+                                        col.set('use_ex', cmap[col.data.column].use_ex);
+                                        // what about descption..
+                                    });
+                                      
                                         
                                         
                                 }

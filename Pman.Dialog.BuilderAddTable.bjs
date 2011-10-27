@@ -51,7 +51,7 @@
                                 {
                                     "listeners": {
                                         "beforeload": "function (_self, options)\n{\n    if (typeof(_this.data) == 'undefined') {\n        return false;\n    \n    }\n    options.params = options.params || {};\n    options.params.table = _this.data.table;\n}",
-                                        "load": "function (_self, records, options)\n{\n    // after load, if we have configuration already, overlay that \n    if (typeof(this.data.cols) == 'undefined') {\n        return;\n    }\n       \n        \n        \n        \n}"
+                                        "load": "function (_self, records, options)\n{\n    // after load, if we have configuration already, overlay that \n    if (typeof(_this.data.cols) == 'undefined') {\n        return;\n    }\n    var cmap = {}\n    Roo.each(_this.data.cols, function (col) {\n        cmap[col.column] = col;\n    \n    });\n    Roo.each(records, function (col) {\n        if (typeof(cmap[col.data.column]) == 'undefined') {\n            return;\n        }\n        col.set('use', cmap[col.data.column].use);\n        col.set('use_ex', cmap[col.data.column].use_ex);\n        // what about descption..\n    });\n      \n        \n        \n}"
                                     },
                                     "*prop": "dataSource",
                                     "remoteSort": true,
