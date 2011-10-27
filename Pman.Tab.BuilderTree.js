@@ -183,7 +183,7 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                                     
                                                     var res = Pman.Builder.Wizard[cls](data); // with old..
                                                      Pman.Builder.Tree.replaceCurrentNode( res );
-                                        
+                                                     Pman.Tab.BuilderView.panel.redraw();
                                          
                                                }
                                             );
