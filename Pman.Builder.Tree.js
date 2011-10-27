@@ -170,8 +170,23 @@ Pman.Builder.Tree = {
         }
         var pn = this.currentNode.parentNode;
         
-         var ix = pn.indexOf(this.currentNode);
+        var ix = pn.indexOf(this.currentNode);
+        pn.removeChild(this.currentNode);
+          
+        if (!pn.childNodes.length) {
+            this.appendNode(pn, cfg, 'append')
+            return true;
+        }
+        if (!ix) {
+            // first..
+            this.appendNode(pn.childNodes[0], cfg, 'before');
+            return true;
         
+        }
+        this.appendNode(pn.childNodes[ix-1], cfg, 'after');
+        
+        
+        return true;
     },
     
     deleteCurrent : function()
