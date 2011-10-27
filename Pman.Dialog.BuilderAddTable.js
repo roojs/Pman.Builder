@@ -102,7 +102,12 @@ Pman.Dialog.BuilderAddTable = {
                                 },
                                 load : function (_self, records, options)
                                 {
-                                        // after load, if we have configuration already, overlay that 
+                                    // after load, if we have configuration already, overlay that 
+                                    if (typeof(this.data.cols) == 'undefined') {
+                                        return;
+                                    }
+                                       
+                                        
                                         
                                         
                                 }

@@ -50,7 +50,7 @@
                                 {
                                     "listeners": {
                                         "beforeload": "function (_self, options)\n{\n    if (typeof(_this.data) == 'undefined') {\n        return false;\n    \n    }\n    options.params = options.params || {};\n    options.params.table = _this.data.table;\n}",
-                                        "load": "function (_self, records, options)\n{\n        // after load, if we have configuration already, overlay that \n        \n        \n}"
+                                        "load": "function (_self, records, options)\n{\n    // after load, if we have configuration already, overlay that \n    if (typeof(this.data.cols) == 'undefined') {\n        return;\n    }\n       \n        \n        \n        \n}"
                                     },
                                     "*prop": "dataSource",
                                     "remoteSort": true,
