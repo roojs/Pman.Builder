@@ -352,7 +352,8 @@ Pman.Builder.Tree = {
                 Pman.Dialog.BuilderAdd.show( cfg , function(fdata ) {
      
                     _t.appendNode(e.target, fdata , e.point);
-    
+                     Pman.Tab.BuilderView.panel.redraw();
+             
                  });
                  return false;
              }
