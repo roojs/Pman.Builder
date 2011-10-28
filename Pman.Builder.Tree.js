@@ -471,8 +471,8 @@ Pman.Builder.Tree = {
                    e.cancel = false;
                    _t.dragProp = (n == new_parent) ?  '' : n.split(':').pop();
                    return true;
-               }
-               return false;
+                }
+               return null;
             });
    
            // done all the checks...
