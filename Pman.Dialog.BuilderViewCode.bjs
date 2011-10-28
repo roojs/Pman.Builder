@@ -39,6 +39,12 @@
                     "|xns": "Roo"
                 },
                 {
+                    "listeners": {
+                        "|activate": "function (_self)\n{\n_this.previewContentPanel = _self;\n}"
+                    },
+                    "autoScroll": true,
+                    "background": false,
+                    "fitToFrame": true,
                     "region": "center",
                     "xtype": "ContentPanel",
                     "|xns": "Roo"
