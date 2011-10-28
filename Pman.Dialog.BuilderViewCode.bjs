@@ -21,9 +21,10 @@
             "|xns": "Roo",
             "items": [
                 {
-                    "xtype": "LayoutRegion",
                     "*prop": "center",
+                    "tabPosition": "Top",
                     "titlebar": false,
+                    "xtype": "LayoutRegion",
                     "|xns": "Roo"
                 },
                 {
