@@ -30,10 +30,6 @@ Pman.Dialog.BuilderSourceEdit = {
         this.dialog = Roo.factory({
             xtype: 'LayoutDialog',
             xns: Roo,
-            background : true,
-            width : 400,
-            height : 500,
-            collapsible : false,
             listeners : {
                 show : function (dlg)
                 {
@@ -61,9 +57,13 @@ Pman.Dialog.BuilderSourceEdit = {
                 
                 }
             },
+            background : true,
             closable : false,
-            title : "Source Code Edit",
+            collapsible : false,
+            height : 500,
             modal : true,
+            title : "Source Code Edit",
+            width : 400,
             items : [
                 {
                     xtype: 'ContentPanel',

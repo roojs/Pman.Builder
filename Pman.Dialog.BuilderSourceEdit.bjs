@@ -6,18 +6,18 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderSourceEdit.bjs",
     "items": [
         {
-            "xtype": "LayoutDialog",
-            "background": true,
-            "width": 400,
-            "height": 500,
-            "collapsible": false,
             "listeners": {
                 "|show": "function (dlg)\n{\n    _this.dialog = dlg;\n    _this.dialog.layout.getRegion('south').collapse();\n    \n    if (!_this.help) {\n       _this.dialog.layout.getRegion('south').showPanel(0);\n       _this.help = _this.dialog.layout.getRegion('south').getPanel(0).el.createChild( {tag: 'iframe',  src : Roo.rootURL + 'docs'});\n       \n    }\n    if (_this.isBuilder) {\n        return;\n    }\n\n    dlg.getLayout().beginUpdate();\n    var w = Roo.lib.Dom.getViewWidth();\n    var h = Roo.lib.Dom.getViewHeight();\n    dlg.resizeTo( w - 70, h - 70);\n    dlg.moveTo(35,35);\n    var val = _this.form.findField('value');\n    val.setSize(w-100, h-170);\n    dlg.getLayout().endUpdate();\n    this.setTitle('Callback for ' + _this.data.title);\n\n}"
             },
+            "background": true,
             "closable": false,
-            "title": "Source Code Edit",
-            "|xns": "Roo",
+            "collapsible": false,
+            "height": 500,
             "modal": true,
+            "title": "Source Code Edit",
+            "width": 400,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo",
             "items": [
                 {
                     "xtype": "LayoutRegion",
