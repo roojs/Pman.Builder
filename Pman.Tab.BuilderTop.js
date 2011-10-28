@@ -364,6 +364,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         {
                                            Pman.Builder.save(
                                              function(data) {
+                                             Roo.log("JSON GOT");
+                                                  Roo.log(data);
                                                  Pman.Dialog.BuilderViewCode.show(data ); 
                                                     
                                         
