@@ -39,7 +39,7 @@ Pman.Dialog.BuilderViewCode = {
                     _this.dialog = _self;        
                     this.getLayout().beginUpdate();
                      
-                    _this.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
+                    this.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
                     this.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));
                  
                     
