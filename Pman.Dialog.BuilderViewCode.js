@@ -88,7 +88,8 @@ Pman.Dialog.BuilderViewCode = {
                 },
                 {
                     xtype: 'ContentPanel',
-                    xns: Roo
+                    xns: Roo,
+                    region : 'center'
                 }
             ],
             center : {
