@@ -210,7 +210,11 @@ Pman.Dialog.BuilderAddTable = {
                                 dataIndex : 'table',
                                 header : 'Table',
                                 width : 100,
-                                renderer : function(v) { return String.format('{0}', v); }
+                                renderer : function(v) { 
+                                
+                                    return String.format('{0}', v == _this.data.table ? v : ('...' + v));
+                                    
+                                 }
                             },
                             {
                                 xtype: 'ColumnModel',
