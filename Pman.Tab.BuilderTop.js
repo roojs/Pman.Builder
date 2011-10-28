@@ -350,7 +350,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                              Pman.Builder.Tree.save(false,0);
+                                              Pman.Builder.save(false,0);
                                         }
                                     },
                                     text : "Save a copy as",
