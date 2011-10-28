@@ -363,8 +363,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                         click : function (_self, e)
                                         {
                                            Pman.Builder.save(
-                                             function() {
-                                                 Pman.Dialog.BuilderViewCode.show({ id : _this.filesel.getValue() } ); 
+                                             function(data) {
+                                                 Pman.Dialog.BuilderViewCode.show(data ); 
                                                     
                                         
                                           } );
