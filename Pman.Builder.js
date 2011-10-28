@@ -63,7 +63,7 @@ Pman.Builder = {
             return;
         }
      
-        var  sid = (typeof(sid) == 'undefined') ? 
+        sid = (typeof(sid) == 'undefined') ? 
              (Pman.Tab.BuilderTop.filesel.lastData ? Pman.Tab.BuilderTop.filesel.lastData.id : 0) : sid;
         
 
