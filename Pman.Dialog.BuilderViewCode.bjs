@@ -44,7 +44,7 @@
                         "|activate": "function (_self)\n{\n_this.jsonContentPanel = _self;\n}"
                     },
                     "autoScroll": true,
-                    "background": true,
+                    "background": false,
                     "fitToFrame": true,
                     "region": "center",
                     "title": "JSON",
