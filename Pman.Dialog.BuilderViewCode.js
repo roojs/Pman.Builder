@@ -37,15 +37,15 @@ Pman.Dialog.BuilderViewCode = {
                        return;
                     }
                     _this.dialog = _self;        
-                    _this.dialog.getLayout().beginUpdate();
+                    this.getLayout().beginUpdate();
                      
-                    _this.dialog.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
-                    _this.dialog.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));
+                    _this.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
+                    this.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));
                  
                     
-                    _this.dialog.moveTo(35,35);
+                    this.moveTo(35,35);
                     
-                    _this.dialog.getLayout().endUpdate();
+                    this.getLayout().endUpdate();
                     
                     _this.previewContentPanel.setContent(
                         '<PRE>' + Roo.util.Format.htmlEncode(_this.data.jsource) + '</PRE>'
@@ -57,7 +57,7 @@ Pman.Dialog.BuilderViewCode = {
                         '<PRE>' + Roo.util.Format.htmlEncode(_this.data.json) + '</PRE>'
                     );
                        
-                            
+                       this.layout.showPanel(0)     
                 }
             },
             background : true,
