@@ -38,23 +38,28 @@ Pman.Dialog.BuilderViewCode = {
                     }
                     _this.dialog = _self;        
                     _this.dialog.getLayout().beginUpdate();
-                             
-                            _this.dialog.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
-                            _this.dialog.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));
-                         
+                     
+                    _this.dialog.resizeTo( Roo.lib.Dom.getViewWidth() - 70, Roo.lib.Dom.getViewHeight() - 70);
+                    _this.dialog.getLayout().getRegion('center').resizeTo(Roo.lib.Dom.getViewWidth() - ( 70 + 50 ));
+                 
+                    
+                    _this.dialog.moveTo(35,35);
+                    
+                    _this.dialog.getLayout().endUpdate();
+                    
+                    _this.previewContentPanel.setContent(
+                        '<PRE>' + Roo.util.Format.htmlEncode(_this.data.jsource) + '</PRE>'
+                    );
+                        
+                    
+                    _this.previewContentPanel.load({
+                        url: baseURL + '/Roo/Code.php',
+                        method: 'GET',
+                        params: {
+                            id: _this.data.id
                             
-                            _this.dialog.moveTo(35,35);
-                            
-                            _this.dialog.getLayout().endUpdate();
-                            
-                            _this.previewContentPanel.load({
-                                url: baseURL + '/Builder/Code.php',
-                                method: 'GET',
-                                params: {
-                                    id: _this.data.id
-                                    
-                                }
-                            });
+                        }
+                    });
                             
                 }
             },
