@@ -97,7 +97,7 @@ Pman.Dialog.BuilderViewCode = {
                         }
                     },
                     autoScroll : true,
-                    background : false,
+                    background : true,
                     fitToFrame : true,
                     region : 'center',
                     title : "JSON"
