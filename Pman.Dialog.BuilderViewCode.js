@@ -84,7 +84,8 @@ Pman.Dialog.BuilderViewCode = {
                     autoScroll : true,
                     background : false,
                     fitToFrame : true,
-                    region : 'center'
+                    region : 'center',
+                    title : "Javascript"
                 },
                 {
                     xtype: 'ContentPanel',

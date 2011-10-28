@@ -35,6 +35,7 @@
                     "background": false,
                     "fitToFrame": true,
                     "region": "center",
+                    "title": "Javascript",
                     "xtype": "ContentPanel",
                     "|xns": "Roo"
                 },
