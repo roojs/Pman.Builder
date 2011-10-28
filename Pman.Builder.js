@@ -54,7 +54,7 @@ Pman.Builder = {
      * 
      */
  
-    save : function() 
+    save : function(cb, sid) 
     {
        // first see if first element has a name.. - we can not save otherwise..
         var t = Pman.Tab.BuilderTree.tree;
@@ -90,6 +90,9 @@ Pman.Builder = {
             success : function(data) {
                 // set the fileSel!!
                 console.log(data);
+                    if (cb) {
+//                        cb.call(_this,data);
+//                  }
                 //if (data) {
                 //    _this.filesel.setFromData(data);
 //                    if (cb) {
