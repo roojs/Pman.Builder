@@ -41,7 +41,7 @@
                 },
                 {
                     "listeners": {
-                        "|activate": "function (_self)\n{\n_this.previewContentPanel = _self;\n}"
+                        "|activate": "function (_self)\n{\n_this.jsonContentPanel = _self;\n}"
                     },
                     "autoScroll": true,
                     "background": true,

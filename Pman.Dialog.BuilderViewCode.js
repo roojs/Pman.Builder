@@ -93,7 +93,7 @@ Pman.Dialog.BuilderViewCode = {
                     listeners : {
                         activate : function (_self)
                         {
-                        _this.previewContentPanel = _self;
+                        _this.jsonContentPanel = _self;
                         }
                     },
                     autoScroll : true,
