@@ -47,6 +47,7 @@
                     "background": false,
                     "fitToFrame": true,
                     "region": "center",
+                    "title": "JSON",
                     "xtype": "ContentPanel",
                     "|xns": "Roo"
                 },
