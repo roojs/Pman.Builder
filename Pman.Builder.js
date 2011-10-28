@@ -90,9 +90,9 @@ Pman.Builder = {
             success : function(data) {
                 // set the fileSel!!
                 console.log(data);
-                    if (cb) {
-//                        cb.call(_this,data);
-//                  }
+                if (cb) {
+                     cb.call(_this,data);
+                }
                 //if (data) {
                 //    _this.filesel.setFromData(data);
 //                    if (cb) {
