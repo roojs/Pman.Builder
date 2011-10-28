@@ -90,16 +90,15 @@ Pman.Builder = {
             success : function(data) {
                 // set the fileSel!!
                 console.log(data);
+                if (data) {
+                    Pman.Tab.BuilderTop.filesel.setFromData(data);
+                    
+                }
                 if (data && cb) {
                      cb.call(_this,data);
+                    // ??? _this.postCode(data);
                 }
-                //if (data) {
-                //    _this.filesel.setFromData(data);
-//                    if (cb) {
-//                        cb.call(_this,data);
-  //                  }
-//                    _this.postCode(data);
-//                }
+
             }
         });
 }
