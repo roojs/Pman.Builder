@@ -95,7 +95,7 @@ Pman.Dialog.BuilderViewCode = {
             center : {
                 xtype: 'LayoutRegion',
                 xns: Roo,
-                tabPosition : 'Top',
+                tabPosition : 'top',
                 titlebar : false
             },
             buttons : [
