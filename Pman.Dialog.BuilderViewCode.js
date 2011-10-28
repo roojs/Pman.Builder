@@ -52,14 +52,11 @@ Pman.Dialog.BuilderViewCode = {
                     );
                         
                     
-                    _this.previewContentPanel.load({
-                        url: baseURL + '/Roo/Code.php',
-                        method: 'GET',
-                        params: {
-                            id: _this.data.id
-                            
-                        }
-                    });
+                      
+                    _this.jsonContentPanel.setContent(
+                        '<PRE>' + Roo.util.Format.htmlEncode(_this.data.json) + '</PRE>'
+                    );
+                       
                             
                 }
             },
