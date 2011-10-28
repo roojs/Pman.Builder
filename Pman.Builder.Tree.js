@@ -465,7 +465,8 @@ Pman.Builder.Tree = {
            this.dragProp = '';
            var _t = this;
            Roo.each(ok_parents, function(n) {
-               if (n == new_parent || n.split(':').shift() == new_parent) {
+                Roo.log("compare "+n+" ? " + new_parent);
+                if (n == new_parent || n.split(':').shift() == new_parent) {
                    Roo.log("got match!");
                    e.cancel = false;
                    _t.dragProp = (n == new_parent) ?  '' : n.split(':').pop();
