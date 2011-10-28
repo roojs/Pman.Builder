@@ -75,16 +75,16 @@ Pman.Dialog.BuilderViewCode = {
                 {
                     xtype: 'ContentPanel',
                     xns: Roo,
-                    background : false,
-                    fitToFrame : true,
-                    region : 'center',
                     listeners : {
                         activate : function (_self)
                         {
                         _this.previewContentPanel = _self;
                         }
                     },
-                    autoScroll : true
+                    autoScroll : true,
+                    background : false,
+                    fitToFrame : true,
+                    region : 'center'
                 }
             ],
             center : {
