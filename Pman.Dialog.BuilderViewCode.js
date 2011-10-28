@@ -65,7 +65,7 @@ Pman.Dialog.BuilderViewCode = {
             collapsible : false,
             height : 400,
             modal : true,
-            resizable : false,
+            resizable : true,
             title : "View Generated Code",
             width : 400,
             items : [
