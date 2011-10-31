@@ -48,7 +48,14 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         }
     }
     
-    
+    function module()
+    {
+        $m = DB_DataObject::Factory('builder_modules');
+        $m->get($this->module_id);
+        return $m;
+        
+        
+    }
 
     
     function onInsert($req,$roo)
