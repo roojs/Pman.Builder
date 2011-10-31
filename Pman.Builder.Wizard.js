@@ -485,7 +485,7 @@ Pman.Builder.Wizard = {
     
     },
     
-    'Roo.form.TextField' : function(rcfg, old)
+    'Roo.form.NumberField' : function(rcfg, old)
     {
         var desc = rcfg.columnshort;
         if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
@@ -498,7 +498,7 @@ Pman.Builder.Wizard = {
         }
         
         return { 
-            xtype : 'TextField',
+            xtype : 'NumberField',
             '|xns' : 'Roo.form',
             fieldLabel : desc,
             name : rcfg.column,
