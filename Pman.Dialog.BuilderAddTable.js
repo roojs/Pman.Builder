@@ -235,6 +235,20 @@ Pman.Dialog.BuilderAddTable = {
                             {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
+                                dataIndex : 'column',
+                                header : 'Column',
+                                width : 150,
+                                renderer : function(v,x,r) { 
+                                    if (r.data.table == _this.data.table) {
+                                    
+                                        return String.format('<B>{0}</B>', v); 
+                                    }
+                                    return String.format('.....{0}', r.data.columnshort); 
+                                }
+                            },
+                            {
+                                xtype: 'ColumnModel',
+                                xns: Roo.grid,
                                 dataIndex : 'ctype',
                                 header : 'Type',
                                 width : 50,
