@@ -87,6 +87,7 @@ Pman.Dialog.BuilderAddTable = {
                             }
                         },
                         autoExpandColumn : 'desc',
+                        clicksToEdit : 1,
                         loadMask : true,
                         dataSource : {
                             xtype: 'Store',

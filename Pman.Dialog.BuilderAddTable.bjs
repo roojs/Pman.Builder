@@ -44,6 +44,7 @@
                             },
                             "*prop": "grid",
                             "autoExpandColumn": "desc",
+                            "clicksToEdit": 1,
                             "loadMask": true,
                             "xtype": "EditorGrid",
                             "|xns": "Roo.grid",
