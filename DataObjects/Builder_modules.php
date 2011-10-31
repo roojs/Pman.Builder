@@ -200,6 +200,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     function checkURL($u)
     {
         if (!preg_match('#^(http|https):/#i', $u)) {
+            var_dump($u);exit;
             return true;
         }
          $curl = System::which('curl');
