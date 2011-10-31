@@ -229,7 +229,7 @@ Pman.Dialog.BuilderAddTable = {
                                     
                                         return String.format('<B>{0}</B>', v); 
                                     }
-                                    return String.format('.....{0}', r.data.columnshort); 
+                                    return String.format('{0}.{0}', r.data.table, r.data.columnshort); 
                                 }
                             },
                             {
