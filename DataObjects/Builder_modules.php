@@ -134,12 +134,12 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     {
         // using the path determine 
         $path = $this->path;
-        var_dump($path);
-        var_dump(file_exists($path.'/.git'));
+        //var_dump($path);
+        //var_dump(file_exists($path.'/.git'));
         
         while (!file_exists($path.'/.git')) {
             $path = dirname($path);
-            var_dump($path);
+            //var_dump($path);
             if (empty($path) || $path == '/') {
                 return false;
             }
@@ -159,7 +159,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             'url' => $url,
             'path' => $sub
         );
-        var_Dump($ret); //exit;
+        //var_Dump($ret); //exit;
         return $ret;
         
     }
@@ -200,7 +200,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     function checkURL($u)
     {
         if (!preg_match('#^(http|https):/#i', $u)) {
-            var_dump($u);exit;
+            //var_dump($u);exit;
             return true;
         }
          $curl = System::which('curl');
