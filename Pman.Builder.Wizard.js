@@ -371,6 +371,16 @@ Pman.Builder.Wizard = {
             ]
         };
     },
+    'Roo.form.Form' : function(rcfg, old)
+    {
+        // simple version to start with..
+        var _t = this;
+        
+        
+        
+    }
+    
+    
     
     
     
