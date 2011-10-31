@@ -48,6 +48,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
             $m->get($q['module_id']);
             $m->syncParts();
         }
+        DB_DataObject::debugLevel(1);
     }
     
     function module()
