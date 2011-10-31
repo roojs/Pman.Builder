@@ -567,8 +567,9 @@ Pman.Builder.Wizard = {
             }
             
         });
-        
+        var combofields = {
           
+        }
         var table = rfg.deps[0].table;
         
         // a reader...( basic as we do meta queries to get the real one..)
@@ -634,7 +635,7 @@ Pman.Builder.Wizard = {
                             '*prop' : 'reader',
                             'xtype' : 'JsonReader',
                             '|xns' : 'Roo.data',
-                            'id' : 'id',
+                            'id' : fcfg.maps_to,
                             'root' : 'data',
                             'totalProperty' : 'total',
                             '|fields' : JSON.stringify(combofields)
