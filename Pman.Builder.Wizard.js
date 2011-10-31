@@ -396,6 +396,7 @@ Pman.Builder.Wizard = {
                 }
                 return false;
             });
+            Roo.log("RETURN: " + cret);
             return cret;
         }
    
