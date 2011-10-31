@@ -320,7 +320,7 @@ Pman.Builder.Wizard = {
         
         
          
-        var formHeight = (frmCfg.items.length * 30) + 40; // work out from number of form ites..
+        var formHeight = (frmCfg.items.length * 40) + 40; // work out from number of form ites..
        
         return {
             xtype : 'LayoutDialog',
@@ -375,6 +375,23 @@ Pman.Builder.Wizard = {
     {
         // simple version to start with..
         var _t = this;
+        
+        var formElements = [];
+        var formHeight = 50;
+    for (var k in reader.form) {
+        if (k == 'id') { // should really do primary key testing..
+            continue;
+        }
+        formHeight += reader.form[k].xtype == 'TextArea' ? 100 : 30;
+        
+        formElements.push(reader.form[k]);
+    }
+    if (reader.form['id']) {
+        formElements.push(reader.form['id']);
+    }
+    
+
+        
         
         return {
             xtype : "Form",
