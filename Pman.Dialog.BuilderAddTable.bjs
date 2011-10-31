@@ -45,7 +45,7 @@
                             "*prop": "grid",
                             "autoExpandColumn": "desc",
                             "loadMask": true,
-                            "xtype": "Grid",
+                            "xtype": "EditorGrid",
                             "|xns": "Roo.grid",
                             "items": [
                                 {

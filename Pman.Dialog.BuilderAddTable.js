@@ -62,7 +62,7 @@ Pman.Dialog.BuilderAddTable = {
                     tableName : 'Images',
                     title : "Images",
                     grid : {
-                        xtype: 'Grid',
+                        xtype: 'EditorGrid',
                         xns: Roo.grid,
                         listeners : {
                             render : function() 
