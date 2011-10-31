@@ -117,7 +117,7 @@ class Pman_Builder_ERM extends Pman
         
         
     }
-    function createRet($do, $pref='')
+    function createRet($do, $pref='', $skip = '')
     {
         static  $cache = array();
         static  $types= array();
@@ -155,6 +155,9 @@ class Pman_Builder_ERM extends Pman
        
         $ret = array();
         foreach($do->table() as $k=>$ty) {
+            if ($k == $skip) {
+                continue;
+            }
             $ret[$k] = array(
                 'table' => $tn,
                 'column' => $pref . $k,
