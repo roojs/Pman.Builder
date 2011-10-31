@@ -383,17 +383,14 @@ Pman.Builder.Wizard = {
                 "|actioncomplete" : "function(_self,action)\n"+
                     "{\n"+
                     "    if (action.type == 'setdata') {\n"+
-                    "       //_this.dialog.el.mask(\"Loading\");\n"+
                     "       //this.load({ method: 'GET', params: { '_id' : _this.data.id }});\n"+
                     "       return;\n"+
                     "    }\n"+
                     "    if (action.type == 'load') {\n"+
-                    "        _this.dialog.el.unmask();\n"+
                     "        return;\n"+
                     "    }\n"+
                     "    if (action.type =='submit') {\n"+
                     "    \n"+
-                    "        _this.dialog.el.unmask();\n"+
                     "        _this.dialog.hide();\n"+
                     "    \n"+
                     "         if (_this.callback) {\n"+
