@@ -315,7 +315,7 @@ Pman.Builder.Wizard = {
         // simple version to start with..
         var _t = this;
         
-        var frmCfg =    _t['Roo.form.Form'](cfg, old);
+        var frmCfg =    _t['Roo.form.Form'](rcfg, old);
         
         // loop through the cols..
         // we need a 'display column' for each of these.
