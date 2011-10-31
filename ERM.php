@@ -99,8 +99,9 @@ class Pman_Builder_ERM extends Pman
             $kv = explode(':', $links[$c]);
             $ar = $this->createRet($dos[$c], $c . '_' . $kv[1] . '_');
             
+            $desc[$c]['deps'] = $ar;
             
-            $ret[] = $desc[$c]['deps'] = $ar;
+            $ret[] = $desc[$c];
             foreach($ar as $cn => $r) {
                 $ret[] = $r;
             }
