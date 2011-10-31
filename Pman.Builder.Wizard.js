@@ -461,15 +461,52 @@ Pman.Builder.Wizard = {
             items : formElements
         };
         
-    }
-    'Roo.form.TextField' : function(cc, old)
+    },
+    'Roo.form.TextField' : function(rcfg, old)
     {
+        var desc = rcfg.columnshort;
+        if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+            desc = desc.substring(rcfg.table.length+1);
+        }
+        desc = desc.replace(/_id$/, '');
         
+        if (!desc.length) {
+            desc = rcfg.column;
+        }
+        
+        return { 
+            xtype : 'TextField',
+            '|xns' : 'Roo.form',
+            fieldLabel : desc,
+            name : rcfg.column,
+            width : 200  
+        };
+    
+    
+    },
+    
+    'Roo.form.TextField' : function(rcfg, old)
+    {
+        var desc = rcfg.columnshort;
+        if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+            desc = desc.substring(rcfg.table.length+1);
+        }
+        desc = desc.replace(/_id$/, '');
+        
+        if (!desc.length) {
+            desc = rcfg.column;
+        }
+        
+        return { 
+            xtype : 'TextField',
+            '|xns' : 'Roo.form',
+            fieldLabel : desc,
+            name : rcfg.column,
+            width : 200  
+        };
     
     
     }
-    
-    
     
     
 }
