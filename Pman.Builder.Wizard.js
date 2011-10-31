@@ -564,6 +564,8 @@ Pman.Builder.Wizard = {
         var local_display= '';  // eg. company_id_name
         
         
+        // a reader...
+        
         
         return {
             '|xns' : 'Roo.form',
