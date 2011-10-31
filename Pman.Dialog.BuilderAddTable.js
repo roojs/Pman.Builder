@@ -107,6 +107,7 @@ Pman.Dialog.BuilderAddTable = {
                                     if (typeof(_this.data.cols) == 'undefined') {
                                         return;
                                     }
+                                    _this.data.cols_ex = _this.data.cols_ex || [];
                                     var cmap = {}
                                     Roo.each(_this.data.cols, function (col) {
                                         cmap[col.column] = col;
