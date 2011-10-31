@@ -119,12 +119,22 @@ class Pman_Builder_ERM extends Pman
     }
     function createRet($do, $pref='', $skip = '')
     {
-        static  $cache = array();
+        static  $desc = array();
         static  $types= array();
         $tn = $do->tableName();
 
+
+
+
+
         // get a description if available..
         if (!isset($desc[$tn])) {
+            
+            
+            
+            
+            
+            
             $desc[$tn] = array();
             $dd = clone($do);
             
@@ -139,7 +149,7 @@ class Pman_Builder_ERM extends Pman
                     c.table_schema = 'public' and c.table_name = '{$tn}'
             ");
             while($dd->fetch()) {
-                $cache[$tn][$dd->name] = $dd->desc;
+                $desc[$tn][$dd->name] = $dd->desc;
             }
             
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
