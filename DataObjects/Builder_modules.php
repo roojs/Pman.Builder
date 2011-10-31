@@ -176,7 +176,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         
         if (!$this->checkURL($url)) {
-            $pg->jerr("netrc authentication not set up for $url");
+            $pg->jerr("netrc authentication not set up for www-data to access  $url");
         }
         // var_dump($working);exit;
         if (file_exists($working)) {
