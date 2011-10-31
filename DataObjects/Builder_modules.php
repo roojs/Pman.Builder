@@ -173,6 +173,11 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         require_once 'System.php';
         $git = System::which('git');
+        
+        
+        if (!$this->checkURL($url)) {
+            $pg->jerr("netrc authentication not set up for $url");
+        }
         // var_dump($working);exit;
         if (file_exists($working)) {
             chdir($working);
@@ -185,7 +190,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         chdir (ini_get('session.save_path'));
         
         $cmd = "$git clone ". escapeshellarg($url) ." " . basename($working);
-        var_dump($cmd);exit;
+        
         `$cmd`;
         return $working;
     }
