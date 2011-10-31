@@ -611,7 +611,7 @@ Pman.Builder.Wizard = {
             
             // from remote..
             valueField : rcfg.maps_to,
-            displayField : name, 
+            displayField : display, 
             
             // from our table..
             hiddenName : rcfg.column, 
