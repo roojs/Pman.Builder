@@ -306,6 +306,67 @@ Pman.Builder.Wizard = {
             "|xns": "Roo.grid",
             "*prop": "colModel[]"
         };
-    }
+    },
+    
+    
+     
+    'Roo.LayoutDialog' : function(rcfg, old)
+    {
+        // simple version to start with..
+         
+        
+       
+        return {
+            xtype : 'LayoutDialog',
+            "|xns": "Roo.grid",
+            '.builderCfg' : Roo.encode(rcfg),
+            
+            closable : false,
+            collapsible: false,
+            modal : true,
+            height : formHeight,
+            resizable: false,
+            title: "Edit / Create " + rcfg.table,
+            width: 400,
+            
+            
+            items  : [
+                {
+                    "|xns": "Roo",
+                    "xtype": "LayoutRegion",
+                    "*prop": "center"
+                },
+                {
+                    "region": "center",
+                    "xtype": "ContentPanel",
+                    "|xns": "Roo",
+                    "items": [
+                        frmCfg
+                    ]
+                },
+                 {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    _this.dialog.hide();\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Cancel",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                },
+                {
+                    "listeners": {
+                        "click": "function (_self, e)\n{\n    // do some checks?\n     \n    \n    _this.dialog.el.mask(\"Saving\");\n    _this.form.doAction(\"submit\");\n\n}"
+                    },
+                    "*prop": "buttons[]",
+                    "text": "Save",
+                    "xtype": "Button",
+                    "|xns": "Roo"
+                }
+            ]
+        };
+    },
+    
+    
+    
     
 }
