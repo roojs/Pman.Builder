@@ -112,7 +112,7 @@ class Pman_Builder_ERM extends Pman
         static  $types= array();
         $tn = $do->tableName();
 
-        
+        // get a description if available..
         if (!isset($desc[$tn])) {
             $desc[$tn] = array();
             $dd = clone($do);
