@@ -141,8 +141,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     function toRooSingleArray()
     {
        // echo '<PRE>';print_R($this);exit;
-        $m  = $this->module();
-        
+     
         $ret = $this->toArray();
         
         return $ret;
