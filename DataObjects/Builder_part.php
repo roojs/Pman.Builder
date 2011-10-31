@@ -24,6 +24,8 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     public $id;                              // int(11)  not_null primary_key auto_increment
     public $name;                            // string(128)  not_null
     public $json;                            // blob(-1)  not_null blob
+    public $jsource;                            // blob(-1)  not_null blob
+
     public $module_id;                           // string(16)  not_null
     public $updated;                           // string(16)  not_null
  
