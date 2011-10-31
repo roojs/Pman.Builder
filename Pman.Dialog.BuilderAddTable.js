@@ -227,7 +227,7 @@ Pman.Dialog.BuilderAddTable = {
                                 renderer : function(v,x,r) { 
                                     if (r.data.table == _this.data.table) {
                                     
-                                        return String.format('{0}', v); 
+                                        return String.format('<B>{0}</B>', v); 
                                     }
                                     return String.format('.....{0}', r.data.columnshort); 
                                 }
