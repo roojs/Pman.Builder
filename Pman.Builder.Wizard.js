@@ -530,7 +530,7 @@ Pman.Builder.Wizard = {
      
     },
     
-    'Roo.form.Combobox' : function(rcfg, old)
+    'Roo.form.ComboBox' : function(rcfg, old)
     {
         /*
          * We need:
