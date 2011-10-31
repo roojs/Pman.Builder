@@ -605,7 +605,7 @@ Pman.Builder.Wizard = {
             
             width: 300,
             
-            tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+display + '}</b> </div>',  
+            tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+ display + '}</b> </div>',  
             queryParam : 'query['+display+']', 
             fieldLabel : desc,   
             valueField : 'id',
