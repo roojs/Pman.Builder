@@ -142,7 +142,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         }
         //$gpath = $path.'/.git';
         
-        $sub = substring($this->path, strlen($path) + 1);
+        $sub = substr($this->path, strlen($path) + 1);
         
         require_once 'System.php';
         $git = System::which('git');
