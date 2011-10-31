@@ -74,6 +74,9 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     function  writeEventFile($roo) 
     {
         
+        // try and commit it..
+        
+        
         $sp = ini_get('session.save_path').'/Builder/'.date('Y/m');
         if (!file_exists($sp)) {
             mkdir($sp, 0755, true);
