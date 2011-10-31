@@ -55,7 +55,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     function module()
     {
         DB_DataObject::debugLevel(1);
-        print_R($this);exit;
+        echo '<PRE>';print_R($this);exit;
         $m = DB_DataObject::Factory('builder_modules');
         $m->get($this->module_id);
         return $m;
