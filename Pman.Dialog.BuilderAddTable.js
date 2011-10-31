@@ -114,11 +114,12 @@ Pman.Dialog.BuilderAddTable = {
                                     
                                     });
                                     Roo.each(records, function (col) {
+                                        col.set('use_ex', _this.data.cols_ex.indexOf(col.data.column) > -1 ? 1 : 0);
                                         if (typeof(cmap[col.data.column]) == 'undefined') {
                                             return;
                                         }
-                                        col.set('use', cmap[col.data.column].use);
-                                        col.set('use_ex', _this.data.cols_ex.indexOf(col.data.column) > -1 ? 1 : 0);
+                                        col.set('use', 1);
+                                
                                         // what about descption..
                                     });
                                       
