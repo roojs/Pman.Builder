@@ -546,9 +546,7 @@ Pman.Builder.Wizard = {
          *
          */
         
-        var deps = rcfg.deps;
-        var maps_to = rcfg.deps;
-        var display = rcfg.display;
+        
         
         
         var desc = rcfg.columnshort;
@@ -561,9 +559,12 @@ Pman.Builder.Wizard = {
             desc = rcfg.column;
         }
         
+        var deps = rcfg.deps;
+        var maps_to = rcfg.deps;
+        var display = rcfg.display;
         
         
-        var remote_id = '';    // eg. comp_id_id
+        var remote_id = rcfg.deps;    // eg. comp_id_id
         var remote_display = ''; // (eg. 'name'
         var local_display= '';  // eg. company_id_name
         
