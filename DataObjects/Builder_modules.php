@@ -167,13 +167,13 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     function gitWorking($url)
     {
         $pg = HTML_FlexyFramework::get()->page;
-         $working = ini_get('session.save_path'). '/' .
+        $working = ini_get('session.save_path'). '/' .
                 urlencode($pg->authUser->email) . '-' .
                 urlencode($url);
         
         require_once 'System.php';
         $git = System::which('git');
-        
+        var_dump($working);
         if (file_exists($working)) {
             chdir($working);
             
@@ -183,7 +183,9 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         }
         // might take some time..
         chdir (ini_get('session.save_path'));
+        
         $cmd = "$git clone ". escapeshellarg($url) ." " . basename($working);
+        var_dump($working);exit;
         `$cmd`;
         return $working;
     }
