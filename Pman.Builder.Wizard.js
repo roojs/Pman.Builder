@@ -530,8 +530,22 @@ Pman.Builder.Wizard = {
      
     },
     
-    'Roo.form.DateField' : function(rcfg, old)
+    'Roo.form.Combobox' : function(rcfg, old)
     {
+        /*
+         * We need:
+         *   localtable:
+         *      the column
+         *      table name.
+         *   remote table:
+         *      table name
+         *      column 'it maps to'
+         *      title column
+         *      
+         *      
+         *
+         */
+        
         var desc = rcfg.columnshort;
         if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
             desc = desc.substring(rcfg.table.length+1);
@@ -562,21 +576,22 @@ Pman.Builder.Wizard = {
             
             width: 300,
             
-            tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>', // SET WHEN USED
-            queryParam : 'query[{name}]', 
+            tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+display + }</b> </div>', // SET WHEN USED
+            queryParam : 'query['+display+']', 
             fieldLabel : desc,   
             valueField : 'id',
-            displayField : '', // SET WHEN USED eg. project_id_name
-            hiddenName : '', // SET WHEN USED eg. project_id
-            name : '', // SET WHEN USED eg. project_id_name
+            displayField : name, // SET WHEN USED eg. project_id_name
+            hiddenName : rcfg.column, // SET WHEN USED eg. project_id
+            name : rcfg.colunn + '_' + display, // SET WHEN USED eg. project_id_name
             items : [
                 {
-                        
                     '*prop' : 'store',
-                    'xtype' : 'Store',
                     '|xns' : 'Roo.data',
-                    'remoteSort' : true,
                     '|sortInfo' : '{ direction : \'ASC\', field: \'id\' }',
+                    xtype : 'Store',
+                    
+                    remoteSort : true,
+                    
                     listeners : {
                         '|beforeload' : 'function (_self, o)' +
                         "{\n" +
