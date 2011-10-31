@@ -388,11 +388,14 @@ Pman.Builder.Wizard = {
             
             var ty = typeof(_t.typemap[cc.ctype]) == 'undefined' ? 'string' : _t.typemap[cc.ctype];
             
-            if (cc.ctype == 'string' ) {
+            if (ty == 'string' ) {
                 formElements.push( _t['Roo.form.TextField'](cc, {}));
                 return;
             }
-            
+            if (ty  == 'date' ) {
+                formElements.push( _t['Roo.form.DateField'](cc, {}));
+                return;
+            }
             
             
             fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
