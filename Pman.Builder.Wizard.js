@@ -407,6 +407,7 @@ Pman.Builder.Wizard = {
                 return;
             }
             if (ty  == 'int' ) {
+                cc.display = fcombo(cc.column);
                 formElements.push( _t['Roo.form.ComboBox'](cc, {}));
                 return;
             }
