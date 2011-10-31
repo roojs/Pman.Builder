@@ -31,7 +31,7 @@ Pman.Builder.Wizard = {
         'bigint' : 'int',
         'tinyint' : 'int',
         'smallint' : 'int',
-        'timestamp' : 'date',
+        'timestamp' : 'date', // for postgres... it's a data!??
         
         'double' : 'float',
         'decimal' : 'float',
