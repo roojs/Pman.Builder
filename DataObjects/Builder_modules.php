@@ -151,10 +151,12 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         $url = trim(`$git config --get remote.origin.url`);
         
-        return array(
+        $ret=  array(
             'url' => $url,
             'path' => $sub
         );
+        var_Dump($ret);exit;
+        return $ret;
         
     }
     
