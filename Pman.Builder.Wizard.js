@@ -635,7 +635,7 @@ Pman.Builder.Wizard = {
                             '*prop' : 'reader',
                             'xtype' : 'JsonReader',
                             '|xns' : 'Roo.data',
-                            'id' : fcfg.maps_to,
+                            'id' : rcfg.maps_to,
                             'root' : 'data',
                             'totalProperty' : 'total',
                             '|fields' : JSON.stringify(combofields)
