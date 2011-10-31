@@ -542,14 +542,70 @@ Pman.Builder.Wizard = {
             desc = rcfg.column;
         }
         
-        return { 
-            xtype : 'NumberField',
+        
+        return {
             '|xns' : 'Roo.form',
-            fieldLabel : desc,
-            name : rcfg.column,
-            width : 100,
-            format : 'Y-m-d'
-        };
+            xtype: 'ComboBox',
+            
+            allowBlank : false,
+            editable : false,
+            emptyText : 'Select ' + table,
+            forceSelection : true,
+            listWidth : 400,
+            loadingText: 'Searching...',
+            minChars : 2,
+            pageSize : 20,
+            qtip: 'Select ' + table,
+            selectOnFocus: true,
+            triggerAction : 'all',
+            typeAhead: true,
+            
+            width: 300,
+            
+            tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>', // SET WHEN USED
+            queryParam : 'query[{name}]', 
+            fieldLabel : desc,   
+            valueField : 'id',
+            displayField : '', // SET WHEN USED eg. project_id_name
+            hiddenName : '', // SET WHEN USED eg. project_id
+            name : '', // SET WHEN USED eg. project_id_name
+            items : [
+                {
+                        
+                    '*prop' : 'store',
+                    'xtype' : 'Store',
+                    '|xns' : 'Roo.data',
+                    'remoteSort' : true,
+                    '|sortInfo' : '{ direction : \'ASC\', field: \'id\' }',
+                    listeners : {
+                        '|beforeload' : 'function (_self, o)' +
+                        "{\n" +
+                        "    o.params = o.params || {};\n" +
+                        "    // set more here\n" +
+                        "}\n"
+                    },
+                    items : [
+                        {
+                            '*prop' : 'proxy',
+                            'xtype' : 'HttpProxy',
+                            'method' : 'GET',
+                            '|xns' : 'Roo.data',
+                            '|url' : "baseURL + '/Roo/" + table + ".php'",
+                        },
+                        
+                        {
+                            '*prop' : 'reader',
+                            'xtype' : 'JsonReader',
+                            '|xns' : 'Roo.data',
+                            'id' : 'id',
+                            'root' : 'data',
+                            'totalProperty' : 'total',
+                            '|fields' : JSON.stringify(combofields)
+                            
+                        }
+                    ]
+                }
+            ]
      
     }
     
