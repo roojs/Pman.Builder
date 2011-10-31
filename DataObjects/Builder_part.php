@@ -101,9 +101,9 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     {
         return $this->json;
         $data = json_decode($this->json);
-       
-        
-        
+        unset($data->xtype);
+        $data->title = isset($data->title) ? $data->title : $data->name;
+        return $data;
         
         
         
