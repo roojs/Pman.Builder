@@ -611,12 +611,12 @@ Pman.Builder.Wizard = {
             valueField : 'id',
             displayField : name, 
             hiddenName : rcfg.column, 
-            name : rcfg.colunn + '_' + display, 
+            name : rcfg.column + '_' + display, 
             items : [
                 {
                     '*prop' : 'store',
                     '|xns' : 'Roo.data',
-                    '|sortInfo' : '{ direction : \'ASC\', field: \'id\' }',
+                    '|sortInfo' : '{ direction : \'ASC\', field: \'' + display  +'\' }',
                     xtype : 'Store',
                     
                     remoteSort : true,
