@@ -302,7 +302,8 @@ Pman.Dialog.BuilderAddTable = {
                              _this.grid.ds.each(function(r) {
                              
                                 if (r.data.use*1) {
-                                    var d = Roo.apply({}, r.data.json);
+                                
+                                    var d = Roo.apply({}, r.json);
                                     Roo.apply(d, r.data);
                                     ret.cols.push(d);
                                         
