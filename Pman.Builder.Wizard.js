@@ -396,6 +396,10 @@ Pman.Builder.Wizard = {
                 formElements.push( _t['Roo.form.DateField'](cc, {}));
                 return;
             }
+            if (ty  == 'int' ) {
+                formElements.push( _t['Roo.form.ComboBox'](cc, {}));
+                return;
+            }
             
             
             fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
