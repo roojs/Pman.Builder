@@ -48,7 +48,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
             $m->get($q['module_id']);
             $m->syncParts();
         }
-        DB_DataObject::debugLevel(1);
+       
     }
     
     function module()
@@ -56,6 +56,16 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         $m = DB_DataObject::Factory('builder_modules');
         $m->get($this->module_id);
         return $m;
+        
+        
+    }
+    
+    function toRooArray()
+    {
+        $ret = $this->toArray();
+        
+        
+        return $ret;
         
         
     }
