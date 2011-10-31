@@ -546,7 +546,9 @@ Pman.Builder.Wizard = {
          *
          */
         
-        
+        var deps = rcfg.deps;
+        var maps_to = rcfg.deps;
+        var display = rcfg.display;
         
         
         var desc = rcfg.columnshort;
