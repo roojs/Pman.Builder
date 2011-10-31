@@ -227,11 +227,8 @@ Pman.Dialog.BuilderAddTable = {
                                 header : 'Title',
                                 width : 150,
                                 renderer : function(v,x,r) { 
-                                    if (r.data.table == _this.data.table) {
-                                    
-                                        return String.format('<B>{0}</B>', v); 
-                                    }
-                                    return String.format('.....{0}', r.data.columnshort); 
+                                     
+                                    return String.format('{0}', v); 
                                 },
                                 editor : {
                                     xtype: 'GridEditor',
