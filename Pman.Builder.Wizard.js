@@ -382,7 +382,16 @@ Pman.Builder.Wizard = {
         
         var formElements = [];
           
- 
+        var fcombo = function(cn) {
+            var cret = '';
+            Roo.each(rcfg.cols_ux, function(n) {
+                if (n.substring(0,cn.length) == cn) {
+                    cret = n;
+                    return true;
+                }
+            );
+            return cret;
+        }
    
         Roo.each(rcfg.cols, function(cc) {
             
