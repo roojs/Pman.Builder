@@ -485,7 +485,7 @@ Pman.Builder.Wizard = {
             '|xns' : 'Roo.form',
             fieldLabel : desc,
             name : rcfg.column,
-            width : 200  
+            width : 300  
         };
     
     
