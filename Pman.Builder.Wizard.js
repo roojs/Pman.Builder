@@ -384,7 +384,12 @@ Pman.Builder.Wizard = {
           
         var fcombo = function(cn) {
             var cret = '';
+            
             Roo.each(rcfg.cols_ex, function(n) {
+                
+                Roo.log(
+                        ['match' , n , 'to', cn, n.substring(0,cn.length) ].join(' ')
+                    );
                 if (n.substring(0,cn.length) == cn) {
                     cret = n;
                     return true;
