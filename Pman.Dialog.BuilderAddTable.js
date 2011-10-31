@@ -121,9 +121,17 @@ Pman.Dialog.BuilderAddTable = {
                                             return;
                                         }
                                         col.set('use', 1);
-                                        col.set('title', 
-                                            typeof(cmap[col.data.column].title) == 'undefined' ? '' : cmap[col.data.column].title
-                                        );
+                                        if (typeof(cmap[col.data.column].title) == 'undefined' ) {
+                                            if (col.data.columnshort.substr(0, col.data.table.length) == col.data.table) {
+                                                // it's prefixed with table name..
+                                                    col.set('title', col.data.columnshort.substr(col.data.table.length+1));
+                                            } else {
+                                                col.set('title', col.data.columnshort);
+                                            }
+                                        } else { 
+                                            col.set('title',  cmap[col.data.column].title);
+                                        }
+                                       
                                 
                                         // what about descption..
                                     });
