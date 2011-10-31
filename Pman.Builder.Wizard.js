@@ -559,15 +559,29 @@ Pman.Builder.Wizard = {
             desc = rcfg.column;
         }
         
+        // set the display column (from the remote table)
+        var display = rcfg.display;
+        Roo.each(rfg.deps, function(dn) {
+            if (dn.column == dn) {
+                display = dn.columnshort;
+            }
+            
+        });
+        
         var deps = rcfg.deps;
+        
+        
         var maps_to = rcfg.deps;
         var display = rcfg.display;
         
         
-        var remote_id = rcfg.deps;    // eg. comp_id_id
+        
+        
+        var remote_id = rcfg.column +'_' rcfg.deps;    // eg. comp_id_id
         var remote_display = ''; // (eg. 'name'
         var local_display= '';  // eg. company_id_name
         
+        var table = rfg.deps[0].table;
         
         // a reader...( basic as we do meta queries to get the real one..)
         
