@@ -42,7 +42,7 @@ Pman.Dialog.BuilderAddTable = {
             modal : true,
             resizable : false,
             title : "Select columns to use",
-            width : 700,
+            width : 900,
             items : [
                 {
                     xtype: 'GridPanel',

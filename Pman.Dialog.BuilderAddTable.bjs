@@ -15,7 +15,7 @@
             "modal": true,
             "resizable": false,
             "title": "Select columns to use",
-            "width": 700,
+            "width": 900,
             "xtype": "LayoutDialog",
             "|xns": "Roo",
             "items": [
