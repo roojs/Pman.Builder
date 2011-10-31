@@ -117,20 +117,20 @@ Pman.Dialog.BuilderAddTable = {
                                     Roo.each(records, function (col) {
                                         col.set('use_ex', _this.data.cols_ex.indexOf(col.data.column) > -1 ? 1 : 0);
                                 
-                                        if (typeof(cmap[col.data.column]) == 'undefined') {
-                                            return;
+                                        if (typeof(cmap[col.data.column]) != 'undefined') {
+                                
+                                            col.set('title',  typeof(cmap[col.data.column].title) == 'undefined' ? '' : cmap[col.data.column].title);
+                                            col.set('use', 1);
                                         }
-                                        col.set('use', 1);
-                                        if (typeof(cmap[col.data.column].title) == 'undefined' ) {
-                                            if (col.data.columnshort.substr(0, col.data.table.length) == col.data.table) {
+                                        if (!col.data.title.length) {
+                                        
+                                            if (col.data.columnshort.substring(0, col.data.table.length) == col.data.table) {
                                                 // it's prefixed with table name..
-                                                    col.set('title', col.data.columnshort.substr(col.data.table.length+1));
+                                                col.set('title', col.data.columnshort.substring(col.data.table.length+1));
                                             } else {
                                                 col.set('title', col.data.columnshort);
                                             }
-                                        } else { 
-                                            col.set('title',  cmap[col.data.column].title);
-                                        }
+                                        } 
                                        
                                 
                                         // what about descption..
