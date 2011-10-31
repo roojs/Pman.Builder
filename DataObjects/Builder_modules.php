@@ -204,7 +204,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             return true;
         }
          $curl = System::which('curl');
-         $cmd = "$cmd -n -I " . escapeshellarg($u);
+         $cmd = "$curl -n -I " . escapeshellarg($u);
         $res = `$cmd`;
         var_dump($res);exit;
         $lines = explode("\n", $res);
