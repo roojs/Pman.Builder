@@ -631,6 +631,7 @@ Pman.Builder.Wizard = {
                     ]
                 }
             ]
+        };
      
     }
     
