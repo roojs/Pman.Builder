@@ -138,15 +138,21 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         return $path.'/'. $this->module.'.js';
     }
     
+    
+    function toRooArraySingle()
+    {
+        echo '<PRE>';print_R($this);exit;
+        $m  = $this->module();
+        $m->gitCommit($this->name . '.bjs', $this->bjs());
+        
+    }
+    
     function toRooArray()
     {
         $ret = $this->toArray();
         
     
-        $m  = $this->module();
-        $m->gitCommit($this->name . '.bjs', $this->bjs());
-        
-        
+       
         return $ret;
         /*
         // update return the code.!!!
