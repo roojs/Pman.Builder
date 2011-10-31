@@ -568,11 +568,8 @@ Pman.Builder.Wizard = {
             
         });
         
-        var deps = rcfg.deps;
-        
-        
-        var maps_to = rcfg.deps;
-        var display = rcfg.display;
+         
+         
          
         var table = rfg.deps[0].table;
         
