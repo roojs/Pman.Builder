@@ -244,6 +244,10 @@ Pman.Dialog.BuilderAddTable = {
                                         return String.format('<B>{0}</B>', v); 
                                     }
                                     return String.format('.....{0}', r.data.columnshort); 
+                                },
+                                editor : {
+                                    xtype: 'GridEditor',
+                                    xns: Roo.grid
                                 }
                             },
                             {
