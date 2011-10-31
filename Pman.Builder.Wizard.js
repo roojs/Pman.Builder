@@ -568,7 +568,7 @@ Pman.Builder.Wizard = {
             
         });
         
-        var table = rfg.deps[0].table;
+        var table = rcfg.deps[0].table;
         
         // a reader...( basic as we do meta queries to get the real one..)
         
