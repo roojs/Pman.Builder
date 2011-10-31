@@ -31,7 +31,7 @@ Pman.Builder.Wizard = {
         'bigint' : 'int',
         'tinyint' : 'int',
         'smallint' : 'int',
-        'timestamp' : 'number',
+        'timestamp' : 'date',
         
         'double' : 'float',
         'decimal' : 'float',
