@@ -337,7 +337,7 @@ Pman.Builder.Wizard = {
             height : formHeight,
             resizable: true,
             title: "Edit / Create " + rcfg.table,
-            width: 400,
+            width: 500,
             
             
             items  : [
