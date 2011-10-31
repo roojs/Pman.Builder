@@ -128,7 +128,7 @@
                                     "header": "Table",
                                     "width": 100,
                                     "xtype": "ColumnModel",
-                                    "|renderer": "function(v) { \n\n    return String.format('{0}', v == _this.data.table ? v : ('...' + v));\n    \n }",
+                                    "|renderer": "function(v) { \n\n    return String.format('{0}', v == _this.data.table ? '' : ('...' + v));\n    \n }",
                                     "|xns": "Roo.grid"
                                 },
                                 {
