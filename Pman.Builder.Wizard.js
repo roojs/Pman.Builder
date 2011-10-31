@@ -567,9 +567,10 @@ Pman.Builder.Wizard = {
             }
             
         });
-        var combofields = {
-          
-        }
+        var combofields = [
+            { name : rcfg.maps_to, type : 'int' },
+            display
+        ]
         var table = rfg.deps[0].table;
         
         // a reader...( basic as we do meta queries to get the real one..)
