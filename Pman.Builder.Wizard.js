@@ -608,10 +608,15 @@ Pman.Builder.Wizard = {
             tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+ display + '}</b> </div>',  
             queryParam : 'query['+display+']', 
             fieldLabel : desc,   
-            valueField : 'id',
+            
+            // from remote..
+            valueField : rcfg.maps_to,
             displayField : name, 
+            
+            // from our table..
             hiddenName : rcfg.column, 
             name : rcfg.column + '_' + display, 
+            
             items : [
                 {
                     '*prop' : 'store',
