@@ -389,7 +389,7 @@ Pman.Builder.Wizard = {
                     cret = n;
                     return true;
                 }
-            );
+            ));
             return cret;
         }
    
