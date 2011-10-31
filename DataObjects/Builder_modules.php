@@ -134,6 +134,9 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     {
         // using the path determine 
         $path = $this->path;
+        var_dump($path);
+        var_dump(file_exists($path.'/.git'));
+        
         while (!file_exists($path.'/.git')) {
             $path = dirname($path);
             var_dump($path);
