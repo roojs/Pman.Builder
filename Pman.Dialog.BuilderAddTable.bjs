@@ -73,7 +73,7 @@
                                             "root": "data",
                                             "totalProperty": "total",
                                             "xtype": "JsonReader",
-                                            "|fields": "[\n    { name: 'use', type: 'int'} , \n    { name: 'use_ex', type: 'int'}, \n    'table', 'column', 'ctype', 'desc', 'columnshort'\n]",
+                                            "|fields": "[\n    { name: 'use', type: 'int'} , \n    { name: 'use_ex', type: 'int'}, \n    'table', 'column', 'ctype', 'desc', 'columnshort', 'title'\n]",
                                             "|xns": "Roo.data"
                                         }
                                     ]

@@ -149,7 +149,7 @@ Pman.Dialog.BuilderAddTable = {
                                 fields : [
                                     { name: 'use', type: 'int'} , 
                                     { name: 'use_ex', type: 'int'}, 
-                                    'table', 'column', 'ctype', 'desc', 'columnshort'
+                                    'table', 'column', 'ctype', 'desc', 'columnshort', 'title'
                                 ]
                             }
                         },
