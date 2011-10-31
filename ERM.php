@@ -98,7 +98,7 @@ class Pman_Builder_ERM extends Pman
             // colname_{remotename}_{col}
             $kv = explode(':', $links[$c]);
             $ar = $this->createRet($dos[$c], $c . '_' . $kv[1] . '_');
-            
+            $desc[$c]['maps_to'] = $kv[1];
             $desc[$c]['deps'] = $ar;
             
             $ret[] = $desc[$c];
