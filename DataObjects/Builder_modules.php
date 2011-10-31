@@ -159,7 +159,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             'url' => $url,
             'path' => $sub
         );
-        var_Dump($ret);exit;
+        var_Dump($ret); //exit;
         return $ret;
         
     }
