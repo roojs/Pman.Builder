@@ -157,7 +157,11 @@ Pman.Builder.JsRender.prototype =  {
         var left =  '';
         
         keys.forEach(function(i) {
-          
+            
+            if (i[0] == '.') { // skip builder data.
+                return;
+            }
+            
             if (typeof(obj[i]) == 'undefined') { // empty or removed.
                 return;
             }
