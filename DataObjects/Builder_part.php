@@ -79,7 +79,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         // try and commit it..
         
         $m  = $this->module();
-        $m->gitCommit($this->name . '.bjs', $this->json);
+        $m->gitCommit($this->name . '.bjs', $this->bjs);
         $m->gitCommit($this->name . '.js', $this->jsource);
         
         
@@ -93,7 +93,14 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
         file_put_contents($fn , $json);
     }
-    
+    function bjs()
+    {
+        
+        
+        
+        
+        
+    }
     
     function writeCopy($path,$roo)
     {
