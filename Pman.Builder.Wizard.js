@@ -562,7 +562,7 @@ Pman.Builder.Wizard = {
         // set the display column (from the remote table)
         var display = rcfg.display;
         Roo.each(rcfg.deps, function(dn) {
-            if (dn.column == dn) {
+            if (dn.column == rcfg.display) {
                 display = dn.columnshort;
             }
             
