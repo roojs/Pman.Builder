@@ -559,6 +559,8 @@ Pman.Builder.Wizard = {
             desc = rcfg.column;
         }
         
+        
+        
         var remote_id = '';    // eg. comp_id_id
         var remote_display = ''; // (eg. 'name'
         var local_display= '';  // eg. company_id_name
