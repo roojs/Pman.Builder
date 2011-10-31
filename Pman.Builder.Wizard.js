@@ -406,6 +406,10 @@ Pman.Builder.Wizard = {
                 formElements.push( _t['Roo.form.DateField'](cc, {}));
                 return;
             }
+            if (ty  == 'float' ) {
+                formElements.push( _t['Roo.form.NumberField'](cc, {}));
+                return;
+            }
             if (ty  == 'int' ) {
                 cc.display = fcombo(cc.column);
                 if (cc.length) { 
@@ -413,10 +417,10 @@ Pman.Builder.Wizard = {
                     return;
                 }
                 formElements.push( _t['Roo.form.NumberField'](cc, {}));
+                return;
             }
             
             
-            fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
         });
         
         
