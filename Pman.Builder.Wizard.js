@@ -462,9 +462,10 @@ Pman.Builder.Wizard = {
         };
         
     }
-    'Roo.form.TextField' : function(rcfg, old)
+    'Roo.form.TextField' : function(cc, old)
     {
     
+    }
     
     
     
