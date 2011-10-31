@@ -564,7 +564,7 @@ Pman.Builder.Wizard = {
         var local_display= '';  // eg. company_id_name
         
         
-        // a reader...
+        // a reader...( basic as we do meta queries to get the real one..)
         
         
         return {
