@@ -138,7 +138,7 @@
                                     "header": "Title",
                                     "width": 150,
                                     "xtype": "ColumnModel",
-                                    "|renderer": "function(v,x,r) { \n     \n    return String.format('{0}', v); \n}",
+                                    "|renderer": "function(v,x,r) { \n     \n    var u = r.data.use * 1;\n     u += (r.data.use_ex*1);\n    \n    return String.format('{0}', u ? v : ''); \n}",
                                     "|xns": "Roo.grid",
                                     "items": [
                                         {

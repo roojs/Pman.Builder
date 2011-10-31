@@ -241,7 +241,10 @@ Pman.Dialog.BuilderAddTable = {
                                 width : 150,
                                 renderer : function(v,x,r) { 
                                      
-                                    return String.format('{0}', v); 
+                                    var u = r.data.use * 1;
+                                     u += (r.data.use_ex*1);
+                                    
+                                    return String.format('{0}', u ? v : ''); 
                                 },
                                 editor : {
                                     xtype: 'GridEditor',
