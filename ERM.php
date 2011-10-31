@@ -85,10 +85,16 @@ class Pman_Builder_ERM extends Pman
        // echo '<PRE>';print_R($desc);
         $ret = array();
         foreach($cols as $c => $ty) {
-            $ret[] = $desc[$c];
-            if (!isset($links[$c])) {
+           
+            if (!isset($links[$c])) 
+                 $ret[] = $desc[$c];
                 continue;
             }
+            // we need to add dependant information to column details so
+            // that combo box can determine how to use it..
+            
+            $ret[] = $desc[$c];
+            
             // colname_{remotename}_{col}
             $kv = explode(':', $links[$c]);
             $ar = $this->createRet($dos[$c], $c . '_' . $kv[1] . '_');
