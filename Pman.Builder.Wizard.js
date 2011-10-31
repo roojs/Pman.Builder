@@ -573,14 +573,7 @@ Pman.Builder.Wizard = {
         
         var maps_to = rcfg.deps;
         var display = rcfg.display;
-        
-        
-        
-        
-        var remote_id = rcfg.column +'_' rcfg.deps;    // eg. comp_id_id
-        var remote_display = ''; // (eg. 'name'
-        var local_display= '';  // eg. company_id_name
-        
+         
         var table = rfg.deps[0].table;
         
         // a reader...( basic as we do meta queries to get the real one..)
