@@ -117,7 +117,7 @@ Pman.Dialog.BuilderAddTable = {
                                             return;
                                         }
                                         col.set('use', cmap[col.data.column].use);
-                                        col.set('use_ex', cmap[col.data.column].use_ex);
+                                        col.set('use_ex', _this.data.cols_ex.indexOf(col.data.column) > -1 ? 1 : 0);
                                         // what about descption..
                                     });
                                       
