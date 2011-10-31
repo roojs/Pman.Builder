@@ -141,8 +141,8 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         $ret = $this->toArray();
         
     
-        $m  = $this->module();
-        $m->gitCommit($this->name . '.bjs', $this->bjs());
+        //$m  = $this->module();
+        //$m->gitCommit($this->name . '.bjs', $this->bjs());
         
         
         return $ret;
