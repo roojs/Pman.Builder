@@ -313,8 +313,9 @@ Pman.Builder.Wizard = {
     'Roo.LayoutDialog' : function(rcfg, old)
     {
         // simple version to start with..
-         
-        var frmCfg =  
+        var _t = this;
+        
+        var frmCfg =    _t['Roo.form.Form'](cfg, old);
          
         var formHeight = 400; // work out from number of form ites..
        
