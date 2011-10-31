@@ -324,7 +324,7 @@ Pman.Builder.Wizard = {
      
         
          
-        var formHeight = (frmCfg.items.length * 20) + 80; // work out from number of form ites..
+        var formHeight = (frmCfg.items.length * 25) + 80; // work out from number of form ites..
        
         return {
             xtype : 'LayoutDialog',
