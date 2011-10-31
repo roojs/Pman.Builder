@@ -142,7 +142,7 @@
                                 },
                                 {
                                     "*prop": "colModel[]",
-                                    "dataIndex": "column",
+                                    "dataIndex": "title",
                                     "header": "Title",
                                     "width": 150,
                                     "xtype": "ColumnModel",
