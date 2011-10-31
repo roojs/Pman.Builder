@@ -479,6 +479,9 @@ Pman.Builder.Wizard = {
         if (!desc.length) {
             desc = rcfg.column;
         }
+        if (rcfg.title && rcfg.title.length) {
+            desc = rcfg.title;
+        }
         
         return { 
             xtype : 'TextField',
@@ -502,7 +505,9 @@ Pman.Builder.Wizard = {
         if (!desc.length) {
             desc = rcfg.column;
         }
-        
+        if (rcfg.title && rcfg.title.length) {
+            desc = rcfg.title;
+        }
         return { 
             xtype : 'NumberField',
             '|xns' : 'Roo.form',
@@ -525,7 +530,9 @@ Pman.Builder.Wizard = {
         if (!desc.length) {
             desc = rcfg.column;
         }
-        
+        if (rcfg.title && rcfg.title.length) {
+            desc = rcfg.title;
+        }
         return { 
             xtype : 'NumberField',
             '|xns' : 'Roo.form',
@@ -565,7 +572,9 @@ Pman.Builder.Wizard = {
         if (!desc.length) {
             desc = rcfg.column;
         }
-        
+        if (rcfg.title && rcfg.title.length) {
+            desc = rcfg.title;
+        }
         // set the display column (from the remote table)
         var display = rcfg.display;
         Roo.each(rcfg.deps, function(dn) {
