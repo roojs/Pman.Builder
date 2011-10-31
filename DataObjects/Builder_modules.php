@@ -189,17 +189,23 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         `$cmd`;
         return $working;
     }
-    function checkURL($u) {
+    /**
+     * dumb http check to see if we are authenticated..
+     */
+    function checkURL($u)
+    {
         if (!preg_match('#^(http|https):/#i', $u)) {
             return true;
         }
          $curl = System::which('curl');
-         $cmd = "$cmd -n -f -I " . escapeshellarg($u);
+         $cmd = "$cmd -n -I " . escapeshellarg($u);
         $res = `$cmd`;
         $lines = explode("\n", $res);
-        if (!preg_match('$lines[0])
-         
-        
+        if (!preg_match('/401/', $lines[0])) {
+            return true;
+        }
+        return false;
+
     }
     
     function gitCommit($file,$data)
