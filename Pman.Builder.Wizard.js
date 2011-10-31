@@ -418,7 +418,7 @@ Pman.Builder.Wizard = {
             }
             if (ty  == 'int' ) {
                 cc.display = fcombo(cc.column);
-                if (cc.display.length) { 
+                if (cc.deps && cc.display.length) { 
                    formElements.push( _t['Roo.form.ComboBox'](cc, {}));
                     return;
                 }
