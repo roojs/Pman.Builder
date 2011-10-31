@@ -392,9 +392,9 @@ Pman.Builder.Wizard = {
                     );
                 if (n.substring(0,cn.length) == cn) {
                     cret = n;
-                    return true;
+                    return false;
                 }
-                return false;
+                return true;
             });
             Roo.log("RETURN: " + cret);
             return cret;
