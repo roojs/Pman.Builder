@@ -247,7 +247,11 @@ Pman.Dialog.BuilderAddTable = {
                                 },
                                 editor : {
                                     xtype: 'GridEditor',
-                                    xns: Roo.grid
+                                    xns: Roo.grid,
+                                    field : {
+                                        xtype: 'TextField',
+                                        xns: Roo.form
+                                    }
                                 }
                             },
                             {
