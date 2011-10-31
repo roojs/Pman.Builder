@@ -173,7 +173,7 @@
                 },
                 {
                     "listeners": {
-                        "click": "function (_self, e)\n{\n     var ret = Roo.applyIf({ cols : [], cols_ex: [] },  _this.data);\n      \n     _this.grid.ds.each(function(r) {\n     \n        if (r.data.use*1) {\n                ret.cols.push(r.data);\n        }\n         if (r.data.use_ex*1) {\n             ret.cols_ex.push( r.data.column );\n         }\n\n     });\n     \n     if (!ret.cols_ex.length) {\n        Roo.MessageBox.alert(\"Error\", \"Select at least one Display/expand col\");\n        return;\n    }\n     Roo.log(ret);\n     _this.callback(ret);\n     _this.dialog.hide();\n\n}"
+                        "click": "function (_self, e)\n{\n     var ret = Roo.applyIf({ cols : [], cols_ex: [] },  _this.data);\n      \n     _this.grid.ds.each(function(r) {\n     \n        if (r.data.use*1) {\n                ret.cols.push(r.json);\n        }\n         if (r.data.use_ex*1) {\n             ret.cols_ex.push( r.data.column );\n         }\n\n     });\n     \n     if (!ret.cols_ex.length) {\n        Roo.MessageBox.alert(\"Error\", \"Select at least one Display/expand col\");\n        return;\n    }\n     Roo.log(ret);\n     _this.callback(ret);\n     _this.dialog.hide();\n\n}"
                     },
                     "*prop": "buttons[]",
                     "text": "Next",
