@@ -328,7 +328,7 @@ Pman.Builder.Wizard = {
        
         return {
             xtype : 'LayoutDialog',
-            "|xns": "Roo.grid",
+            "|xns": "Roo",
             '.builderCfg' : Roo.encode(rcfg),
             
             closable : false,
