@@ -141,7 +141,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     
     function toRooSingleArray()
     {
-        echo '<PRE>';print_R($this);exit;
+       // echo '<PRE>';print_R($this);exit;
         $m  = $this->module();
         $m->gitCommit($this->name . '.bjs', $this->bjs());
         $ret = $this->toArray();
