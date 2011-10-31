@@ -185,7 +185,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         chdir (ini_get('session.save_path'));
         
         $cmd = "$git clone ". escapeshellarg($url) ." " . basename($working);
-        var_dump($working);exit;
+        var_dump($cmd);exit;
         `$cmd`;
         return $working;
     }
