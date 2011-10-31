@@ -317,7 +317,11 @@ Pman.Builder.Wizard = {
         
         var frmCfg =    _t['Roo.form.Form'](cfg, old);
         
+        // loop through the cols..
+        // we need a 'display column' for each of these.
+        // we could also have a 'renderer'...
         
+     
         
          
         var formHeight = (frmCfg.items.length * 40) + 40; // work out from number of form ites..
@@ -377,20 +381,23 @@ Pman.Builder.Wizard = {
         var _t = this;
         
         var formElements = [];
-        var formHeight = 50;
-    for (var k in reader.form) {
-        if (k == 'id') { // should really do primary key testing..
-            continue;
-        }
-        formHeight += reader.form[k].xtype == 'TextArea' ? 100 : 30;
+          
+ 
+   
+        Roo.each(rcfg.cols, function(cc) {
+            
+            var ty = typeof(_t.typemap[cc.ctype]) == 'undefined' ? 'string' : _t.typemap[cc.ctype];
+            
+            if (cc.ctype == 'string' ) {
+                formElements.push( _t['Roo.form.TextField'](cc, {}));
+                return;
+            }
+            
+            
+            
+            fields.push({ name : cc.column, type : _t.typemap[cc.ctype]} );
+        });
         
-        formElements.push(reader.form[k]);
-    }
-    if (reader.form['id']) {
-        formElements.push(reader.form['id']);
-    }
-    
-
         
         
         return {
