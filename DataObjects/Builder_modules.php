@@ -189,7 +189,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         if (!$gd) {
             return false;
         }
-        $working = $this->getWorking($gd['url']);
+        $working = $this->gitWorking($gd['url']);
         chdir($working);
         $path = strlen($gd['path']) ? $gd['path'] . '/' : '';
         $target = $working.'/'.$path . $file;
