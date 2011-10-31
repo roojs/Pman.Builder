@@ -408,9 +408,9 @@ Pman.Builder.Wizard = {
             },
             method : "POST",
             style : "margin:10px;",
-            "|url" : "baseURL + '/Roo/" + reader.table + ".php'",
+            "|url" : "baseURL + '/Roo/" + rcfg.table + ".php'",
             items : formElements
-    };
+        };
         
     }
     
