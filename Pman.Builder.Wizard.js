@@ -546,6 +546,9 @@ Pman.Builder.Wizard = {
          *
          */
         
+        
+        
+        
         var desc = rcfg.columnshort;
         if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
             desc = desc.substring(rcfg.table.length+1);
@@ -555,6 +558,11 @@ Pman.Builder.Wizard = {
         if (!desc.length) {
             desc = rcfg.column;
         }
+        
+        var remote_id = '';    // eg. comp_id_id
+        var remote_display = ''; // (eg. 'name'
+        var local_display= '';  // eg. company_id_name
+        
         
         
         return {
@@ -576,13 +584,13 @@ Pman.Builder.Wizard = {
             
             width: 300,
             
-            tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+display + }</b> </div>', // SET WHEN USED
+            tpl : '<div class="x-grid-cell-text x-btn button"><b>{'+display + '}</b> </div>',  
             queryParam : 'query['+display+']', 
             fieldLabel : desc,   
             valueField : 'id',
-            displayField : name, // SET WHEN USED eg. project_id_name
-            hiddenName : rcfg.column, // SET WHEN USED eg. project_id
-            name : rcfg.colunn + '_' + display, // SET WHEN USED eg. project_id_name
+            displayField : name, 
+            hiddenName : rcfg.column, 
+            name : rcfg.colunn + '_' + display, 
             items : [
                 {
                     '*prop' : 'store',
@@ -605,7 +613,7 @@ Pman.Builder.Wizard = {
                             'xtype' : 'HttpProxy',
                             'method' : 'GET',
                             '|xns' : 'Roo.data',
-                            '|url' : "baseURL + '/Roo/" + table + ".php'",
+                            '|url' : "baseURL + '/Roo/" + table + ".php'"
                         },
                         
                         {
