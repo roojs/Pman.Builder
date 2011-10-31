@@ -86,7 +86,7 @@ class Pman_Builder_ERM extends Pman
         $ret = array();
         foreach($cols as $c => $ty) {
            
-            if (!isset($links[$c])) 
+            if (!isset($links[$c]))  {
                  $ret[] = $desc[$c];
                 continue;
             }
