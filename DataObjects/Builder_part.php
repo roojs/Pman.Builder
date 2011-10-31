@@ -76,6 +76,9 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
         // try and commit it..
         
+        $m  = $this->module();
+        
+        
         
         $sp = ini_get('session.save_path').'/Builder/'.date('Y/m');
         if (!file_exists($sp)) {
