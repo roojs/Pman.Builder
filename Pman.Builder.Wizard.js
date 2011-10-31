@@ -376,7 +376,44 @@ Pman.Builder.Wizard = {
         // simple version to start with..
         var _t = this;
         
-        
+        return {
+            xtype : "Form",
+            '|xns' : 'Roo.form',
+            listeners : {
+                "|actioncomplete" : "function(_self,action)\n"+
+                    "{\n"+
+                    "    if (action.type == 'setdata') {\n"+
+                    "       //_this.dialog.el.mask(\"Loading\");\n"+
+                    "       //this.load({ method: 'GET', params: { '_id' : _this.data.id }});\n"+
+                    "       return;\n"+
+                    "    }\n"+
+                    "    if (action.type == 'load') {\n"+
+                    "        _this.dialog.el.unmask();\n"+
+                    "        return;\n"+
+                    "    }\n"+
+                    "    if (action.type =='submit') {\n"+
+                    "    \n"+
+                    "        _this.dialog.el.unmask();\n"+
+                    "        _this.dialog.hide();\n"+
+                    "    \n"+
+                    "         if (_this.callback) {\n"+
+                    "            _this.callback.call(_this, _this.form.getValues());\n"+
+                    "         }\n"+
+                    "         _this.form.reset();\n"+
+                    "         return;\n"+
+                    "    }\n"+
+                    "}\n",
+                
+                "|rendered" : "function (form)\n"+
+                    "{\n"+
+                    "    _this.form= form;\n"+
+                    "}\n"
+            },
+            method : "POST",
+            style : "margin:10px;",
+            "|url" : "baseURL + '/Roo/" + reader.table + ".php'",
+            items : formElements
+    };
         
     }
     
