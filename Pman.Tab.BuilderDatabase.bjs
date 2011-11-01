@@ -36,7 +36,19 @@
                                 {
                                     "|xns": "Roo",
                                     "xtype": "Toolbar",
-                                    "*prop": "toolbar"
+                                    "*prop": "toolbar",
+                                    "items": [
+                                        {
+                                            "listeners": {
+                                                "|click": "function()\n{\n    Roo.MessageBox.alert(\"Updating\", \"Updating the cache\");\n    new Pman.Request({\n        url : baseURL + '/Core/RefreshDatabaseCache',\n        method : 'GET',\n        success : function() {\n            Roo.MessageBox.hide();\n        }\n    });\n}\n"
+                                            },
+                                            "cls": "x-btn-text-icon",
+                                            "text": "Refresh Schema",
+                                            "xtype": "Button",
+                                            "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
+                                            "|xns": "Roo.Toolbar"
+                                        }
+                                    ]
                                 },
                                 {
                                     "|xns": "Roo.tree",
