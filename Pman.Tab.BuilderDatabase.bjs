@@ -88,7 +88,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "create": "function (_self, attr)\n{\n    attr.text = '';\n    \n    attr.leaf = n.attributes.name.length ? true : false;\n    attr.html = String.format('<B>{0}</B><i>{1}</i>',\n        n.attributes.name,\n        n.attributes.desc\n    );\n    Roo.log(attr);\n\n}"
+                                                "create": "function (_self, attr)\n{\n    attr.text = '';\n    \n    attr.leaf = n.attributes.name.length ? true : false;\n    attr.html = String.format('<B>{0}</B><i>{1}</i>',\n        attr.name,\n        attr.desc\n    );\n    Roo.log(attr);\n\n}"
                                             },
                                             "*prop": "loader",
                                             "queryParam": "parent_id",
