@@ -41,4 +41,4 @@ ALTER TABLE builder_tables ADD COLUMN descrip varchar(254)  NOT NULL;
 ALTER TABLE builder_tables ADD COLUMN parent_id int(11)  NOT NULL;
 ALTER TABLE builder_tables ADD COLUMN dbschema text  NOT NULL;
 
-COMMENT = 'list of tables (with relations ships and grouping)';
+COMMENT ON TABLE IS  'list of tables (with relations ships and grouping)';
