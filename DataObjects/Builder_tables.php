@@ -94,7 +94,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
 
         if (isset($cache[$tn])) {
             return $cache[$tn];
-
+        }
 
         // get a description if available..
         if (!isset($desc[$tn])) {
@@ -123,7 +123,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             }
             $cache[$tn]= $defs;
         }
-        return $cache[$tn];
         
+        return $cache[$tn];
+    }
     
 }
