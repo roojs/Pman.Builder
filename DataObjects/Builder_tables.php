@@ -117,11 +117,13 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             }
             
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
-            
+            // add descriptions?
             foreach($defs as $i=>$c) {
                 $defs[$i]['desc'] = isset($desc[$c['name']]) ? $desc[$c['name']] : '';
             }
+            $cache[$tn]= $defs;
         }
+        return $cache[$tn];
         
     
 }
