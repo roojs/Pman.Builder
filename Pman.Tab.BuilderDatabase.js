@@ -51,6 +51,12 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 {
                                     xtype: 'SplitButton',
                                     xns: Roo.Toolbar,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                         _this.tree.root.reload();
+                                        }
+                                    },
                                     text : "Refresh/Manage Tables",
                                     menu : {
                                         xtype: 'Menu',
