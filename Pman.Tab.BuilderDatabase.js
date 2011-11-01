@@ -54,7 +54,13 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     text : "Manage Table Tree",
                                     menu : {
                                         xtype: 'Menu',
-                                        xns: Roo.menu
+                                        xns: Roo.menu,
+                                        items : [
+                                            {
+                                                xtype: 'Item',
+                                                xns: Roo.menu
+                                            }
+                                        ]
                                     }
                                 }
                             ]
