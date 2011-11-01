@@ -40,7 +40,7 @@
                                     "items": [
                                         {
                                             "cls": "x-btn-text-icon",
-                                            "text": "Refresh Schema",
+                                            "text": "Manage Table Tree",
                                             "xtype": "Button",
                                             "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
                                             "|xns": "Roo.Toolbar"

@@ -52,7 +52,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     xtype: 'Button',
                                     xns: Roo.Toolbar,
                                     cls : 'x-btn-text-icon',
-                                    text : "Refresh Schema",
+                                    text : "Manage Table Tree",
                                     icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
                                 }
                             ]
