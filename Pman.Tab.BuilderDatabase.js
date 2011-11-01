@@ -124,13 +124,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             rootVisible : false,
                             sm : {
                                 xtype: 'MultiSelectionModel',
-                                xns: Roo.tree,
-                                listeners : {
-                                    selectionchange : function (_self, nodes)
-                                    {
-                                    
-                                    }
-                                }
+                                xns: Roo.tree
                             },
                             loader : {
                                 xtype: 'TreeLoader',
