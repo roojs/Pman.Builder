@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-91",
+    "id": "roo-file-93",
     "name": "Pman.Tab.BuilderDatabase",
     "parent": "Pman.Tab.Builder",
     "title": "Pman.Tab.BuilderDatabase",
@@ -20,6 +20,10 @@
                             "|xns": "Roo",
                             "xtype": "LayoutRegion",
                             "*prop": "center"
+                        },
+                        {
+                            "|xns": "Roo",
+                            "xtype": "TreePanel"
                         },
                         {
                             "listeners": {
