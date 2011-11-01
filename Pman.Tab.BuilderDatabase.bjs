@@ -63,6 +63,7 @@
                                     "*prop": "tree",
                                     "ddGroup": "dbtree",
                                     "enableDrag": true,
+                                    "enableDrop": true,
                                     "rootVisible": false,
                                     "xtype": "TreePanel",
                                     "|xns": "Roo.tree",
