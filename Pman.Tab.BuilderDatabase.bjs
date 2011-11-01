@@ -40,7 +40,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n _this.panel.tree.root.reload();\n}"
+                                                "click": "function (_self, e)\n{\n _this.treepanel.tree.root.reload();\n}"
                                             },
                                             "text": "Refresh/Manage Tables",
                                             "xtype": "SplitButton",

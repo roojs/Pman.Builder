@@ -54,7 +54,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                         _this.panel.tree.root.reload();
+                                         _this.treepanel.tree.root.reload();
                                         }
                                     },
                                     text : "Refresh/Manage Tables",
