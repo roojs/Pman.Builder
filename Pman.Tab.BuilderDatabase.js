@@ -108,11 +108,13 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             enableDrop : true,
                             rootVisible : false,
                             renderer : function(n) {
+                                n.attributes.leaf = n.attributes.name.length ? true : false;
+                            
                                 return String.format('<B>{0}</B><i>{1}</i>',
                                     n.attributes.name,
                                     n.attributes.desc
                                 );
-                            
+                                
                             },
                             loader : {
                                 xtype: 'TreeLoader',
