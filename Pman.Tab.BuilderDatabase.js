@@ -43,6 +43,12 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                     {
                         xtype: 'TreePanel',
                         xns: Roo,
+                        listeners : {
+                            render : function (_self)
+                            {
+                               _this.treepanel = _self;
+                            }
+                        },
                         region : 'west',
                         toolbar : {
                             xtype: 'Toolbar',

@@ -29,6 +29,9 @@
                             "|xns": "Roo"
                         },
                         {
+                            "listeners": {
+                                "render": "function (_self)\n{\n   _this.treepanel = _self;\n}"
+                            },
                             "region": "west",
                             "xtype": "TreePanel",
                             "|xns": "Roo",
