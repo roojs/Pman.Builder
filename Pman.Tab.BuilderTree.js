@@ -174,14 +174,14 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                             
                                             
                                             var cfg = Roo.decode(cn.elConfig['.builderCfg']);
+                                            
                                             Roo.log(cfg);
                                             Pman.Dialog.BuilderAddTable.show( 
-                                                cfg,       
+                                                cfg,  
                                                 function(data) {
                                         
-                                                    var cls = data['|xns'] + '.' + data['xtype'];
-                                                    
-                                                    var res = Pman.Builder.Wizard[cls](data); // with old..
+                                                     
+                                                    var res = Pman.Builder.Wizard[str](data); // with old..
                                                      Pman.Builder.Tree.replaceCurrentNode( res );
                                                      Pman.Tab.BuilderView.panel.redraw();
                                          
