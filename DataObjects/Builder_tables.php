@@ -26,6 +26,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         //DB_DataObject::debugLEvel(1);
         if (!empty($q['_sync'])) {
             $this->syncDatabase();
+            HTML_FlexyFramework::get()->page->jok("DONE");
         }
        
     }
