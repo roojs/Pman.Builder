@@ -86,19 +86,20 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     function tableSchema($tn)
     {
-        static  $desc = array();
+        static  $cache = array();
         static  $types= array();
         $do = DB_DataObject::factory($tn);
         $tn = $do->tableName(); // cleaned up!
 
 
-
+        if (isset($cache[$tn])) {
+            return $cache[$tn];
 
 
         // get a description if available..
         if (!isset($desc[$tn])) {
              
-            $desc[$tn] = array();
+            $desc = array();
             $dd = clone($do);
             
            // DB_DataObject::DebugLevel(1);
@@ -112,15 +113,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                     c.table_schema = 'public' and c.table_name = '{$tn}'
             ");
             while($dd->fetch()) {
-                $desc[$tn][$dd->name] = $dd->desc;
+                $desc[$dd->name] = $dd->desc;
             }
             
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
-            $types[$tn] = array();
-            foreach($defs as $c) {
-                $types[$tn][$c['name']] = $c['type'];
+            
+            foreach($defs as $i=>$c) {
+                $defs[$i]['desc'] = isset($desc[$c['name']]) ? $desc[$c['name']] : '';
             }
         }
-    
+        
     
 }
