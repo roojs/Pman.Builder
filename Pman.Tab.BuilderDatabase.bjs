@@ -72,11 +72,6 @@
                                             "*prop": "loader",
                                             "xtype": "TreeLoader",
                                             "|xns": "Roo.tree"
-                                        },
-                                        {
-                                            "|xns": "Roo.tree",
-                                            "xtype": "TreeNode",
-                                            "*prop": "root"
                                         }
                                     ]
                                 }
