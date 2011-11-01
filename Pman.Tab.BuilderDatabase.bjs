@@ -65,9 +65,10 @@
                                     "*prop": "tree",
                                     "items": [
                                         {
-                                            "|xns": "Roo.tree",
+                                            "*prop": "loader",
+                                            "dataUrl": "rootURL + '/Roo/Builder_tables'",
                                             "xtype": "TreeLoader",
-                                            "*prop": "loader"
+                                            "|xns": "Roo.tree"
                                         },
                                         {
                                             "|xns": "Roo.tree",
