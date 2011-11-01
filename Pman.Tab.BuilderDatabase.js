@@ -49,7 +49,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             xns: Roo,
                             items : [
                                 {
-                                    xtype: 'Button',
+                                    xtype: 'SplitButton',
                                     xns: Roo.Toolbar,
                                     text : "Manage Table Tree",
                                     menu : {

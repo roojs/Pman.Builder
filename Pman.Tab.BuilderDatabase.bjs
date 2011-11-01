@@ -40,7 +40,7 @@
                                     "items": [
                                         {
                                             "text": "Manage Table Tree",
-                                            "xtype": "Button",
+                                            "xtype": "SplitButton",
                                             "|xns": "Roo.Toolbar",
                                             "items": [
                                                 {
