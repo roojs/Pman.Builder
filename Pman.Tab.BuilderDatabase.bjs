@@ -6,6 +6,9 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Tab.BuilderDatabase.bjs",
     "items": [
         {
+            "listeners": {
+                "activate": "function (_self)\n{\n _this.treepanel.tree.root.reload();\n}"
+            },
             "background": true,
             "region": "center",
             "title": "Manage Database",
