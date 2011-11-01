@@ -76,6 +76,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             loader : {
                                 xtype: 'TreeLoader',
                                 xns: Roo.tree,
+                                queryParam : 'parent_id',
                                 requestMethod : 'GET',
                                 root : 'data',
                                 baseParams : { _tree: 1, 'sort': 'name', dir: 'ASC' },

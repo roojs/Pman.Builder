@@ -69,8 +69,9 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
-                                            "requestMethod": "GET",
                                             "*prop": "loader",
+                                            "queryParam": "parent_id",
+                                            "requestMethod": "GET",
                                             "root": "data",
                                             "xtype": "TreeLoader",
                                             "|baseParams": " { _tree: 1, 'sort': 'name', dir: 'ASC' }",
