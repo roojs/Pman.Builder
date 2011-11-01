@@ -297,9 +297,11 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                         }
                     }
                 ],
-                center : {
+                west : {
                     xtype: 'LayoutRegion',
-                    xns: Roo
+                    xns: Roo,
+                    split : true,
+                    width : 150
                 },
                 center : {
                     xtype: 'LayoutRegion',

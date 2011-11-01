@@ -17,7 +17,7 @@
                     "*prop": "layout",
                     "items": [
                         {
-                            "*prop": "center",
+                            "*prop": "west",
                             "split": true,
                             "width": 150,
                             "xtype": "LayoutRegion",
