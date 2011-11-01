@@ -111,7 +111,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 xtype: 'TreeLoader',
                                 xns: Roo.tree,
                                 listeners : {
-                                    create : function (This, attr)
+                                    create : function (_self, attr)
                                     {
                                         attr.text = '';
                                         
