@@ -69,11 +69,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 continue;
             }
             // check it can be constructed..
+            // this might be problematic for 'new' tables...
             $do = DB_DataObject::factory($k);
             if (!is_a($do,'DB_DataObject')) {
                 continue;
             }
-             
+            
             $set = array(
                 'name' => $k,
                 'descript' => isset($desc[$k]) ? $desc[$k] : '',
