@@ -70,7 +70,7 @@
                                     "items": [
                                         {
                                             "*prop": "loader",
-                                            "|baseParams": "",
+                                            "|baseParams": " { _tree: 1, 'sort': 'name', dir: 'ASC' }",
                                             "xtype": "TreeLoader",
                                             "|dataUrl": "baseURL + '/Roo/Builder_tables.php'",
                                             "|xns": "Roo.tree"
