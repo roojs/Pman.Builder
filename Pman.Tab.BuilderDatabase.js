@@ -60,6 +60,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                                 xtype: 'Item',
                                                 xns: Roo.menu,
                                                 text : "Add Table/Container"
+                                            },
+                                            {
+                                                xtype: 'Separator',
+                                                xns: Roo.menu
                                             }
                                         ]
                                     }
