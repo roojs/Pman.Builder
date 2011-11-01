@@ -69,7 +69,7 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
-                                            "requestMethod": "",
+                                            "requestMethod": "GET",
                                             "*prop": "loader",
                                             "root": "data",
                                             "xtype": "TreeLoader",

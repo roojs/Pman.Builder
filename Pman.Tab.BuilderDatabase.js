@@ -76,7 +76,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             loader : {
                                 xtype: 'TreeLoader',
                                 xns: Roo.tree,
-                                requestMethod : '',
+                                requestMethod : 'GET',
                                 root : 'data',
                                 baseParams : { _tree: 1, 'sort': 'name', dir: 'ASC' },
                                 dataUrl : baseURL + '/Roo/Builder_tables.php'
