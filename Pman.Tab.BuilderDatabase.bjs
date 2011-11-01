@@ -29,8 +29,9 @@
                             "*prop": "center"
                         },
                         {
-                            "|xns": "Roo",
-                            "xtype": "TreePanel"
+                            "region": "west",
+                            "xtype": "TreePanel",
+                            "|xns": "Roo"
                         },
                         {
                             "listeners": {

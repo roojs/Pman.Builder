@@ -42,7 +42,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                 items : [
                     {
                         xtype: 'TreePanel',
-                        xns: Roo
+                        xns: Roo,
+                        region : 'west'
                     },
                     {
                         xtype: 'GridPanel',
