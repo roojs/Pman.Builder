@@ -34,6 +34,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
         this.panel = parentLayout.addxtype({
             xtype: 'NestedLayoutPanel',
             xns: Roo,
+            background : true,
             region : 'center',
             title : "Manage Database",
             layout : {
