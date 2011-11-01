@@ -39,7 +39,7 @@
                                     "*prop": "toolbar",
                                     "items": [
                                         {
-                                            "text": "Manage Table Tree",
+                                            "text": "Refresh/Manage Tables",
                                             "xtype": "SplitButton",
                                             "|xns": "Roo.Toolbar",
                                             "items": [
