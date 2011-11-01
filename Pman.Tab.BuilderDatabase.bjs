@@ -70,8 +70,9 @@
                                     "items": [
                                         {
                                             "*prop": "loader",
-                                            "|dataUrl": "baseURL + '/Roo/Builder_tables.php'",
+                                            "|baseParams": "",
                                             "xtype": "TreeLoader",
+                                            "|dataUrl": "baseURL + '/Roo/Builder_tables.php'",
                                             "|xns": "Roo.tree"
                                         },
                                         {
