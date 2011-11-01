@@ -39,7 +39,6 @@
                                     "*prop": "toolbar",
                                     "items": [
                                         {
-                                            "cls": "x-btn-text-icon",
                                             "text": "Manage Table Tree",
                                             "xtype": "Button",
                                             "|xns": "Roo.Toolbar"
