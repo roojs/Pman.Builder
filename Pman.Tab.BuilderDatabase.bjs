@@ -17,9 +17,11 @@
                     "*prop": "layout",
                     "items": [
                         {
-                            "|xns": "Roo",
+                            "*prop": "center",
+                            "split": true,
+                            "width": 150,
                             "xtype": "LayoutRegion",
-                            "*prop": "center"
+                            "|xns": "Roo"
                         },
                         {
                             "|xns": "Roo",
