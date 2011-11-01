@@ -62,7 +62,14 @@
                                 {
                                     "|xns": "Roo.tree",
                                     "xtype": "TreePanel",
-                                    "*prop": "tree"
+                                    "*prop": "tree",
+                                    "items": [
+                                        {
+                                            "|xns": "Roo.tree",
+                                            "xtype": "TreeLoader",
+                                            "*prop": "loader"
+                                        }
+                                    ]
                                 }
                             ]
                         },
