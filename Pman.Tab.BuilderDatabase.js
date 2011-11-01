@@ -67,7 +67,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             },
                                             {
                                                 xtype: 'Item',
-                                                xns: Roo.menu
+                                                xns: Roo.menu,
+                                                text : "Sync Tables"
                                             }
                                         ]
                                     }

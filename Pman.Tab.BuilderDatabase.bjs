@@ -58,8 +58,9 @@
                                                             "xtype": "Separator"
                                                         },
                                                         {
-                                                            "|xns": "Roo.menu",
-                                                            "xtype": "Item"
+                                                            "text": "Sync Tables",
+                                                            "xtype": "Item",
+                                                            "|xns": "Roo.menu"
                                                         }
                                                     ]
                                                 }
