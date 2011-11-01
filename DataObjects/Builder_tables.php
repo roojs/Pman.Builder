@@ -19,4 +19,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     /* the code above is auto generated do not remove the tag below */
     ###END_AUTOCODE
+    
+    
+    function applyFilters($q, $au)
+    {
+        //DB_DataObject::debugLEvel(1);
+        if (!empty($q['_sync'])) {
+            $this->syncDatabase();
+        }
+       
+    }
+    
 }
