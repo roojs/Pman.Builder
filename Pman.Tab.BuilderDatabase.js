@@ -76,7 +76,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             loader : {
                                 xtype: 'TreeLoader',
                                 xns: Roo.tree,
-                                dataUrl : 'baseURL + \'/Roo/Builder_tables.php\''
+                                dataUrl : baseURL + '/Roo/Builder_tables.php'
                             },
                             root : {
                                 xtype: 'AsyncTreeNode',
