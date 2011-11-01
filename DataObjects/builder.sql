@@ -31,8 +31,7 @@ ALTER TABLE builder_part ALTER COLUMN json SET DEFAULT '';
 
 CREATE TABLE  builder_tables (
   id int(11)  NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (id),
-  
+  PRIMARY KEY (id)
 );
 
 ALTER TABLE builder_tables ADD COLUMN name varchar(128)  NOT NULL;
