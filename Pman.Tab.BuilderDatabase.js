@@ -46,7 +46,11 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                         region : 'west',
                         tree : {
                             xtype: 'TreePanel',
-                            xns: Roo.tree
+                            xns: Roo.tree,
+                            root : {
+                                xtype: 'TreeNode',
+                                xns: Roo.tree
+                            }
                         }
                     },
                     {
