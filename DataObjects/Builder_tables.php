@@ -71,9 +71,9 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 continue;
             }
             $ret[] = array(
-                    'name' => $k,
-                    'desc' => isset($desc[$k]) ? $desc[$k] : ''
-                );
+                'name' => $k,
+                'desc' => isset($desc[$k]) ? $desc[$k] : ''
+            );
         }
             
         
