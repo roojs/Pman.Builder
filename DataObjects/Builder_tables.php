@@ -35,7 +35,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         global $_DB_DATAOBJECT;
         $x = DB_DataObject::factory('builder_tables');
         $x->whereAdD("name != ''"); // real tables only..
-        $mine = $this->fetchAll('id', 'name');
+        $mine = $this->fetchAll('name','id');
         
         // ensure everything is loaded...
         $tq = DB_DataObject::factory('builder_tables');
@@ -71,10 +71,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             if (!is_a($do,'DB_DataObject')) {
                 continue;
             }
-            $ret[] = array(
+            $table[$k]= array(
+                'id' => 0,
                 'name' => $k,
                 'desc' => isset($desc[$k]) ? $desc[$k] : ''
             );
+            if ()
         }
             
         
