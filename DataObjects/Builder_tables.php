@@ -30,4 +30,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
        
     }
     
+    function syncDatabase()
+    {
+        $x = DB_DataObject::factory('builder_tables');
+        $mine = $this->fetchAll('id' => 'name');
+        
+        
+    }
+    
+    
+    
+    
 }
