@@ -299,6 +299,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                 center : {
                     xtype: 'LayoutRegion',
                     xns: Roo
+                },
+                center : {
+                    xtype: 'LayoutRegion',
+                    xns: Roo
                 }
             }
         });
