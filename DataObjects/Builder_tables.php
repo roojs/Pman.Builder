@@ -71,12 +71,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             if (!is_a($do,'DB_DataObject')) {
                 continue;
             }
-            $table[$k]= array(
-                'id' => 0,
+            $ret[$k]= array(
+                'id' => isset($mime[$k]) ? $mime[$k] : 0,
                 'name' => $k,
                 'desc' => isset($desc[$k]) ? $desc[$k] : ''
             );
-            if ()
+            
         }
             
         
