@@ -121,7 +121,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             attr.leaf = n.attributes.name.length ? true : false;
                                             attr.html = String.format('<B>{0}</B><i>{1}</i>',
                                                 attr.name,
-                                                attr.desc
+                                                attr.descrip
                                             );
                                         } catch(e) {
                                             Roo.log(e);
