@@ -78,6 +78,9 @@
                                     ]
                                 },
                                 {
+                                    "listeners": {
+                                        "load": "function (node)\n{\n    Roo.log('load');\n    Roo.log(node);\n}"
+                                    },
                                     "*prop": "tree",
                                     "ddGroup": "dbtree",
                                     "enableDrag": true,
