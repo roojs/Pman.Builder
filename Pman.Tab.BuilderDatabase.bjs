@@ -69,6 +69,7 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
+                                            "requestMethod": "",
                                             "*prop": "loader",
                                             "root": "data",
                                             "xtype": "TreeLoader",
