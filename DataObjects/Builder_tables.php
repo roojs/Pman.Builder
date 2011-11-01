@@ -51,7 +51,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
        // DB_DataObjecT::DebugLevel(1);
-        $tq = DB_DataObject::factory('Person');
+        $tq = DB_DataObject::factory('builder_tables');
         $tq->query( "
             select relname, obj_description( oid) as desc FROM pg_catalog.pg_class");
         while ($tq->fetch()) {
@@ -59,23 +59,27 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
 
             
-            
+        $tq = DB_DataObject::factory('builder_tables');
         
+        require_once 'Services/JSON.php';
         
         
         foreach( $t as $k) {
             if (preg_match('/__keys$/', $k)) {
                 continue;
             }
+            // check it can be constructed..
             $do = DB_DataObject::factory($k);
             if (!is_a($do,'DB_DataObject')) {
                 continue;
             }
-            $ret[$k]= array(
-                'id' => isset($mime[$k]) ? $mime[$k] : 0,
+             
+            $set = array(
                 'name' => $k,
-                'desc' => isset($desc[$k]) ? $desc[$k] : ''
+                'descript' => isset($desc[$k]) ? $desc[$k] : '',
+                'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4)
             );
+            
             
         }
             
@@ -97,33 +101,32 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
 
         // get a description if available..
-        if (!isset($desc[$tn])) {
+       
              
-            $desc = array();
-            $dd = clone($do);
-            
-           // DB_DataObject::DebugLevel(1);
-            $dd->query("SELECT
-                    c.column_name as name,
-                    pgd.description as desc
-                FROM pg_catalog.pg_statio_all_tables as st
-                    inner join pg_catalog.pg_description pgd on (pgd.objoid=st.relid)
-                    inner join information_schema.columns c on (pgd.objsubid=c.ordinal_position and c.table_schema=st.schemaname and c.table_name=st.relname)
-                WHERE
-                    c.table_schema = 'public' and c.table_name = '{$tn}'
-            ");
-            while($dd->fetch()) {
-                $desc[$dd->name] = $dd->desc;
-            }
-            
-            $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
-            // add descriptions?
-            foreach($defs as $i=>$c) {
-                $defs[$i]['desc'] = isset($desc[$c['name']]) ? $desc[$c['name']] : '';
-            }
-            $cache[$tn]= $defs;
+        $desc = array();
+        $dd = clone($do);
+        
+       // DB_DataObject::DebugLevel(1);
+        $dd->query("SELECT
+                c.column_name as name,
+                pgd.description as desc
+            FROM pg_catalog.pg_statio_all_tables as st
+                inner join pg_catalog.pg_description pgd on (pgd.objoid=st.relid)
+                inner join information_schema.columns c on (pgd.objsubid=c.ordinal_position and c.table_schema=st.schemaname and c.table_name=st.relname)
+            WHERE
+                c.table_schema = 'public' and c.table_name = '{$tn}'
+        ");
+        while($dd->fetch()) {
+            $desc[$dd->name] = $dd->desc;
         }
         
+        $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
+        // add descriptions?
+        foreach($defs as $i=>$c) {
+            $defs[$i]['desc'] = isset($desc[$c['name']]) ? $desc[$c['name']] : '';
+        }
+        $cache[$tn]= $defs;
+     
         return $cache[$tn];
     }
     
