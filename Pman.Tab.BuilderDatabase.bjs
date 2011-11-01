@@ -66,6 +66,11 @@
                                     "items": [
                                         {
                                             "|xns": "Roo.tree",
+                                            "xtype": "TreeLoader",
+                                            "*prop": "loader"
+                                        },
+                                        {
+                                            "|xns": "Roo.tree",
                                             "xtype": "TreeNode",
                                             "*prop": "root"
                                         }
