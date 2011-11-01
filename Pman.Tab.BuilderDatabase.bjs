@@ -94,9 +94,12 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
-                                            "|xns": "Roo.tree",
+                                            "listeners": {
+                                                "selectionchange": "function (_self, nodes)\n{\n\n}"
+                                            },
+                                            "*prop": "sm",
                                             "xtype": "MultiSelectionModel",
-                                            "*prop": "sm"
+                                            "|xns": "Roo.tree"
                                         },
                                         {
                                             "listeners": {
