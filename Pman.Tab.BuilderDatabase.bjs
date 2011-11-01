@@ -34,6 +34,11 @@
                             "|xns": "Roo",
                             "items": [
                                 {
+                                    "|xns": "Roo",
+                                    "xtype": "Toolbar",
+                                    "*prop": "toolbar"
+                                },
+                                {
                                     "|xns": "Roo.tree",
                                     "xtype": "TreePanel",
                                     "*prop": "tree",
