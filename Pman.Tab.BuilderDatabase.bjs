@@ -49,8 +49,9 @@
                                                     "*prop": "menu",
                                                     "items": [
                                                         {
-                                                            "|xns": "Roo.menu",
-                                                            "xtype": "Item"
+                                                            "text": "Add Table/Container",
+                                                            "xtype": "Item",
+                                                            "|xns": "Roo.menu"
                                                         }
                                                     ]
                                                 }
