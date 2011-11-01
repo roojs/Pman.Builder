@@ -51,19 +51,6 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 {
                                     xtype: 'Button',
                                     xns: Roo.Toolbar,
-                                    listeners : {
-                                        click : function()
-                                        {
-                                            Roo.MessageBox.alert("Updating", "Updating the cache");
-                                            new Pman.Request({
-                                                url : baseURL + '/Core/RefreshDatabaseCache',
-                                                method : 'GET',
-                                                success : function() {
-                                                    Roo.MessageBox.hide();
-                                                }
-                                            });
-                                        }
-                                    },
                                     cls : 'x-btn-text-icon',
                                     text : "Refresh Schema",
                                     icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
