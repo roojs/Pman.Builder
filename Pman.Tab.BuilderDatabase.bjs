@@ -69,11 +69,6 @@
                                             "|dataUrl": "rootURL + '/Roo/Builder_tables'",
                                             "xtype": "TreeLoader",
                                             "|xns": "Roo.tree"
-                                        },
-                                        {
-                                            "|xns": "Roo.tree",
-                                            "xtype": "TreeNode",
-                                            "*prop": "root"
                                         }
                                     ]
                                 }
