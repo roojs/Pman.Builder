@@ -81,6 +81,16 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4)
             );
             
+            $do = clone($tq);
+            if (isset($mine[$k])) { 
+                $do->get($mine[$k]);
+                $do->setFrom($set);
+                $do->update();
+                continue;
+            }
+            
+            $do->setFrom($set);
+            $do->insert();
             
         }
             
