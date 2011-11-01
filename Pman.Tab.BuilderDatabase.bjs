@@ -60,9 +60,10 @@
                                     ]
                                 },
                                 {
-                                    "|xns": "Roo.tree",
-                                    "xtype": "TreePanel",
                                     "*prop": "tree",
+                                    "rootVisible": false,
+                                    "xtype": "TreePanel",
+                                    "|xns": "Roo.tree",
                                     "items": [
                                         {
                                             "*prop": "loader",
