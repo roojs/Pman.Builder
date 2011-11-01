@@ -61,6 +61,7 @@
                                 },
                                 {
                                     "*prop": "tree",
+                                    "ddGroup": "dbtree",
                                     "rootVisible": false,
                                     "xtype": "TreePanel",
                                     "|xns": "Roo.tree",

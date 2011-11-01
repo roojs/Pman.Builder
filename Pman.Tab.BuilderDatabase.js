@@ -69,6 +69,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                         tree : {
                             xtype: 'TreePanel',
                             xns: Roo.tree,
+                            ddGroup : 'dbtree',
                             rootVisible : false,
                             loader : {
                                 xtype: 'TreeLoader',
