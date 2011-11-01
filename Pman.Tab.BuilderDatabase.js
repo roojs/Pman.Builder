@@ -120,7 +120,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             n.attributes.name,
                                             n.attributes.desc
                                         );
-                                        
+                                        Roo.log(attr);
                                     
                                     }
                                 },
