@@ -88,6 +88,9 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
+                                            "listeners": {
+                                                "create": "function (This, attr)\n{\n\n}"
+                                            },
                                             "*prop": "loader",
                                             "queryParam": "parent_id",
                                             "requestMethod": "GET",
