@@ -114,14 +114,18 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 listeners : {
                                     create : function (_self, attr)
                                     {
-                                          Roo.log("CREATE");
-                                        attr.text = '';
-                                        
-                                        attr.leaf = n.attributes.name.length ? true : false;
-                                        attr.html = String.format('<B>{0}</B><i>{1}</i>',
-                                            attr.name,
-                                            attr.desc
-                                        );
+                                        Roo.log("CREATE");
+                                        try {
+                                            attr.text = '';
+                                            
+                                            attr.leaf = n.attributes.name.length ? true : false;
+                                            attr.html = String.format('<B>{0}</B><i>{1}</i>',
+                                                attr.name,
+                                                attr.desc
+                                            );
+                                        } catch(e) {
+                                            Roo.log(e);
+                                        }
                                         Roo.log(attr);
                                     
                                     }
