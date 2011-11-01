@@ -79,7 +79,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             },
                             root : {
                                 xtype: 'AsyncTreeNode',
-                                xns: Roo.tree
+                                xns: Roo.tree,
+                                text : "TOP LEVEL"
                             }
                         }
                     },

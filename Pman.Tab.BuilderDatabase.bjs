@@ -74,9 +74,10 @@
                                             "|xns": "Roo.tree"
                                         },
                                         {
-                                            "|xns": "Roo.tree",
+                                            "*prop": "root",
+                                            "text": "TOP LEVEL",
                                             "xtype": "AsyncTreeNode",
-                                            "*prop": "root"
+                                            "|xns": "Roo.tree"
                                         }
                                     ]
                                 }
