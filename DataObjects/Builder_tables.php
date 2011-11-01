@@ -88,7 +88,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     {
         static  $desc = array();
         static  $types= array();
-        $tn = $do->tableName();
+        $do = DB_DataObject::factory($tn);
+        $tn = $do->tableName(); // cleaned up!
 
 
 
@@ -112,6 +113,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             ");
             while($dd->fetch()) {
                 $desc[$tn][$dd->name] = $dd->desc;
+            }
+            
+            $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
+            $types[$tn] = array();
+            foreach($defs as $c) {
+                $types[$tn][$c['name']] = $c['type'];
             }
         }
     
