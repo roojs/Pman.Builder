@@ -31,7 +31,14 @@
                         {
                             "region": "west",
                             "xtype": "TreePanel",
-                            "|xns": "Roo"
+                            "|xns": "Roo",
+                            "items": [
+                                {
+                                    "|xns": "Roo.tree",
+                                    "xtype": "TreePanel",
+                                    "*prop": "tree"
+                                }
+                            ]
                         },
                         {
                             "listeners": {
