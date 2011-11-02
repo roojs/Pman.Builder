@@ -244,6 +244,32 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                         }
                                     },
                                     text : "Add Group"
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                            _this.nIndex =     _this.nIndex || 0;
+                                            
+                                            var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';
+                                            var tree =  _this.treepanel.tree;
+                                            
+                                            var n = tree.loader.createNode({
+                                                id : -1,
+                                                descrip :'New Group ' + (++_this.nIndex), 
+                                                name : ''
+                                            }); 
+                                            
+                                            var node = _this.cxnode[m]( n , _this.cxnode.firstChild);
+                                            setTimeout(function(){
+                                                    tree.editor.editNode = node;
+                                                    tree.editor.startEdit(node.ui.textNode);
+                                                }, 10);
+                                        }
+                                    },
+                                    text : "Add Group"
                                 }
                             ]
                         }
