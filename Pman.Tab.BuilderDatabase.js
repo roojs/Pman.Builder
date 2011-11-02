@@ -175,6 +175,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     }
                                 }
                             }
+                        },
+                        menu : {
+                            xtype: 'Menu',
+                            xns: Roo.menu
                         }
                     },
                     {

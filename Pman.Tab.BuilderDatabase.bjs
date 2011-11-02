@@ -126,6 +126,11 @@
                                             "|xns": "Roo.tree"
                                         }
                                     ]
+                                },
+                                {
+                                    "|xns": "Roo.menu",
+                                    "xtype": "Menu",
+                                    "*prop": "menu"
                                 }
                             ]
                         },
