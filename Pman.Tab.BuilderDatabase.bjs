@@ -83,7 +83,8 @@
                                 },
                                 {
                                     "listeners": {
-                                        "beforeload": "function (node)\n{\n    if (!_this.panel.active) {\n        return false;\n    }\n}"
+                                        "beforeload": "function (node)\n{\n    if (!_this.panel.active) {\n        return false;\n    }\n}",
+                                        "contextmenu": "function (node, e)\n{\n   _this.treepanel.menu;\n}"
                                     },
                                     "*prop": "tree",
                                     "containerScroll": true,

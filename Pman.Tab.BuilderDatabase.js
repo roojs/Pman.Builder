@@ -116,6 +116,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     if (!_this.panel.active) {
                                         return false;
                                     }
+                                },
+                                contextmenu : function (node, e)
+                                {
+                                   _this.treepanel.menu;
                                 }
                             },
                             containerScroll : true,
