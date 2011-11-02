@@ -85,6 +85,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                     explode('_',
                         substr(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)))
                     ));
+            var_dump($mod);exit;
             // should get 'ZZZ' part.. : XXX_ZZZZ_DataObject_xx_Builder
             if (!isset($modids[$mod])) {
                 $x = DB_DataObject::factory('builder_tables');
@@ -117,7 +118,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             
             $do->setFrom($set);
             $do->insert();
-            exit;
+        
         }
             
         
