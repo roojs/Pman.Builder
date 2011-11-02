@@ -51,15 +51,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
-        
-        $tq = DB_DataObject::factory('builder_tables');
-        $tq->query( "
-            select relname, obj_description( oid) as desc FROM pg_catalog.pg_class
-            ");
-        while ($tq->fetch()) {
-            $desc[$tq->relname] = $tq->desc;
+        if (preg_match('/^psql:/', $this->_database)) {
+            $tq = DB_DataObject::factory('builder_tables');
+            $tq->query( "
+                select relname, obj_description( oid) as desc FROM pg_catalog.pg_class
+                ");
+            while ($tq->fetch()) {
+                $desc[$tq->relname] = $tq->desc;
+            }
         }
-
             DB_DataObjecT::DebugLevel(1);
         $tq = DB_DataObject::factory('builder_tables');
         
@@ -141,22 +141,23 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
        
              
         $desc = array();
-        $dd = clone($do);
-        
-       // DB_DataObject::DebugLevel(1);
-        $dd->query("SELECT
-                c.column_name as name,
-                pgd.description as desc
-            FROM pg_catalog.pg_statio_all_tables as st
-                inner join pg_catalog.pg_description pgd on (pgd.objoid=st.relid)
-                inner join information_schema.columns c on (pgd.objsubid=c.ordinal_position and c.table_schema=st.schemaname and c.table_name=st.relname)
-            WHERE
-                c.table_schema = 'public' and c.table_name = '{$tn}'
-        ");
-        while($dd->fetch()) {
-            $desc[$dd->name] = $dd->desc;
+        if (preg_match('/^psql:/', $this->_database)) {
+            $dd = clone($do);
+            
+           // DB_DataObject::DebugLevel(1);
+            $dd->query("SELECT
+                    c.column_name as name,
+                    pgd.description as desc
+                FROM pg_catalog.pg_statio_all_tables as st
+                    inner join pg_catalog.pg_description pgd on (pgd.objoid=st.relid)
+                    inner join information_schema.columns c on (pgd.objsubid=c.ordinal_position and c.table_schema=st.schemaname and c.table_name=st.relname)
+                WHERE
+                    c.table_schema = 'public' and c.table_name = '{$tn}'
+            ");
+            while($dd->fetch()) {
+                $desc[$dd->name] = $dd->desc;
+            }
         }
-        
         $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
         // add descriptions?
         foreach($defs as $i=>$c) {
