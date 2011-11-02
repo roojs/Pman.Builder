@@ -94,7 +94,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 if ($x->find(true)) {
                     $x->insert();
                 } 
-                  
+                 $modids[$mod] = $x->id; 
                 
             }
             
@@ -104,7 +104,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 'name' => $k,
                 'descript' => isset($desc[$k]) ? $desc[$k] : '',
                 'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4),
-                'parent_id' => $x->id,
+                'parent_id' =>  $modids[$mod],
             );
             
             $do = clone($tq);
