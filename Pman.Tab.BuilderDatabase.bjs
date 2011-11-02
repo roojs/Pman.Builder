@@ -148,7 +148,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';\n    var tree =  _this.treepanel.tree;\n    \n    var n = tree.loader.createNode({\n        id : -1,\n        descrip :'New Group ' + (++_this.nIndex), \n        name : ''\n    }); \n    \n    var node = _this.cxnode[m]( n , _this.cxnode.firstChild);\n    setTimeout(function(){\n            tree.editor.editNode = node;\n            tree.editor.startEdit(node.ui.textNode);\n        }, 10);\n}"
+                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    _this.cxnode;\n    // try and delete it..\n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        params : {\n            _delete : _this.cxnode.attributes.id\n        },\n        success : function() {\n            _this.cxnode.parentNode.removeNode(_this.cxnode);\n            _this.cxnode = false;\n        \n        }\n    });\n    \n}"
                                             },
                                             "text": "Add Group",
                                             "xtype": "Item",

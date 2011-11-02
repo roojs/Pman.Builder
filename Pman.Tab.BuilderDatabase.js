@@ -257,20 +257,20 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                         {
                                             _this.nIndex =     _this.nIndex || 0;
                                             
-                                            var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';
-                                            var tree =  _this.treepanel.tree;
+                                            _this.cxnode;
+                                            // try and delete it..
+                                            new Pman.Request({
+                                                url : baseURL + '/Roo/Builder_tables',
+                                                params : {
+                                                    _delete : _this.cxnode.attributes.id
+                                                },
+                                                success : function() {
+                                                    _this.cxnode.parentNode.removeNode(_this.cxnode);
+                                                    _this.cxnode = false;
+                                                
+                                                }
+                                            });
                                             
-                                            var n = tree.loader.createNode({
-                                                id : -1,
-                                                descrip :'New Group ' + (++_this.nIndex), 
-                                                name : ''
-                                            }); 
-                                            
-                                            var node = _this.cxnode[m]( n , _this.cxnode.firstChild);
-                                            setTimeout(function(){
-                                                    tree.editor.editNode = node;
-                                                    tree.editor.startEdit(node.ui.textNode);
-                                                }, 10);
                                         }
                                     },
                                     text : "Add Group"
