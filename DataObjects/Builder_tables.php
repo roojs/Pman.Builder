@@ -83,7 +83,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             // assumes '_' is not used in module name.
             $mod = array_pop(
                     explode('_',
-                        substring(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)))
+                        substr(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)))
                     ));
             // should get 'ZZZ' part.. : XXX_ZZZZ_DataObject_xx_Builder
             if (!isset($modids[$mod])) {
