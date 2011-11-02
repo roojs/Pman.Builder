@@ -130,6 +130,27 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 beforenodedrop : function (dropEvent)
                                 {
                                     Roo.log(dropEvent);
+                                    var node = dropEvent.dropNode;
+                                    var targ = dropEvent.target;
+                                    var parent = dropEvent.target;
+                                    switch(dropEvent.point) {
+                                        case 'below': 
+                                         case 'above':  
+                                            parent = dropEvent.target.parentNode;
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                    // technically you should not be able to drag tables into other modules..
+                                    
+                                    new Pman.Request({
+                                        url : baseURL + '/Roo/Builder_tables',
+                                        params : {
+                                            id : node.attributes.id,
+                                            parent_id : parent.attributes.id
+                                        }
+                                    });
+                                    
                                     
                                 }
                             },

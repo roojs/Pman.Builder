@@ -85,7 +85,7 @@
                                     "listeners": {
                                         "beforeload": "function (node)\n{\n    if (!_this.panel.active) {\n        return false;\n    }\n}",
                                         "contextmenu": "function (node, e)\n{\n    if (!node.expanded || node.leaf) {\n        return;\n    }\n\n   _this.treepanel.menu = Roo.factory(_this.treepanel.menu);\n   _this.treepanel.menu.show(node.ui.anchor,'tr');\n   _this.cxnode = node;\n}",
-                                        "beforenodedrop": "function (dropEvent)\n{\n    Roo.log(dropEvent);\n    \n}"
+                                        "beforenodedrop": "function (dropEvent)\n{\n    Roo.log(dropEvent);\n    var node = dropEvent.dropNode;\n    var targ = dropEvent.target;\n    var parent = dropEvent.target;\n    switch(dropEvent.point) {\n        case 'below': \n         case 'above':  \n            parent = dropEvent.target.parentNode;\n            break;\n        default:\n            break;\n    }\n    // technically you should not be able to drag tables into other modules..\n    \n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        params : {\n            id : node.attributes.id,\n            parent_id : parent.attributes.id\n        }\n    });\n    \n    \n}"
                                     },
                                     "*prop": "tree",
                                     "containerScroll": true,
