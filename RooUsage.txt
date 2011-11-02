@@ -221,6 +221,11 @@ right:
  Roo.tree.AsyncTreeNode         
   Roo.tree.TreeNode         
 
+left:     
+  Roo.tree.TreePanel:editor
+right:
+  Roo.tree.TreeEditor
+  
 left:           
  Roo.tree.TreePanel:loader 
 right:
