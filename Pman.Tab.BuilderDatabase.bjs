@@ -96,11 +96,6 @@
                                     "|xns": "Roo.tree",
                                     "items": [
                                         {
-                                            "*prop": "sm",
-                                            "xtype": "MultiSelectionModel",
-                                            "|xns": "Roo.tree"
-                                        },
-                                        {
                                             "listeners": {
                                                 "create": "function (_self, attr)\n{\n    Roo.log(\"CREATE\");\n    try {\n        attr.text = '';\n        \n        attr.leaf = attr.name.length ? true : false;\n        attr.html = String.format('<B>{0}</B><i>{1}</i>',\n            attr.name,\n            attr.descrip\n        );\n    } catch(e) {\n        Roo.log(e);\n    }\n    Roo.log(attr);\n\n}"
                                             },
