@@ -35,7 +35,7 @@ CREATE TABLE  builder_tables (
 );
 
 ALTER TABLE builder_tables ADD COLUMN name varchar(128)  NOT NULL;
-ALTER TABLE builder_tables ADD COLUMN descrip varchar(254)  NOT NULL;
+ALTER TABLE builder_tables ADD COLUMN descrip text NOT NULL;
 ALTER TABLE builder_tables ADD COLUMN parent_id int(11)  NOT NULL;
 ALTER TABLE builder_tables ADD COLUMN dbschema text  NOT NULL;
 
