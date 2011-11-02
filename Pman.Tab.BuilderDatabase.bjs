@@ -135,7 +135,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n      var node = this.cxnode.appendChild(\n        new Tree.TreeNode({\n            text:'New Group ' + (++_this.nIndex), \n            cls:'album-node', \n            allowDrag:false\n        }));\n}"
+                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n      var node = this.cxnode.appendChild(\n        new Tree.TreeNode({\n            text:'New Group ' + (++_this.nIndex), \n            cls:'album-node', \n            allowDrag:false,\n            leaf : false,\n        }));\n}"
                                             },
                                             "text": "Add Group",
                                             "xtype": "Item",

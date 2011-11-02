@@ -197,7 +197,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                                 new Tree.TreeNode({
                                                     text:'New Group ' + (++_this.nIndex), 
                                                     cls:'album-node', 
-                                                    allowDrag:false
+                                                    allowDrag:false,
+                                                    leaf : false,
                                                 }));
                                         }
                                     },
