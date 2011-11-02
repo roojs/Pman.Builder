@@ -60,7 +60,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $desc[$tq->relname] = $tq->desc;
             }
         }
-            DB_DataObjecT::DebugLevel(1);
+        //   DB_DataObjecT::DebugLevel(1);
         $tq = DB_DataObject::factory('builder_tables');
         
         require_once 'Services/JSON.php';
