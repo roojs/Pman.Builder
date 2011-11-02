@@ -50,6 +50,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $t = array_keys($tables);
         sort($t);
         
+        
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
         if (preg_match('/^pgsql:/', $this->_database)) {
