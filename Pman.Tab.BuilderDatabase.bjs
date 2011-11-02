@@ -118,7 +118,9 @@
                                             "*prop": "sm"
                                         },
                                         {
-                                            "beforenodeedit": "function (_self, boundEl, value)\n{\n    Roo.log('before start edit');\n    Roo.log(this.editNode);\n    if (this.editNode.attributes.name.length) {;\n        return false;\n    }\n    return true;\n    \n}",
+                                            "listeners": {
+                                                "beforenodeedit": "function (_self, node)\n{\n\n}"
+                                            },
                                             "*prop": "editor",
                                             "xtype": "TreeEditor",
                                             "|xns": "Roo.tree"

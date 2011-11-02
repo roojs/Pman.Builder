@@ -162,16 +162,12 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             editor : {
                                 xtype: 'TreeEditor',
                                 xns: Roo.tree,
-                                beforenodeedit : 'function (_self, boundEl, value)
-{
-    Roo.log(\'before start edit\');
-    Roo.log(this.editNode);
-    if (this.editNode.attributes.name.length) {;
-        return false;
-    }
-    return true;
-    
-}'
+                                listeners : {
+                                    beforenodeedit : function (_self, node)
+                                    {
+                                    
+                                    }
+                                }
                             }
                         }
                     },
