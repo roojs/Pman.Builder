@@ -199,8 +199,9 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             _this.nIndex =     _this.nIndex || 0;
                                             
                                             var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';
+                                            var tree =  _this.treepanel.tree;
                                             
-                                            var n = _this.treepanel.tree.loader.createNode({
+                                            var n = tree.loader.createNode({
                                                 id : -1,
                                                 descrip :'New Group ' + (++_this.nIndex), 
                                                 name : ''
