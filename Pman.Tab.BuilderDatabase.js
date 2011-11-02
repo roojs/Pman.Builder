@@ -142,7 +142,9 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             break;
                                     }
                                     // technically you should not be able to drag tables into other modules..
-                                    
+                                    if (parent.attributes.id < 1) {
+                                        dropEvent.cancel = 1;
+                                    }
                                     new Pman.Request({
                                         url : baseURL + '/Roo/Builder_tables',
                                         params : {
