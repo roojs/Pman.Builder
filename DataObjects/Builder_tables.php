@@ -114,6 +114,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $dd = clone($do);
                 $do->setFrom($set);
                 if (empty($do->parent_id)) {
+                    // allow user to modify this..
                     $do->parent_id = $modids[$mod];
                 }
                 $do->update($dd);
