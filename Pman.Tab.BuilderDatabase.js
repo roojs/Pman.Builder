@@ -118,6 +118,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     }
                                 }
                             },
+                            containerScroll : true,
                             ddGroup : 'dbtree',
                             enableDrag : true,
                             enableDrop : true,

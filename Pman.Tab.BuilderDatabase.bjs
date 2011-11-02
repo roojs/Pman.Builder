@@ -86,6 +86,7 @@
                                         "beforeload": "function (node)\n{\n    if (!_this.panel.active) {\n        return false;\n    }\n}"
                                     },
                                     "*prop": "tree",
+                                    "containerScroll": true,
                                     "ddGroup": "dbtree",
                                     "enableDrag": true,
                                     "enableDrop": true,
