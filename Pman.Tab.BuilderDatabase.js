@@ -126,6 +126,11 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                    _this.treepanel.menu = Roo.factory(_this.treepanel.menu);
                                    _this.treepanel.menu.show(node.ui.anchor,'tr');
                                    _this.cxnode = node;
+                                },
+                                beforenodedrop : function (dropEvent)
+                                {
+                                    Roo.log(dropEvent);
+                                    
                                 }
                             },
                             containerScroll : true,
