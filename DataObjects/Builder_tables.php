@@ -105,7 +105,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             
             $set = array(
                 'name' => $k,
-                'descript' => isset($desc[$k]) ? $desc[$k] : '',
+                'descrip' => isset($desc[$k]) ? $desc[$k] : '',
                 'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4),
                // 'parent_id' =>  $modids[$mod],
             );
