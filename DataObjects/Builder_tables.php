@@ -65,6 +65,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         require_once 'Services/JSON.php';
         
+        $modids = array();
+        
         
         foreach( $t as $k) {
             if (preg_match('/__keys$/', $k)) {
@@ -77,10 +79,32 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 continue;
             }
             
+            // get's the module part out of the dataobject class name
+            // assumes '_' is not used in module name.
+            $mod = array_pop(
+                    explode('_',
+                        substring(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)))
+                    ));
+            // should get 'ZZZ' part.. : XXX_ZZZZ_DataObject_xx_Builder
+            if (!isset($modids[$mod])) {
+                $x = DB_DataObject::factory('builder_tables');
+                $x->parent_id =0;
+                $x->name = '';
+                $x->descrip = $mod;
+                if ($x->find(true)) {
+                    $x->insert();
+                } 
+                  
+                
+            }
+            
+            
+            
             $set = array(
                 'name' => $k,
                 'descript' => isset($desc[$k]) ? $desc[$k] : '',
-                'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4)
+                'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4),
+                'parent_id' => $x->id
             );
             
             $do = clone($tq);
