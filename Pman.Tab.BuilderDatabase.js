@@ -158,6 +158,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                             sm : {
                                 xtype: 'DefaultSelectionModel',
                                 xns: Roo.tree
+                            },
+                            editor : {
+                                xtype: 'TreeEditor',
+                                xns: Roo.tree
                             }
                         }
                     },

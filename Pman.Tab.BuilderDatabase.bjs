@@ -116,6 +116,11 @@
                                             "|xns": "Roo.tree",
                                             "xtype": "DefaultSelectionModel",
                                             "*prop": "sm"
+                                        },
+                                        {
+                                            "|xns": "Roo.tree",
+                                            "xtype": "TreeEditor",
+                                            "*prop": "editor"
                                         }
                                     ]
                                 }
