@@ -54,7 +54,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
        // DB_DataObjecT::DebugLevel(1);
         $tq = DB_DataObject::factory('builder_tables');
         $tq->query( "
-            select relname, obj_description( oid) as desc FROM pg_catalog.pg_class");
+            select relname, obj_description( oid) as desc FROM pg_catalog.pg_class
+            ");
         while ($tq->fetch()) {
             $desc[$tq->relname] = $tq->desc;
         }
