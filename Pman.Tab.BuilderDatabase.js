@@ -195,7 +195,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                      
                                             parent_id : pa.id,
                                             descrip : this.editNode.text,
-                                            name : ''
+                                            name : '',
+                                            dbschema : ''
                                         };
                                             
                                         if (attr.id > 0) {
