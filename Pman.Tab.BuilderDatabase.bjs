@@ -118,9 +118,12 @@
                                             "*prop": "sm"
                                         },
                                         {
-                                            "|xns": "Roo.tree",
+                                            "listeners": {
+                                                "beforestartedit": "function (_self, boundEl, value)\n{\n    if (this.editNode.attributes.name.length) {;\n        return false;\n    }\n    return true;\n    \n}"
+                                            },
+                                            "*prop": "editor",
                                             "xtype": "TreeEditor",
-                                            "*prop": "editor"
+                                            "|xns": "Roo.tree"
                                         }
                                     ]
                                 }
