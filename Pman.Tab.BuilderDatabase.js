@@ -265,7 +265,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                                     _delete : _this.cxnode.attributes.id
                                                 },
                                                 success : function() {
-                                                    _this.cxnode.parentNode.removeNode(_this.cxnode);
+                                                    _this.cxnode.parentNode.removeChild(_this.cxnode);
                                                     _this.cxnode = false;
                                                 
                                                 }

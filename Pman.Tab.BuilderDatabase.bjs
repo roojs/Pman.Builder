@@ -148,7 +148,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    _this.cxnode;\n    // try and delete it..\n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        params : {\n            _delete : _this.cxnode.attributes.id\n        },\n        success : function() {\n            _this.cxnode.parentNode.removeNode(_this.cxnode);\n            _this.cxnode = false;\n        \n        }\n    });\n    \n}"
+                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    _this.cxnode;\n    // try and delete it..\n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        params : {\n            _delete : _this.cxnode.attributes.id\n        },\n        success : function() {\n            _this.cxnode.parentNode.removeChild(_this.cxnode);\n            _this.cxnode = false;\n        \n        }\n    });\n    \n}"
                                             },
                                             "text": "Add Group",
                                             "xtype": "Item",
