@@ -133,8 +133,9 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
-                                            "|xns": "Roo.menu",
-                                            "xtype": "Item"
+                                            "text": "Add Group",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
                                         }
                                     ]
                                 }
