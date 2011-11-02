@@ -52,7 +52,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
-        if (preg_match('/^psql:/', $this->_database)) {
+        if (preg_match('/^pgsql:/', $this->_database)) {
             $tq = DB_DataObject::factory('builder_tables');
             $tq->query( "
                 select relname, obj_description( oid) as desc FROM pg_catalog.pg_class
@@ -151,7 +151,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
              
         $desc = array();
         $dd = clone($do);
-        if (preg_match('/^psql:/', $this->_database)) {
+        if (preg_match('/^pgsql:/', $this->_database)) {
             
             
            // DB_DataObject::DebugLevel(1);
