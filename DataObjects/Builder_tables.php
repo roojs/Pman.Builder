@@ -141,8 +141,9 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
        
              
         $desc = array();
+        $dd = clone($do);
         if (preg_match('/^psql:/', $this->_database)) {
-            $dd = clone($do);
+            
             
            // DB_DataObject::DebugLevel(1);
             $dd->query("SELECT
