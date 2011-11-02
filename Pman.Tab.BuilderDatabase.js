@@ -192,11 +192,12 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                         var pa = this.editNode.parentNode.attributes;
                                         Roo.log(pa);
                                         var pr =  {
-                                                id : attr.id < 0 ? 0 : attr.id, 
-                                                parent_id : pa.id,
-                                                descrip : this.editNode.text,
-                                                name : ''
-                                            };
+                                            id : attr.id < 0 ? 0 : attr.id, 
+                                            parent_id : pa.id,
+                                            descrip : this.editNode.text,
+                                            name : ''
+                                        };
+                                            
                                         if (attr.id > 0) {
                                             pr.id = attr.id;
                                         }
