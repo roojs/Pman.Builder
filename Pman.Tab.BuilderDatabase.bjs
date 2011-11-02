@@ -89,7 +89,6 @@
                                     "containerScroll": true,
                                     "ddGroup": "dbtree",
                                     "enableDD": true,
-                                    "enableDrop": true,
                                     "rootVisible": false,
                                     "xtype": "TreePanel",
                                     "|xns": "Roo.tree",
