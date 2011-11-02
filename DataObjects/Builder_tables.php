@@ -33,7 +33,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     function syncDatabase()
     {
-        //DB_DataObject::debugLevel(1);
+         DB_DataObject::debugLevel(1);
         global $_DB_DATAOBJECT;
         $x = DB_DataObject::factory('builder_tables');
         $x->whereAdd("name != ''"); // real tables only..
