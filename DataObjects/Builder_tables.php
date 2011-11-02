@@ -111,8 +111,9 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             $do = clone($tq);
             if (isset($mine[$k])) { 
                 $do->get($mine[$k]);
+                $dd = clone($do);
                 $do->setFrom($set);
-                $do->update();
+                $do->update($dd);
                 continue;
             }
             
