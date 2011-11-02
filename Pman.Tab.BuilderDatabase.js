@@ -206,7 +206,8 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                                 name : ''
                                             }); 
                                             
-                                            var node = _this.cxnode[m]( n , _this.cxnode.firstChild);
+                                            _this.cxnode[m]( n , _this.cxnode.firstChild);
+                                            
                                         }
                                     },
                                     text : "Add Group"
