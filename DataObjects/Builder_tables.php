@@ -93,6 +93,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $x->parent_id =0;
                 $x->name = '';
                 $x->descrip = $mod;
+                $x->dbschema = '';
                 if (!$x->find(true)) {
                     $x->insert();
                 } 
