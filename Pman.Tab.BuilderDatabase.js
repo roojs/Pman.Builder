@@ -186,6 +186,22 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     complete : function (_self, value, startValue)
                                     {
                                         Roo.log(this.editNode);
+                                    
+                                        var attr = this.editNode.attributes;
+                                        
+                                        var pa = this.editNode.parentNode.attributes;
+                                        
+                                        new Pman.Request({
+                                            url : baseURL + '/Roo/Builder_tables',
+                                            method : 'POST',
+                                            params : {
+                                                id : attr.id < 0 ? 0 :attr.id, 
+                                                parent_id : pa.id,
+                                                descrip : this.editNode.text
+                                            }
+                                        });
+                                        
+                                        
                                         
                                     }
                                 }
