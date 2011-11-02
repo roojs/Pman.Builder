@@ -134,6 +134,9 @@
                                     "*prop": "menu",
                                     "items": [
                                         {
+                                            "listeners": {
+                                                "click": "function (_self, e)\n{\n    var node = root.appendChild(new Tree.TreeNode({\n        text:'Album ' + (++newIndex), \n        cls:'album-node', \n        allowDrag:false\n    }));\n}"
+                                            },
                                             "text": "Add Group",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
