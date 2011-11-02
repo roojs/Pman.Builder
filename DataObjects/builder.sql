@@ -34,10 +34,12 @@ CREATE TABLE  builder_tables (
   PRIMARY KEY (id)
 );
 
-ALTER TABLE builder_tables ADD COLUMN name varchar(128)  NOT NULL;
-ALTER TABLE builder_tables ADD COLUMN descrip text NOT NULL;
-ALTER TABLE builder_tables ADD COLUMN parent_id int(11)  NOT NULL;
-ALTER TABLE builder_tables ADD COLUMN dbschema text  NOT NULL;
+ALTER TABLE builder_tables ADD COLUMN name varchar(128)  NOT NULL DEFAULT '';
+ALTER TABLE builder_tables ADD COLUMN descrip text NOT NULL DEFAULT '';
+ALTER TABLE builder_tables ADD COLUMN parent_id int(11)  NOT NULL DEFAULT '';
+ALTER TABLE builder_tables ADD COLUMN dbschema text  NOT NULL DEFAULT '';
+
+ALTER TABLE builder_tables CHANGE COLUMN descript text  NOT NULL DEFAULT '';
 
 ALTER TABLE builder_tables ADD INDEX lookup(parent_id, name);
 
