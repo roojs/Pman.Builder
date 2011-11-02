@@ -117,7 +117,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             
             $do->setFrom($set);
             $do->insert();
-            
+            exit;
         }
             
         
