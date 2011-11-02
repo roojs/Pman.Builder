@@ -39,9 +39,9 @@ ALTER TABLE builder_tables ADD COLUMN descrip text NOT NULL DEFAULT '';
 ALTER TABLE builder_tables ADD COLUMN parent_id int(11)  NOT NULL DEFAULT '';
 ALTER TABLE builder_tables ADD COLUMN dbschema text  NOT NULL DEFAULT '';
 
-ALTER TABLE builder_tables CHANGE COLUMN descript text  NOT NULL DEFAULT '';
-ALTER TABLE builder_tables ALTER COLUMN descript TYPE text;
-ALTER TABLE builder_tables ALTER COLUMN descript SET DEFAULT '';
+ALTER TABLE builder_tables CHANGE COLUMN descrip text  NOT NULL DEFAULT '';
+ALTER TABLE builder_tables ALTER COLUMN descrip TYPE text;
+ALTER TABLE builder_tables ALTER COLUMN descrip SET DEFAULT '';
 ALTER TABLE builder_tables ALTER COLUMN name SET DEFAULT '';
 ALTER TABLE builder_tables ALTER COLUMN dbschema SET DEFAULT '';
 
