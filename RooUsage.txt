@@ -225,7 +225,14 @@ left:
   Roo.tree.TreePanel:editor
 right:
   Roo.tree.TreeEditor
+
+left:     
+  Roo.tree.TreeEditor:field
+right:
+  Roo.form.TextField
   
+
+
 left:           
  Roo.tree.TreePanel:loader 
 right:
