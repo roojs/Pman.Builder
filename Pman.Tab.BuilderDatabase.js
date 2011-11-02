@@ -192,11 +192,13 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self, e)
                                         {
-                                            var node = root.appendChild(new Tree.TreeNode({
-                                                text:'Album ' + (++newIndex), 
-                                                cls:'album-node', 
-                                                allowDrag:false
-                                            }));
+                                            _this.nIndex =     _this.nIndex || 0;
+                                              var node = this.cxnode.appendChild(
+                                                new Tree.TreeNode({
+                                                    text:'New Group ' + (++_this.nIndex), 
+                                                    cls:'album-node', 
+                                                    allowDrag:false
+                                                }));
                                         }
                                     },
                                     text : "Add Group"
