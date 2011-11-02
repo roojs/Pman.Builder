@@ -120,7 +120,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 contextmenu : function (node, e)
                                 {
                                    _this.treepanel.menu = Roo.factory(_this.treepanel.menu);
-                                   _this.treepanel.menu.show(node.el,'tr');
+                                   _this.treepanel.menu.show(node.ui.anchor,'tr');
                                 }
                             },
                             containerScroll : true,
