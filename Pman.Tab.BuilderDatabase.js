@@ -185,7 +185,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     },
                                     complete : function (_self, value, startValue)
                                     {
-                                        Roo.log(this.node);
+                                        Roo.log(this.editNode);
                                         
                                     }
                                 }

@@ -121,7 +121,7 @@
                                         {
                                             "listeners": {
                                                 "beforenodeedit": "function (_self,node)\n{\n    Roo.log('before start edit');\n    Roo.log(this.editNode);\n    if (node.attributes.name.length) {\n        return false;\n    }\n    return true;\n    \n}",
-                                                "complete": "function (_self, value, startValue)\n{\n    Roo.log(this.node);\n    \n}"
+                                                "complete": "function (_self, value, startValue)\n{\n    Roo.log(this.editNode);\n    \n}"
                                             },
                                             "*prop": "editor",
                                             "xtype": "TreeEditor",
