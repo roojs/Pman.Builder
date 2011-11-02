@@ -107,7 +107,7 @@
                                             "requestMethod": "GET",
                                             "root": "data",
                                             "xtype": "TreeLoader",
-                                            "|baseParams": " { _tree: 1, 'sort': 'name', dir: 'ASC' }",
+                                            "|baseParams": " { _tree: 1, 'sort': 'name', dir: 'ASC', limit : 9999 }",
                                             "|dataUrl": "baseURL + '/Roo/Builder_tables.php'",
                                             "|xns": "Roo.tree"
                                         },

@@ -151,7 +151,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 queryParam : 'parent_id',
                                 requestMethod : 'GET',
                                 root : 'data',
-                                baseParams : { _tree: 1, 'sort': 'name', dir: 'ASC' },
+                                baseParams : { _tree: 1, 'sort': 'name', dir: 'ASC', limit : 9999 },
                                 dataUrl : baseURL + '/Roo/Builder_tables.php'
                             },
                             root : {
