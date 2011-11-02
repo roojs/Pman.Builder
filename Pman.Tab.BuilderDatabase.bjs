@@ -135,7 +135,7 @@
                                     "items": [
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';\n    var node = _this.cxnode[m](\n        new Roo.tree.AsyncTreeNode({\n            text:'New Group ' + (++_this.nIndex), \n            cls:'album-node', \n            allowDrag:false,\n            leaf : false,\n        }), _this.cxnode.firstChild);\n}"
+                                                "click": "function (_self, e)\n{\n    _this.nIndex =     _this.nIndex || 0;\n    \n    var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';\n    \n    var n = _this.treepanel.laoder.createNode({\n        id : 0,\n        descrip :'New Group ' + (++_this.nIndex), \n        name : ''\n    }); \n    \n    var node = _this.cxnode[m]( n , _this.cxnode.firstChild);\n}"
                                             },
                                             "text": "Add Group",
                                             "xtype": "Item",

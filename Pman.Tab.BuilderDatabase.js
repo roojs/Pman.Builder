@@ -199,13 +199,14 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             _this.nIndex =     _this.nIndex || 0;
                                             
                                             var m = _this.cxnode.firstChild ? 'insertBefore' : 'appendChild';
-                                            var node = _this.cxnode[m](
-                                                new Roo.tree.AsyncTreeNode({
-                                                    text:'New Group ' + (++_this.nIndex), 
-                                                    cls:'album-node', 
-                                                    allowDrag:false,
-                                                    leaf : false,
-                                                }), _this.cxnode.firstChild);
+                                            
+                                            var n = _this.treepanel.laoder.createNode({
+                                                id : 0,
+                                                descrip :'New Group ' + (++_this.nIndex), 
+                                                name : ''
+                                            }); 
+                                            
+                                            var node = _this.cxnode[m]( n , _this.cxnode.firstChild);
                                         }
                                     },
                                     text : "Add Group"
