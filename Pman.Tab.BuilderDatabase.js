@@ -246,6 +246,10 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                     text : "Add Group"
                                 },
                                 {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
+                                },
+                                {
                                     xtype: 'Item',
                                     xns: Roo.menu,
                                     listeners : {
