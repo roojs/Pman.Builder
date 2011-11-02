@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-93",
+    "id": "roo-file-92",
     "name": "Pman.Tab.BuilderDatabase",
     "parent": "Pman.Tab.Builder",
     "title": "Pman.Tab.BuilderDatabase",
@@ -118,9 +118,6 @@
                                             "*prop": "sm"
                                         },
                                         {
-                                            "listeners": {
-                                                "beforenodeedit": "function (_self,node)\n{\n    Roo.log('before start edit');\n    Roo.log(this.editNode);\n    if (node.attributes.name.length) {\n        return false;\n    }\n    return true;\n    \n}"
-                                            },
                                             "*prop": "editor",
                                             "xtype": "TreeEditor",
                                             "|xns": "Roo.tree"
