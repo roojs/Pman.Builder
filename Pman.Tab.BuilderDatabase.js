@@ -273,7 +273,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             
                                         }
                                     },
-                                    text : "Add Group"
+                                    text : "Remove Group"
                                 }
                             ]
                         }
