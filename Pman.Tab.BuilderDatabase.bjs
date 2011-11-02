@@ -84,8 +84,7 @@
                                 {
                                     "listeners": {
                                         "beforeload": "function (node)\n{\n    if (!_this.panel.active) {\n        return false;\n    }\n}",
-                                        "contextmenu": "function (node, e)\n{\n    if (!node.expanded || node.leaf) {\n        return;\n    }\n\n   _this.treepanel.menu = Roo.factory(_this.treepanel.menu);\n   _this.treepanel.menu.show(node.ui.anchor,'tr');\n   _this.cxnode = node;\n}",
-                                        "nodedrop": "function (dropEvent)\n{\n\n}"
+                                        "contextmenu": "function (node, e)\n{\n    if (!node.expanded || node.leaf) {\n        return;\n    }\n\n   _this.treepanel.menu = Roo.factory(_this.treepanel.menu);\n   _this.treepanel.menu.show(node.ui.anchor,'tr');\n   _this.cxnode = node;\n}"
                                     },
                                     "*prop": "tree",
                                     "containerScroll": true,
