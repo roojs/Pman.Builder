@@ -105,7 +105,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 'name' => $k,
                 'descript' => isset($desc[$k]) ? $desc[$k] : '',
                 'dbschema' => Services_JSON::stringify($this->tableSchema($k),null,4),
-                'parent_id' =>  $modids[$mod],
+               // 'parent_id' =>  $modids[$mod],
             );
             
             $do = clone($tq);
@@ -113,11 +113,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $do->get($mine[$k]);
                 $dd = clone($do);
                 $do->setFrom($set);
+                if (empty($do->parent_id)) {
+                    $do->parent_id = $modids[$mod];
+                }
                 $do->update($dd);
                 continue;
             }
             
             $do->setFrom($set);
+            $do->parent_id = $modids[$mod];
             $do->insert();
         
         }
