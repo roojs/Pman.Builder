@@ -195,7 +195,7 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                             url : baseURL + '/Roo/Builder_tables',
                                             method : 'POST',
                                             params : {
-                                                id : attr.id < 0 ? 0 :attr.id, 
+                                                id : attr.id < 0 ? 0 : attr.id, 
                                                 parent_id : pa.id,
                                                 descrip : this.editNode.text
                                             }

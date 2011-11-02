@@ -121,7 +121,7 @@
                                         {
                                             "listeners": {
                                                 "beforenodeedit": "function (_self,node)\n{\n    Roo.log('before start edit');\n    Roo.log(this.editNode);\n    if (node.attributes.name.length) {\n        return false;\n    }\n    return true;\n    \n}",
-                                                "complete": "function (_self, value, startValue)\n{\n    Roo.log(this.editNode);\n\n    var attr = this.editNode.attributes;\n    \n    var pa = this.editNode.parentNode.attributes;\n    \n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        method : 'POST',\n        params : {\n            id : attr.id < 0 ? 0 :attr.id, \n            parent_id : pa.id,\n            descrip : this.editNode.text\n        }\n    });\n    \n    \n    \n}"
+                                                "complete": "function (_self, value, startValue)\n{\n    Roo.log(this.editNode);\n\n    var attr = this.editNode.attributes;\n    \n    var pa = this.editNode.parentNode.attributes;\n    \n    new Pman.Request({\n        url : baseURL + '/Roo/Builder_tables',\n        method : 'POST',\n        params : {\n            id : attr.id < 0 ? 0 : attr.id, \n            parent_id : pa.id,\n            descrip : this.editNode.text\n        }\n    });\n    \n    \n    \n}"
                                             },
                                             "*prop": "editor",
                                             "xtype": "TreeEditor",
