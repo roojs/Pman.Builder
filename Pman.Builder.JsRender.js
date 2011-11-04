@@ -22,6 +22,8 @@
  * @cfg {String}  disable? function call to disable it?
  * @cfg {String} permname
  * @cfg {Number} modOrder
+  * @cfg {Number} modKey ???
+ * 
  *
  */ 
 Pman.Builder.JsRender = function(cfg) {
