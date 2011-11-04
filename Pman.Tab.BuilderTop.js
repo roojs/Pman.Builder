@@ -238,15 +238,15 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                     return;
                                                 }
                                                     
-                                        
+                                               
                                                new Pman.Request({
                                                     url : baseURL + '/Roo/Builder_part',
                                                     method : 'POST',
                                                     params : {
-                                                        _delete : -1
+                                                        _delete :  _this.filesel.getValue()
                                                     },
                                                     success : function() {
-                                                        _this.partCombo.setValue('');
+                                                        _this.fikeCombo.setValue('');
                                                         // unload stuff..
                                                     
                                                     }
