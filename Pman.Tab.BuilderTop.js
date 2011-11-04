@@ -292,6 +292,10 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                             render : function (_self)
                             {
                                 _this.filesel = this;
+                            },
+                            change : function (_self, newValue, oldValue)
+                            {
+                               Roo.log("CHANGE: newValue");
                             }
                         },
                         allowBlank : true,
