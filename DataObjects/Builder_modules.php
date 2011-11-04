@@ -301,9 +301,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         $cmd = "$git commit -m '{$path}{$file} - Commit (DELETE) from online editor' ";
         `$cmd`;
         `git push`;
-        
-        
-        
+         
     }
     
     
