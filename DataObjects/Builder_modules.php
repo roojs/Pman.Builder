@@ -187,7 +187,6 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     {
         
         
-        
         $pg = HTML_FlexyFramework::get()->page;
         $working = ini_get('session.save_path'). '/' .
                 urlencode($pg->authUser->email) . '-' .
