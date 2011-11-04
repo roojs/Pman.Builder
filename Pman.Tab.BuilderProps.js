@@ -250,6 +250,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                         xns: ec['|xns'] || '',
                                         list: 'events'
                                 }, function (n,val) {
+                                    n = '!|' + n;
                                     ec[n] = val || "function () {\n\n}";
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
                                     var bp = Pman.Tab.BuilderView.panel;
