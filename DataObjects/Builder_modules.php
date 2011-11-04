@@ -86,7 +86,10 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         $ret = array();
         foreach(glob($working . '/'. $path .'*.bjs') as $bjs) {
-            var_dump($bjs);exit;
+            $js = preg_replace('/\.bjs$/', '.js', $bjs);
+            if (!file_exists($js)) {
+                continue;
+            }
             $n = preg_replace('/\.bjs$/', '', basename($bjs));
             
             $ret[$n] = filemtime( $bjs);
