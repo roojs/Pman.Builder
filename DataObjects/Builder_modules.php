@@ -141,8 +141,16 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
      */
     function gitDir()
     {
+        
+        static $paths= array();
+        if (isset($paths[$this->path])) {
+            return $paths[$this->path]; 
+        }
         // using the path determine 
         $path = $this->path;
+        
+        
+        
         //var_dump($path);
         //var_dump(file_exists($path.'/.git'));
         
@@ -168,6 +176,8 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             'url' => $url,
             'path' => $sub
         );
+        
+        $paths[$this->path] = $ret;
         //var_Dump($ret); //exit;
         return $ret;
         
