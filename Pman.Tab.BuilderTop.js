@@ -281,12 +281,13 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                     pt.clearAll();
                                     pt.setCurrentNode(bt.root,true);
                                    // var bv = Pman.Tab.BuilderView;
-                                   Pman.Tab.BuilderView.panel.clearAll();
+                                    Pman.Tab.BuilderView.panel.clearAll();
+                                    Pman.Tab.BuilderTab.layout.getRegion('west').el.mask("select part");
                                    // bv.panel.el.mask("select Module / Part");
                                     return;
                                 }
                                 //bv.panel.el.unmask();
-                                
+                                Pman.Tab.BuilderTab.layout.getRegion('west').el.unmask();
                                 pt.loadBJS(_this.modsel.getValue(), rec.data.id)
                             
                             
