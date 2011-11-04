@@ -273,7 +273,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
     }
     
-    function gitCommitDelete($file,$data)
+    function gitCommitDelete($file)
     {
         $gd = $this->gitDir();
         if (!$gd) {
