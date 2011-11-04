@@ -562,7 +562,7 @@ Pman.Builder.Wizard = {
          *
          */
         var rcfg = in_rcfg;
-        var table , desc, display, idcol, hiddenName;
+        var table , desc, display, idcol, hiddenName, name;
         
         // rcfg can be one of two things: (from a form)
         // or direct..
