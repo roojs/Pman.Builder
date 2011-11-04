@@ -248,7 +248,8 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                     success : function() {
                                                         _this.fileCombo.setValue('');
                                                         // unload stuff..
-                                                        Pman.Tab.BuilderTab.layout.getRegion('west').el.mask("select part");
+                                                         _this.filesel.fireEvent('select', false);
+                                        //                Pman.Tab.BuilderTab.layout.getRegion('west').el.mask("select part");
                                                     
                                                     }
                                                
