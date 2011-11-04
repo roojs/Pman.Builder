@@ -62,8 +62,10 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
     }
     
-    function onDelete($req, $roo)
+    function beforeDelete($req, $roo)
     {
+        
+        
         
     }
     function onInsert($req,$roo)
