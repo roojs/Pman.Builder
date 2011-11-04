@@ -661,7 +661,7 @@ Pman.Builder.Wizard = {
             
             // from our table..
             hiddenName : hiddenName, 
-            name : rcfg.column + '_' + display, 
+            name : name, 
             
             items : [
                 {
@@ -692,7 +692,7 @@ Pman.Builder.Wizard = {
                             '*prop' : 'reader',
                             'xtype' : 'JsonReader',
                             '|xns' : 'Roo.data',
-                            'id' : rcfg.maps_to,
+                            'id' : idcol,
                             'root' : 'data',
                             'totalProperty' : 'total',
                             '|fields' : JSON.stringify(combofields)
