@@ -22,7 +22,7 @@
  * @cfg {String}  disable? function call to disable it?
  * @cfg {String} permname
  * @cfg {Number} modOrder
-  * @cfg {Number} modKey ???
+  * @cfg {Number} modkey ???
  * 
  *
  */ 
@@ -486,7 +486,7 @@ Pman.Builder.JsRender.prototype =  {
         var items = JSON.parse(JSON.stringify(this.items[0]));
         var o = this.mungeToString(items, false, '            ');   
          
-        var modkey = this.modKey + '-' + this.name.replace(/[^A-Z.]+/ig, '-');
+        var modkey = this.modkey + '-' + this.name.replace(/[^A-Z.]+/ig, '-');
         
         
         if (this.name.match(/^Pman/)) {
