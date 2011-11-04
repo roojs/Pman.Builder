@@ -93,6 +93,7 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             v = true;
                         }
                         var ec = _this.grid.currentNode.elConfig;
+                        
                         if (id[0] == '!') {
                             ec.listeners = ec.listeners || {};
                             ec.listeners[id.substring(1)] = v;
