@@ -124,7 +124,7 @@ Pman.Builder.Wizard = {
                 "|rowdblclick": "function (_self, rowIndex, e)\n" + 
                     "{\n" + 
                     "    if (!_this.dialog) return;\n" + 
-                    "    _this.dialog.show( this.getDataSource().getAt(rowIndex), function() {\n" + 
+                    "    _this.dialog.show( this.getDataSource().getAt(rowIndex).data, function() {\n" + 
                     "        _this.grid.footer.onClick('first');\n" + 
                     "    }); \n" + 
                     "}\n"
