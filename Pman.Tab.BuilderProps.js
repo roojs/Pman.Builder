@@ -92,7 +92,18 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         if (v == 'true') {
                             v = true;
                         }
-                        _this.grid.currentNode.elConfig[id] = v;
+                        if (!id.length) {
+                            return;
+                        }
+                        var ec = _this.grid.currentNode.elConfig.listeners ;
+                        if (id[0] == '!') {
+                            ec.listeners = ec.listeners || {};
+                            ec.listeners[id.substring(1)] = v;
+                        } else { 
+                            _this.grid.currentNode.elConfig[id] = v;
+                        }
+                        
+                        
                         _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
                         
                         var bp = Pman.Tab.BuilderView.panel;
