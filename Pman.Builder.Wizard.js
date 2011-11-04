@@ -546,7 +546,7 @@ Pman.Builder.Wizard = {
      
     },
     
-    'Roo.form.ComboBox' : function(rcfg, old)
+    'Roo.form.ComboBox' : function(in_rcfg, old)
     {
         /*
          * We need:
@@ -561,33 +561,51 @@ Pman.Builder.Wizard = {
          *      
          *
          */
+        var rcfg = in_rcfg;
+        var table , desc, display;
         
-        
-        
-        
-        var desc = rcfg.columnshort;
-        if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
-            desc = desc.substring(rcfg.table.length+1);
-        }
-        desc = desc.replace(/_id$/, '');
-        
-        if (!desc.length) {
-            desc = rcfg.column;
-        }
-        if (rcfg.title && rcfg.title.length) {
-            desc = rcfg.title;
-        }
-        // set the display column (from the remote table)
-        var display = rcfg.display;
-        Roo.each(rcfg.deps, function(dn) {
-            if (dn.column == rcfg.display) {
-                display = dn.columnshort;
-            }
+        // rcfg can be one of two things: (from a form)
+        // or direct..
+        if (rcfg.cols) {
             
-        });
-        
-        var table = rcfg.deps[0].table;
-        
+            table = rcfg.cols[0].table;
+            desc = rcfg.cols[0].title
+            if (!desc.length) {
+                desc = rcfg.cols[0].column;
+                if (desc.substring(0, table.length+1) == table+'_') {
+                    desc = desc.substring(table.length+1);
+                }
+                desc = desc.replace(/_id$/, '');
+                if (!desc.length) {
+                    desc = rcfg.cols[0].column;
+                }
+                
+        } else { 
+            
+            
+            desc = rcfg.columnshort;
+            if (desc.substring(0, rcfg.table.length+1) == rcfg.table+'_') {
+                desc = desc.substring(rcfg.table.length+1);
+            }
+            desc = desc.replace(/_id$/, '');
+            
+            if (!desc.length) {
+                desc = rcfg.column;
+            }
+            if (rcfg.title && rcfg.title.length) {
+                desc = rcfg.title;
+            }
+            // set the display column (from the remote table)
+            display = rcfg.display;
+            Roo.each(rcfg.deps, function(dn) {
+                if (dn.column == rcfg.display) {
+                    display = dn.columnshort;
+                }
+                
+            });
+            
+            var table = rcfg.deps[0].table;
+        }
         // a reader...( basic as we do meta queries to get the real one..)
         
         var combofields = [
