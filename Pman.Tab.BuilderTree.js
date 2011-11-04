@@ -54,8 +54,8 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                 }
                                 
                                 _this.hasMouseEvent = true;
-                                 this.el.on('mouseover', function() { _this.isMouseOver= true; });
-                                this.el.on('mouseout', function() { _this.isMouseOver = false; });
+                              //   this.el.on('mouseover', function() { _this.isMouseOver= true; });
+                                 // this.el.on('mouseout', function() { _this.isMouseOver = false; });
                             
                             }
                         },
