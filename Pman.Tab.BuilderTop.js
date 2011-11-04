@@ -230,6 +230,32 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                 {
                                     xtype: 'Item',
                                     xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
+                                            Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete it?", function(a) {
+                                                if (a != 'yes') {
+                                                    return;
+                                                }
+                                                    
+                                        
+                                               new Pman.Request({
+                                                    url : baseURL + '/Roo/Builder_part',
+                                                    method : 'POST',
+                                                    params : {
+                                                        _delete : -1
+                                                    },
+                                                    success : function() {
+                                                        _this.partCombo.setValue('');
+                                                        // unload stuff..
+                                                    
+                                                    }
+                                               
+                                               
+                                               });
+                                           });
+                                        }
+                                    },
                                     text : "Delete"
                                 }
                             ]
