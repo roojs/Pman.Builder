@@ -286,8 +286,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
         $path = strlen($gd['path']) ? $gd['path'] . '/' : '';
         $target = $working.'/'.$path . $file;
-        $exist = file_exists($target);
-        
+        var_dump($target);exit;
         if (!file_exists($target)) {
             return; // no need to do anything..
         }
