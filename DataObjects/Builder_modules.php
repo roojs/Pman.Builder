@@ -296,8 +296,9 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         $git = System::which('git');
         chdir($working);
         
+        `$git rm {$path}{$file}`;
         
-        $cmd = "$git commit -m '{$path}{$file} - Commit (DELETE) from online editor' {$path}{$file}";
+        $cmd = "$git commit -m '{$path}{$file} - Commit (DELETE) from online editor' ";
         `$cmd`;
         `git push`;
         
