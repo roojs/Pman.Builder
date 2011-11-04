@@ -69,9 +69,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             
         }
     }
-     
-    
-    
+      
     function scanDir() // return name => mtime for files in path..
     {
         $gd = $this->gitDir();
