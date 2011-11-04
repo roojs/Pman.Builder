@@ -245,6 +245,37 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         
     }
     
+    function gitCommitDelete($file,$data)
+    {
+        $gd = $this->gitDir();
+        if (!$gd) {
+            return false;
+        }
+        $working = $this->gitWorking($gd['url']);
+        
+        
+        $path = strlen($gd['path']) ? $gd['path'] . '/' : '';
+        $target = $working.'/'.$path . $file;
+        $exist = file_exists($target);
+        
+        if (!file_exists($target)) {
+            return; // no need to do anything..
+        }
+       
+        
+        require_once 'System.php';
+        $git = System::which('git');
+        chdir($working);
+        
+        
+        $cmd = "$git commit -m 'Commit (DELETE) from online editor' {$path}{$file}";
+        `$cmd`;
+        `git push`;
+        
+        
+        
+    }
+    
     
     
 }
