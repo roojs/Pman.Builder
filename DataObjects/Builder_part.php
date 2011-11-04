@@ -62,12 +62,17 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
     }
     
-    function beforeDelete($req, $roo)
+    function beforeDelete($deps)
     {
         
-        
+        $m  = $this->module();
+        $m->gitCommitDelete($this->name . '.bjs');
+        $m->gitCommitDelete($this->name . '.js');
+       
         
     }
+    
+    
     function onInsert($req,$roo)
     {
         // write it to a file... use date time...  - which should hopefully be the same as the
