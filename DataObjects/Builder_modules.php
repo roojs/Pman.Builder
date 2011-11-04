@@ -119,6 +119,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             if (isset($files[$d->name]) && strtotime($d->updated) < $files[$d->name]) {
                 //file mtime is greater than db. -- replace!
                 $d->json = file_get_contents($working . '/'. $path . $d->name . '.bjs');
+                $d->jsource = file_get_contents($working . '/'. $path . $d->name . '.js');
                 $d->update();
                 // do not need to create it...
                 unset($files[$d->name]);
@@ -133,6 +134,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             $d = DB_DataObject::factory('builder_part');
             $d->name = $f;
             $d->json = file_get_contents($working . '/'. $path . $f . '.bjs');
+            $d->jsource = file_get_contents($working . '/'. $path . $f . '.js');
             $d->updated = date('Y-m-d H:i:s', $mt);
             $d->module_id = $this->id;
             $d->insert();
