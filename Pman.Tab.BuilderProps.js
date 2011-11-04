@@ -92,24 +92,20 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         if (v == 'true') {
                             v = true;
                         }
-                        if (!id.length) {
-                            return;
-                        }
                         var ec = _this.grid.currentNode.elConfig.listeners ;
                         if (id[0] == '!') {
                             ec.listeners = ec.listeners || {};
                             ec.listeners[id.substring(1)] = v;
                         } else { 
-                            _this.grid.currentNode.elConfig[id] = v;
+                           ec[id] = v;
                         }
                         
-                        
-                        _this.grid.setSourceFromNode(_this.grid.currentNode.elConfig);
+                        _this.grid.setSourceFromNode(ec);
                         
                         var bp = Pman.Tab.BuilderView.panel;
                         bp.redraw.defer(100,bp, [true]);
                         _this.grid.currentNode.setText(
-                            Pman.Builder.Tree.configToText(_this.grid.currentNode.elConfig)
+                            Pman.Builder.Tree.configToText(ec)
                         );
                     },
                     contextmenu : function (e)
@@ -261,7 +257,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                                         xns: ec['|xns'] || '',
                                         list: 'events'
                                 }, function (n,val) {
-                                    n = '!|' + n; // force the type..
                                     ec[n] = val || "function () {\n\n}";
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
                                     var bp = Pman.Tab.BuilderView.panel;
