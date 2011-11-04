@@ -562,7 +562,7 @@ Pman.Builder.Wizard = {
          *
          */
         var rcfg = in_rcfg;
-        var table , desc, display, combofields;
+        var table , desc, display, idcol, hiddenName;
         
         // rcfg can be one of two things: (from a form)
         // or direct..
@@ -574,7 +574,7 @@ Pman.Builder.Wizard = {
             
             var ix = rcfg.cols[0].columnshort == display ? 0 : 1;
             
-            var idcol =  rcfg.cols[ ix ? 0 : 1 ].columnshort;
+            idcol =  rcfg.cols[ ix ? 0 : 1 ].columnshort;
             
             desc = rcfg.cols[ix].title
             if (!desc.length) {
@@ -591,7 +591,8 @@ Pman.Builder.Wizard = {
                 { name : idcol, type : 'int' },
                 display
             ];
-            
+            hiddenName = idcol;
+            name = display;
                 
         } else { 
             
@@ -619,20 +620,17 @@ Pman.Builder.Wizard = {
             });
             
             table = rcfg.deps[0].table;
-            
-            combofields = [
-                { name : rcfg.maps_to, type : 'int' },
-                display
-            ];
+            idcol =  rcfg.maps_to;
+            hiddenName  = rcfg.column;
+            name = rcfg.column + '_' + display;
             
         }
         // a reader...( basic as we do meta queries to get the real one..)
-        
         var combofields = [
-            { name : rcfg.maps_to, type : 'int' },
-            display
-        ];
-        
+                { name : idcol , type : 'int' },
+                display
+            ];
+         
         
         return {
             '|xns' : 'Roo.form',
@@ -658,11 +656,11 @@ Pman.Builder.Wizard = {
             fieldLabel : desc,   
             
             // from remote..
-            valueField : rcfg.maps_to,
+            valueField : idcol,
             displayField : display, 
             
             // from our table..
-            hiddenName : rcfg.column, 
+            hiddenName : hiddenName, 
             name : rcfg.column + '_' + display, 
             
             items : [
