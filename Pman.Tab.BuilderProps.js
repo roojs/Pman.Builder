@@ -96,6 +96,9 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                         if (id[0] == '!') {
                             ec.listeners = ec.listeners || {};
                             ec.listeners[id.substring(1)] = v;
+                            if (typeof(ec[id]) != 'undefined') {
+                                delete ec[id];
+                            }
                         } else { 
                            ec[id] = v;
                         }
