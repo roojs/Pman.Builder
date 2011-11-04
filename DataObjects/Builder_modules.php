@@ -237,7 +237,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
             `$cmd`;
         }
         
-        $cmd = "$git commit -m 'Commit from online editor' {$path}{$file}";
+        $cmd = "$git commit -m '{$path}{$file} - Commit from online editor' {$path}{$file}";
         `$cmd`;
         `git push`;
         
@@ -268,7 +268,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         chdir($working);
         
         
-        $cmd = "$git commit -m 'Commit (DELETE) from online editor' {$path}{$file}";
+        $cmd = "$git commit -m '{$path}{$file} - Commit (DELETE) from online editor' {$path}{$file}";
         `$cmd`;
         `git push`;
         
