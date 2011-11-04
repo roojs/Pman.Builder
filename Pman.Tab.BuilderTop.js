@@ -246,7 +246,7 @@ Pman.Tab.BuilderTop = new Roo.util.Observable({
                                                         _delete :  _this.filesel.getValue()
                                                     },
                                                     success : function() {
-                                                        _this.fikeCombo.setValue('');
+                                                        _this.fileCombo.setValue('');
                                                         // unload stuff..
                                                     
                                                     }

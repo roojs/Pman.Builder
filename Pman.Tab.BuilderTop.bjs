@@ -140,7 +140,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete it?\", function(a) {\n        if (a != 'yes') {\n            return;\n        }\n            \n       \n       new Pman.Request({\n            url : baseURL + '/Roo/Builder_part',\n            method : 'POST',\n            params : {\n                _delete :  _this.filesel.getValue()\n            },\n            success : function() {\n                _this.fikeCombo.setValue('');\n                // unload stuff..\n            \n            }\n       \n       \n       });\n   });\n}"
+                                                "click": "function (_self, e)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete it?\", function(a) {\n        if (a != 'yes') {\n            return;\n        }\n            \n       \n       new Pman.Request({\n            url : baseURL + '/Roo/Builder_part',\n            method : 'POST',\n            params : {\n                _delete :  _this.filesel.getValue()\n            },\n            success : function() {\n                _this.fileCombo.setValue('');\n                // unload stuff..\n            \n            }\n       \n       \n       });\n   });\n}"
                                             },
                                             "text": "Delete",
                                             "xtype": "Item",
