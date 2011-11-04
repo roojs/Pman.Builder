@@ -562,16 +562,23 @@ Pman.Builder.Wizard = {
          *
          */
         var rcfg = in_rcfg;
-        var table , desc, display;
+        var table , desc, display, combofields;
         
         // rcfg can be one of two things: (from a form)
         // or direct..
         if (rcfg.cols) {
+            display = rcfg.cols_ex[0];
             
-            table = rcfg.cols[0].table;
-            desc = rcfg.cols[0].title
+            
+            table = rcfg.table;
+            
+            var ix = rcfg.cols[0].columnshort == display ? 0 : 1;
+            
+            var idcol =  rcfg.cols[ ix ? 0 : 1 ].columnshort;
+            
+            desc = rcfg.cols[ix].title
             if (!desc.length) {
-                desc = rcfg.cols[0].column;
+                desc = rcfg.cols[ix].column;
                 if (desc.substring(0, table.length+1) == table+'_') {
                     desc = desc.substring(table.length+1);
                 }
@@ -579,8 +586,15 @@ Pman.Builder.Wizard = {
                 if (!desc.length) {
                     desc = rcfg.cols[0].column;
                 }
+            }
+            combofields = [
+                { name : idcol, type : 'int' },
+                display
+            ];
+            
                 
         } else { 
+            
             
             
             desc = rcfg.columnshort;
@@ -604,7 +618,13 @@ Pman.Builder.Wizard = {
                 
             });
             
-            var table = rcfg.deps[0].table;
+            table = rcfg.deps[0].table;
+            
+            combofields = [
+                { name : rcfg.maps_to, type : 'int' },
+                display
+            ];
+            
         }
         // a reader...( basic as we do meta queries to get the real one..)
         
