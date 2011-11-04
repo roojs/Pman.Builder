@@ -74,15 +74,18 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     
     function scanDir() // return name => mtime for files in path..
     {
+        $gd = $this->gitDir();
+        if (!$gd) {
+            return false;
+        }
+        $working = $this->gitWorking($gd['url']);
+        $path = strlen($gd['path']) ? $gd['path'] . '/' : '';
         
         // list of bjs files...
         // or should this be totally database related...
-        if (empty($this->path ) || !file_exists($this->path)) {
-            return array();
-        }
         
         $ret = array();
-        foreach(glob($this->path. '/*.bjs') as $bjs) {
+        foreach(glob($working . '/'. $path .'*.bjs') as $bjs) {
             $n = preg_replace('/\.bjs$/', '', basename($bjs));
             
             $ret[$n] = filemtime( $bjs);
@@ -96,7 +99,13 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
      */
     function syncParts()
     {
+        
+        
         $files = $this->scanDir();
+        
+        
+        
+        
         $d = DB_DataObject::factory('builder_part');
         $d->module_id = $this->id;
        // DB_DataObject::debugLevel(1);
