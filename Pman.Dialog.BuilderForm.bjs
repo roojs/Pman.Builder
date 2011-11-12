@@ -18,6 +18,10 @@
                     "*prop": "center"
                 },
                 {
+                    "|xns": "Roo",
+                    "xtype": "GridPanel"
+                },
+                {
                     "*prop": "buttons[]",
                     "text": "Cancel",
                     "xtype": "Button",
