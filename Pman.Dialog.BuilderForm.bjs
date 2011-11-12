@@ -14,7 +14,7 @@
             "items": [
                 {
                     "*prop": "buttons[]",
-                    "text": "Save",
+                    "text": "Cancel",
                     "xtype": "Button",
                     "|xns": "Roo"
                 },

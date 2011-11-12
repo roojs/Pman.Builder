@@ -37,7 +37,7 @@ Pman.Dialog.BuilderForm = {
                 {
                     xtype: 'Button',
                     xns: Roo,
-                    text : "Save"
+                    text : "Cancel"
                 },
                 {
                     xtype: 'Button',
