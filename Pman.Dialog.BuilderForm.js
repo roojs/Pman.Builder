@@ -44,7 +44,13 @@ Pman.Dialog.BuilderForm = {
                         xns: Roo.grid,
                         toolbar : {
                             xtype: 'Toolbar',
-                            xns: Roo
+                            xns: Roo,
+                            items : [
+                                {
+                                    xtype: 'Button',
+                                    xns: Roo.Toolbar
+                                }
+                            ]
                         },
                         ds : {
                             xtype: 'Store',
