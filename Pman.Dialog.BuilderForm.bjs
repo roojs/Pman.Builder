@@ -25,7 +25,14 @@
                         {
                             "|xns": "Roo.grid",
                             "xtype": "EditorGrid",
-                            "*prop": "grid"
+                            "*prop": "grid",
+                            "items": [
+                                {
+                                    "|xns": "Roo.data",
+                                    "xtype": "Store",
+                                    "*prop": "ds"
+                                }
+                            ]
                         }
                     ]
                 },
