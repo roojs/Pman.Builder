@@ -55,7 +55,7 @@ Pman.Dialog.BuilderForm = {
                             {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
-                                header : 'Source Field'
+                                header : 'Display Field'
                             },
                             {
                                 xtype: 'ColumnModel',
