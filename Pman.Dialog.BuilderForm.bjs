@@ -33,11 +33,6 @@
                     "text": "Save",
                     "xtype": "Button",
                     "|xns": "Roo"
-                },
-                {
-                    "region": "center",
-                    "xtype": "ContentPanel",
-                    "|xns": "Roo"
                 }
             ]
         }

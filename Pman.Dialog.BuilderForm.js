@@ -38,11 +38,6 @@ Pman.Dialog.BuilderForm = {
                     xtype: 'GridPanel',
                     xns: Roo,
                     region : 'center'
-                },
-                {
-                    xtype: 'ContentPanel',
-                    xns: Roo,
-                    region : 'center'
                 }
             ],
             center : {
