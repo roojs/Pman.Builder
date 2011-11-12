@@ -23,6 +23,10 @@
                     "text": "Save",
                     "xtype": "Button",
                     "|xns": "Roo"
+                },
+                {
+                    "|xns": "Roo",
+                    "xtype": "ContentPanel"
                 }
             ]
         }

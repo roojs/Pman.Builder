@@ -33,6 +33,12 @@ Pman.Dialog.BuilderForm = {
             closable : true,
             height : 600,
             width : 800,
+            items : [
+                {
+                    xtype: 'ContentPanel',
+                    xns: Roo
+                }
+            ],
             buttons : [
                 {
                     xtype: 'Button',
