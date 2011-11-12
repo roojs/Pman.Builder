@@ -44,7 +44,13 @@ Pman.Dialog.BuilderForm = {
                         ds : {
                             xtype: 'Store',
                             xns: Roo.data
-                        }
+                        },
+                        cm : [
+                            {
+                                xtype: 'ColumnModel',
+                                xns: Roo.grid
+                            }
+                        ]
                     }
                 }
             ],
