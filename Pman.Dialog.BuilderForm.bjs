@@ -10,7 +10,14 @@
             "height": 600,
             "width": 800,
             "xtype": "LayoutDialog",
-            "|xns": "Roo"
+            "|xns": "Roo",
+            "items": [
+                {
+                    "|xns": "Roo",
+                    "xtype": "Button",
+                    "*prop": "buttons[]"
+                }
+            ]
         }
     ],
     "permname": "",
