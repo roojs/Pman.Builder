@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-204",
+    "id": "roo-file-75",
     "name": "Pman.Dialog.BuilderForm",
     "parent": "",
     "title": "",
@@ -42,6 +42,12 @@
                                 {
                                     "*prop": "cm[]",
                                     "header": "Type",
+                                    "xtype": "ColumnModel",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "cm[]",
+                                    "header": "Display Field",
                                     "xtype": "ColumnModel",
                                     "|xns": "Roo.grid"
                                 },
