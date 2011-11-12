@@ -13,9 +13,10 @@
             "|xns": "Roo",
             "items": [
                 {
-                    "|xns": "Roo",
+                    "*prop": "buttons[]",
+                    "text": "Save",
                     "xtype": "Button",
-                    "*prop": "buttons[]"
+                    "|xns": "Roo"
                 }
             ]
         }
