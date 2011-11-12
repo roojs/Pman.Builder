@@ -41,7 +41,7 @@
                                 },
                                 {
                                     "*prop": "cm[]",
-                                    "header": "Source Data",
+                                    "header": "Source Field",
                                     "xtype": "ColumnModel",
                                     "|xns": "Roo.grid"
                                 },
