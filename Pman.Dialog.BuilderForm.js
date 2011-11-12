@@ -60,7 +60,8 @@ Pman.Dialog.BuilderForm = {
                             {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
-                                header : 'Width'
+                                header : 'Width',
+                                width : 50
                             },
                             {
                                 xtype: 'ColumnModel',

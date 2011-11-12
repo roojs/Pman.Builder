@@ -48,6 +48,7 @@
                                 {
                                     "*prop": "cm[]",
                                     "header": "Width",
+                                    "width": 50,
                                     "xtype": "ColumnModel",
                                     "|xns": "Roo.grid"
                                 },
