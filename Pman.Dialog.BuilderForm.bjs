@@ -37,6 +37,12 @@
                                     "header": "Label",
                                     "xtype": "ColumnModel",
                                     "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "cm[]",
+                                    "header": "Label",
+                                    "xtype": "ColumnModel",
+                                    "|xns": "Roo.grid"
                                 }
                             ]
                         }
