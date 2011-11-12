@@ -48,7 +48,8 @@ Pman.Dialog.BuilderForm = {
                         cm : [
                             {
                                 xtype: 'ColumnModel',
-                                xns: Roo.grid
+                                xns: Roo.grid,
+                                header : 'Label'
                             }
                         ]
                     }

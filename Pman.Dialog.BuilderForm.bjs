@@ -33,9 +33,10 @@
                                     "*prop": "ds"
                                 },
                                 {
-                                    "|xns": "Roo.grid",
+                                    "*prop": "cm[]",
+                                    "header": "Label",
                                     "xtype": "ColumnModel",
-                                    "*prop": "cm[]"
+                                    "|xns": "Roo.grid"
                                 }
                             ]
                         }
