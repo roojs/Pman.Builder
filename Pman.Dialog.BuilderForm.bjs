@@ -20,7 +20,14 @@
                 {
                     "region": "center",
                     "xtype": "GridPanel",
-                    "|xns": "Roo"
+                    "|xns": "Roo",
+                    "items": [
+                        {
+                            "|xns": "Roo.grid",
+                            "xtype": "EditorGrid",
+                            "*prop": "grid"
+                        }
+                    ]
                 },
                 {
                     "*prop": "buttons[]",

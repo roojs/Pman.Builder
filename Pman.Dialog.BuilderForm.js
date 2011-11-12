@@ -37,7 +37,11 @@ Pman.Dialog.BuilderForm = {
                 {
                     xtype: 'GridPanel',
                     xns: Roo,
-                    region : 'center'
+                    region : 'center',
+                    grid : {
+                        xtype: 'EditorGrid',
+                        xns: Roo.grid
+                    }
                 }
             ],
             center : {
