@@ -53,7 +53,7 @@ Pman.Dialog.BuilderForm = {
                                 {
                                     xtype: 'Button',
                                     xns: Roo.Toolbar,
-                                    text : "Add"
+                                    text : "Add Field"
                                 }
                             ]
                         },

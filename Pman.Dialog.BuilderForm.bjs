@@ -38,7 +38,7 @@
                                             "xtype": "Fill"
                                         },
                                         {
-                                            "text": "Add",
+                                            "text": "Add Field",
                                             "xtype": "Button",
                                             "|xns": "Roo.Toolbar"
                                         }
