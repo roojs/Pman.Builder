@@ -31,6 +31,7 @@ Pman.Dialog.BuilderForm = {
             xtype: 'LayoutDialog',
             xns: Roo,
             closable : true,
+            height : 600,
             width : 800
         });
     }
