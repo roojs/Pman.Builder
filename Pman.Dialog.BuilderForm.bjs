@@ -29,6 +29,11 @@
                             "*prop": "grid",
                             "items": [
                                 {
+                                    "|xns": "Roo",
+                                    "xtype": "Toolbar",
+                                    "*prop": "toolbar"
+                                },
+                                {
                                     "|xns": "Roo.data",
                                     "xtype": "Store",
                                     "*prop": "ds"
