@@ -34,8 +34,9 @@
                                     "*prop": "toolbar",
                                     "items": [
                                         {
-                                            "|xns": "Roo.Toolbar",
-                                            "xtype": "Button"
+                                            "text": "Add",
+                                            "xtype": "Button",
+                                            "|xns": "Roo.Toolbar"
                                         }
                                     ]
                                 },

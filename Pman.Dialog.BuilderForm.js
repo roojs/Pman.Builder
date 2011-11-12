@@ -48,7 +48,8 @@ Pman.Dialog.BuilderForm = {
                             items : [
                                 {
                                     xtype: 'Button',
-                                    xns: Roo.Toolbar
+                                    xns: Roo.Toolbar,
+                                    text : "Add"
                                 }
                             ]
                         },
