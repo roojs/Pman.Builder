@@ -32,6 +32,7 @@ Pman.Dialog.BuilderForm = {
             xns: Roo,
             closable : true,
             height : 600,
+            title : "Edit Form Elements",
             width : 800,
             items : [
                 {
