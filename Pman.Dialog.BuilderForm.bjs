@@ -101,6 +101,9 @@
                                     "|xns": "Roo.grid"
                                 },
                                 {
+                                    "listeners": {
+                                        "headerchange": "function (_self, columnIndex, newText)\n{\n\n}"
+                                    },
                                     "*prop": "cm[]",
                                     "header": "Source Data (display)",
                                     "xtype": "ColumnModel",

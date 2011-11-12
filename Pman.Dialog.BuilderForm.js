@@ -104,6 +104,12 @@ Pman.Dialog.BuilderForm = {
                             {
                                 xtype: 'ColumnModel',
                                 xns: Roo.grid,
+                                listeners : {
+                                    headerchange : function (_self, columnIndex, newText)
+                                    {
+                                    
+                                    }
+                                },
                                 header : 'Source Data (display)'
                             },
                             {
