@@ -37,7 +37,14 @@
                                     "*prop": "cm[]",
                                     "header": "Label",
                                     "xtype": "ColumnModel",
-                                    "|xns": "Roo.grid"
+                                    "|xns": "Roo.grid",
+                                    "items": [
+                                        {
+                                            "|xns": "Roo.grid",
+                                            "xtype": "GridEditor",
+                                            "*prop": "editor"
+                                        }
+                                    ]
                                 },
                                 {
                                     "*prop": "cm[]",
