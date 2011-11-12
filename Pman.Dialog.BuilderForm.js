@@ -29,7 +29,9 @@ Pman.Dialog.BuilderForm = {
         var _this = this;
         this.dialog = Roo.factory({
             xtype: 'LayoutDialog',
-            xns: Roo
+            xns: Roo,
+            closable : true,
+            width : 800
         });
     }
 };

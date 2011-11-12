@@ -6,8 +6,10 @@
     "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderForm.bjs",
     "items": [
         {
-            "|xns": "Roo",
-            "xtype": "LayoutDialog"
+            "closable": true,
+            "width": 800,
+            "xtype": "LayoutDialog",
+            "|xns": "Roo"
         }
     ],
     "permname": "",
