@@ -36,7 +36,8 @@ Pman.Dialog.BuilderForm = {
             items : [
                 {
                     xtype: 'ContentPanel',
-                    xns: Roo
+                    xns: Roo,
+                    region : 'center'
                 }
             ],
             buttons : [
