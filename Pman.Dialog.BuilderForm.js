@@ -38,6 +38,11 @@ Pman.Dialog.BuilderForm = {
                     xtype: 'Button',
                     xns: Roo,
                     text : "Save"
+                },
+                {
+                    xtype: 'Button',
+                    xns: Roo,
+                    text : "Save"
                 }
             ]
         });
