@@ -50,11 +50,7 @@ Pman.Dialog.BuilderForm = {
                     xns: Roo,
                     text : "Save"
                 }
-            ],
-            center : {
-                xtype: 'LayoutRegion',
-                xns: Roo
-            }
+            ]
         });
     }
 };

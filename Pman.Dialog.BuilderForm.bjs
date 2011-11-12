@@ -27,11 +27,6 @@
                 {
                     "|xns": "Roo",
                     "xtype": "ContentPanel"
-                },
-                {
-                    "|xns": "Roo",
-                    "xtype": "LayoutRegion",
-                    "*prop": "center"
                 }
             ]
         }
