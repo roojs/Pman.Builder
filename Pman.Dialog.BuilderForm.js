@@ -40,6 +40,10 @@ Pman.Dialog.BuilderForm = {
                     region : 'center'
                 }
             ],
+            center : {
+                xtype: 'LayoutRegion',
+                xns: Roo
+            },
             buttons : [
                 {
                     xtype: 'Button',

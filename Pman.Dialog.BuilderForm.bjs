@@ -13,6 +13,11 @@
             "|xns": "Roo",
             "items": [
                 {
+                    "|xns": "Roo",
+                    "xtype": "LayoutRegion",
+                    "*prop": "center"
+                },
+                {
                     "*prop": "buttons[]",
                     "text": "Cancel",
                     "xtype": "Button",
