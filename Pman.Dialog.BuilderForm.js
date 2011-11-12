@@ -53,7 +53,11 @@ Pman.Dialog.BuilderForm = {
                                 header : 'Label',
                                 editor : {
                                     xtype: 'GridEditor',
-                                    xns: Roo.grid
+                                    xns: Roo.grid,
+                                    field : {
+                                        xtype: 'TextField',
+                                        xns: Roo.form
+                                    }
                                 }
                             },
                             {
