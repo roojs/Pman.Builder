@@ -18,8 +18,9 @@
                     "*prop": "center"
                 },
                 {
-                    "|xns": "Roo",
-                    "xtype": "GridPanel"
+                    "region": "center",
+                    "xtype": "GridPanel",
+                    "|xns": "Roo"
                 },
                 {
                     "*prop": "buttons[]",
