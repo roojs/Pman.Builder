@@ -84,6 +84,12 @@
                                 },
                                 {
                                     "*prop": "cm[]",
+                                    "header": "Data Field",
+                                    "xtype": "ColumnModel",
+                                    "|xns": "Roo.grid"
+                                },
+                                {
+                                    "*prop": "cm[]",
                                     "header": "Display Field",
                                     "xtype": "ColumnModel",
                                     "|xns": "Roo.grid"
