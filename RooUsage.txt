@@ -326,3 +326,10 @@ right:
     Roo.bootstrap.Navbar.Item
     Roo.bootstrap.Navbar.Button
         
+left:
+    Roo.bootstrap.Form
+right:
+    Roo.bootstrap.Input
+    Roo.bootstrap.Button
+//    Roo.bootstrap.Fieldset
+        
