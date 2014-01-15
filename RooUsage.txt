@@ -8,7 +8,9 @@ right:
  Roo.NestedLayoutPanel
  Roo.ContentPanel         
  Roo.GridPanel         
- Roo.TreePanel         
+ Roo.TreePanel
+ Roo.bootstrap.Body
+ Roo.bootstrap.Modal
  
 
 // added with a property..  (*prop)
