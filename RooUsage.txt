@@ -286,3 +286,43 @@ left:
 right:
    Roo.dd.DropTarget
   
+  
+  
+  
+// bootstrap?
+
+left:
+    Roo.bootstrap.Body
+    Roo.bootstrap.Container
+right:
+    Roo.bootstrap.Container
+    Roo.bootstrap.Button
+    Roo.bootstrap.ButtonGroup
+    Roo.bootstrap.Column
+    Roo.bootstrap.Form
+    Roo.bootstrap.Navbar
+    Roo.bootstrap.Row
+
+left:
+    Roo.bootstrap.ButtonGroup
+right:
+    Roo.bootstrap.Button
+    Roo.bootstrap.Form
+
+left:
+    Roo.bootstrap.Button:menu
+    Roo.bootstrap.Navbar.Button:menu
+right:
+    Roo.bootstrap.Menu
+
+left:
+    Roo.bootstrap.Menu
+right:
+    Roo.bootstrap.MenuItem
+    
+left:
+    Roo.bootstrap.Navbar
+right:
+    Roo.bootstrap.Navbar.Item
+    Roo.bootstrap.Navbar.Button
+        
