@@ -2,36 +2,19 @@
 
 // Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
-
-
-// register the module first
-Pman.on('beforeload', function()
-{
-    Pman.register({
-        part :  ["Builder","Palette"],
-        modKey : '001-Pman.Tab.BuilderPalette',
-        module : Pman.Tab.BuilderPalette,
-        region : 'center',
-        parent : Pman.Tab.BuilderTab,
-        name : "Pman.Tab.BuilderPalette",
-        disabled : false, 
-        permname: '' 
-    });
-});
-
-Pman.Tab.BuilderPalette = new Roo.util.Observable({
-
-    panel : false,
-    disabled : false,
-    parentLayout:  false,
-
-    add : function(parentLayout, region)
+Pman.Tab.BuilderPalette = new Roo.XComponent({
+    part     :  ["Builder","Palette"],
+    order    : '001-Pman.Tab.BuilderPalette',
+    region   : 'center',
+    parent   : 'Pman.Tab.BuilderTab',
+    name     : "Pman.Tab.BuilderPalette",
+    disabled : false, 
+    permname : '', 
+    _tree : function()
     {
-
         var _this = this;
-        this.parentLayout = parentLayout;
-
-        this.panel = parentLayout.addxtype({
+        var MODULE = this;
+        return {
             xtype: 'GridPanel',
             xns: Roo,
             listeners : {
@@ -137,8 +120,6 @@ Pman.Tab.BuilderPalette = new Roo.util.Observable({
                     singleSelect : true
                 }
             }
-        });
-        this.layout = this.panel.layout;
-
+        };
     }
 });
