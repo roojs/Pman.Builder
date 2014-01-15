@@ -177,7 +177,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
         require_once 'System.php';
         $git = System::which('git');
         
-        chdir($this->path);
+        @chdir($this->path);
         
         $url = trim(`$git config --get remote.origin.url`);
         
