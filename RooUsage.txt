@@ -10,7 +10,7 @@ right:
  Roo.GridPanel         
  Roo.TreePanel
  Roo.bootstrap.Body
- Roo.bootstrap.Modal
+ Roo.bootstrap.Dialog
  
 
 // added with a property..  (*prop)
