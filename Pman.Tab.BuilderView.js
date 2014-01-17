@@ -21,7 +21,7 @@ Pman.Tab.BuilderView = new Roo.XComponent({
                 activate : function (_self)
                 {
                     _this.panel = _self;
-                    Pman.Builder.View.init(this);
+                    Pman.Builder.View.init(_this);
                 }
             },
             region : 'center',
