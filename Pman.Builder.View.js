@@ -13,6 +13,7 @@
 Pman.Builder.View = {
     
     panel : false,
+    doc : false,
     
     panelroot : false,
     dialogroot : false,
@@ -33,7 +34,9 @@ Pman.Builder.View = {
         this.container.setContent(
                 '<iframe width="100%" height="100%" src="'+rootURL+'/Pman/Builder/templates/frame.html"></iframe>'
         );
+        var iframe = this.container.el.select('iframe',true).first().dom;
         
+        this.doc = iframe.contentDocument || iframe.contentWindow.document;
         
         
         
