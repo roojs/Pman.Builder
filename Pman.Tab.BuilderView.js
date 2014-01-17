@@ -39,35 +39,8 @@ Pman.Tab.BuilderView = new Roo.XComponent({
                   return Pman.Builder.View.redraw(isAuto);
                 },
             toJS : function(n) {
+                return Pman.View.Builder.toJS(n);
              
-                if (!n) {
-                    return Pman.Builder.Tree.toJS(Pman.Tab.BuilderTree.tree.root);
-                }
-            
-                var _this = this;
-                var ret = Pman.Builder.Tree.cloneConfig(n.elConfig);
-                
-                // flag to prevent rendering..
-                if ((typeof(ret['+buildershow']) != 'undefined') && !ret['+buildershow']) {
-                    return false;
-                }
-            
-                ret.id = typeof(ret.id) == 'undefined' ? 'builder-' + n.id : ret.id;
-            
-                if (n.childNodes.length) {
-                    ret.items = [];
-                    n.eachChild(function(cn) {
-                        var add = _this.toJS(cn);
-                        if (add === false) {
-                            return;
-                        }
-                        
-                        
-                        ret.items.push(add);
-                    });
-                        
-                }
-                return ret;
             },
             layout : {
                 xtype: 'BorderLayout',

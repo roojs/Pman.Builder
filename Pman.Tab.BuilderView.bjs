@@ -15,7 +15,7 @@
             "|clearAll": "function(isAuto) {\n\n    Pman.Builder.View.clearAll(isAuto);\n}\n",
             "|munge": "function(cfg, keyname) {\n     return Pman.Builder.View.munge(cfg,keyname);\n        \n        \n}\n",
             "|redraw": "function(isAuto)\n    {\n      return Pman.Builder.View.redraw(isAuto);\n    }",
-            "|toJS": "function(n) {\n \n    if (!n) {\n        return Pman.Builder.Tree.toJS(Pman.Tab.BuilderTree.tree.root);\n    }\n\n    var _this = this;\n    var ret = Pman.Builder.Tree.cloneConfig(n.elConfig);\n    \n    // flag to prevent rendering..\n    if ((typeof(ret['+buildershow']) != 'undefined') && !ret['+buildershow']) {\n        return false;\n    }\n\n    ret.id = typeof(ret.id) == 'undefined' ? 'builder-' + n.id : ret.id;\n\n    if (n.childNodes.length) {\n        ret.items = [];\n        n.eachChild(function(cn) {\n            var add = _this.toJS(cn);\n            if (add === false) {\n                return;\n            }\n            \n            \n            ret.items.push(add);\n        });\n            \n    }\n    return ret;\n}\n",
+            "|toJS": "function(n) {\n    return Pman.View.Builder.toJS(n);\n \n}\n",
             "|xns": "Roo",
             "items": [
                 {
