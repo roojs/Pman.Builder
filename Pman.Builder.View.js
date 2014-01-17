@@ -27,6 +27,9 @@ Pman.Builder.View = {
         }
         this.panel = comp.panel;
         this.layout  = comp.panel.layout;
+        // see if we can render a iframe..
+        
+        
         
         
         
