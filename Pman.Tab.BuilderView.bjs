@@ -7,7 +7,7 @@
     "items": [
         {
             "listeners": {
-                "activate": "function (_self)\n{\n    _this.panel = _self;\n}"
+                "activate": "function (_self)\n{\n    _this.panel = _self;\n    Pman.Builder.View.init(this);\n}"
             },
             "region": "center",
             "title": "View",
