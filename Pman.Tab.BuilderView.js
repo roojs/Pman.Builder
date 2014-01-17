@@ -56,7 +56,7 @@ Pman.Tab.BuilderView = new Roo.XComponent({
                 center : {
                     xtype: 'LayoutRegion',
                     xns: Roo,
-                    alwaysShowTabs : true,
+                    alwaysShowTabs : false,
                     tabPosition : 'top'
                 }
             }
