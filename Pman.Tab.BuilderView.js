@@ -46,6 +46,12 @@ Pman.Tab.BuilderView = new Roo.XComponent({
             layout : {
                 xtype: 'BorderLayout',
                 xns: Roo,
+                items : [
+                    {
+                        xtype: 'ContentPanel',
+                        xns: Roo
+                    }
+                ],
                 center : {
                     xtype: 'LayoutRegion',
                     xns: Roo,
