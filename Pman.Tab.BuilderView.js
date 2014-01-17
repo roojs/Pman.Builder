@@ -2,36 +2,19 @@
 
 // Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
-
-
-// register the module first
-Pman.on('beforeload', function()
-{
-    Pman.register({
-        part :  ["Builder","View"],
-        modKey : '001-Pman.Tab.BuilderView',
-        module : Pman.Tab.BuilderView,
-        region : 'center',
-        parent : Pman.Tab.BuilderTab,
-        name : "Pman.Tab.BuilderView",
-        disabled : false, 
-        permname: '' 
-    });
-});
-
-Pman.Tab.BuilderView = new Roo.util.Observable({
-
-    panel : false,
-    disabled : false,
-    parentLayout:  false,
-
-    add : function(parentLayout, region)
+Pman.Tab.BuilderView = new Roo.XComponent({
+    part     :  ["Builder","View"],
+    order    : '001-Pman.Tab.BuilderView',
+    region   : 'center',
+    parent   : 'Pman.Tab.BuilderTab',
+    name     : "Pman.Tab.BuilderView",
+    disabled : false, 
+    permname : '', 
+    _tree : function()
     {
-
         var _this = this;
-        this.parentLayout = parentLayout;
-
-        this.panel = parentLayout.addxtype({
+        var MODULE = this;
+        return {
             xtype: 'NestedLayoutPanel',
             xns: Roo,
             listeners : {
@@ -289,8 +272,6 @@ Pman.Tab.BuilderView = new Roo.util.Observable({
                     tabPosition : 'top'
                 }
             }
-        });
-        this.layout = this.panel.layout;
-
+        };
     }
 });
