@@ -36,70 +36,7 @@ Pman.Tab.BuilderView = new Roo.XComponent({
             },
             redraw : function(isAuto)
                 {
-                    
-                    // top level is not relivant
-            
-            //          var btop =  Pman.Tab.BuilderTop2;
-              //      if (isAuto && btop.redrawBtn  && !btop.redrawBtn.auto) {
-                //        return; /// auto redraw is turned off..
-                  //  }
-                    
-                    this.clearAll(isAuto);
-                    
-                    var cfg =  this.toJS();
-                    if (!cfg.items[0]) {
-                        return;
-                    }
-                    
-                    
-                    this.munge(cfg.items[0]);
-                    
-                    // we draw either a dialog or a tab..
-                    
-                    if (cfg.items[0].xtype == 'LayoutDialog') {
-                        
-                        cfg.items[0].modal = false;
-                        var xy  = this.el.getXY();
-                        cfg.items[0].x = xy[0];
-                        cfg.items[0].y = xy[1];
-                        cfg.items[0].constraintoviewport = false;
-                        
-                        this.dialogroot = Roo.get( document.body).createChild();
-                        try { 
-                            this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
-                          //  this.dialog.el.on('click', this.panelClick, this);
-                            this.dialog.show();
-                            var dlg = this.dialog;
-                            (function () {
-                                dlg.moveTo(xy[0], xy[1]);
-                            }).defer(100);
-                        } catch(e) {
-                            Roo.log("Error rendering: " + e.toString());
-                            Roo.log(e);
-                        }
-                        return;
-                        
-                        
-                    }
-                    // should we render this into a dialog???
-                         // force center region..
-                    cfg.items[0].region = 'center';
-                    cfg.items[0].background = false;
-                    
-                    try {
-                        this.panelroot = this.layout.addxtype(cfg.items[0]);
-                    
-                    } catch(e) {
-                        Roo.log("Error rendering: " + e.toString());
-                        Roo.log(e);
-                    }
-                    //this.highlightElement(Pman.Tab.BuilderTree.currentNode);
-                    
-                    if (this.panelroot && this.panelroot.el) {
-                            this.panelroot.el.scrollTo('top', 0);
-                            this.panelroot.el.scrollTo('left', 0);
-                        
-                    }
+                  return Pman.Builder.View.redraw(isAuto);
                 },
             toJS : function(n) {
              
