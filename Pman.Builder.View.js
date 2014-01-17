@@ -22,14 +22,14 @@ Pman.Builder.View = {
     
     
     init : function (comp) {
-        if (this.panel) {
+        if (this.panel || !comp.layout.getRegion('center').getPanel(0)) {
             return;
         }
         this.panel = comp.panel;
         this.layout  = comp.panel.layout;
         // see if we can render a iframe..
         
-        this.container = this.layout.getRegion('center').getPanel(0);
+        this.container = comp.layout.getRegion('center').getPanel(0);
         this.container.setContent(
                 '<iframe width="100%" height="100%" src="'+rootURL+'/Pman/Builder/templates/frame.html"></iframe>'
         );
