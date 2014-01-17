@@ -22,7 +22,7 @@ Pman.Builder.View = {
     
     
     init : function (comp) {
-        if (this.panel || !comp.layout.getRegion('center').getPanel(0)) {
+        if (this.panel || !comp.layout) {
             return;
         }
         this.panel = comp.panel;
