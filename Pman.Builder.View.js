@@ -22,6 +22,9 @@ Pman.Builder.View = {
     
     
     init : function (comp) {
+        if (this.panel) {
+            return;
+        }
         this.panel = comp.panel;
         this.layout  = comp.panel.layout;
         
