@@ -31,8 +31,9 @@
                             "|xns": "Roo"
                         },
                         {
-                            "|xns": "Roo",
-                            "xtype": "ContentPanel"
+                            "region": "center",
+                            "xtype": "ContentPanel",
+                            "|xns": "Roo"
                         }
                     ]
                 }
