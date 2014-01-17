@@ -21,6 +21,12 @@ Pman.Builder.View = {
     
     renderObj : false,
     
+    doc : function() {
+        var iframe = this.container.el.select('iframe',true).first().dom;
+        
+        return iframe.contentDocument || iframe.contentWindow.document;
+    },
+    
     
     init : function (comp) {
         if (this.panel || !comp.layout) {
@@ -267,6 +273,10 @@ Pman.Builder.View = {
         cfg.items[0].background = false;
         
         try {
+            
+            cfg.parent = '#';
+            
+            
             this.panelroot = this.layout.addxtype(cfg.items[0]);
         
         } catch(e) {
