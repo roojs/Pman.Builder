@@ -13,7 +13,6 @@
 Pman.Builder.View = {
     
     panel : false,
-    doc : false,
     
     panelroot : false,
     dialogroot : false,
