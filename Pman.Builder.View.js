@@ -244,7 +244,7 @@ Pman.Builder.View = {
             cfg.items[0].y = xy[1];
             cfg.items[0].constraintoviewport = false;
             
-            this.dialogroot = Roo.get( document.body).createChild();
+            this.dialogroot = Roo.get( this.doc).createChild();
             try { 
                 this.dialog = new Roo[cfg.items[0].xtype](this.dialogroot, cfg.items[0]);
               //  this.dialog.el.on('click', this.panelClick, this);
