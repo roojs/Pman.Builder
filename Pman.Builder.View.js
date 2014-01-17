@@ -29,6 +29,8 @@ Pman.Builder.View = {
         this.layout  = comp.panel.layout;
         // see if we can render a iframe..
         
+        this.container = this.layout.getRegion('center').getPanel(0);
+        
         
         
         
@@ -209,7 +211,7 @@ Pman.Builder.View = {
 
     redraw : function(isAuto)
     {
-        
+        return;
         // top level is not relivant
 
 //          var btop =  Pman.Tab.BuilderTop2;
