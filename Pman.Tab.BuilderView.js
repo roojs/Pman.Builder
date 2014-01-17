@@ -26,18 +26,8 @@ Pman.Tab.BuilderView = new Roo.XComponent({
             region : 'center',
             title : "View",
             clearAll : function(isAuto) {
-            //        this.renderObj = { isBuilder : true };
             
-                    
-                    if (this.panelroot) {
-                        this.scroll = this.panelroot.el.getScroll();
-                        this.layout.remove('center', this.panelroot);
-                        this.panelroot = false;
-                    }
-                    if (this.dialogroot) {
-                        this.dialogroot.remove();
-                        this.dialogroot = false;
-                    }
+                Pman.Builder.View.clearAll(isAuto);
             },
             munge : function(cfg, keyname) {
                 keyname = keyname || false;
