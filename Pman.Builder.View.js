@@ -30,7 +30,9 @@ Pman.Builder.View = {
         // see if we can render a iframe..
         
         this.container = this.layout.getRegion('center').getPanel(0);
-        
+        this.container.setContent(
+                '<iframe width="100%" height="100%" src="'+rootURL+'/Pman/Builder/templates/frame.html"></iframe>'
+        );
         
         
         
