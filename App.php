@@ -34,8 +34,8 @@ class Pman_Builder_App extends Pman
             $this->builderJs = array();
             //should it try and load the core???
             $o  = HTML_FlexyFramework::get();
-            $o->enable = 'Core';
-            $o->enableArray = array('Core');
+            $o->enable = '';
+            $o->enableArray = array('');
             return;
         }
         
