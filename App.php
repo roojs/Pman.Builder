@@ -36,6 +36,7 @@ class Pman_Builder_App extends Pman
             $o  = HTML_FlexyFramework::get();
             $o->enable = '';
             $o->enableArray = array('');
+            $o->disable  = 'Core';
             return;
         }
         
