@@ -35,6 +35,8 @@ Pman.Builder.View = {
         this.layout  = comp.panel.layout;
         // see if we can render a iframe..
         
+        var app = 'test';
+        
         this.container = comp.layout.getRegion('center').getPanel(0);
         this.container.setContent(
                 '<iframe width="100%" height="100%" src="'+baseURL+'/Pman/Builder/App/' + app + '"></iframe>'
