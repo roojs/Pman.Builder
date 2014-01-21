@@ -1,5 +1,9 @@
 <?php
 
+
+/*
+ * used to preview a button or item..
+ */
 require_once 'Pman.php';
 
 class Pman_Builder_App extends Pman
@@ -10,7 +14,11 @@ class Pman_Builder_App extends Pman
         return true;
     }
   
-    function get($app) {
+    function get($req) {
+        
+        $bits = explode('/', $req);
+        $app = $bits[0];
+        
         if (empty($app)) {
             die("Invalid Application");
         }
