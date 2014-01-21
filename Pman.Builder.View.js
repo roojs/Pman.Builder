@@ -39,7 +39,7 @@ Pman.Builder.View = {
         
         this.container = comp.layout.getRegion('center').getPanel(0);
         this.container.setContent(
-                '<iframe width="100%" height="100%" src="'+baseURL+'/Pman/Builder/App/' + app + '"></iframe>'
+                '<iframe width="100%" height="100%" src="'+baseURL+'/Builder/App/' + app + '"></iframe>'
         );
         var iframe = this.container.el.select('iframe',true).first().dom;
         
