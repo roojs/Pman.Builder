@@ -32,6 +32,9 @@ class Pman_Builder_App extends Pman
         if (!empty($_REQUEST['no_parts')) {
             $this->builderJs = array();
             //should it try and load the core???
+            $o->enable = 'Core';
+            $o->enableArray = array('Core');
+            return;
         }
         
         $p = DB_DataObject::factory('builder_part');
