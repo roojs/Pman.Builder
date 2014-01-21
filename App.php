@@ -30,8 +30,10 @@ class Pman_Builder_App extends Pman
         
         if (!empty($_REQUEST['no_parts'])) {
             // used to do the previewer
+            
             $this->builderJs = array();
             //should it try and load the core???
+            $o  = HTML_FlexyFramework::get();
             $o->enable = 'Core';
             $o->enableArray = array('Core');
             return;
