@@ -4,7 +4,7 @@ require_once 'Pman.php';
 
 class Pman_Builder_App extends Pman
 {
-  
+    var $template = "frame.html";
     // getAuth - everyone allowed in...
     function getAuth() {
         return true;
