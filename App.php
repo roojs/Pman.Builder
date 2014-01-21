@@ -14,8 +14,12 @@ class Pman_Builder_App extends Pman
         if (empty($app)) {
             die("Invalid Application");
         }
-        $p = DB_DataObject::factory('builder_modules');
-        $p->app = $app;
+        $mod = DB_DataObject::factory('builder_modules');
+        if (!$mod->get('app', $app)) {
+            die("invalid module");
+        }
+        $p = DB_DataObject::factory('builder_part');
+        $p->module_id = $mod->id;
         $p->selectAdd();
         $p->selectAdd('module');
         if (!$p->find()) {
