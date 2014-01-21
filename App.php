@@ -37,6 +37,7 @@ class Pman_Builder_App extends Pman
             $o->enable = '';
             $o->enableArray = array('');
             $o->disable  = 'Core';
+            $this->disable_jstemplate = true;
             return;
         }
         
