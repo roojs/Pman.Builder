@@ -64,13 +64,7 @@
         {outputJavascriptIncludes()}
              
         <!-- used by App.php in Builder - to enable loading of code/applicaiton on the fly -->
-        {foreach:builderJs,js}
-            <script type="text/javascript" src="{baseURL}/Builder/Code/{js}.js"></script>    
-        {end:} 
-           
-           
-           
-           
+         
         <!-- finally language.. -->   
         <script type="text/javascript" src="{baseURL}/Core/I18n.js"></script>
                
