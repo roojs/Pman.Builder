@@ -14,18 +14,26 @@ class Pman_Builder_App extends Pman
         return true;
     }
   
-    function get($req) {
+    function get($app) {
         
-        $bits = explode('/', $req);
+        
         $app = $bits[0];
         
         if (empty($app)) {
             die("Invalid Application");
         }
+        
+        
         $mod = DB_DataObject::factory('builder_modules');
         if (!$mod->get('app', $app)) {
             die("invalid module");
         }
+        
+        if (!empty($_REQUEST['no_parts')) {
+            $this->builderJs = array();
+            //should it try and load the core???
+        }
+        
         $p = DB_DataObject::factory('builder_part');
         $p->module_id = $mod->id;
         $p->selectAdd();
