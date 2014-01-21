@@ -29,7 +29,7 @@ class Pman_Builder_App extends Pman
             die("invalid module");
         }
         
-        if (!empty($_REQUEST['no_parts')) {
+        if (!empty($_REQUEST['no_parts'])) {
             $this->builderJs = array();
             //should it try and load the core???
             $o->enable = 'Core';
