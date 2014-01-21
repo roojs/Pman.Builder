@@ -16,8 +16,7 @@ class Pman_Builder_App extends Pman
   
     function get($app) {
         
-        
-        $app = $bits[0];
+         
         
         if (empty($app)) {
             die("Invalid Application");
