@@ -245,7 +245,7 @@ Pman.Builder.View = {
         }
         
         
-        this.munge(cfg.items[0]);
+        this.munge(cfg);
           Roo.log(cfg);
           return;
         // we draw either a dialog or a tab..
