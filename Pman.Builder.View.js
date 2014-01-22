@@ -271,6 +271,13 @@ Pman.Builder.View = {
             
             
         }
+        if (cfg.xns == 'Roo.bootstrap') {
+            Roo.log("bootstrap build!?");
+        
+        }
+        
+        
+        
         // should we render this into a dialog???
              // force center region..
         cfg.items[0].region = 'center';
