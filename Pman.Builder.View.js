@@ -44,7 +44,9 @@ Pman.Builder.View = {
         this.container.setContent(
                 '<iframe width="100%" height="100%" src="'+baseURL+'/Builder/App/' + app + '?no_parts=1"></iframe>'
         );
-        var iframe = this.container.el.select('iframe',true).first().dom;
+        var iframe = this.container.el.select('iframe',true).first()
+        
+        iframe.setSize( this.panel.el.getSize());
         
         //this.doc = iframe.contentDocument || iframe.contentWindow.document;
         
