@@ -345,3 +345,8 @@ left:
     Roo.bootstrap.Body
 right:
     Roo.bootstrap.Modal
+
+left:    
+    Roo.bootstrap.Modal:buttons
+right:
+    Roo.bootstrap.Button
