@@ -10,11 +10,11 @@ Roo.onReady(function() {
         
         {
             xtype: 'Body',
-            xns: 'Roo.bootstrap',
+            '|xns': 'Roo.bootstrap',
             items: [
                 {
                     xtype: 'Navbar',
-                    xns: 'Roo.bootstrap',
+                    '|xns': 'Roo.bootstrap',
                     position: 'fixed-top',
                     inverse: true,
                     brand: '<img src="http://detail.herokuapp.com/img/logo.png" alt="logo">',
@@ -22,12 +22,12 @@ Roo.onReady(function() {
                     items: [
                         {
                             xtype: 'NavGroup',
-                            xns: 'Roo.bootstrap',
+                            '|xns': 'Roo.bootstrap',
                             align: 'right',
                             items: [
                                 {
                                     xtype: 'Item',
-                                    xns: 'Roo.bootstrap.Navbar',
+                                    '|xns': 'Roo.bootstrap.Navbar',
                                     href: '#',
                                     html: "hello",
                                     badge: 'test',
@@ -35,21 +35,21 @@ Roo.onReady(function() {
                                 },
                                 {
                                     xtype: 'Item',
-                                    xns: 'Roo.bootstrap.Navbar',
+                                    '|xns': 'Roo.bootstrap.Navbar',
                                     html: "hello",
                                     menu:  {
                                             xtype: 'Menu',
-                                            xns: 'Roo.bootstrap',
+                                            '|xns': 'Roo.bootstrap',
                                             items : [
                                                 {
                                                     xtype: 'MenuItem',
-                                                    xns: 'Roo.bootstrap',
+                                                    '|xns': 'Roo.bootstrap',
                                                     html: "hello aaa",
                                                     href : 'http://roojs.com'
                                                 },
                                                 {
                                                     xtype: 'MenuItem',
-                                                    xns: 'Roo.bootstrap',
+                                                    '|xns': 'Roo.bootstrap',
                                                     html: "hello",
                                                     href : 'http://roojs.com'
                                                 }
@@ -58,7 +58,7 @@ Roo.onReady(function() {
                                 },
                                 {
                                     xtype: 'Item',
-                                    xns: 'Roo.bootstrap.Navbar',
+                                    '|xns': 'Roo.bootstrap.Navbar',
                                    
                                     html: "dialog",
                                     listeners : {
@@ -69,7 +69,7 @@ Roo.onReady(function() {
                                 {
                                     xtype: 'Modal',
                                     id: 'test-modal-1',
-                                    xns: 'Roo.bootstrap',
+                                    '|xns': 'Roo.bootstrap',
                                     title : 'test1',
                                     html: "dialog"
                                 }
@@ -79,7 +79,7 @@ Roo.onReady(function() {
                 },
                 {
                     xtype: 'Container',
-                    xns: 'Roo.bootstrap',
+                    '|xns': 'Roo.bootstrap',
                     jumbotron : true,
                     style :  'padding: 30px 15px 40px', 
                     html : '<h1> hello world </h1><p>test</p>'
