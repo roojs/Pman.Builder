@@ -234,6 +234,9 @@ Pman.Builder.View = {
         this.clearAll(isAuto);
         
         var cfg =  this.toJS();
+        this.draw(cfg);
+    },
+    draw :function(cfg) {
         if (!cfg.items[0]) {
             return;
         }
