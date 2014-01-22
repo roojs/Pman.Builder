@@ -245,7 +245,7 @@ Pman.Builder.View = {
         
         
         this.munge(cfg.items[0]);
-        
+          Roo.log(cfg);
         // we draw either a dialog or a tab..
         
         if (cfg.items[0].xtype == 'LayoutDialog') {
