@@ -103,6 +103,7 @@ Pman.Builder.View = {
                         ' catch (e) { Roo.log(e) } }';
                 }
                 try {
+                    Roo.log("interpret? " + str);
                     var _tmp = false;
                     var _this = this.renderObj; /// fake '_this' object..
                     // stupid IE can not return objects evaluated..
