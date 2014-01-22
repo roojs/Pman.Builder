@@ -55,7 +55,7 @@ Pman.Builder.View = {
         
     },
     
-    clarAll : function(isAuto) {
+    clearAll : function(isAuto) {
         try {
             this.win().Pman.Builder.View.frameClearAll(isAuto);
         } catch(e) {
@@ -253,7 +253,7 @@ Pman.Builder.View = {
     //        return; /// auto redraw is turned off..
       //  }
         
-        this.win().Pman.Builder.View.clearAll(isAuto);
+        this.clearAll(isAuto);
         
         var cfg =  this.toJS();
         
