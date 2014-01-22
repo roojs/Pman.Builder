@@ -57,13 +57,13 @@ Pman.Builder.View = {
     
     clarAll : function(isAuto) {
         try {
-            this.win().Pman.Builder.View.clearAll(isAuto);
+            this.win().Pman.Builder.View.frameClearAll(isAuto);
         } catch(e) {
             //alert(e);
         }
         
        
-    }
+    },
     
     frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
