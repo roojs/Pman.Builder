@@ -43,7 +43,7 @@ Pman.Builder.View = {
         );
         var iframe = this.container.el.select('iframe',true).first().dom;
         
-        this.doc = iframe.contentDocument || iframe.contentWindow.document;
+        //this.doc = iframe.contentDocument || iframe.contentWindow.document;
         
         
         
@@ -235,6 +235,9 @@ Pman.Builder.View = {
         this.clearAll(isAuto);
         
         var cfg =  this.toJS();
+        
+        Pman.Builder.View.draw( cfg );
+        
         this.draw(cfg);
     },
     draw :function(cfg) {
