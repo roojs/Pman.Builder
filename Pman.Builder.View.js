@@ -67,7 +67,7 @@ Pman.Builder.View = {
             this.dialogroot.remove();
             this.dialogroot = false;
         }
-        Roo.select('.container').remove();
+        Roo.select('div').remove();
         
     },
     munge : function(cfg, keyname) {
