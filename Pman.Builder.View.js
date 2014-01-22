@@ -268,7 +268,7 @@ Pman.Builder.View = {
                 }).defer(100);
             } catch(e) {
                 Roo.log("Error rendering: " + e.toString());
-                Roo.log(e);
+                throw e;
             }
             return;
             
