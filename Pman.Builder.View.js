@@ -237,7 +237,7 @@ Pman.Builder.View = {
     //        return; /// auto redraw is turned off..
       //  }
         
-        this.clearAll(isAuto);
+        this.win().Pman.Builder.View..clearAll(isAuto);
         
         var cfg =  this.toJS();
         
