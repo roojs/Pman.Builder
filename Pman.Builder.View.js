@@ -239,7 +239,7 @@ Pman.Builder.View = {
         
         var cfg =  this.toJS();
         
-        this.doc().Pman.Builder.View.draw( cfg );
+        this.win().Pman.Builder.View.draw( cfg );
         
     },
     draw :function(cfg) {
