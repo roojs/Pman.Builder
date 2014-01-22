@@ -322,6 +322,11 @@ right:
     
 left:
     Roo.bootstrap.Navbar
+right:    
+    Roo.bootstrap.NavGroup
+
+left:
+    Roo.bootstrap.NavGroup
 right:
     Roo.bootstrap.Navbar.Item
     Roo.bootstrap.Navbar.Button
