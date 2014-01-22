@@ -311,7 +311,7 @@ right:
 
 left:
     Roo.bootstrap.Button:menu
-    Roo.bootstrap.Navbar.Button:menu
+    Roo.bootstrap.Navbar.Item:menu
 right:
     Roo.bootstrap.Menu
 
