@@ -54,7 +54,18 @@ Pman.Builder.View = {
         
         
     },
-    clearAll : function(isAuto) {
+    
+    clarAll : function(isAuto) {
+        try {
+            this.win().Pman.Builder.View.clearAll(isAuto);
+        } catch(e) {
+            //alert(e);
+        }
+        
+       
+    }
+    
+    frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
 
         
