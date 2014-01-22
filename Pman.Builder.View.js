@@ -308,7 +308,7 @@ Pman.Builder.View = {
             this.bootstrapModal = top.addxtype(cfg.items[0]);
             
             if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
+                this.bootstrapModal.items[0].show();
             }
             
             return;
