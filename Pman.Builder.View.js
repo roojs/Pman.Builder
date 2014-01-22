@@ -250,8 +250,8 @@ Pman.Builder.View = {
         }
         
         
-        this.munge(cfg);
-        Roo.log(cfg);
+        this.munge(cfg.items[0]);
+        
         //  return;
         // we draw either a dialog or a tab..
         
@@ -280,11 +280,11 @@ Pman.Builder.View = {
             
             
         }
-        if (cfg['|xns'] == 'Roo.bootstrap') {
+        if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            top.addxtype(cfg);
+            top.addxtype(cfg.items[0]);
             
             return;
         }
