@@ -10,7 +10,7 @@ Roo.onReady(function() {
         
         {
             xtype: 'Body',
-            xns: Roo.bootstrap,
+            xns: 'Roo.bootstrap',
             items: [
                 {
                     xtype: 'Navbar',
