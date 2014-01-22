@@ -236,9 +236,8 @@ Pman.Builder.View = {
         
         var cfg =  this.toJS();
         
-        Pman.Builder.View.draw( cfg );
+        this.doc().Pman.Builder.View.draw( cfg );
         
-        this.draw(cfg);
     },
     draw :function(cfg) {
         Roo.log(cfg);
