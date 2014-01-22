@@ -347,6 +347,6 @@ right:
     Roo.bootstrap.Modal
 
 left:    
-    Roo.bootstrap.Modal:buttons
+    Roo.bootstrap.Modal:buttons[]
 right:
     Roo.bootstrap.Button
