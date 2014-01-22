@@ -305,10 +305,10 @@ Pman.Builder.View = {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            var tt = top.addxtype(cfg.items[0]);
+            this.bootstrapModal = top.addxtype(cfg.items[0]);
             
             if (cfg.items[0].xtype =='Modal' ) {
-                tt.show();
+                this.bootstrapModal.show();
             }
             
             return;
