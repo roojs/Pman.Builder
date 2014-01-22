@@ -28,7 +28,7 @@ Pman.Builder.View = {
     win : function() {
         var iframe = this.container.el.select('iframe',true).first().dom;
         return iframe.contentWindow;
-    }
+    },
     
     init : function (comp) {
         if (this.panel || !comp.layout) {
