@@ -6,7 +6,12 @@ Roo.onReady(function() {
     
     // now let's see if we can build shit..
     
-    
-    
+    Pman.Builder.View.draw({
+        
+        
+        
+        
+        
+    })
     
 })
