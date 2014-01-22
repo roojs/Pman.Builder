@@ -237,6 +237,8 @@ Pman.Builder.View = {
         this.draw(cfg);
     },
     draw :function(cfg) {
+        Roo.log(cfg);
+        
         if (!cfg.items[0]) {
             return;
         }
