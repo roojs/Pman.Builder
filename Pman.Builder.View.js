@@ -231,6 +231,9 @@ Pman.Builder.View = {
 
     redraw : function(isAuto)
     {
+        this.container.el.select('iframe',true).first().setSize(this.panel.el.getSize());
+
+        
        // return;
         // top level is not relivant
 
