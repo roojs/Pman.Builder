@@ -274,7 +274,7 @@ Pman.Builder.View = {
         if (cfg.xns == 'Roo.bootstrap') {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
-            
+            top.onRender(false,false);
             top.addxtype(cfg);
             
             return;
