@@ -1,1 +1,8 @@
-Roo.log("Test");
+
+
+
+Roo.onReady(function() {
+    Roo.log("Test");
+    
+    
+})
