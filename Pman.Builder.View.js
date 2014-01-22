@@ -267,8 +267,8 @@ Pman.Builder.View = {
                     dlg.moveTo(xy[0], xy[1]);
                 }).defer(100);
             } catch(e) {
-                Roo.log("Error rendering: " + e.toString());
-                throw e;
+                Roo.log("Error rendering dialog: " + e.toString());
+                Roo.log(e);
             }
             return;
             
