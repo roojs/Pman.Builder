@@ -294,6 +294,7 @@ right:
 left:
     Roo.bootstrap.Body
     Roo.bootstrap.Container
+    Roo.bootstrap.Modal
 right:
     Roo.bootstrap.Container
     Roo.bootstrap.Button
@@ -340,3 +341,7 @@ right:
     Roo.bootstrap.Button
 //    Roo.bootstrap.Fieldset
         
+left:
+    Roo.bootstrap.Body
+right:
+    Roo.bootstrap.Modal
