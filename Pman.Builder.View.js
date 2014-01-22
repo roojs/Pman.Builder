@@ -224,7 +224,7 @@ Pman.Builder.View = {
 
     redraw : function(isAuto)
     {
-        return;
+       // return;
         // top level is not relivant
 
 //          var btop =  Pman.Tab.BuilderTop2;
