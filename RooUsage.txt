@@ -295,6 +295,8 @@ left:
     Roo.bootstrap.Body
     Roo.bootstrap.Container
     Roo.bootstrap.Modal
+    Roo.bootstrap.Column
+    Roo.bootstrap.Row
 right:
     Roo.bootstrap.Container
     Roo.bootstrap.Button
@@ -305,6 +307,9 @@ right:
     Roo.bootstrap.Row
     Roo.bootstrap.Header
     Roo.bootstrap.Img
+
+    
+
 
 left:
     Roo.bootstrap.ButtonGroup
