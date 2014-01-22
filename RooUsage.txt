@@ -303,6 +303,7 @@ right:
     Roo.bootstrap.Navbar
     Roo.bootstrap.Row
     Roo.bootstrap.Header
+    Roo.bootstrap.Img
 
 left:
     Roo.bootstrap.ButtonGroup
