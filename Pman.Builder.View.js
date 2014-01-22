@@ -120,9 +120,9 @@ Pman.Builder.View = {
                     }
                    
                 } catch(e) {  console.log('Error evaluating: '  + str); };
-                if (p.charAt(0) == '|' ) {
-                    delete cfg[p];
-                }
+                //if (p.charAt(0) == '|' ) {
+                //    delete cfg[p];
+                //}
                     
                 
                 continue;
