@@ -114,7 +114,7 @@ Pman.Builder.View = {
                 // Formatting code (indent the tree so it looks nice on the screen)
                 
                 if  (currentElementChild.nodeName == '#text') {
-                    cb(currentElement.nodeValue);
+                    cb(currentElementChild.nodeValue);
                     i++;
                     currentElementChild=currentElement.childNodes[i];
                     continue;
