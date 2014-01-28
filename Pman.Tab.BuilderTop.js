@@ -475,7 +475,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                     // set more here
                                 }
                             },
-                            remoteSort : true,
+                            remoteSort : false,
                             sortInfo : { direction : 'ASC', field: 'name' },
                             proxy : {
                                 xtype: 'HttpProxy',

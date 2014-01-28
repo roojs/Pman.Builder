@@ -310,7 +310,7 @@
                                         "|beforeload": "function (_self, o){\n    o.params = o.params || {};\n    // set more here\n}\n"
                                     },
                                     "*prop": "store",
-                                    "remoteSort": true,
+                                    "remoteSort": false,
                                     "xtype": "Store",
                                     "|sortInfo": "{ direction : 'ASC', field: 'name' }",
                                     "|xns": "Roo.data",
