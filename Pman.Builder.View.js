@@ -122,7 +122,7 @@ Pman.Builder.View = {
           if (tagName)
             targetDocument.writeln("</"+tagName+">");
         }
-    }
+    },
 
     printDOMTree : function(domElement, destinationWindow) {
         var outputWindow = destinationWindow;
