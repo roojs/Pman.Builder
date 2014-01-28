@@ -119,7 +119,7 @@ Pman.Builder.View = {
           }     
           cb("  ");
           if (tagName)
-            targetDocument.writeln("</"+tagName+">");
+            cb("</"+tagName+">");
         }
     },
 
