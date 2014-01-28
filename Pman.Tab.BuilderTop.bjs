@@ -328,7 +328,7 @@
                                             "root": "data",
                                             "totalProperty": "total",
                                             "xtype": "JsonReader",
-                                            "|fields": "[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"assigntype\",\"type\":\"string\"}]",
+                                            "|fields": "[\"name\"]",
                                             "|xns": "Roo.data"
                                         }
                                     ]

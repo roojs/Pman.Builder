@@ -489,7 +489,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                 id : 'name',
                                 root : 'data',
                                 totalProperty : 'total',
-                                fields : [{"name":"id","type":"int"},{"name":"assigntype","type":"string"}]
+                                fields : ["name"]
                             }
                         }
                     }
