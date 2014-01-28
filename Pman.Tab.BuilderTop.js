@@ -443,6 +443,56 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                     {
                         xtype: 'Fill',
                         xns: Roo.Toolbar
+                    },
+                    {
+                        xtype: 'ComboBox',
+                        xns: Roo.form,
+                        allowBlank : 'false',
+                        editable : 'false',
+                        emptyText : "Select CampaignAssign",
+                        forceSelection : true,
+                        listWidth : 400,
+                        loadingText : "Searching...",
+                        minChars : 2,
+                        pageSize : 20,
+                        qtip : "Select CampaignAssign",
+                        selectOnFocus : true,
+                        triggerAction : 'all',
+                        typeAhead : true,
+                        width : 300,
+                        tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>',
+                        queryParam : '',
+                        fieldLabel : 'CampaignAssign',
+                        valueField : 'id',
+                        displayField : '',
+                        hiddenName : '',
+                        name : '',
+                        store : {
+                            xtype: 'Store',
+                            xns: Roo.data,
+                            remoteSort : true,
+                            sortInfo : { direction : 'ASC', field: 'id' },
+                            listeners : {
+                                beforeload : function (_self, o){
+                                    o.params = o.params || {};
+                                    // set more here
+                                }
+                            },
+                            proxy : {
+                                xtype: 'HttpProxy',
+                                xns: Roo.data,
+                                method : 'GET',
+                                url : baseURL + '/Roo/CampaignAssign.php'
+                            },
+                            reader : {
+                                xtype: 'JsonReader',
+                                xns: Roo.data,
+                                id : 'id',
+                                root : 'data',
+                                totalProperty : 'total',
+                                fields : [{"name":"id","type":"int"},{"name":"assigntype","type":"string"}]
+                            }
+                        }
                     }
                 ]
             }
