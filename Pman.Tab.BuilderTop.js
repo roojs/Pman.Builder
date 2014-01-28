@@ -456,7 +456,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         listWidth : 400,
                         loadingText : "Searching...",
                         minChars : 2,
-                        name : '',
+                        name : 'name',
                         pageSize : 20,
                         qtip : "Select CampaignAssign",
                         queryParam : '',
