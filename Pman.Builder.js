@@ -95,7 +95,7 @@ Pman.Builder = {
                     
                 }
                 data.jsource = render.toSource();
-                data.json = Roo.encode(js, null, 4),
+                data.json = Roo.encode(js, null, 4);
                 
                 if (data && cb) {
                      cb.call(Pman.Tab.BuilderTop,data);
