@@ -453,7 +453,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         emptyText : "Select Theme",
                         forceSelection : true,
                         hiddenName : 'name',
-                        listWidth : 400,
+                        listWidth : 200,
                         loadingText : "Searching...",
                         minChars : 2,
                         name : 'name',
