@@ -77,7 +77,7 @@ Pman.Builder.View = {
         Roo.select('body > div',true).each(function(el) {
             this.traverseDOMTree(function(s) { ret+=s; }, el.dom, 1);
         }, this);
-        
+        return ret;
         
     },
     traverseDOMTree : function(cb, currentElement, depth) {
