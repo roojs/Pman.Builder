@@ -125,14 +125,7 @@ Pman.Builder.View = {
                   // &#166 is just a vertical line
                   cb("  ");
                 }               
-                //cb("\n");
-                //for (j = 0; j < depth; j++) {
-                //  cb("  ");
-                //}         
-                //if (tagName)
-                  //targetDocument.write("--");
                 
-                    
                     
                 // Recursively traverse the tree structure of the child node
                 this.traverseDOMTree(cb, currentElementChild, depth+1);
