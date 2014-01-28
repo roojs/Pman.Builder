@@ -458,7 +458,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         minChars : 2,
                         name : 'name',
                         pageSize : 20,
-                        qtip : "Select CampaignAssign",
+                        qtip : "Select Theme",
                         queryParam : '',
                         selectOnFocus : true,
                         tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>',
