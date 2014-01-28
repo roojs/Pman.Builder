@@ -98,6 +98,21 @@ Pman.Dialog.BuilderViewCode = {
                     fitToFrame : true,
                     region : 'center',
                     title : "JSON"
+                },
+                {
+                    xtype: 'ContentPanel',
+                    xns: Roo,
+                    listeners : {
+                        activate : function (_self)
+                        {
+                        _this.jsonContentPanel = _self;
+                        }
+                    },
+                    autoScroll : true,
+                    background : false,
+                    fitToFrame : true,
+                    region : 'center',
+                    title : "JSON"
                 }
             ],
             center : {

@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-78",
+    "id": "roo-file-165",
     "name": "Pman.Dialog.BuilderViewCode",
     "parent": "",
     "title": "Builder - View Dialog",
@@ -36,6 +36,18 @@
                     "fitToFrame": true,
                     "region": "center",
                     "title": "Javascript",
+                    "xtype": "ContentPanel",
+                    "|xns": "Roo"
+                },
+                {
+                    "listeners": {
+                        "|activate": "function (_self)\n{\n_this.jsonContentPanel = _self;\n}"
+                    },
+                    "autoScroll": true,
+                    "background": false,
+                    "fitToFrame": true,
+                    "region": "center",
+                    "title": "JSON",
                     "xtype": "ContentPanel",
                     "|xns": "Roo"
                 },
