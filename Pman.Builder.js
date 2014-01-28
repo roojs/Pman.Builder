@@ -94,6 +94,9 @@ Pman.Builder = {
                     Pman.Tab.BuilderTop.filesel.setFromData(data);
                     
                 }
+                data.jsource = render.toSource();
+                data.json = Roo.encode(js, null, 4),
+                
                 if (data && cb) {
                      cb.call(Pman.Tab.BuilderTop,data);
                     // ??? _this.postCode(data);
