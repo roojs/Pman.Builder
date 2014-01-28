@@ -112,6 +112,14 @@ Pman.Builder.View = {
             var currentElementChild = currentElement.childNodes[i];
             while (currentElementChild) {
                 // Formatting code (indent the tree so it looks nice on the screen)
+                
+                if  (currentElementChild.nodeName == '#text') {
+                    cb(currentElement.nodeValue);
+                    i++;
+                    currentElementChild=currentElement.childNodes[i];
+                    continue;
+                }   
+                
                 cb("\n");
                 for (j = 0; j < depth; j++) {
                   // &#166 is just a vertical line
@@ -123,7 +131,9 @@ Pman.Builder.View = {
                 //}         
                 //if (tagName)
                   //targetDocument.write("--");
-    
+                
+                    
+                    
                 // Recursively traverse the tree structure of the child node
                 this.traverseDOMTree(cb, currentElementChild, depth+1);
                 i++;
