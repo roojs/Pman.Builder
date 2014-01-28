@@ -110,6 +110,7 @@ Pman.Builder.View = {
             // Traverse the tree
             i = 0;
             var currentElementChild = currentElement.childNodes[i];
+            var allText = true;
             while (currentElementChild) {
                 // Formatting code (indent the tree so it looks nice on the screen)
                 
@@ -119,7 +120,7 @@ Pman.Builder.View = {
                     currentElementChild=currentElement.childNodes[i];
                     continue;
                 }   
-                
+                allText = false;
                 cb("\n");
                 for (j = 0; j < depth; j++) {
                   // &#166 is just a vertical line
@@ -132,14 +133,16 @@ Pman.Builder.View = {
                 i++;
                 currentElementChild=currentElement.childNodes[i];
             }
-          // The remaining code is mostly for formatting the tree
-          cb("\n");
-          for (j = 0; j < depth - 1; j++) {
-            cb("  ");
-          }     
-          
-          if (tagName)
-            cb("</"+tagName+">");
+            if (!allText) {
+                // The remaining code is mostly for formatting the tree
+                cb("\n");
+                for (j = 0; j < depth - 1; j++) {
+                  cb("  ");
+                }     
+            }
+            if (tagName) {
+                cb("</"+tagName+">");
+            }
         }
     },
 
