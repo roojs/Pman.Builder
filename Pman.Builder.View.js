@@ -82,6 +82,7 @@ Pman.Builder.View = {
     },
     traverseDOMTree : function(cb, currentElement, depth) {
         if (currentElement) {
+            Roo.log(currentElement);
           var j;
           var tagName = currentElement.tagName;
           // Prints the node tagName, such as <A>, <IMG>, etc
