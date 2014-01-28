@@ -96,11 +96,14 @@ Pman.Builder = {
                 }
                 data.jsource = render.toSource();
                 data.json = Roo.encode(js, null, 4);
+                data.html = '??';
                 try {
                     data.html = Pman.Builder.View.frameToHTML();
                     
+                } catch (e) {
+                    
                 }
-                data.html =
+                
                 
                 if (data && cb) {
                      cb.call(Pman.Tab.BuilderTop,data);
