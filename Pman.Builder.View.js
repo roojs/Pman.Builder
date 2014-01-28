@@ -73,8 +73,11 @@ Pman.Builder.View = {
         
     },
     toHTML : function ()  {
-        var ret = 
-        Roo.select('div')
+        var ret = '';
+        Roo.select('body > div',true).each(function(el) {
+           ret += el.dom.outerHTML;
+            
+        });
         
         
     },
