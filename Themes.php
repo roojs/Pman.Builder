@@ -20,7 +20,7 @@ class Pman_Builder_Themes  extends Pman
         $dh = opendir($bd);
         $ret = array();
         while ($dh && (false !== ($fn = readdir($dh)))) {
-            if (is_link($bd . $fn) || is_dir($bd. $fn)) {
+            if (is_link($bd .'/'. $fn) || is_dir($bd.'/'. $fn)) {
                 $ret[] = $fn;
             }
             
