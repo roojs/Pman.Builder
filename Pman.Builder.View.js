@@ -81,7 +81,63 @@ Pman.Builder.View = {
         
         
     },
-    
+    traverseDOMTree : function(cb, currentElement, depth) {
+        if (currentElement) {
+          var j;
+          var tagName = currentElement.tagName;
+          // Prints the node tagName, such as <A>, <IMG>, etc
+          if (tagName)
+            cb("<"+currentElement.tagName+">");
+          else
+            cb("[unknown tag]");
+
+          // Traverse the tree
+          var i = 0;
+          var currentElementChild = currentElement.childNodes[i];
+          while (currentElementChild) {
+            // Formatting code (indent the tree so it looks nice on the screen)
+            cb("\n");
+            for (j = 0; j < depth; j++) {
+              // &#166 is just a vertical line
+              cb("  ");
+            }               
+            cb("\n");
+            for (j = 0; j < depth; j++) {
+              cb("  ");
+            }         
+            //if (tagName)
+              //targetDocument.write("--");
+
+            // Recursively traverse the tree structure of the child node
+            traverseDOMTree(cb, currentElementChild, depth+1);
+            i++;
+            currentElementChild=currentElement.childNodes[i];
+          }
+          // The remaining code is mostly for formatting the tree
+          cb("\n");
+          for (j = 0; j < depth - 1; j++) {
+            cb("  ");
+          }     
+          cb("  ");
+          if (tagName)
+            targetDocument.writeln("</"+tagName+">");
+        }
+    }
+
+    printDOMTree : function(domElement, destinationWindow) {
+        var outputWindow = destinationWindow;
+        if (!outputWindow)
+          outputWindow = window.open();
+
+        outputWindow.document.open("text/html", "replace");
+        outputWindow.document.write("<HTML><HEAD><TITLE>DOM</TITLE></HEAD><BODY>\n");
+        outputWindow.document.write("<CODE>\n");
+        traverseDOMTree(outputWindow.document, domElement, 1);
+        outputWindow.document.write("</CODE>\n");
+        outputWindow.document.write("</BODY></HTML>\n");
+
+        outputWindow.document.close();
+      }  
     
     frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
