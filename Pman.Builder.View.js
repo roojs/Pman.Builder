@@ -65,6 +65,20 @@ Pman.Builder.View = {
        
     },
     
+    frameToHTML : function()
+    {
+        return this.win().Pman.Builder.View.toHtml();  
+        
+        
+        
+    },
+    toHTML : function ()  {
+        
+        
+        
+    },
+    
+    
     frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
 
