@@ -73,7 +73,8 @@ Pman.Builder.View = {
         
     },
     toHTML : function ()  {
-        
+        var ret = 
+        Roo.select('div')
         
         
     },
@@ -92,7 +93,7 @@ Pman.Builder.View = {
             this.dialogroot.remove();
             this.dialogroot = false;
         }
-        Roo.select('div').remove();
+        Roo.select('body > div').remove();
         
     },
     munge : function(cfg, keyname) {
