@@ -447,6 +447,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                     {
                         xtype: 'ComboBox',
                         xns: Roo.form,
+                        allowBlank : false,
                         displayField : '',
                         editable : 'false',
                         emptyText : "Select CampaignAssign",

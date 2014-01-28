@@ -283,6 +283,7 @@
                             "xtype": "Fill"
                         },
                         {
+                            "allowBlank": false,
                             "displayField": "",
                             "editable": "false",
                             "emptyText": "Select CampaignAssign",
