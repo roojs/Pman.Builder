@@ -75,7 +75,7 @@ Pman.Builder.View = {
     toHTML : function ()  {
         var ret = '';
         Roo.select('body > div',true).each(function(el) {
-            traverseDOMTree(function(s) { ret+=s; }, el.dom, 1);
+            this.traverseDOMTree(function(s) { ret+=s; }, el.dom, 1);
         });
         
         
@@ -108,7 +108,7 @@ Pman.Builder.View = {
               //targetDocument.write("--");
 
             // Recursively traverse the tree structure of the child node
-            traverseDOMTree(cb, currentElementChild, depth+1);
+            this.traverseDOMTree(cb, currentElementChild, depth+1);
             i++;
             currentElementChild=currentElement.childNodes[i];
           }
@@ -123,10 +123,7 @@ Pman.Builder.View = {
         }
     },
 
-    printDOMTree : function(domElement, cb) {
-        traverseDOMTree(cb, domElement, 1);
-        
-    } , 
+     
     
     frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
