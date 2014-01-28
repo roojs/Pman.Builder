@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-168",
+    "id": "roo-file-171",
     "name": "Pman.Tab.BuilderTop",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTop",
@@ -233,7 +233,7 @@
                                             "listeners": {
                                                 "click": "function (_self, e)\n{\n   Pman.Builder.save(\n     function(data) {\n     Roo.log(\"JSON GOT\");\n          Roo.log(data);\n         Pman.Dialog.BuilderViewCode.show(data ); \n            \n\n  } );\n}\n"
                                             },
-                                            "text": "Show JSON",
+                                            "text": "Show JSON / Javascript HTML",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
                                         }

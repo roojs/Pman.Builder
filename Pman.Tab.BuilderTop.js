@@ -384,7 +384,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                           } );
                                         }
                                     },
-                                    text : "Show JSON"
+                                    text : "Show JSON / Javascript HTML"
                                 }
                             ]
                         }
