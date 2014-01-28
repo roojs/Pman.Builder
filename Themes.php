@@ -24,7 +24,7 @@ class Pman_Builder_Themes  extends Pman
                 continue;
             }
             if (is_link($bd .'/'. $fn) || is_dir($bd.'/'. $fn)) {
-                $ret[] = $fn;
+                $ret[] = array('name' => $fn);
             }
             
             
