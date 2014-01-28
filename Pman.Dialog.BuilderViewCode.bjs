@@ -53,7 +53,7 @@
                 },
                 {
                     "listeners": {
-                        "|activate": "function (_self)\n{\n_this.jsonContentPanel = _self;\n}"
+                        "|activate": "function (_self)\n{\n_this.htmlContentPanel = _self;\n}"
                     },
                     "autoScroll": true,
                     "background": false,

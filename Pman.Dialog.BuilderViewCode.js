@@ -105,7 +105,7 @@ Pman.Dialog.BuilderViewCode = {
                     listeners : {
                         activate : function (_self)
                         {
-                        _this.jsonContentPanel = _self;
+                        _this.htmlContentPanel = _self;
                         }
                     },
                     autoScroll : true,
