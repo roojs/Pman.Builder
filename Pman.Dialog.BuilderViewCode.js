@@ -112,7 +112,7 @@ Pman.Dialog.BuilderViewCode = {
                     background : false,
                     fitToFrame : true,
                     region : 'center',
-                    title : "JSON"
+                    title : "HTML"
                 }
             ],
             center : {

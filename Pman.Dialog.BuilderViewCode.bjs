@@ -59,7 +59,7 @@
                     "background": false,
                     "fitToFrame": true,
                     "region": "center",
-                    "title": "JSON",
+                    "title": "HTML",
                     "xtype": "ContentPanel",
                     "|xns": "Roo"
                 },
