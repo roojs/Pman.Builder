@@ -50,9 +50,7 @@ Pman.Dialog.BuilderViewCode = {
                     _this.previewContentPanel.setContent(
                         '<PRE>' + Roo.util.Format.htmlEncode(_this.data.jsource) + '</PRE>'
                     );
-                        
-                    
-                      
+                         
                     _this.jsonContentPanel.setContent(
                         '<PRE>' + Roo.util.Format.htmlEncode(_this.data.json) + '</PRE>'
                     );
