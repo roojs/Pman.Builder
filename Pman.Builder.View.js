@@ -133,7 +133,7 @@ Pman.Builder.View = {
           for (j = 0; j < depth - 1; j++) {
             cb("  ");
           }     
-          cb("  ");
+          cb("  "); //??? extra?
           if (tagName)
             cb("</"+tagName+">");
         }
