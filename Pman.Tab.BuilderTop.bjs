@@ -285,7 +285,6 @@
                         {
                             "allowBlank": false,
                             "displayField": "name",
-                            "editable": "false",
                             "emptyText": "Select CampaignAssign",
                             "fieldLabel": "CampaignAssign",
                             "forceSelection": true,
