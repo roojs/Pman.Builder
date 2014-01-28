@@ -116,10 +116,10 @@ Pman.Builder.View = {
                   // &#166 is just a vertical line
                   cb("  ");
                 }               
-                cb("\n");
-                for (j = 0; j < depth; j++) {
-                  cb("  ");
-                }         
+                //cb("\n");
+                //for (j = 0; j < depth; j++) {
+                //  cb("  ");
+                //}         
                 //if (tagName)
                   //targetDocument.write("--");
     
