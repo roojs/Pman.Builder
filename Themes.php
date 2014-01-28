@@ -18,6 +18,7 @@ class Pman_Builder_Themes  extends Pman
     {
         $bd = __DIR__.'/themes';
         $dh = opendir($bd);
+        $ret = array();
         while ($dh && (false !== ($fn = readdir($dh)))) {
             if (is_link($bd . $fn) || is_dir($bd. $fn)) {
                 $ret[] = $fn;
