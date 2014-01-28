@@ -286,7 +286,7 @@
                             "allowBlank": false,
                             "displayField": "name",
                             "editable": false,
-                            "emptyText": "Select CampaignAssign",
+                            "emptyText": "Select Theme",
                             "fieldLabel": "CampaignAssign",
                             "forceSelection": true,
                             "hiddenName": "",

@@ -450,7 +450,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         allowBlank : false,
                         displayField : 'name',
                         editable : false,
-                        emptyText : "Select CampaignAssign",
+                        emptyText : "Select Theme",
                         fieldLabel : 'CampaignAssign',
                         forceSelection : true,
                         hiddenName : '',
