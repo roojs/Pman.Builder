@@ -88,7 +88,7 @@ Pman.Builder.View = {
             var tagName = currentElement.tagName;
             
             if  (nodeName == '#text') {
-                cb(node.value);
+                cb(currentElement.value);
                 return;
             
             }
