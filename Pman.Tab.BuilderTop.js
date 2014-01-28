@@ -465,7 +465,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         triggerAction : 'all',
                         typeAhead : true,
                         valueField : 'name',
-                        width : 300,
+                        width : 200,
                         store : {
                             xtype: 'Store',
                             xns: Roo.data,
