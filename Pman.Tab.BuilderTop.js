@@ -376,12 +376,12 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                         {
                                            Pman.Builder.save(
                                              function(data) {
-                                             Roo.log("JSON GOT");
-                                                  Roo.log(data);
-                                                 Pman.Dialog.BuilderViewCode.show(data ); 
-                                                    
+                                                 Roo.log("JSON GOT");
+                                                      Roo.log(data);
+                                                     Pman.Dialog.BuilderViewCode.show(data ); 
+                                                        
                                         
-                                          } );
+                                              } );
                                         }
                                     },
                                     text : "Show JSON / Javascript HTML"

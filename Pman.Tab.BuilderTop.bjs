@@ -231,7 +231,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self, e)\n{\n   Pman.Builder.save(\n     function(data) {\n     Roo.log(\"JSON GOT\");\n          Roo.log(data);\n         Pman.Dialog.BuilderViewCode.show(data ); \n            \n\n  } );\n}\n"
+                                                "click": "function (_self, e)\n{\n   Pman.Builder.save(\n     function(data) {\n         Roo.log(\"JSON GOT\");\n              Roo.log(data);\n             Pman.Dialog.BuilderViewCode.show(data ); \n                \n\n      } );\n}\n"
                                             },
                                             "text": "Show JSON / Javascript HTML",
                                             "xtype": "Item",
