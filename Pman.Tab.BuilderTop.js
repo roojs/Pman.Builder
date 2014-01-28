@@ -486,7 +486,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                             reader : {
                                 xtype: 'JsonReader',
                                 xns: Roo.data,
-                                id : 'id',
+                                id : 'name',
                                 root : 'data',
                                 totalProperty : 'total',
                                 fields : [{"name":"id","type":"int"},{"name":"assigntype","type":"string"}]
