@@ -439,6 +439,10 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                 }
                             ]
                         }
+                    },
+                    {
+                        xtype: 'Fill',
+                        xns: Roo.Toolbar
                     }
                 ]
             }

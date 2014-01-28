@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-171",
+    "id": "roo-file-248",
     "name": "Pman.Tab.BuilderTop",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTop",
@@ -277,6 +277,10 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "|xns": "Roo.Toolbar",
+                            "xtype": "Fill"
                         }
                     ]
                 }
