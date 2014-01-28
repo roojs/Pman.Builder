@@ -26,7 +26,6 @@ class Pman_Builder_Themes  extends Pman
         }
         closedir($dh);
          
-         
         $this->jdata($ret);
               
         // 
