@@ -124,20 +124,10 @@ Pman.Builder.View = {
         }
     },
 
-    printDOMTree : function(domElement, destinationWindow) {
-        var outputWindow = destinationWindow;
-        if (!outputWindow)
-          outputWindow = window.open();
-
-        outputWindow.document.open("text/html", "replace");
-        outputWindow.document.write("<HTML><HEAD><TITLE>DOM</TITLE></HEAD><BODY>\n");
-        outputWindow.document.write("<CODE>\n");
-        traverseDOMTree(outputWindow.document, domElement, 1);
-        outputWindow.document.write("</CODE>\n");
-        outputWindow.document.write("</BODY></HTML>\n");
-
-        outputWindow.document.close();
-      }  
+    printDOMTree : function(domElement, cb) {
+        traverseDOMTree(cb, domElement, 1);
+        
+    } , 
     
     frameClearAll : function(isAuto) {
 //        this.renderObj = { isBuilder : true };
