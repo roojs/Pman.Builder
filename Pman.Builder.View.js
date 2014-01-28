@@ -84,7 +84,7 @@ Pman.Builder.View = {
         if (currentElement) {
             //Roo.log(currentElement);
             var j;
-            var name = currentElement.name;
+            var nodeType = currentElement.nodeType;
             var tagName = currentElement.tagName;
             
           // Prints the node tagName, such as <A>, <IMG>, etc
