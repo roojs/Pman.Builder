@@ -67,7 +67,7 @@ Pman.Builder.View = {
     
     frameToHTML : function()
     {
-        return this.win().Pman.Builder.View.toHtml();  
+        return this.win().Pman.Builder.View.toHTML();  
         
         
         
