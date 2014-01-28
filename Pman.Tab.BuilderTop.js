@@ -464,7 +464,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                         tpl : '<div class="x-grid-cell-text x-btn button"><b>{name}</b> </div>',
                         triggerAction : 'all',
                         typeAhead : true,
-                        valueField : 'id',
+                        valueField : 'name',
                         width : 300,
                         store : {
                             xtype: 'Store',
