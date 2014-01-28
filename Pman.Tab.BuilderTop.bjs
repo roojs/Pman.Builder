@@ -317,10 +317,10 @@
                                     "items": [
                                         {
                                             "*prop": "proxy",
-                                            "xtype": "HttpProxy",
                                             "method": "GET",
-                                            "|xns": "Roo.data",
-                                            "|url": "baseURL + '/Roo/CampaignAssign.php'"
+                                            "xtype": "HttpProxy",
+                                            "|url": "baseURL + '/Builder/Themes'",
+                                            "|xns": "Roo.data"
                                         },
                                         {
                                             "*prop": "reader",

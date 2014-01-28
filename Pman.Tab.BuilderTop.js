@@ -481,7 +481,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                 xtype: 'HttpProxy',
                                 xns: Roo.data,
                                 method : 'GET',
-                                url : baseURL + '/Roo/CampaignAssign.php'
+                                url : baseURL + '/Builder/Themes'
                             },
                             reader : {
                                 xtype: 'JsonReader',
