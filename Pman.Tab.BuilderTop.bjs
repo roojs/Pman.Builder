@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-248",
+    "id": "roo-file-171",
     "name": "Pman.Tab.BuilderTop",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTop",
@@ -283,6 +283,9 @@
                             "xtype": "Fill"
                         },
                         {
+                            "listeners": {
+                                "select": "function (combo, record, index)\n{\n    Pman.Builder.View.frameUpdateTheme(record.data.name);\n}"
+                            },
                             "allowBlank": false,
                             "displayField": "name",
                             "editable": false,
