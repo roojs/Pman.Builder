@@ -429,8 +429,14 @@ Pman.Builder.View = {
     },
     updateTheme : function(name)
     {
+       Roo.select('head link[rel=stylesheet]').each(function(e) {
+            if (!e.dom.href.match(/bootstrap\.\min.css$/)) {
+                return;
+            }
+            e.dom.setAttribute('href', rootURL +'/bootswatch/' + name + '/bootstrap.min.css' );
+            
         
-        
+       });
     }
     
     
