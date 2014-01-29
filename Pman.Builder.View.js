@@ -422,8 +422,17 @@ Pman.Builder.View = {
                 this.panelroot.el.scrollTo('left', 0);
             
         }
+    },
+    frameUpdateTheme: function(name)
+    {
+         return this.win().Pman.Builder.View.updateTheme(name);  
+    },
+    updateTheme : function(name)
+    {
+        
+        
     }
-
+    
     
     
 }
