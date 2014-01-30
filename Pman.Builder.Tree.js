@@ -288,7 +288,7 @@ Pman.Builder.Tree = {
     nodeXtype : function(n)
     {
         var tree = Pman.Tab.BuilderTree.tree;
-        if (!n) {return ''; }
+        if (!n || !n.elConfig) {return ''; }
         var xt = n.elConfig.xtype ||  '';
         var xns= n.elConfig['|xns'] ||   '';
         xns += xns.length ? '.' : '';
