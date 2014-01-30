@@ -77,7 +77,7 @@ Pman.Builder = {
         
         //var _this = this;
         
-        Pman.request({
+        new Pman.Request({
             url: baseURL + '/Roo/Builder_part.php',
             method : 'POST',
             params : {
