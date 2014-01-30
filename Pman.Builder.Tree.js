@@ -22,7 +22,7 @@ Pman.Builder.Tree = {
         
         
         var items = [];
-        if (inConfig.items) { // loading!
+        if (typeof(inConfig.items) !== 'undefined' && inConfig.items) { // loading!
             items = inConfig.items;
             delete inConfig.items;
         }
