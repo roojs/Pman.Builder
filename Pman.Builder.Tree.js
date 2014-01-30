@@ -20,7 +20,7 @@ Pman.Builder.Tree = {
                                     
         var tree = Pman.Tab.BuilderTree.tree;
         
-        if (typeof(inConfig) !== 'undefined') {
+        if (typeof(inConfig) == 'undefined') {
             return;
         }
         var items = [];
