@@ -422,8 +422,23 @@ Pman.Builder.View = {
                 this.panelroot.el.scrollTo('left', 0);
             
         }
+    },
+    frameUpdateTheme: function(name)
+    {
+         return this.win().Pman.Builder.View.updateTheme(name);  
+    },
+    updateTheme : function(name)
+    {
+       Roo.select('head link[rel=stylesheet]').each(function(e) {
+            if (!e.dom.href.match(/bootstrap\.\min.css$/)) {
+                return;
+            }
+            e.dom.setAttribute('href', rootURL +'/bootswatch/' + name + '/bootstrap.min.css' );
+            
+        
+       });
     }
-
+    
     
     
 }

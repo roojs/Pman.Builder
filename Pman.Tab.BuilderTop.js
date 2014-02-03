@@ -447,6 +447,12 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                     {
                         xtype: 'ComboBox',
                         xns: Roo.form,
+                        listeners : {
+                            select : function (combo, record, index)
+                            {
+                                Pman.Builder.View.frameUpdateTheme(record.data.name);
+                            }
+                        },
                         allowBlank : false,
                         displayField : 'name',
                         editable : false,

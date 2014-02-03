@@ -20,9 +20,11 @@ Pman.Builder.Tree = {
                                     
         var tree = Pman.Tab.BuilderTree.tree;
         
-        
+        if (typeof(inConfig) == 'undefined') {
+            return;
+        }
         var items = [];
-        if (inConfig.items) { // loading!
+        if (typeof(inConfig) !== 'undefined' && inConfig.items) { // loading!
             items = inConfig.items;
             delete inConfig.items;
         }
@@ -182,11 +184,12 @@ Pman.Builder.Tree = {
         }
         if (!ix) {
             // first..
-            this.appendNode(pn.childNodes[0], cfg, 'before');
+            this.appendNode(pn.childNodes[0], cfg, 'above');
             return true;
         
         }
-        this.appendNode(pn.childNodes[ix-1], cfg, 'after');
+        
+        this.appendNode(pn.childNodes[ix-1], cfg, 'below');
         
         
         return true;
@@ -285,7 +288,7 @@ Pman.Builder.Tree = {
     nodeXtype : function(n)
     {
         var tree = Pman.Tab.BuilderTree.tree;
-        if (!n) {return ''; }
+        if (!n || !n.elConfig) {return ''; }
         var xt = n.elConfig.xtype ||  '';
         var xns= n.elConfig['|xns'] ||   '';
         xns += xns.length ? '.' : '';
@@ -404,9 +407,12 @@ Pman.Builder.Tree = {
         }
         // can append has to use palete...
         // this code should be in nodedragover.
-        
-        Roo.log("move checks need moving");
-        return false;
+        if (e.dropNode) {
+            var cfg = this.toJS(e.dropNode);
+            this.appendNode(e.target, cfg, e.point);
+        }
+        Roo.log('no e.dropNode?');
+        return false; // do not allow movement..
         
         if (_this.canAppend(np, e.dropNode.elConfig)) {
             if (e.rawEvent.ctrlKey) {
@@ -478,7 +484,16 @@ Pman.Builder.Tree = {
            // done all the checks...
            return;
            
-       }
+        }
+        
+        
+        // have a drop node - hence comming from the same object..
+        var drop_xtype = this.nodeXtype(e.dropNode);
+        // currently we can not determine validity..
+        e.cancel = false;
+        return ;
+        
+        
         
     },
     save : function() 

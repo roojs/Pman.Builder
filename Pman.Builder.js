@@ -77,7 +77,7 @@ Pman.Builder = {
         
         //var _this = this;
         
-        Pman.request({
+        new Pman.Request({
             url: baseURL + '/Roo/Builder_part.php',
             method : 'POST',
             params : {
@@ -87,7 +87,8 @@ Pman.Builder = {
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
             }, 
-            success : function(data) {
+            success : function(res) {
+                var data = res.data;
                 // set the fileSel!!
                 console.log(data);
                 if (data) {
