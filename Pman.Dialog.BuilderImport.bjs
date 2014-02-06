@@ -43,7 +43,7 @@
                                     "height": 200,
                                     "name": "json",
                                     "width": 400,
-                                    "xtype": "TextField",
+                                    "xtype": "TextArea",
                                     "|xns": "Roo.form"
                                 },
                                 {

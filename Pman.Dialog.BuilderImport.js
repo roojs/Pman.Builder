@@ -80,7 +80,7 @@ Pman.Dialog.BuilderImport = {
                             url : baseURL + '/Roo/builder_part',
                             items : [
                                 {
-                                    xtype: 'TextField',
+                                    xtype: 'TextArea',
                                     xns: Roo.form,
                                     fieldLabel : 'Paste BJS code from export',
                                     height : 200,
