@@ -85,7 +85,7 @@ Pman.Dialog.BuilderImport = {
                                     fieldLabel : 'Paste BJS code from export',
                                     height : 200,
                                     name : 'json',
-                                    width : 400
+                                    width : 410
                                 },
                                 {
                                     xtype: 'Hidden',
