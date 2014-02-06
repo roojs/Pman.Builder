@@ -75,6 +75,7 @@ Pman.Dialog.BuilderImport = {
                                     _this.form= form;
                                 }
                             },
+                            labelAlign : 'top',
                             method : 'POST',
                             style : 'margin:10px;',
                             url : baseURL + '/Roo/core_enum.php',
