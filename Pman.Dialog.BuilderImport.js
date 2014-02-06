@@ -33,10 +33,10 @@ Pman.Dialog.BuilderImport = {
             closable : false,
             collapsible : false,
             height : 230,
+            modal : true,
             resizable : false,
             title : "Edit / Create core_enum",
-            width : 400,
-            modal : true,
+            width : 500,
             items : [
                 {
                     xtype: 'ContentPanel',
