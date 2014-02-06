@@ -145,6 +145,10 @@
                                             "text": "Delete",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "|xns": "Roo.menu",
+                                            "xtype": "Separator"
                                         }
                                     ]
                                 }

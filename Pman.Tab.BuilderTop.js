@@ -242,6 +242,10 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                         }
                                     },
                                     text : "Delete"
+                                },
+                                {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
                                 }
                             ]
                         }
