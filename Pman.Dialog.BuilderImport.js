@@ -50,8 +50,8 @@ Pman.Dialog.BuilderImport = {
                                 actioncomplete : function(_self,action)
                                 {
                                     if (action.type == 'setdata') {
-                                       //_this.dialog.el.mask("Loading");
-                                       //this.load({ method: 'GET', params: { '_id' : _this.data.id }});
+                                       _this.dialog.el.mask("Loading");
+                                       this.load({ method: 'GET', params: { '_id' : _this.data.id }});
                                        return;
                                     }
                                     if (action.type == 'load') {
