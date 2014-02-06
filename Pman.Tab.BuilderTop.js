@@ -258,20 +258,13 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                 return false;
                                             }
                                             
-                                            Pman.Dialog.BuilderPart.show( {
+                                            Pman.Dialog.BuilderImport.show( {
                                                      id : 0, 
                                                      module_id: _this.modsel.getValue() 
                                                  } ,
                                                  function(data) {
-                                                    _this.filesel.reset();
-                                                    if (!data.id) {
-                                                        return;
-                                                    }
-                                                    _this.filesel.setfromdata(data);
-                                                    Pman.Builder.Tree.clearAll();
-                                                    Pman.Builder.Tree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
                                                      
-                                                    Pman.Tab.BuilderPanel.redraw.defer(100,Pman.Tab.BuilderPanel,[true]);
+                                                     
                                             });
                                         
                                         }
