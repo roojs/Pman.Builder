@@ -272,7 +272,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                     
                                                     //bv.panel.el.unmask();
                                                     Pman.Tab.BuilderTab.layout.getRegion('west').el.unmask();
-                                                    //pt.loadBJS(_this.modsel.getValue(), rec.data.id)
+                                                    pt.loadBJS(_this.modsel.getValue(), _this.filesel.getValue())
                                         
                                                      
                                             });
