@@ -84,7 +84,7 @@ Pman.Dialog.BuilderImport = {
                                     xtype: 'TextField',
                                     xns: Roo.form,
                                     fieldLabel : 'Paste BJS code from export',
-                                    name : 'display_name',
+                                    name : 'code',
                                     width : 200
                                 },
                                 {
