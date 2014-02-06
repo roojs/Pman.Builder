@@ -38,20 +38,6 @@
                             "|url": "baseURL + '/Roo/core_enum.php'",
                             "items": [
                                 {
-                                    "fieldLabel": "Etype",
-                                    "name": "etype",
-                                    "width": 200,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
-                                    "fieldLabel": "Name",
-                                    "name": "name",
-                                    "width": 200,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
                                     "fieldLabel": "Active",
                                     "name": "active",
                                     "width": 75,

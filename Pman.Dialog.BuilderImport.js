@@ -82,20 +82,6 @@ Pman.Dialog.BuilderImport = {
                                 {
                                     xtype: 'TextField',
                                     xns: Roo.form,
-                                    fieldLabel : 'Etype',
-                                    name : 'etype',
-                                    width : 200
-                                },
-                                {
-                                    xtype: 'TextField',
-                                    xns: Roo.form,
-                                    fieldLabel : 'Name',
-                                    name : 'name',
-                                    width : 200
-                                },
-                                {
-                                    xtype: 'TextField',
-                                    xns: Roo.form,
                                     fieldLabel : 'Active',
                                     name : 'active',
                                     width : 75
