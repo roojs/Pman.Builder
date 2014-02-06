@@ -35,7 +35,7 @@
                             "method": "POST",
                             "style": "margin:10px;",
                             "xtype": "Form",
-                            "|url": "baseURL + '/Roo/core_enum.php'",
+                            "|url": "baseURL + '/Roo/builder_part'",
                             "|xns": "Roo.form",
                             "items": [
                                 {

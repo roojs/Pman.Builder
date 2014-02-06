@@ -77,7 +77,7 @@ Pman.Dialog.BuilderImport = {
                             labelAlign : 'top',
                             method : 'POST',
                             style : 'margin:10px;',
-                            url : baseURL + '/Roo/core_enum.php',
+                            url : baseURL + '/Roo/builder_part',
                             items : [
                                 {
                                     xtype: 'TextField',
