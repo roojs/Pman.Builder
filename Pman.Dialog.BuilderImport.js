@@ -32,7 +32,7 @@ Pman.Dialog.BuilderImport = {
             xns: Roo,
             closable : false,
             collapsible : false,
-            height : 230,
+            height : 330,
             modal : true,
             resizable : false,
             title : "Edit / Create core_enum",
