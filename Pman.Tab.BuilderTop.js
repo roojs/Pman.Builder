@@ -276,7 +276,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                         
                                         }
                                     },
-                                    text : "New Part",
+                                    text : "Import (by pasting)",
                                     icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
                                 }
                             ]
