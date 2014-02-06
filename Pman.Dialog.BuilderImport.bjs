@@ -38,27 +38,6 @@
                             "|url": "baseURL + '/Roo/core_enum.php'",
                             "items": [
                                 {
-                                    "fieldLabel": "Active",
-                                    "name": "active",
-                                    "width": 75,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
-                                    "fieldLabel": "Seqid",
-                                    "name": "seqid",
-                                    "width": 75,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
-                                    "fieldLabel": "Seqmax",
-                                    "name": "seqmax",
-                                    "width": 75,
-                                    "|xns": "Roo.form",
-                                    "xtype": "TextField"
-                                },
-                                {
                                     "fieldLabel": "Display name",
                                     "name": "display_name",
                                     "width": 200,
