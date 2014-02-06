@@ -257,13 +257,23 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                 Roo.MessageBox.alert("Error", "Select Module");
                                                 return false;
                                             }
-                                            
+                                             if (!_this.modsel.getValue()) {
+                                                Roo.MessageBox.alert("Error", "Select Module");
+                                                return false;
+                                            }
                                             Pman.Dialog.BuilderImport.show( {
                                                      id : 0, 
                                                      module_id: _this.modsel.getValue() 
                                                  } ,
                                                  function(data) {
-                                                     
+                                                     var bt = Pman.Tab.BuilderTree.tree;
+                                                    var pt = Pman.Builder.Tree;
+                                                    
+                                                    
+                                                    //bv.panel.el.unmask();
+                                                    Pman.Tab.BuilderTab.layout.getRegion('west').el.unmask();
+                                                    //pt.loadBJS(_this.modsel.getValue(), rec.data.id)
+                                        
                                                      
                                             });
                                         
