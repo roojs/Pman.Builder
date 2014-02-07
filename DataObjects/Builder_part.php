@@ -94,7 +94,9 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         $m  = $this->module();
         $m->gitCommit($this->name . '.bjs', $this->bjs());
         $m->gitCommit($this->name . '.js', $this->jsource);
-        
+        if (!empty($req['html'])) {
+            $m->gitCommit($this->name . '.html', $req['html']);
+        }
         
         // writes to session page?
         $sp = ini_get('session.save_path').'/Builder/'.date('Y/m');
