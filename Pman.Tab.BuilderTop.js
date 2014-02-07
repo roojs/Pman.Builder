@@ -193,7 +193,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                 return false;
                                             }
                                             Pman.Dialog.BuilderPart.show( {
-                                                     id : _this.filesel.getValue(), 
+                                                     id : _this.filesel.getValue(),
                                                      module_id: _this.modsel.getValue() 
                                                  } ,
                                                  function(data) {
