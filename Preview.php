@@ -17,7 +17,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
             $this->outputJS(preg_replace('#^BuilderJS/#','', $name));
             
         }
-        var_dump($name, $default);
+        //var_dump($name, $default);
         //DB_DataObject::debugLevel(5);
         parent::loadPage($prefix, $name, $default );
         
