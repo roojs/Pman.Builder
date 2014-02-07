@@ -13,7 +13,10 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     function loadPage($prefix, $name, $default = false)
     {
         
-        
+        if (preg_match('/^BuilderJS/', $name)) {
+            $this->outputJS(preg_replace('/BuilderJS/','', $name));
+            
+        }
         var_dump($name, $default);
         //DB_DataObject::debugLevel(5);
         parent::loadPage($prefix, $name, $default );
@@ -24,6 +27,22 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         // menus????
         
          
+    }
+    
+    function outputJS($name)
+    {
+        $proj = HTML_FlexyFramework::get()->project;
+        // DB_DataObject::debugLevel(1);
+        $m = DB_DAtaObject::factory('Builder_modules');
+        $m->get('name', $proj );
+        $p = DB_DAtaObject::factory('Builder_part');
+        $p->module_id = $m->pid();
+        if (!$p->get('name', $name )) {
+            $this->err("invalid url");
+        }
+        header('Content-type: text/javascript');
+        echo $p->jsource;
+        exit;
     }
     
     function outputBody()
