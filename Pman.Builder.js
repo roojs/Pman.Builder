@@ -78,8 +78,9 @@ Pman.Builder = {
         //var _this = this;
         
         // should we try and render first???
+        var html = '';
         try {
-            data.html = Pman.Builder.View.frameToHTML();
+             html = Pman.Builder.View.frameToHTML();
             
         } catch (e) {
             
@@ -93,6 +94,7 @@ Pman.Builder = {
             params : {
                 json : Roo.encode(js, null, 4),
                 jsource : render.toSource(),
+                html : html
                 name :   js.name,
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
@@ -107,13 +109,7 @@ Pman.Builder = {
                 }
                 data.jsource = render.toSource();
                 data.json = Roo.encode(js, null, 4);
-                data.html = '??';
-                try {
-                    data.html = Pman.Builder.View.frameToHTML();
-                    
-                } catch (e) {
-                    
-                }
+                data.html = html; 
                 
                 
                 if (data && cb) {
