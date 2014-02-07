@@ -78,12 +78,12 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         // write it to a file... use date time...  - which should hopefully be the same as the
         //event that was created..
         $this->writeEventFile($roo,$req);
-        
+        $this->syncTemplate();
     }
     function onUpdate($old , $req, $roo)
     {
-         $this->writeEventFile($roo,$req);
-        
+        $this->writeEventFile($roo,$req);
+        $this->syncTemplate();
         
     }
     function  writeEventFile($roo,$req) 
@@ -182,4 +182,21 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         return $ret;
         */
     }
+    function syncTemplate()
+    {
+        $m = $this->module();
+        $t = DB_DataObject::Factory('cms_template');
+        $t->view_name = $m->name;
+        $t->template = $this->name . '.html';
+        $t->lang= 'en';
+        if (!$t->find(true)) {
+            $t->updated = $t->sqlValue('NOW()');
+            $t->insert();
+            return;
+        }
+        $t->updated = $t->sqlValue('NOW()');
+        $t->update();
+        
+    }
+    
 }
