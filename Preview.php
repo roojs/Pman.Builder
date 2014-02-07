@@ -27,11 +27,10 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     function outputBody()
     {
         
-        $oo = HTML_FlexyFramework::get()->Pman_Cms;
-        $template_prefix = isset($oo['template_prefix']) ? $oo['template_prefix'] : '';
-        DB_DataObject::debugLevel(1);
+        $proj = HTML_FlexyFramework::get()->project;
+         DB_DataObject::debugLevel(1);
         $m = DB_DAtaObject::factory('Builder_modules');
-        $m->get('name', $template_prefix);
+        $m->get('name', $proj );
         
         // needs to modify the template directory??
         // use the builder_module == app name
