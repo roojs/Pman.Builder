@@ -22,6 +22,8 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     function outputBody()
     {
         // needs to modify the template directory??
+        // use the builder_module == app name
+        // look for part with same name.
         return parent::outputBody();
         
         
