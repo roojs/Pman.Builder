@@ -164,7 +164,7 @@ Pman.Builder.View = {
         Roo.select('body > div').remove();
         
     },
-    munge : function(cfg, keyname) {
+    munge : function(cfg, keyname, add_xattr) {
         keyname = keyname || false;
         
         this.renderObj = this.renderObj || {};
@@ -187,7 +187,7 @@ Pman.Builder.View = {
             }
             
             if (typeof(cfg[p]) == 'object') { // listeners!!!
-                this.munge(cfg[p], p);
+                this.munge(cfg[p], p, add_xattr);
                 continue;
             }
             // SPECIAL - PIPE
@@ -236,6 +236,17 @@ Pman.Builder.View = {
             // normal..
               
         }
+        
+        // add xattr data?
+        if (add_xattr) {
+            cfg.xattr = {
+                xtype : cfg.xns + '.' + cfg.xtype 
+            };
+            
+        }
+        
+        
+        
         // now for all the children.. (items)
         if (xitems === false) {
             return;
@@ -248,7 +259,7 @@ Pman.Builder.View = {
             var xi = xitems[i];
             if (typeof(xi['*prop']) != 'undefined') {
                 var pr = xi['*prop'];
-                this.munge(xi);
+                this.munge(xi, false, add_xattr);
                 // if prop is an array - then it's items are really the value..
                 if (pr.match(/\[\]$/)) {
                     pr = pr.replace(/\[\]$/, '');
@@ -267,7 +278,7 @@ Pman.Builder.View = {
                 
                 continue;
             }
-            this.munge(xi);
+            this.munge(xi, false, add_xattr);
             cfg.items.push(xi);
         }
         
@@ -326,8 +337,7 @@ Pman.Builder.View = {
     redraw : function(isAuto)
     {
         this.container.el.select('iframe',true).first().setSize(this.panel.el.getSize());
-
-        
+ 
        // return;
         // top level is not relivant
 
@@ -343,7 +353,8 @@ Pman.Builder.View = {
         this.win().Pman.Builder.View.draw( cfg );
         
     },
-    draw :function(cfg) {
+    draw :function(cfg)
+    {
         Roo.log(cfg);
         
         if (!cfg.items[0]) {
@@ -351,8 +362,9 @@ Pman.Builder.View = {
         }
         
         
-        this.munge(cfg.items[0]);
+        this.munge(cfg.items[0],false , true );
         
+        Roo.log(cfg);
         //  return;
         // we draw either a dialog or a tab..
         
