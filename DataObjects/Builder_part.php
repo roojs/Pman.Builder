@@ -95,7 +95,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         $m->gitCommit($this->name . '.bjs', $this->bjs());
         $m->gitCommit($this->name . '.js', $this->jsource);
         if (!empty($req['html'])) {
-            $roo->jerr("write html? {$this->name}.html");
+           // $roo->jerr("write html? {$this->name}.html");
             $m->gitCommit($this->name . '.html', $req['html']);
         }
         
