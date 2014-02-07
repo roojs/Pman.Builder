@@ -197,7 +197,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                      module_id: _this.modsel.getValue() 
                                                  } ,
                                                  function(data) {
-                                                    _this.filesel.reset();
+                                                    //_this.filesel.reset();
                                                     if (!data.id) {
                                                         return;
                                                     }
