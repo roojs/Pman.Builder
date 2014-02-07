@@ -255,7 +255,7 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                 return false;
             }
             if (!file_exists($this->path)) {
-                HTML_FlexyFramework::get()->page->jerr("configured url is not git or writable");
+                HTML_FlexyFramework::get()->page->jerr("configured url is not git or writable: {$this->path}");
                 
             }
             HTML_FlexyFramework::get()->page->jerr("fixme - can write?");
