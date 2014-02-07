@@ -82,7 +82,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     }
     function onUpdate($old , $req, $roo)
     {
-         $this->writeEventFile($roo);
+         $this->writeEventFile($roo,$req);
         
         
     }
