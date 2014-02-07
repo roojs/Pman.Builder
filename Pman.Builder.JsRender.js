@@ -489,7 +489,7 @@ Pman.Builder.JsRender.prototype =  {
          
         var modkey = this.modkey + '-' + this.name.replace(/[^A-Z.]+/ig, '-');
         
-        var name = this.name.replace(/[^a-z_]+/i, '');
+        var name = this.name.replace(/[^a-z_]+/i, '_');
         
     
         return [
