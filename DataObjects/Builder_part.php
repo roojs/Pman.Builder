@@ -77,7 +77,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     {
         // write it to a file... use date time...  - which should hopefully be the same as the
         //event that was created..
-        $this->writeEventFile($roo);
+        $this->writeEventFile($roo,$req);
         
     }
     function onUpdate($old , $req, $roo)
