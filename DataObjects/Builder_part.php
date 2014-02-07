@@ -184,6 +184,8 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
     }
     function syncTemplate()
     {
+        // possibly needs to be cleverer = if template is a dialog etc.?
+        
         $m = $this->module();
         $t = DB_DataObject::Factory('cms_template');
         $t->view_name = $m->name;
