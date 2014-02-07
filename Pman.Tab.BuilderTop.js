@@ -202,10 +202,8 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                         return;
                                                     }
                                                     _this.filesel.setfromdata(data);
-                                                    Pman.Builder.Tree.clearAll();
-                                                    Pman.Builder.Tree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
                                                      
-                                                    Pman.Tab.BuilderPanel.redraw.defer(100,Pman.Tab.BuilderPanel,[true]);
+                                                    pt.loadBJS(_this.modsel.getValue(), _this.filesel.getValue())
                                             });
                                         
                                         }
