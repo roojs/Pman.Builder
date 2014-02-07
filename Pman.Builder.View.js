@@ -240,7 +240,7 @@ Pman.Builder.View = {
         // add xattr data?
         if (add_xattr) {
             cfg.xattr = {
-                xtype : cfg.xns + '.' + cfg.xtype 
+                xtype : cfg['|xns'] + '.' + cfg.xtype 
             };
             
         }
