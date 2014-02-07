@@ -4,6 +4,7 @@
  * intended use is with the bootstrap code HTML generated..
  *
 */
+require_once 'Pman/Cms/Preview.php';
 
 class Pman_Builder_Preview extends Pman_Cms_Preview
 {
