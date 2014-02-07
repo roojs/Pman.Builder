@@ -94,7 +94,7 @@ Pman.Builder = {
             params : {
                 json : Roo.encode(js, null, 4),
                 jsource : render.toSource(),
-                html : html
+                html : html,
                 name :   js.name,
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
