@@ -500,7 +500,7 @@ Pman.Builder.Tree = {
     {
         Roo.MessageBox.alert("Error", "Pman.Builder.Tree.save calleed");
         throw   "old code";
-    
+        // moved to Builder.save
     
     
         // first see if first element has a name.. - we can not save otherwise..
