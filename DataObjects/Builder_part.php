@@ -86,7 +86,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         
         
     }
-    function  writeEventFile($roo) 
+    function  writeEventFile($roo,$req) 
     {
         
         // try and commit it..
