@@ -14,7 +14,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     {
         //var_dump($name, $default);
         
-        parent::loadPage();
+        parent::loadPage($prefix, $name, $default );
         // menus????
         
          
