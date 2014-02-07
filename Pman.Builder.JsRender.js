@@ -419,7 +419,8 @@ Pman.Builder.JsRender.prototype =  {
     toSourceDialog : function() 
     {
         var items = JSON.parse(JSON.stringify(this.items[0]));
-        var o = this.mungeToString(items, false, '            ');   
+        var o = this.mungeToString(items, false, '            ');
+        
         return [
             this.outputHeader(),
             this.name + " = {",
@@ -488,59 +489,13 @@ Pman.Builder.JsRender.prototype =  {
          
         var modkey = this.modkey + '-' + this.name.replace(/[^A-Z.]+/ig, '-');
         
-        
-        if (this.name.match(/^Pman/)) {
-            
-             
-            // old BC way we did things..
-            return [
-                this.outputHeader(),
-                "",
-                "",
-                "// register the module first",
-                "Pman.on('beforeload', function()",
-                "{",
-                "    Pman.register({",
-                "        part :  "+ JSON.stringify(this.pathToPart()) + ",", /// critical used by builder to associate modules/parts/persm
-                "        modKey : '" +modkey+"',",
-                "        module : " + this.name + ",",
-                "        region : '" + this.region   +"',",
-                "        parent : " + (this.parent ||  'false') + ",",
-                "        name : " + JSON.stringify(this.title  || "unnamed module") + ",",
-                "        disabled : " + (this.disabled || 'false') +", ",
-                "        permname: '" + (this.permname|| '') +"' ",
-                "    });",
-                "});",
-                "",
-                
-                this.name  +  " = new Roo.util.Observable({",
-                "",
-                "    panel : false,",
-                "    disabled : false,",
-                "    parentLayout:  false,",
-                "",
-                "    add : function(parentLayout, region)",
-                "    {",
-                "",
-                "        var _this = this;", // standard avaialbe..
-                "        this.parentLayout = parentLayout;",
-                "",
-                "        this.panel = parentLayout.addxtype(" + o +  ");",
-                "        this.layout = this.panel.layout;",
-                "",
-                "    }",
-                "});",
-                ""
-                 
-                
-             ].join("\n");
-        }
+        var name = this.name.replace(/[^a-z_]+/i, '');
         
     
         return [
             this.outputHeader(),
             
-            this.name  +  " = new Roo.XComponent({",
+            name  +  " = new Roo.XComponent({",
             "    order    : '" +modkey+"',",
             "    region   : '" + this.region   +"',",
             "    parent   : "+ (this.parent ?  "'" + this.parent + "'" :  'false') + ",",
