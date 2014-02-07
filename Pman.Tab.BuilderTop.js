@@ -207,8 +207,12 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                         
                                         }
                                     },
-                                    text : "New Part",
+                                    text : "Rename",
                                     icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
+                                },
+                                {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
                                 },
                                 {
                                     xtype: 'Item',
