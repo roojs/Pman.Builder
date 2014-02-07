@@ -276,7 +276,7 @@ Pman.Builder.JsRender.prototype =  {
     },
     
     
-  setNSID : function(id)
+    setNSID : function(id)
     {
         
         this.items[0]['|module'] = id;
