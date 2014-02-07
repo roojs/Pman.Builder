@@ -201,8 +201,10 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                     if (!data.id) {
                                                         return;
                                                     }
-                                                    _this.filesel.setfromdata(data);
-                                                     
+                                                    _this.filesel.setFromData(data);
+                                                    // set the part name on the json..
+                                                    
+                                                    
                                                     pt.loadBJS(_this.modsel.getValue(), _this.filesel.getValue())
                                             });
                                         
