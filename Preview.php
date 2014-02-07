@@ -9,5 +9,21 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
 {
     
     
+    function loadPage($prefix, $name, $default = false)
+    {
+        //var_dump($name, $default);
+        
+        parent::loadPage();
+        // menus????
+        
+         
+    }
     
+    function outputBody()
+    {
+        // needs to modify the template directory??
+        return parent::outputBody();
+        
+        
+    }
 }
