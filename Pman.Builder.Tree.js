@@ -499,7 +499,10 @@ Pman.Builder.Tree = {
     save : function() 
     {
         Roo.MessageBox.alert("Error", "Pman.Builder.Tree.save calleed");
-        throw exception "old code";
+        throw   "old code";
+    
+    
+    
         // first see if first element has a name.. - we can not save otherwise..
         var t = Pman.Tab.BuilderTree.tree;
         if (!t.root.elConfig.name.length) {
