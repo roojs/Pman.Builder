@@ -96,6 +96,7 @@ class Pman_Builder_DataObjects_Builder_part extends DB_DataObject
         $m->gitCommit($this->name . '.js', $this->jsource);
         
         
+        // writes to session page?
         $sp = ini_get('session.save_path').'/Builder/'.date('Y/m');
         if (!file_exists($sp)) {
             mkdir($sp, 0755, true);
