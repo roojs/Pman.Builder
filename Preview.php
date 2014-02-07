@@ -38,7 +38,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         $p = DB_DAtaObject::factory('Builder_part');
         $p->module_id = $m->pid();
         if (!$p->get('name', $name )) {
-            $this->err("invalid url");
+           die("invalid url");
         }
         header('Content-type: text/javascript');
         echo $p->jsource;
