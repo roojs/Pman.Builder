@@ -294,7 +294,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                 return false;
                                             }
                                              if (!_this.filesel.getValue()) {
-                                                Roo.MessageBox.alert("Error", "Select Module");
+                                                Roo.MessageBox.alert("Error", "Select Part");
                                                 return false;
                                             }
                                             Pman.Dialog.BuilderImport.show( {
