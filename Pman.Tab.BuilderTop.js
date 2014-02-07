@@ -188,9 +188,12 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                                 Roo.MessageBox.alert("Error", "Select Module");
                                                 return false;
                                             }
-                                            
+                                             if (!_this.filesel.getValue()) {
+                                                Roo.MessageBox.alert("Error", "Select Part");
+                                                return false;
+                                            }
                                             Pman.Dialog.BuilderPart.show( {
-                                                     id : 0, 
+                                                     id : this.filesel.getValue(), 
                                                      module_id: _this.modsel.getValue() 
                                                  } ,
                                                  function(data) {
