@@ -31,7 +31,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         $template_prefix = isset($oo['template_prefix']) ? $oo['template_prefix'] : '';
        
         $m = DB_DAtaObject::Factory('Builder_modules');
-        $m->get($template_prefix);
+        $m->get('name', $template_prefix);
         
         // needs to modify the template directory??
         // use the builder_module == app name
