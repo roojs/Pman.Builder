@@ -29,7 +29,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         
         $oo = HTML_FlexyFramework::get()->Pman_Cms;
         $template_prefix = isset($oo['template_prefix']) ? $oo['template_prefix'] : '';
-       
+        DB_DataObject::debugLevel(5);
         $m = DB_DAtaObject::factory('Builder_modules');
         $m->get('name', $template_prefix);
         
