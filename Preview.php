@@ -14,7 +14,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     {
         
         if (preg_match('/^BuilderJS/', $name)) {
-            $this->outputJS(preg_replace('/BuilderJS/','', $name));
+            $this->outputJS(preg_replace('#BuilderJS/#','', $name));
             
         }
         var_dump($name, $default);
