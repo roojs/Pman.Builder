@@ -37,7 +37,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         // use the builder_module == app name
         // look for part with same name.
         $template_engine = new HTML_Template_Flexy(array(
-            'template_dir' => $m->path
+            'templateDir' => $m->path
         ));
         $template_engine->compile($this->template);
         if ($this->elements) { /* BC crap! */
