@@ -140,6 +140,15 @@
                                         },
                                         {
                                             "listeners": {
+                                                "click": "function (_self, e)\n{\n    if (!_this.modsel.getValue()) {\n        Roo.MessageBox.alert(\"Error\", \"Select Module\");\n        return false;\n    }\n    \n    Pman.Dialog.BuilderPart.show( {\n             id : 0, \n             module_id: _this.modsel.getValue() \n         } ,\n         function(data) {\n            _this.filesel.reset();\n            if (!data.id) {\n                return;\n            }\n            _this.filesel.setfromdata(data);\n            Pman.Builder.Tree.clearAll();\n            Pman.Builder.Tree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);\n             \n            Pman.Tab.BuilderPanel.redraw.defer(100,Pman.Tab.BuilderPanel,[true]);\n    });\n\n}"
+                                            },
+                                            "text": "New Part",
+                                            "xtype": "Item",
+                                            "|icon": "Roo.rootURL + 'images/default/dd/drop-add.gif'",
+                                            "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "listeners": {
                                                 "click": "function (_self, e)\n{\n    Roo.MessageBox.confirm(\"Confirm\", \"Are you sure you want to delete it?\", function(a) {\n        if (a != 'yes') {\n            return;\n        }\n            \n       \n       new Pman.Request({\n            url : baseURL + '/Roo/Builder_part',\n            method : 'POST',\n            params : {\n                _delete :  _this.filesel.getValue()\n            },\n            success : function() {\n                _this.filesel.setValue('');\n                // unload stuff..\n                 _this.filesel.fireEvent('select', false);\n//                Pman.Tab.BuilderTab.layout.getRegion('west').el.mask(\"select part\");\n            \n            }\n       \n       \n       });\n   });\n}"
                                             },
                                             "text": "Delete",

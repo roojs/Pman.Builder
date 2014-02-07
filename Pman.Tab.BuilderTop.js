@@ -216,6 +216,38 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                     listeners : {
                                         click : function (_self, e)
                                         {
+                                            if (!_this.modsel.getValue()) {
+                                                Roo.MessageBox.alert("Error", "Select Module");
+                                                return false;
+                                            }
+                                            
+                                            Pman.Dialog.BuilderPart.show( {
+                                                     id : 0, 
+                                                     module_id: _this.modsel.getValue() 
+                                                 } ,
+                                                 function(data) {
+                                                    _this.filesel.reset();
+                                                    if (!data.id) {
+                                                        return;
+                                                    }
+                                                    _this.filesel.setfromdata(data);
+                                                    Pman.Builder.Tree.clearAll();
+                                                    Pman.Builder.Tree.setCurrentNode(Pman.Tab.BuilderTree.tree.root,true);
+                                                     
+                                                    Pman.Tab.BuilderPanel.redraw.defer(100,Pman.Tab.BuilderPanel,[true]);
+                                            });
+                                        
+                                        }
+                                    },
+                                    text : "New Part",
+                                    icon : Roo.rootURL + 'images/default/dd/drop-add.gif'
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self, e)
+                                        {
                                             Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete it?", function(a) {
                                                 if (a != 'yes') {
                                                     return;
