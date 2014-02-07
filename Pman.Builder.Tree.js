@@ -498,7 +498,9 @@ Pman.Builder.Tree = {
     },
     save : function() 
     {
-       // first see if first element has a name.. - we can not save otherwise..
+        Roo.MessageBox.alert("Error", "Pman.Builder.Tree.save calleed");
+        throw exception "old code";
+        // first see if first element has a name.. - we can not save otherwise..
         var t = Pman.Tab.BuilderTree.tree;
         if (!t.root.elConfig.name.length) {
             Roo.MessageBox.alert("Error", "No name set for form");
@@ -525,6 +527,7 @@ Pman.Builder.Tree = {
             params : {
                 json : Roo.encode(js, null, 4),
                 jsource : render.toSource(),
+                jhtml :  Pman.Tab.BuilderTop.modsel.getValue(),
                 name :   js.name,
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
