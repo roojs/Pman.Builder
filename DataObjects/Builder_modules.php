@@ -258,7 +258,9 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
                 HTML_FlexyFramework::get()->page->jerr("configured url is not git or writable: {$this->path}");
                 
             }
-            HTML_FlexyFramework::get()->page->jerr("fixme - can write?");
+            file_put_contents(rtrim($this->path,'/') .'/'. $file, $data);
+            
+            
             return false;
         }
         $working = $this->gitWorking($gd['url']);
