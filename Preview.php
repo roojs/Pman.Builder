@@ -32,7 +32,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     function outputJS($name)
     {
         $proj = HTML_FlexyFramework::get()->project;
-        // DB_DataObject::debugLevel(1);
+         DB_DataObject::debugLevel(1);
         $m = DB_DAtaObject::factory('Builder_modules');
         $m->get('name', $proj );
         $p = DB_DAtaObject::factory('Builder_part');
