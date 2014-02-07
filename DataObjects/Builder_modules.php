@@ -249,6 +249,16 @@ class Pman_Builder_DataObjects_Builder_modules extends DB_DataObject
     {
         $gd = $this->gitDir();
         if (!$gd) {
+            
+            // directory is not git..
+            if (empty($this->path)) {
+                return false;
+            }
+            if (!file_exists($this->path)) {
+                HTML_FlexyFramework::get()->page->jerr("configured url is not git or writable");
+                
+            }
+            HTML_FlexyFramework::get()->page->jerr("fixme - can write?");
             return false;
         }
         $working = $this->gitWorking($gd['url']);
