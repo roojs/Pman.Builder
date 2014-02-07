@@ -77,6 +77,16 @@ Pman.Builder = {
         
         //var _this = this;
         
+        // should we try and render first???
+        try {
+            data.html = Pman.Builder.View.frameToHTML();
+            
+        } catch (e) {
+            
+        }
+        
+        
+        
         new Pman.Request({
             url: baseURL + '/Roo/Builder_part.php',
             method : 'POST',
