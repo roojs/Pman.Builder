@@ -178,8 +178,11 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                  if (n == 'xtype') {
                                     return;
                                  }
+                                  if (n[0] == '!') {
+                                    Roo.MesssageBox.alert("Error", "Error, you can not do this to listeners");
+                                    return;
+                                }
                                  if (n[0] == '|') {
-                                 
                                     var val =  _this.grid.currentNode.elConfig[n];
                                     delete _this.grid.currentNode.elConfig[n];
                                     _this.grid.currentNode.elConfig[ n.substring(1)] = val;
