@@ -196,6 +196,10 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                         text : "Delete Property / Event"
                     },
                     {
+                        xtype: 'Separator',
+                        xns: Roo.menu
+                    },
+                    {
                         xtype: 'Item',
                         xns: Roo.menu,
                         listeners : {
