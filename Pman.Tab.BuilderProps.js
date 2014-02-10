@@ -2,36 +2,19 @@
 
 // Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
-
-
-// register the module first
-Pman.on('beforeload', function()
-{
-    Pman.register({
-        part :  ["Builder","Props"],
-        modKey : '001-Pman.Tab.BuilderProps',
-        module : Pman.Tab.BuilderProps,
-        region : 'center',
-        parent : Pman.Tab.BuilderTree,
-        name : "Pman.Tab.BuilderProps",
-        disabled : false, 
-        permname: '' 
-    });
-});
-
-Pman.Tab.BuilderProps = new Roo.util.Observable({
-
-    panel : false,
-    disabled : false,
-    parentLayout:  false,
-
-    add : function(parentLayout, region)
+Pman.Tab.BuilderProps = new Roo.XComponent({
+    part     :  ["Builder","Props"],
+    order    : '001-Pman.Tab.BuilderProps',
+    region   : 'center',
+    parent   : 'Pman.Tab.BuilderTree',
+    name     : "Pman.Tab.BuilderProps",
+    disabled : false, 
+    permname : '', 
+    _tree : function()
     {
-
         var _this = this;
-        this.parentLayout = parentLayout;
-
-        this.panel = parentLayout.addxtype({
+        var MODULE = this;
+        return {
             xtype: 'GridPanel',
             xns: Roo,
             region : 'south',
@@ -211,6 +194,35 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                             }
                         },
                         text : "Delete Property / Event"
+                    },
+                    {
+                        xtype: 'Item',
+                        xns: Roo.menu,
+                        listeners : {
+                            click : function (_self, e)
+                            {
+                             
+                                 var rc = _this.grid.getSelectionModel().getSelectedCell();
+                                 var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
+                                 if (n == 'xtype') {
+                                    return;
+                                }
+                                if (n[0] == '!') {
+                                    delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
+                                } else {
+                                    delete _this.grid.currentNode.elConfig[n];
+                                }
+                                // reloads      
+                                _this.grid.setCurrrentNode(_this.grid.currentNode);
+                                var bp = Pman.Tab.BuilderView.panel;
+                                bp.redraw.defer(100,bp, [true]);
+                                // update the tree's  text
+                                _this.grid.currentNode.setText(
+                                    Pman.Builder.Tree.configToText(_this.grid.currentNode.elConfig)
+                                );
+                            }
+                        },
+                        text : "Delete Property / Event"
                     }
                 ]
             },
@@ -294,8 +306,6 @@ Pman.Tab.BuilderProps = new Roo.util.Observable({
                     }
                 ]
             }
-        });
-        this.layout = this.panel.layout;
-
+        };
     }
 });
