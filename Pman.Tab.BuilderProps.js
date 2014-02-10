@@ -193,7 +193,7 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                 );
                             }
                         },
-                        text : "Delete Property / Event"
+                        text : "Toggle property as Javascript"
                     },
                     {
                         xtype: 'Separator',
