@@ -177,12 +177,18 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                  var n = _this.grid.getDataSource().getAt(rc[0]).data.name;
                                  if (n == 'xtype') {
                                     return;
-                                }
-                                if (n[0] == '!') {
-                                    delete _this.grid.currentNode.elConfig.listeners[n.substring(1)];
-                                } else {
+                                 }
+                                 if (n[0] == '|') {
+                                 
+                                    var val =  _this.grid.currentNode.elConfig[n];
                                     delete _this.grid.currentNode.elConfig[n];
-                                }
+                                    _this.grid.currentNode.elConfig['|' + n] = val;
+                                     
+                                 } else {
+                                    var val =  _this.grid.currentNode.elConfig[n];
+                                    delete _this.grid.currentNode.elConfig[n];
+                                    _this.grid.currentNode.elConfig[ n] = val;
+                                 }
                                 // reloads      
                                 _this.grid.setCurrrentNode(_this.grid.currentNode);
                                 var bp = Pman.Tab.BuilderView.panel;
