@@ -178,7 +178,7 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                  if (n == 'xtype') {
                                     return;
                                  }
-                                 if (n[0] == '|') {
+                                 if (n[0] != '|') {
                                  
                                     var val =  _this.grid.currentNode.elConfig[n];
                                     delete _this.grid.currentNode.elConfig[n];
