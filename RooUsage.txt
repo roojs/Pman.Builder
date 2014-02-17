@@ -345,6 +345,7 @@ left:
 right:
     Roo.bootstrap.Input
     Roo.bootstrap.Button
+    Roo.bootstrap.ComboBox
 //    Roo.bootstrap.Fieldset
         
 left:
