@@ -255,6 +255,7 @@ left:
   Roo.form.ComboBox:store
   Roo.View:store
   Roo.JsonView:store
+  Roo.bootstrap.ComboBox:store
 right: 
   Roo.data.Store
   Roo.data.SimpleStore
