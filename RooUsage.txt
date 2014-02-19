@@ -308,7 +308,7 @@ right:
     Roo.bootstrap.Row
     Roo.bootstrap.Header
     Roo.bootstrap.Img
-
+    Roo.bootstrap.Calendar  
     
 
 
