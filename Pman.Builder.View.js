@@ -83,6 +83,10 @@ Pman.Builder.View = {
     },
     traverseDOMTree : function(cb, currentElement, depth) {
         if (currentElement) {
+            
+            if (currentElement.className.match(/roo-dynamic/)) {
+                return;
+            }
             //Roo.log(currentElement);
             var j;
             var nodeName = currentElement.nodeName;
