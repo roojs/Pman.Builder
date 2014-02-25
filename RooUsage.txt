@@ -309,8 +309,7 @@ right:
     Roo.bootstrap.Header
     Roo.bootstrap.Img
     Roo.bootstrap.Calendar  
-    
-
+    Roo.bootstrap.Popover
 
 left:
     Roo.bootstrap.ButtonGroup
