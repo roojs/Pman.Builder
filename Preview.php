@@ -47,7 +47,8 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     
     function outputBody()
     {
-        
+        print_R($m->path);
+        print_R($m->template);
         $proj = HTML_FlexyFramework::get()->project;
         // DB_DataObject::debugLevel(1);
         $m = DB_DAtaObject::factory('Builder_modules');
