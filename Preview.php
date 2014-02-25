@@ -55,7 +55,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         $m->get('name', $proj );
         
         print_R($m->path);
-        print_R($this->template);
+        var_dump($this->template);
         // needs to modify the template directory??
         // use the builder_module == app name
         // look for part with same name.
