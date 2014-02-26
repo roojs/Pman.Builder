@@ -28,26 +28,26 @@ class Pman_Builder_Palette extends Pman
         if ($sub == 'Prop') {
             foreach(array(
                 array(
-                    name => "builder.sharedpart",
-                    desc  => "This is a shared part, between different parts (modifying it will change other pages",
-                    memberOf => "Builder",
+                    'name' => "builder.sharedpart",
+                    'desc'  => "This is a shared part, between different parts (modifying it will change other pages",
+                    'memberOf' => "Builder",
                     
-                    type => "Boolean"
+                    'type' => "Boolean"
                 ),
                 
                 array(
-                    name => "flexy:foreach",
-                    desc  => "Loop foreach (array,key,val|array,val)",
-                    memberOf => "Flexy",
+                    'name' => "flexy:foreach",
+                    'desc'  => "Loop foreach (array,key,val|array,val)",
+                    'memberOf' => "Flexy",
                     
-                    type => "String"
+                    'type' => "String"
                 ),
                 array(
-                    name => "flexy:if",
-                    desc  => "if condition - put 0 to always disable it",
-                    memberOf => "Flexy",
+                    'name' => "flexy:if",
+                    'desc'  => "if condition - put 0 to always disable it",
+                    'memberOf' => "Flexy",
                     
-                    type => "String"
+                    'type' => "String"
                 ),
                   
                 
