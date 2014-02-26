@@ -72,7 +72,7 @@ Pman.Builder.Tree = {
                 break;
         }
         
-        newNode.ui.ctNode.style.display = config['builder.hidden'] ? 'none' : '';
+        newNode.ui.ctNode.style.display = hidden ? 'none' : '';
         
         if (items.length) {
             Roo.each(items, function(i) {
