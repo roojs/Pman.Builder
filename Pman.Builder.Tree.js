@@ -42,8 +42,6 @@ Pman.Builder.Tree = {
               
         newNode.elConfig = config;
         
-        newNode.ui.ctNode.style.display = config['builder.hidden'] ? 'none' : '';
-        
         //if (markUndo === true) {
         //Pman.Tab.Builder.markUndo("Add " + newNode.text);
         //
@@ -72,7 +70,9 @@ Pman.Builder.Tree = {
                 parent.expand(true);
                 break;
         }
-            
+        
+        newNode.ui.ctNode.style.display = config['builder.hidden'] ? 'none' : '';
+        
         if (items.length) {
             Roo.each(items, function(i) {
                 this.appendNode(newNode, i);
