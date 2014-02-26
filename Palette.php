@@ -44,12 +44,12 @@ class Pman_Builder_Palette extends Pman
                 ),
                 array(
                     name => "flexy:if",
-                    desc  => "Loop foreach (array,key,val|array,val)",
+                    desc  => "if condition - put 0 to always disable it",
                     memberOf => "Flexy",
                     
                     type => "String"
                 ),
-                
+                  
                 
             ) as  $add) {
                 array_push($out,$add);
