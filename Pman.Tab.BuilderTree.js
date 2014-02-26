@@ -207,7 +207,7 @@ Pman.Tab.BuilderTree = new Roo.XComponent({
                                         {
                                             
                                               
-                                            Pman.Builder.Tree.collapseToggle();
+                                            Pman.Builder.Tree.createSharedPart();
                                                 
                                         }
                                     },

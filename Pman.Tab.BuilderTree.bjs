@@ -93,7 +93,7 @@
                                         },
                                         {
                                             "listeners": {
-                                                "click": "function (_self)\n{\n    \n      \n    Pman.Builder.Tree.collapseToggle();\n        \n}"
+                                                "click": "function (_self)\n{\n    \n      \n    Pman.Builder.Tree.createSharedPart();\n        \n}"
                                             },
                                             "text": "Create shared part from this node",
                                             "xtype": "Item",
