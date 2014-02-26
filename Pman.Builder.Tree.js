@@ -30,8 +30,9 @@ Pman.Builder.Tree = {
         }
         
         var config = this.cloneConfig(inConfig);
-        config['builder.hidden'] = config['builder.hidden'] || 0;
         
+        var hidden =  config['builder.hidden'] || false;
+         
         if (!parent) {
             parent = tree.root;
         }
