@@ -211,10 +211,15 @@ Pman.Builder.Tree = {
         }
         var cfg = this.currentNode.elConfig;
         // things that can not be deleted...
+        var hidden = cfg['builder.hidden'] || 0;
+        if (hidden) {
+            delete cfg['builder.hidden'];
+        } else {
+            cfg['builder.hidden'] = 1;
+        }
+         
         
-        cfg['builder.hidden'] = !(cfg['builder.hidden'] || 0);
-        
-        this.currentNode.ui.ctNode.style.display = cfg['builder.hidden']  ? 'none' : '';
+        this.currentNode.ui.ctNode.style.display = !hidden ? 'none' : '';
          
          
         //this.setCurrentNode(pn.childNodes.length ? pn.childNodes[ix] : pn  ,true);
