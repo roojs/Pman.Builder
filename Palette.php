@@ -28,7 +28,7 @@ class Pman_Builder_Palette extends Pman
         if ($sub == 'Prop') {
             foreach(array(
                 array(
-                    'name' => "builder.sharedpart",
+                    'name' => "builder.sharedname",
                     'desc'  => "This is a shared part, between different parts (modifying it will change other pages",
                     'memberOf' => "Builder",
                     
