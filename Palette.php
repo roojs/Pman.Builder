@@ -23,7 +23,42 @@ class Pman_Builder_Palette extends Pman
         $data = json_decode(file_get_contents($ff->rootDir . '/roojs1/docs/json/roodata.json'));
         
         //echo '<PRE>'; print_R($data);
+        
+        $out = $data->data->{ $cls } -> {$_REQUEST['list'] };
+        if ($sub == 'Prop') {
+            foreach(array(
+                array(
+                    name => "builder.sharedpart",
+                    desc  => "This is a shared part, between different parts (modifying it will change other pages",
+                    memberOf => "Builder",
+                    
+                    type => "Boolean"
+                ),
+                
+                array(
+                    name => "flexy:foreach",
+                    desc  => "Loop foreach (array,key,val|array,val)",
+                    memberOf => "Flexy",
+                    
+                    type => "String"
+                ),
+                array(
+                    name => "flexy:if",
+                    desc  => "Loop foreach (array,key,val|array,val)",
+                    memberOf => "Flexy",
+                    
+                    type => "String"
+                ),
+                
+                
+            ) as  $add) {
+                array_push($out,$add);
+            }
+  
+            
+            
          
+        }
         $this->jdata($data->data->{ $cls } -> {$_REQUEST['list'] } );
               
         // 
