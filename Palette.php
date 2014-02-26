@@ -59,7 +59,7 @@ class Pman_Builder_Palette extends Pman
             
          
         }
-        $this->jdata($data->data->{ $cls } -> {$_REQUEST['list'] } );
+        $this->jdata($out );
               
         // 
         
