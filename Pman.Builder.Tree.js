@@ -30,17 +30,20 @@ Pman.Builder.Tree = {
         }
         
         var config = this.cloneConfig(inConfig);
+        config['builder.hidden'] = config['builder.hidden'] || 0;
         
         if (!parent) {
             parent = tree.root;
         }
               
         var newNode = new Roo.tree.TreeNode({
-                text: this.configToText(config)
+            text: this.configToText(config)
         });
-                
-        
+              
         newNode.elConfig = config;
+        
+        newNode.ui.ctNode.style.display = config['builder.hidden'] ? 'none' : '';
+        
         //if (markUndo === true) {
         //Pman.Tab.Builder.markUndo("Add " + newNode.text);
         //
@@ -194,6 +197,28 @@ Pman.Builder.Tree = {
         
         return true;
     },
+    
+    collapseToggle : function()
+    {
+        var tree = Pman.Tab.BuilderTree.tree;
+        
+        if (this.currentNode == tree.root) {
+            return false;
+        }
+        var cfg = this.currentNode.elConfig;
+        // things that can not be deleted...
+        
+        cfg['builder.hidden'] = !(cfg['builder.hidden'] || 0);
+        
+        this.currentNode.ui.ctNode.style.display = cfg['builder.hidden']  ? 'none' : '';
+         
+         
+        //this.setCurrentNode(pn.childNodes.length ? pn.childNodes[ix] : pn  ,true);
+        return true;
+    },
+    
+    
+    
     
     deleteCurrent : function()
     {
@@ -498,12 +523,7 @@ Pman.Builder.Tree = {
     },
     save : function() 
     {
-        Roo.MessageBox.alert("Error", "Pman.Builder.Tree.save calleed");
-        throw   "old code";
-        // moved to Builder.save
-    
-    
-        // first see if first element has a name.. - we can not save otherwise..
+       // first see if first element has a name.. - we can not save otherwise..
         var t = Pman.Tab.BuilderTree.tree;
         if (!t.root.elConfig.name.length) {
             Roo.MessageBox.alert("Error", "No name set for form");
@@ -530,7 +550,6 @@ Pman.Builder.Tree = {
             params : {
                 json : Roo.encode(js, null, 4),
                 jsource : render.toSource(),
-                
                 name :   js.name,
                 module_id : Pman.Tab.BuilderTop.modsel.getValue(),
                 id : sid
