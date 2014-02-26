@@ -1,5 +1,5 @@
 {
-    "id": "roo-file-97",
+    "id": "roo-file-250",
     "name": "Pman.Tab.BuilderTree",
     "parent": "Pman.Tab.BuilderTab",
     "title": "Pman.Tab.BuilderTree",
@@ -76,6 +76,26 @@
                                                 "click": "function (_self)\n{\n    \n    var str = Pman.Builder.Tree.currentNodeType();\n    if (typeof(Pman.Builder.Wizard[str]) == 'undefined') {\n        Roo.MessageBox.alert(\"Sorry\", \"No wizard exists for \" + str);\n        return;\n    }\n    var cn = Pman.Builder.Tree.currentNode;\n    if (typeof(cn.elConfig['.builderCfg']) == 'undefined') {\n        Roo.MessageBox.alert(\"Sorry\", \"No configuration exists for \" + str);\n        return;\n    }\n    \n    \n    var cfg = Roo.decode(cn.elConfig['.builderCfg']);\n    \n    Roo.log(cfg);\n    Pman.Dialog.BuilderAddTable.show( \n        cfg,  \n        function(data) {\n\n             \n            var res = Pman.Builder.Wizard[str](data); // with old..\n             Pman.Builder.Tree.replaceCurrentNode( res );\n             Pman.Tab.BuilderView.panel.redraw();\n \n       }\n    );\n\n   \n    // otherwise, call back with template??\n    \n   \n   \n        \n}"
                                             },
                                             "text": "Edit Using Wizard",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "|xns": "Roo.menu",
+                                            "xtype": "Separator"
+                                        },
+                                        {
+                                            "listeners": {
+                                                "click": "function (_self)\n{\n    \n      \n    Pman.Builder.Tree.collapseToggle();\n        \n}"
+                                            },
+                                            "text": "Toggle Collapse",
+                                            "xtype": "Item",
+                                            "|xns": "Roo.menu"
+                                        },
+                                        {
+                                            "listeners": {
+                                                "click": "function (_self)\n{\n    \n      \n    Pman.Builder.Tree.collapseToggle();\n        \n}"
+                                            },
+                                            "text": "Toggle Collapse",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
                                         },

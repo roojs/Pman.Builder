@@ -2,36 +2,19 @@
 
 // Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
-
-
-// register the module first
-Pman.on('beforeload', function()
-{
-    Pman.register({
-        part :  ["Builder","Tree"],
-        modKey : '001-Pman.Tab.BuilderTree',
-        module : Pman.Tab.BuilderTree,
-        region : 'center',
-        parent : Pman.Tab.BuilderTab,
-        name : "Pman.Tab.BuilderTree",
-        disabled : false, 
-        permname: '' 
-    });
-});
-
-Pman.Tab.BuilderTree = new Roo.util.Observable({
-
-    panel : false,
-    disabled : false,
-    parentLayout:  false,
-
-    add : function(parentLayout, region)
+Pman.Tab.BuilderTree = new Roo.XComponent({
+    part     :  ["Builder","Tree"],
+    order    : '001-Pman.Tab.BuilderTree',
+    region   : 'center',
+    parent   : 'Pman.Tab.BuilderTab',
+    name     : "Pman.Tab.BuilderTree",
+    disabled : false, 
+    permname : '', 
+    _tree : function()
     {
-
         var _this = this;
-        this.parentLayout = parentLayout;
-
-        this.panel = parentLayout.addxtype({
+        var MODULE = this;
+        return {
             xtype: 'NestedLayoutPanel',
             xns: Roo,
             region : 'west',
@@ -208,6 +191,38 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                                     listeners : {
                                         click : function (_self)
                                         {
+                                            
+                                              
+                                            Pman.Builder.Tree.collapseToggle();
+                                                
+                                        }
+                                    },
+                                    text : "Toggle Collapse"
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self)
+                                        {
+                                            
+                                              
+                                            Pman.Builder.Tree.collapseToggle();
+                                                
+                                        }
+                                    },
+                                    text : "Toggle Collapse"
+                                },
+                                {
+                                    xtype: 'Separator',
+                                    xns: Roo.menu
+                                },
+                                {
+                                    xtype: 'Item',
+                                    xns: Roo.menu,
+                                    listeners : {
+                                        click : function (_self)
+                                        {
                                             Roo.MessageBox.confirm("Confirm", "Are you sure you want to delete that node?",
                                                 function(r) {
                                                     if (r!='yes') {
@@ -241,8 +256,6 @@ Pman.Tab.BuilderTree = new Roo.util.Observable({
                     split : true
                 }
             }
-        });
-        this.layout = this.panel.layout;
-
+        };
     }
 });
