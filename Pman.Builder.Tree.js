@@ -118,6 +118,9 @@ Pman.Builder.Tree = {
         var newConfig = {};
         
         for (var i in config) {
+            if (i.match(/^builder\./)) {
+                continue;
+            }
             if (typeof config[i] == 'object') {
                  newConfig[i] = this.cloneConfig(config[i]);
             } else if (typeof config[i] != 'function') { // should this happen?
