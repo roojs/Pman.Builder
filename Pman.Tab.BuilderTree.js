@@ -211,7 +211,7 @@ Pman.Tab.BuilderTree = new Roo.XComponent({
                                                 
                                         }
                                     },
-                                    text : "Toggle Collapse"
+                                    text : "Create shared part from this node"
                                 },
                                 {
                                     xtype: 'Separator',

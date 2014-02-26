@@ -95,7 +95,7 @@
                                             "listeners": {
                                                 "click": "function (_self)\n{\n    \n      \n    Pman.Builder.Tree.collapseToggle();\n        \n}"
                                             },
-                                            "text": "Toggle Collapse",
+                                            "text": "Create shared part from this node",
                                             "xtype": "Item",
                                             "|xns": "Roo.menu"
                                         },
