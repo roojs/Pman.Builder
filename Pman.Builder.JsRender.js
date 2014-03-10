@@ -542,7 +542,7 @@ Pman.Builder.JsRender.prototype =  {
          
                         
                              
-    },
+    }
    
     
 };
