@@ -80,9 +80,9 @@ class Pman_Builder_ERM extends Pman
             }
         }
         
-      print_r($links);exit;
+      
         $desc =   $this->createRet($do);
-       // echo '<PRE>';print_R($desc);
+        echo '<PRE>';print_R($desc);
         $ret = array();
         foreach($cols as $c => $ty) {
            
