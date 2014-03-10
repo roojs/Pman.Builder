@@ -59,7 +59,7 @@
                         {
                             "*prop": "colModel[]",
                             "dataIndex": "name",
-                            "header": "Name",
+                            "header": "Name ? Value",
                             "width": 200,
                             "xtype": "ColumnModel",
                             "|renderer": "function(v) { return String.format('{0}', v); }",
