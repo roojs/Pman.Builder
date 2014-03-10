@@ -1,9 +1,9 @@
 {
-    "id": "roo-file-231",
+    "id": "roo-file-184",
     "name": "Pman.Dialog.BuilderAddTable",
     "parent": "",
     "title": "",
-    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderAddTable.bjs",
+    "path": "/home/edward/gitlive/Pman.Builder/Pman.Dialog.BuilderAddTable.bjs",
     "items": [
         {
             "listeners": {
