@@ -33,7 +33,7 @@ class Pman_Builder_ERM extends Pman
             $ret = array();
             $t = array_keys($tables);
             sort($t);
-            print_r($t);exit;
+            
             // for postgres we can get descriptions - this should just fail in Mysql..
             $desc= array();
            // DB_DataObjecT::DebugLevel(1);
