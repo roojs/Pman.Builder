@@ -68,9 +68,7 @@ class Pman_Builder_ERM extends Pman
         
         $do = DB_DataObject::factory($_GET['table']);
         $links = $do->links();
-        
         $cols = $do->table();
-        print_r($cols);exit;
         $dos = array();
        //    echo '<PRE>';print_R($links);
         foreach($links as $k=>$v) {
