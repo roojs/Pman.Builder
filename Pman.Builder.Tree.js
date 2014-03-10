@@ -307,6 +307,8 @@ Pman.Builder.Tree = {
     },
     loadTree : function(o)
     {
+        Roo.log('oooooooo');
+        Roo.log(o);
         var tree = Pman.Tab.BuilderTree.tree;
         this.clearAll();
         tree.root.elConfig = o;
