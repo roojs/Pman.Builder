@@ -87,6 +87,7 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                            ec[id] = v;
                         }
                         Roo.log("propertychange");
+                            Roo.log(ec);
                         _this.grid.setSourceFromNode(ec);
                         
                         var bp = Pman.Tab.BuilderView.panel;
