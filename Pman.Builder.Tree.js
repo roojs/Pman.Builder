@@ -28,7 +28,8 @@ Pman.Builder.Tree = {
             items = inConfig.items;
             delete inConfig.items;
         }
-        
+        Roo.log('item');
+        Roo.log(items);
         var config = this.cloneConfig(inConfig);
         
         var hidden =  config['builder.hidden'] || false;
