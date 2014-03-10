@@ -44,7 +44,7 @@ class Pman_Builder_ERM extends Pman
                 $desc[$tq->relname] = $tq->desc;
             }
 
-            print_r($desc);exit;
+            
             
             
             
