@@ -109,7 +109,7 @@ Pman.Tab.BuilderPalette = new Roo.XComponent({
                         xtype: 'ColumnModel',
                         xns: Roo.grid,
                         dataIndex : 'name',
-                        header : 'Name ? Value',
+                        header : 'Name',
                         width : 200,
                         renderer : function(v) { return String.format('{0}', v); }
                     }
