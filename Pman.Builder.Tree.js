@@ -314,6 +314,7 @@ Pman.Builder.Tree = {
             o.xtype = '*top';
         }
         tree.root.setText(this.configToText(tree.root.elConfig));
+        return;
         this.appendNode(tree.root, o.items[0]);
         tree.root.expand(true);
         Pman.Tab.BuilderView.panel.redraw();
