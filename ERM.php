@@ -125,7 +125,7 @@ class Pman_Builder_ERM extends Pman
 
 
 
-        print_r($desc);exit;
+
 
         // get a description if available..
         if (!isset($desc[$tn])) {
@@ -151,7 +151,7 @@ class Pman_Builder_ERM extends Pman
             while($dd->fetch()) {
                 $desc[$tn][$dd->name] = $dd->desc;
             }
-            
+            print_r($desc);exit;
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
             $types[$tn] = array();
             foreach($defs as $c) {
