@@ -99,6 +99,7 @@ class Pman_Builder_ERM extends Pman
             $kv = explode(':', $links[$c]);
             //$ar = $this->createRet($dos[$c], $c . '_' . $kv[1] . '_');
             $ar = $this->createRet($dos[$c], $c . '_' , $kv[1]);
+            print_r($ar);exit;
             $desc[$c]['maps_to'] = $kv[1];
             $desc[$c]['deps'] = array_values($ar);
             
