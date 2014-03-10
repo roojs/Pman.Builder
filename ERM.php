@@ -27,9 +27,8 @@ class Pman_Builder_ERM extends Pman
         $tq = DB_DataObject::factory('Person');
         $tq->table();
         $tq->links();
-        
         $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
-        print_r($_DB_DATAOBJECT);exit;
+        
         if (!isset($_GET['table'])) {
             $ret = array();
             $t = array_keys($tables);
