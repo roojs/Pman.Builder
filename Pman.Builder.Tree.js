@@ -17,7 +17,8 @@ Pman.Builder.Tree = {
     
     appendNode : function(parent, inConfig, point) {
                                 
-                                    
+        Roo.log('inConfig');
+        Roo.log(inConfig);
         var tree = Pman.Tab.BuilderTree.tree;
         
         if (typeof(inConfig) == 'undefined') {
