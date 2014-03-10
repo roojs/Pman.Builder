@@ -1,9 +1,9 @@
 {
-    "id": "roo-file-39",
+    "id": "roo-file-190",
     "name": "Pman.Dialog.BuilderProp",
     "parent": "",
     "title": "",
-    "path": "/home/alan/gitlive/Pman.Builder/Pman.Dialog.BuilderProp.bjs",
+    "path": "/home/edward/gitlive/Pman.Builder/Pman.Dialog.BuilderProp.bjs",
     "items": [
         {
             "listeners": {
