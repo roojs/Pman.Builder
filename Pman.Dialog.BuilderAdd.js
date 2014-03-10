@@ -125,6 +125,9 @@ Pman.Dialog.BuilderAdd = {
                         click : function (_self, e)
                         {
                             var vals = _this.form.getValues();
+                            
+                            _this.dialog.hide();
+                            
                            if (vals.table.length) {
                               Pman.Dialog.BuilderAddTable.show( 
                                Roo.apply({  table : vals.table } , _this.data),  
@@ -141,7 +144,7 @@ Pman.Dialog.BuilderAdd = {
                            
                             // otherwise, call back with template??
                            
-                             _this.dialog.hide();
+                             
                              _this.callback(_this.data);
                         }
                     },
