@@ -294,7 +294,6 @@ Pman.Builder.Tree = {
                     return;
                 
                 }
-                Roo.log('data');
                 
                 _t.loadTree(JSON.parse(res.data.json));
                 
@@ -308,7 +307,6 @@ Pman.Builder.Tree = {
     },
     loadTree : function(o)
     {
-        Roo.log(o);
         var tree = Pman.Tab.BuilderTree.tree;
         this.clearAll();
         tree.root.elConfig = o;
