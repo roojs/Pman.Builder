@@ -294,7 +294,8 @@ Pman.Builder.Tree = {
                     return;
                 
                 }
-                
+                Roo.log('data');
+                Roo.log(JSON.parse(res.data.json));
                 _t.loadTree(JSON.parse(res.data.json));
                 
              
