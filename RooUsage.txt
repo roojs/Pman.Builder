@@ -256,6 +256,7 @@ left:
   Roo.View:store
   Roo.JsonView:store
   Roo.bootstrap.ComboBox:store
+  Roo.bootstrap.Calendar:store
 right: 
   Roo.data.Store
   Roo.data.SimpleStore
