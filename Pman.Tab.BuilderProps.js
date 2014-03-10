@@ -259,14 +259,16 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                         xns: ec['|xns'] || '',
                                         list: 'props'
                                 }, function (n,val) {
-                                    ec[n] = val || '';
+                                    Roo.log(n);
+                                            Roo.log(val);
+                            /*        ec[n] = val || '';
                                     _this.grid.setCurrrentNode(_this.grid.currentNode);
                                     var bp = Pman.Tab.BuilderView.panel;
                                     bp.redraw.defer(100,bp, [true]);
                                     // update the tree's  text
                                     _this.grid.currentNode.setText(
                                         Pman.Builder.Tree.configToText(_this.grid.currentNode.elConfig)
-                                    );
+                                    );*/
                                 });
                             }
                         },
