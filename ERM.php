@@ -106,7 +106,7 @@ class Pman_Builder_ERM extends Pman
             foreach($ar as $cn => $r) {
                 $ret[] = $r;
             }
-            print_r($ret);exit;
+            
             
         }
         // echo '<PRE>';print_R($ret);
