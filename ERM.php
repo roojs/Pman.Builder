@@ -101,12 +101,12 @@ class Pman_Builder_ERM extends Pman
             $ar = $this->createRet($dos[$c], $c . '_' , $kv[1]);
             $desc[$c]['maps_to'] = $kv[1];
             $desc[$c]['deps'] = array_values($ar);
-            print_r($desc);exit;
+            
             $ret[] = $desc[$c];
             foreach($ar as $cn => $r) {
                 $ret[] = $r;
             }
-            
+            print_r($ret);exit;
             
         }
         // echo '<PRE>';print_R($ret);
