@@ -178,7 +178,7 @@
                         },
                         {
                             "listeners": {
-                                "select": "function (combo, rec, index)\n{\n   //cb.lastData = rec.data;\n    \n    \n    \n    \n    var bt = Pman.Tab.BuilderTree.tree;\n    var pt = Pman.Builder.Tree;\n    \n    if (!rec) {\n        pt.clearAll();\n        pt.setCurrentNode(bt.root,true);\n       // var bv = Pman.Tab.BuilderView;\n        Pman.Tab.BuilderView.panel.clearAll();\n        Pman.Tab.BuilderTab.layout.getRegion('west').el.mask(\"select part\");\n       // bv.panel.el.mask(\"select Module / Part\");\n        return;\n    }\n    //bv.panel.el.unmask();\n    Pman.Tab.BuilderTab.layout.getRegion('west').el.unmask();\n    pt.loadBJS(_this.modsel.getValue(), rec.data.id)\n\n\n}",
+                                "select": "function (combo, rec, index)\n{\n   //cb.lastData = rec.data;\n    \n    \n    \n    \n    var bt = Pman.Tab.BuilderTree.tree;\n    var pt = Pman.Builder.Tree;\n    Roo.log(pt);\n    \n    if (!rec) {\n        pt.clearAll();\n        pt.setCurrentNode(bt.root,true);\n       // var bv = Pman.Tab.BuilderView;\n        Pman.Tab.BuilderView.panel.clearAll();\n        Pman.Tab.BuilderTab.layout.getRegion('west').el.mask(\"select part\");\n       // bv.panel.el.mask(\"select Module / Part\");\n        return;\n    }\n    //bv.panel.el.unmask();\n    Pman.Tab.BuilderTab.layout.getRegion('west').el.unmask();\n    pt.loadBJS(_this.modsel.getValue(), rec.data.id)\n\n\n}",
                                 "render": "function (_self)\n{\n    _this.filesel = this;\n}"
                             },
                             "allowBlank": true,

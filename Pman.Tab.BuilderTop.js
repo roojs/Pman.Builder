@@ -337,6 +337,7 @@ Pman.Tab.BuilderTop = new Roo.XComponent({
                                 
                                 var bt = Pman.Tab.BuilderTree.tree;
                                 var pt = Pman.Builder.Tree;
+                                Roo.log(pt);
                                 
                                 if (!rec) {
                                     pt.clearAll();
