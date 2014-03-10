@@ -161,7 +161,7 @@ class Pman_Builder_ERM extends Pman
             
         }
        
-       
+       print_r($types);exit;
        
         $ret = array();
         foreach($do->table() as $k=>$ty) {
