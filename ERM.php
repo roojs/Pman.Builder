@@ -125,7 +125,7 @@ class Pman_Builder_ERM extends Pman
 
 
 
-
+        print_r($desc);exit;
 
         // get a description if available..
         if (!isset($desc[$tn])) {
