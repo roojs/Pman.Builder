@@ -151,8 +151,9 @@ class Pman_Builder_ERM extends Pman
             while($dd->fetch()) {
                 $desc[$tn][$dd->name] = $dd->desc;
             }
-            print_r($desc);exit;
+            
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
+            print_r($defs);exit;
             $types[$tn] = array();
             foreach($defs as $c) {
                 $types[$tn][$c['name']] = $c['type'];
