@@ -134,7 +134,8 @@ Pman.Dialog.BuilderAdd = {
                                     var cls = data['|xns'] + '.' + data['xtype'];
                                     
                                     var res = Pman.Builder.Wizard[cls](data);
-                                    
+                                    Roo.log(res);
+                                    Roo.log(_this.callback);return;
                                    _this.callback(res); 
                                });
                                 return;
