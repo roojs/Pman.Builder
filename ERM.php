@@ -109,7 +109,7 @@ class Pman_Builder_ERM extends Pman
             
             
         }
-        // echo '<PRE>';print_R($ret);
+         echo '<PRE>';print_R($ret);
         
         $this->jdata($ret); 
         
