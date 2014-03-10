@@ -323,8 +323,9 @@ Pman.Dialog.BuilderAddTable = {
                             }
                              Roo.log(ret);
                         
+                            _this.dialog.hide();
                              _this.callback(ret);
-                             _this.dialog.hide();
+                             
                         
                         }
                     },
