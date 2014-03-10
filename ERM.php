@@ -153,7 +153,7 @@ class Pman_Builder_ERM extends Pman
             }
             
             $defs =  $dd->getDatabaseConnection()->tableInfo($tn);
-            print_r($defs);
+            print_r($defs);exit;
             $types[$tn] = array();
             foreach($defs as $c) {
                 $types[$tn][$c['name']] = $c['type'];
