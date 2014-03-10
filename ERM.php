@@ -176,7 +176,6 @@ class Pman_Builder_ERM extends Pman
                 'desc' => isset($cache[$tn][$k]) ? $cache[$tn][$k] : '',
             );
         }
-        print_r($ret);exit;
         return $ret;
         
         
