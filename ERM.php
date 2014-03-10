@@ -29,7 +29,7 @@ class Pman_Builder_ERM extends Pman
         $tq->links();
         
         $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
-        print_r($tables);exit;
+        print_r($_DB_DATAOBJECT);exit;
         if (!isset($_GET['table'])) {
             $ret = array();
             $t = array_keys($tables);
