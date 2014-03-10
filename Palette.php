@@ -11,7 +11,6 @@ class Pman_Builder_Palette extends Pman
     
     function get($sub)
     {
-        print_r($sub);exit;
         if (empty($sub)) {
             return $this->roousage();
         }
