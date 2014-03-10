@@ -287,6 +287,7 @@ Pman.Builder.Tree = {
                 
                 if (!res.data.json.length) {
                     var cfg = _t.defaultElConfig();
+                    Roo.log(cfg);
                     cfg.name = Pman.Tab.BuilderTop.filesel.lastData.name;
                     cfg.part = Pman.Tab.BuilderTop.filesel.lastData.name;
                     cfg.module = '';
