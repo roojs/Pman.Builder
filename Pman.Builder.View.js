@@ -359,6 +359,7 @@ Pman.Builder.View = {
     },
     draw :function(cfg)
     {
+        Roo.log('Pman.Builder.View.redraw');
         Roo.log(cfg);
         
         if (!cfg.items[0]) {
