@@ -24,11 +24,12 @@ class Pman_Builder_App extends Pman
             die("Invalid Application");
         }
         
-        print_r($app);exit;
+        
         $mod = DB_DataObject::factory('builder_modules');
         if (!$mod->get('app', $app)) {
+            print_r($app);exit;
             die("invalid module");
-        }
+        }print_r($app);exit;
         
         if (!empty($_REQUEST['no_parts'])) {
             // used to do the previewer
