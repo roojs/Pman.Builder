@@ -68,8 +68,7 @@ Pman.Builder = {
         
 
         var js = Pman.Builder.Tree.toJS();
-        Roo.log('ret');
-        Roo.log(js);
+        
         var render = new Pman.Builder.JsRender(js); 
          
         // console.log(js);
