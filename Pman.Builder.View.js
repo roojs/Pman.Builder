@@ -353,8 +353,7 @@ Pman.Builder.View = {
         this.clearAll(isAuto);
         
         var cfg =  this.toJS();
-        Roo.log('Pman.Builder.View cfg toJs()');
-        Roo.log(cfg);
+        
         this.win().Pman.Builder.View.draw( cfg );
         
     },
