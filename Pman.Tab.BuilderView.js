@@ -37,7 +37,6 @@ Pman.Tab.BuilderView = new Roo.XComponent({
             },
             redraw : function(isAuto)
                 {
-                    Roo.log('Pman.Tab.BuilderView.redraw');
                   return Pman.Builder.View.redraw(isAuto);
                 },
             toJS : function(n) {
