@@ -369,7 +369,7 @@ Pman.Builder.View = {
         }
         
         
-        this.munge(cfg.items[0],false , true );
+//        this.munge(cfg.items[0],false , true );
         
         Roo.log(cfg);
         //  return;
