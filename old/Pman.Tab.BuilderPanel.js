@@ -349,7 +349,7 @@ Pman.Tab.BuilderPanel = {
     
     redraw: function(isAuto)
     {
-        
+        Roo.log('Pman.Tab.BuilderPanel.redraw');
         // top level is not relivant
         this.redrawClear(isAuto);
           var btop =  Pman.Tab.BuilderTop2;
