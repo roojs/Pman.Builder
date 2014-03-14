@@ -18,7 +18,7 @@ class Pman_Builder_App extends Pman
   
     function get($app) {
         
-         
+         print_r('run');exit;
         
         if (empty($app)) {
             die("Invalid Application");
