@@ -85,7 +85,7 @@ Pman.Builder = {
         } catch (e) {
             
         }
-        Roo.log(html);
+        
         
         
         new Pman.Request({
