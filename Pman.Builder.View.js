@@ -353,8 +353,9 @@ Pman.Builder.View = {
         this.clearAll(isAuto);
         
         var cfg =  this.toJS();
-        
+        Roo.log('before');
         this.win().Pman.Builder.View.draw( cfg );
+        Roo.log('end');
         
     },
     draw :function(cfg)
