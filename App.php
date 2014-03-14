@@ -27,7 +27,7 @@ class Pman_Builder_App extends Pman
         
         $mod = DB_DataObject::factory('builder_modules');
         if (!$mod->get('app', $app)) {
-            print_r($app);exit;
+            print_r('in');exit;
             die("invalid module");
         }print_r($app);exit;
         
