@@ -465,11 +465,9 @@ Pman.Builder.View = {
     {
         if (typeof(tree['flexy:foreach']) != 'undefined') {
             tree.el.attr('flexy:foreach', tree['flexy:foreach']);
-            tree.el.attr('id', '');
         }
         if (typeof(tree['flexy:if']) != 'undefined') {
             tree.el.attr('flexy:if', tree['flexy:if']);
-            tree.el.attr('id', '');
         }
         if (typeof(tree.items) == 'undefinded' || !tree.items.length) { return; }
         
