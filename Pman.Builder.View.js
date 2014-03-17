@@ -459,7 +459,23 @@ Pman.Builder.View = {
             
         
        });
-    }
+    },
+    
+//    function applyFlexy(el)
+//    {
+//        if (typeof(el['flexy:foreach']) != undefined) {
+//            el.el.attr('flexy:foreach'.el['flexy:foreach'] );
+//        }
+//        if (typeof(el['flexy:if']) != undefined) {
+//            el.el.attr('flexy:if'.el['flexy:if'] );
+//        }
+//        if (!el.items) { return; }
+//        for (var i = 0;i< el.items;i++){
+//            this.applyFlexy(el.items[i]);
+//        }
+//        
+//        
+//    }
     
     
     
