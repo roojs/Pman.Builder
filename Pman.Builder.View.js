@@ -410,12 +410,11 @@ Pman.Builder.View = {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            Roo.log(top);
-            this.applyFlexy(top);
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
             Roo.log("config is now");
             
-            
+            Roo.log(top);
+            this.applyFlexy(top);
             
             if (cfg.items[0].xtype =='Modal' ) {
                 this.bootstrapModal.show();
