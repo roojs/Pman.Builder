@@ -474,6 +474,7 @@ Pman.Builder.View = {
         if (!tree.items) { return; }
         
         for (var i = 0;i< tree.items;i++){
+            Roo.log('time');
             this.applyFlexy(tree.items[i]);
         }
     }
