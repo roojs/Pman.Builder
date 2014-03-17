@@ -459,7 +459,7 @@ Pman.Builder.View = {
             
         
        });
-    },
+    }
     
 //    function applyFlexy(el)
 //    {
