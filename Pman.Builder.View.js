@@ -414,7 +414,7 @@ Pman.Builder.View = {
             
             Roo.log(top);
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
-            Roo.log("config is now");
+            Roo.log("config after is now");
             
             Roo.log(top);
             this.applyFlexy(top);
