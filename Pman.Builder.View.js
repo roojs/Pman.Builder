@@ -104,6 +104,9 @@ Pman.Builder.View = {
             if (tagName) {
                 var attr = [];
                 for(i = 0; i < currentElement.attributes.length;i++) {
+                    if (currentElement.attributes.item(i).name=='id') {
+                        continue;
+                    }
                     attr.push(currentElement.attributes.item(i).name + '="' + currentElement.attributes.item(i).value + '"' );
                 }
                 
