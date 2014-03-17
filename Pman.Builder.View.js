@@ -410,7 +410,8 @@ Pman.Builder.View = {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            
+            Roo.log('cfg is here');
+            Roo.log(cfg);
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
             Roo.log("config after is now");
             
