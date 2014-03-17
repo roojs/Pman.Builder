@@ -473,7 +473,7 @@ Pman.Builder.View = {
         }
         if (!tree.items) { Roo.log('no items');return; }
         
-        for (var i = 0;i< tree.items;i++){
+        for (var i = 0;i< tree.items.length;i++){
             
             this.applyFlexy(tree.items[i]);
         }
