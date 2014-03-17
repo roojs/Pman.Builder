@@ -475,7 +475,7 @@ Pman.Builder.View = {
         if (typeof(tree['flexy:if']) != 'undefined') {
             tree.el.attr('flexy:if', tree['flexy:if']);
         }
-        if (typeof(tree.items) == 'undefinded' || !tree.items.length) { return; }
+        if (!tree.items || !tree.items.length) { return; }
         
         for (var i = 0; i < tree.items.length; i++){
             this.applyFlexy(tree.items[i]);
