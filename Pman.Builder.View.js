@@ -464,10 +464,11 @@ Pman.Builder.View = {
     applyFlexy: function(tree)
     {
         if (typeof(tree['flexy:foreach']) != 'undefined') {
-            tree.el.attr('flexy:foreach', tree['flexy:foreach'] );
+            Roo.log('flexy:foreach : ' + tree['flexy:foreach']);
+            tree.el.attr('flexy:foreach', tree['flexy:foreach']);
         }
         if (typeof(tree['flexy:if']) != 'undefined') {
-            tree.el.attr('flexy:if', tree['flexy:if'] );
+            tree.el.attr('flexy:if', tree['flexy:if']);
         }
         if (!tree.items) { return; }
         
