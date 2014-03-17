@@ -169,7 +169,6 @@ Pman.Builder.View = {
         
     },
     munge : function(cfg, keyname, add_xattr) {
-        Roo.log(cfg);
         keyname = keyname || false;
         
         this.renderObj = this.renderObj || {};
