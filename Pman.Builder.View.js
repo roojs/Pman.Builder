@@ -416,10 +416,10 @@ Pman.Builder.View = {
             
             Roo.log(top);
             this.applyFlexy(top);
-            
-            if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
-            }
+//            
+//            if (cfg.items[0].xtype =='Modal' ) {
+//                this.bootstrapModal.show();
+//            }
             
             return;
         }
