@@ -463,7 +463,7 @@ Pman.Builder.View = {
     
     applyFlexy: function(tree)
     {
-        
+        Roo.log('got here');
         if (typeof(tree['flexy:foreach']) != 'undefined') {
             Roo.log('flexy:foreach : ' + tree['flexy:foreach']);
             tree.el.attr('flexy:foreach', tree['flexy:foreach']);
@@ -471,7 +471,7 @@ Pman.Builder.View = {
         if (typeof(tree['flexy:if']) != 'undefined') {
             tree.el.attr('flexy:if', tree['flexy:if']);
         }
-        if (!tree.items) { Roo.log('time');return; }
+        if (!tree.items) { Roo.log('no items');return; }
         
         for (var i = 0;i< tree.items;i++){
             
