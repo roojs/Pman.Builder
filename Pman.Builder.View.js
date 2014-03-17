@@ -459,23 +459,22 @@ Pman.Builder.View = {
             
         
        });
-    }
+    },
     
-//    function applyFlexy(el)
-//    {
-//        if (typeof(el['flexy:foreach']) != undefined) {
-//            el.el.attr('flexy:foreach'.el['flexy:foreach'] );
-//        }
-//        if (typeof(el['flexy:if']) != undefined) {
-//            el.el.attr('flexy:if'.el['flexy:if'] );
-//        }
-//        if (!el.items) { return; }
-//        for (var i = 0;i< el.items;i++){
-//            this.applyFlexy(el.items[i]);
-//        }
-//        
-//        
-//    }
+    applyFlexy: function(tree)
+    {
+        if (typeof(tree['flexy:foreach']) != undefined) {
+            tree.el.attr('flexy:foreach', tree['flexy:foreach'] );
+        }
+        if (typeof(tree['flexy:if']) != undefined) {
+            tree.el.attr('flexy:if', tree['flexy:if'] );
+        }
+        if (!tree.items) { return; }
+        
+        for (var i = 0;i< tree.items;i++){
+            this.applyFlexy(tree.items[i]);
+        }
+    }
     
     
     
