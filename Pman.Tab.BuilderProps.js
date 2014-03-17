@@ -223,8 +223,9 @@ Pman.Tab.BuilderProps = new Roo.XComponent({
                                 if (n[0] == '!') {
                                     try{
                                         delete _this.grid.currentNode.elConfig.listeners[n.substring(1)]; 
+                                                    delete _this.grid.currentNode.elConfig[n.substring(1)];
                                     }catch(err){
-                                        delete _this.grid.currentNode.elConfig[n.substring(1)];
+                            
                                         Roo.log(err);
                                     }
                                     
