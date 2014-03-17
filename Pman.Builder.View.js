@@ -471,10 +471,10 @@ Pman.Builder.View = {
         if (typeof(tree['flexy:if']) != 'undefined') {
             tree.el.attr('flexy:if', tree['flexy:if']);
         }
-        if (!tree.items) { return; }
+        if (!tree.items) { Roo.log('time');return; }
         
         for (var i = 0;i< tree.items;i++){
-            Roo.log('time');
+            
             this.applyFlexy(tree.items[i]);
         }
     }
