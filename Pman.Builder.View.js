@@ -104,10 +104,11 @@ Pman.Builder.View = {
             if (tagName) {
                 var attr = [];
                 for(i = 0; i < currentElement.attributes.length;i++) {
-                    if (currentElement.attributes.item(i).name=='id') {
-                        continue;
+                    var aname = currentElement.attributes.item(i).name;
+                    if (aname=='id') {
+                        aname= 'xbuilderid';
                     }
-                    attr.push(currentElement.attributes.item(i).name + '="' + currentElement.attributes.item(i).value + '"' );
+                    attr.push(aname + '="' + currentElement.attributes.item(i).value + '"' );
                 }
                 
                 
