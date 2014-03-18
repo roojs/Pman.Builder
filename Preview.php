@@ -61,7 +61,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         $m = DB_DAtaObject::factory('Builder_modules');
         $m->get('name', $proj );
         
-         
+        var_dump($m->path);exit;
         // needs to modify the template directory??
         // use the builder_module == app name
         // look for part with same name.
