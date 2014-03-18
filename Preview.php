@@ -41,6 +41,13 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
            die("invalid url");
         }
         header('Content-type: text/javascript');
+        // this should outpt the file if it's found.
+        if (file_exists($m->path . '/'. $p->name .'.js')) {
+            $fh = fopen($m->path . '/'. $p->name .'.js', 'r');
+            fpassthru($fh);
+            exit;
+        }
+        
         echo $p->jsource;
         exit;
     }
