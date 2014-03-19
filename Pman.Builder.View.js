@@ -75,8 +75,6 @@ Pman.Builder.View = {
     toHTML : function ()  {
         var ret = '';
         Roo.select('body > div',true).each(function(el) {
-            Roo.log('el');
-            Roo.log(el);
             this.traverseDOMTree(function(s) { ret+=s; }, el.dom, 1);
             ret+="\n";
         }, this);
