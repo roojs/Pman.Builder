@@ -50,6 +50,7 @@ Pman.Builder.View = {
         
         //this.doc = iframe.contentDocument || iframe.contentWindow.document;
         
+        
     },
     
     clearAll : function(isAuto) {
