@@ -406,7 +406,9 @@ Pman.Builder.View = {
             // if xtype = 'modal...'
              // construct the modal..
              // and show it..
-             
+            if (cfg.items[0].xtype =='Modal' ) {
+                
+            }
             
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
