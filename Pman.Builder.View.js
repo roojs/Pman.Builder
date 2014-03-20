@@ -401,7 +401,7 @@ Pman.Builder.View = {
         }
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
-            Roo.log('run draw');
+            Roo.log('----------------------------run draw----------------------------');
             // if xtype = 'modal...'
              // construct the modal..
              // and show it..
