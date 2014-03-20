@@ -409,6 +409,8 @@ Pman.Builder.View = {
             
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
             
+            Roo.log('this.bootstrapModal');
+            Roo.log(this.bootstrapModal);
             this.applyFlexy(top);
             
             if (cfg.items[0].xtype =='Modal' ) {
