@@ -402,20 +402,23 @@ Pman.Builder.View = {
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
             Roo.log('----------------------------run draw----------------------------');
-//            Roo.log(cfg.items[0]);return;
+            
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
             
+            if (cfg.items[0].xtype =='Modal' ) {
+                this.bootstrapModal = top.addxtype(cfg.items[0]).show()
+                return;
+            }
+            
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
             
-            Roo.log('this.bootstrapModal');
-            Roo.log(this.bootstrapModal);
             this.applyFlexy(top);
-            
-            if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
-            }
+//            
+//            if (cfg.items[0].xtype =='Modal' ) {
+//                this.bootstrapModal.show();
+//            }
             
             return;
         }
