@@ -403,16 +403,14 @@ Pman.Builder.View = {
             
             Roo.log('----------------------------run draw----------------------------');
 
-            Roo.log("bootstrap build!?");
-            var top = new Roo.bootstrap.Body({});
-            top.onRender(false,false);
-            
             if (cfg.items[0].xtype =='Modal' ) {
                 new Roo.bootstrap.Modal(cfg.items[0]).show();
                 return;
             }
             
-            
+            Roo.log("bootstrap build!?");
+            var top = new Roo.bootstrap.Body({});
+            top.onRender(false,false);
             
             this.bootstrapModal = top.addxtype(cfg.items[0]).items[0];
             
