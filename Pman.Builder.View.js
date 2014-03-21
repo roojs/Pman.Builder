@@ -410,7 +410,7 @@ Pman.Builder.View = {
             this.applyFlexy(top);
             
             if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
+                this.bootstrapModal.items[0].show();
             }
             
             return;
