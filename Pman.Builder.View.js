@@ -401,6 +401,10 @@ Pman.Builder.View = {
         }
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
+            if (cfg.items[0].xtype =='Modal' ) {
+                this.bootstrapModal.show();
+                return;
+            }
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
@@ -409,9 +413,7 @@ Pman.Builder.View = {
             
             this.applyFlexy(top);
             
-            if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
-            }
+            
             
             return;
         }
