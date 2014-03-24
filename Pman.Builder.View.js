@@ -404,8 +404,7 @@ Pman.Builder.View = {
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            Roo.log('top');
-            Roo.log(top);return;
+            
             this.bootstrapModal = top.addxtype(cfg.items[0]);
             
             this.applyFlexy(top);
