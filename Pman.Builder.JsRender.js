@@ -388,8 +388,7 @@ Pman.Builder.JsRender.prototype =  {
         // we have 2 types = dialogs and components
         // 
         var top = this.guessName(this.items[0]);
-        Roo.log('toSource');
-        Roo.log(top);
+        
         if (!top) {
             return false;
         }
