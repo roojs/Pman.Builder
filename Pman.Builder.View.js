@@ -399,7 +399,7 @@ Pman.Builder.View = {
             
             
         }
-        
+        return;
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
             Roo.log("bootstrap build!?");
