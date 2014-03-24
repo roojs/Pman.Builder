@@ -402,7 +402,7 @@ Pman.Builder.View = {
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
             Roo.log("bootstrap build!?");
-            
+            Roo.log(cfg.items[0]);
             if (cfg.items[0].xtype =='Modal' ) {
                 cfg.items[0].show();
                 return;
