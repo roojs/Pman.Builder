@@ -403,7 +403,8 @@ Pman.Builder.View = {
             
             Roo.log("bootstrap build!?");
             if (cfg.items[0].xtype =='Modal' ) {
-                this.bootstrapModal.show();
+                cfg.items[0].show();
+                return;
             }
             
             var top = new Roo.bootstrap.Body({});
