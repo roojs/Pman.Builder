@@ -399,13 +399,13 @@ Pman.Builder.View = {
             
             
         }
-        return;
         if (cfg.items[0]['|xns'] == 'Roo.bootstrap') {
             
             Roo.log("bootstrap build!?");
             var top = new Roo.bootstrap.Body({});
             top.onRender(false,false);
-            
+            Roo.lpg('top');
+            Roo.log(top);return;
             this.bootstrapModal = top.addxtype(cfg.items[0]);
             
             this.applyFlexy(top);
