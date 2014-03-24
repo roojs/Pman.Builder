@@ -393,7 +393,7 @@ Pman.Builder.JsRender.prototype =  {
         if (!top) {
             return false;
         }
-        if (top.match(/Dialog/)) {
+        if (top.match(/Dialog/) || top.match(/Modal/)) {
             return this.toSourceDialog();
         }
         return this.toSourceLayout();
