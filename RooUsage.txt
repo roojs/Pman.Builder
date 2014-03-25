@@ -311,6 +311,7 @@ right:
     Roo.bootstrap.Img
     Roo.bootstrap.Calendar  
     Roo.bootstrap.Popover
+    Roo.bootstrap.Input
 
 left:
     Roo.bootstrap.ButtonGroup
