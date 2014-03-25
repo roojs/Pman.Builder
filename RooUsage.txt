@@ -360,3 +360,8 @@ left:
     Roo.bootstrap.Modal:buttons[]
 right:
     Roo.bootstrap.Button
+
+left:    
+    Roo.bootstrap.Header
+right:
+    Roo.bootstrap.Container
