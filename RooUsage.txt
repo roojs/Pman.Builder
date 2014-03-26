@@ -367,7 +367,3 @@ left:
 right:
     Roo.bootstrap.Container
 
-left:    
-    Roo.bootstrap.Button
-right:
-    Roo.bootstrap.Img
