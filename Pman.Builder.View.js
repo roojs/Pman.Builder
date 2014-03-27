@@ -412,7 +412,7 @@ Pman.Builder.View = {
             
             this.bootstrapModal = top.addxtype(cfg.items[0]);
             
-            this.applyFlexy(top);
+//            this.applyFlexy(top);
             
             
             
