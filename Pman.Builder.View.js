@@ -253,9 +253,6 @@ Pman.Builder.View = {
                 };
             }
             
-            
-
-            
         }
         
         
