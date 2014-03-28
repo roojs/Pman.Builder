@@ -245,14 +245,16 @@ Pman.Builder.View = {
         
         // add xattr data?
         if (add_xattr) {
-//            if(typeof(cfg.xattr) != 'undefined'){
-//                
-//                
-//            }
-//            cfg.xattr = {
-//                xtype : cfg['|xns'] + '.' + cfg.xtype 
-//            };
-            cfg.xattr.xtype = cfg['|xns'] + '.' + cfg.xtype;
+            if(typeof(cfg.xattr) != 'undefined'){
+                cfg.xattr.xtype = cfg['|xns'] + '.' + cfg.xtype;
+            }else{
+                cfg.xattr = {
+                    xtype : cfg['|xns'] + '.' + cfg.xtype 
+                };
+            }
+            
+            
+
             
         }
         
