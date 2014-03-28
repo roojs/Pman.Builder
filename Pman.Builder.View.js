@@ -254,6 +254,8 @@ Pman.Builder.View = {
                 };
             }
             
+            Roo.log(cfg.xattr);
+            
         }
         
         
