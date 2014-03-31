@@ -255,6 +255,7 @@ Pman.Builder.View = {
                     xtype : cfg['|xns'] + '.' + cfg.xtype 
                 };
             }
+            Roo.log(cfg.xattr);
             
         }
         
