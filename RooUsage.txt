@@ -333,6 +333,11 @@ right:
     Roo.bootstrap.TableCell
 
 left:
+    Roo.bootstrap.TableRow
+right:
+    Roo.bootstrap.TableCell
+
+left:
     Roo.bootstrap.ButtonGroup
 right:
     Roo.bootstrap.Button
