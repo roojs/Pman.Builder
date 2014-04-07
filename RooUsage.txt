@@ -299,7 +299,6 @@ left:
     Roo.bootstrap.Modal
     Roo.bootstrap.Column
     Roo.bootstrap.Row
-    Roo.bootstrap.TableCell
 right:
     Roo.bootstrap.Container
     Roo.bootstrap.Button
