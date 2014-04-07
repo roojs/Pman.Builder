@@ -321,13 +321,9 @@ right:
     Roo.bootstrap.TableRow
     Roo.bootstrap.TableCell
     Roo.bootstrap.TableBody
-    Roo.bootstrap.TableHead
-    Roo.bootstrap.TableFoot
 
 left:
     Roo.bootstrap.TableBody
-    Roo.bootstrap.TableHead
-    Roo.bootstrap.TableFoot
 right:
     Roo.bootstrap.TableRow
     Roo.bootstrap.TableCell
