@@ -313,6 +313,7 @@ right:
     Roo.bootstrap.Popover
     Roo.bootstrap.Input
     Roo.bootstrap.TextArea
+    Roo.bootstrap.Table
 
 left:
     Roo.bootstrap.ButtonGroup
