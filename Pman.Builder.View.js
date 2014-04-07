@@ -245,7 +245,7 @@ Pman.Builder.View = {
         
         // add xattr data?
         if (add_xattr) {
-            
+            Roo.log(cfg);
             if(typeof(cfg.xattr) != 'undefined'){
                 
                 cfg.xattr.xtype = cfg['|xns'] + '.' + cfg.xtype;
