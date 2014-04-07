@@ -316,6 +316,13 @@ right:
     Roo.bootstrap.Table
 
 left:
+    Roo.bootstrap.Table
+right:
+    Roo.bootstrap.TableRow
+    Roo.bootstrap.TableCell
+    Roo.bootstrap.TableBody
+
+left:
     Roo.bootstrap.ButtonGroup
 right:
     Roo.bootstrap.Button
