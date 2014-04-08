@@ -16,7 +16,7 @@ class Pman_Builder_Themes  extends Pman
     
     function get($sub)
     {
-        $bd = __DIR__.'/themes';
+        $bd = $this->rootDir.'/themes';
         $dh = opendir($bd);
         $ret = array();
         while ($dh && (false !== ($fn = readdir($dh)))) {
