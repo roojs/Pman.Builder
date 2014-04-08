@@ -355,7 +355,6 @@ left:
 right:    
     Roo.bootstrap.NavGroup
     Roo.bootstrap.Form
-    Roo.bootstrap.Container
 
 left:
     Roo.bootstrap.NavGroup
