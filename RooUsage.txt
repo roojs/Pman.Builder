@@ -314,6 +314,7 @@ right:
     Roo.bootstrap.Input
     Roo.bootstrap.TextArea
     Roo.bootstrap.Table
+    Roo.bootstrap.Pagination
 
 left:
     Roo.bootstrap.Table
