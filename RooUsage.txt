@@ -344,6 +344,7 @@ left:
     Roo.bootstrap.Navbar.Item:menu
 right:
     Roo.bootstrap.Menu
+    Roo.bootstrap.Container
 
 left:
     Roo.bootstrap.Menu
