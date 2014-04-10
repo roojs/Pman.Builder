@@ -317,6 +317,7 @@ right:
     Roo.bootstrap.Table
     Roo.bootstrap.Pagination
     Roo.bootstrap.Progress
+    Roo.bootstrap.TabPanel
 
 left:
     Roo.bootstrap.Progress
