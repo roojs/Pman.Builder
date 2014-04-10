@@ -315,6 +315,12 @@ right:
     Roo.bootstrap.TextArea
     Roo.bootstrap.Table
     Roo.bootstrap.Pagination
+    Roo.bootstrap.Progress
+
+left:
+    Roo.bootstrap.Progress
+right:
+    Roo.bootstrap.ProgressBar
 
 left:
     Roo.bootstrap.Table
