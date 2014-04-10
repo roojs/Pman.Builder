@@ -361,7 +361,6 @@ left:
 right:    
     Roo.bootstrap.NavGroup
     Roo.bootstrap.Form
-    Roo.bootstrap.Navbar.Item
 
 left:
     Roo.bootstrap.NavGroup
