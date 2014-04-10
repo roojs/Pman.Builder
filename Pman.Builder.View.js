@@ -78,6 +78,7 @@ Pman.Builder.View = {
             this.traverseDOMTree(function(s) { ret+=s; }, el.dom, 1);
             ret+="\n";
         }, this);
+        Roo.log(ret);
         return ret;
         
     },
