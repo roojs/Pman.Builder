@@ -299,6 +299,7 @@ left:
     Roo.bootstrap.Modal
     Roo.bootstrap.Column
     Roo.bootstrap.Row
+    Roo.bootstrap.TabPanel
 right:
     Roo.bootstrap.Container
     Roo.bootstrap.Button
