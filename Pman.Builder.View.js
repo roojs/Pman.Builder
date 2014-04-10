@@ -95,6 +95,11 @@ Pman.Builder.View = {
                 return;
             
             }
+            if(nodeName == 'BR'){
+                cb("<BR/>");
+                return;
+            }
+            
             var i = 0;
           // Prints the node tagName, such as <A>, <IMG>, etc
             if (tagName) {
