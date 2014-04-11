@@ -318,6 +318,7 @@ right:
     Roo.bootstrap.Pagination
     Roo.bootstrap.Progress
     Roo.bootstrap.TabPanel
+    Roo.bootstrap.DateField
 
 left:
     Roo.bootstrap.Progress
