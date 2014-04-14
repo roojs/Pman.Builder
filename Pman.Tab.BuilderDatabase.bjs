@@ -109,15 +109,15 @@
                                             "|xns": "Roo.tree"
                                         },
                                         {
+                                            "|xns": "Roo.tree",
+                                            "xtype": "MultiSelectionModel",
+                                            "*prop": "sm"
+                                        },
+                                        {
                                             "*prop": "root",
                                             "text": "TOP LEVEL",
                                             "xtype": "AsyncTreeNode",
                                             "|xns": "Roo.tree"
-                                        },
-                                        {
-                                            "|xns": "Roo.tree",
-                                            "xtype": "DefaultSelectionModel",
-                                            "*prop": "sm"
                                         },
                                         {
                                             "listeners": {

@@ -188,14 +188,14 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                                 baseParams : { _tree: 1, 'sort': 'name', dir: 'ASC', limit : 9999 },
                                 dataUrl : baseURL + '/Roo/Builder_tables.php'
                             },
+                            sm : {
+                                xtype: 'MultiSelectionModel',
+                                xns: Roo.tree
+                            },
                             root : {
                                 xtype: 'AsyncTreeNode',
                                 xns: Roo.tree,
                                 text : "TOP LEVEL"
-                            },
-                            sm : {
-                                xtype: 'DefaultSelectionModel',
-                                xns: Roo.tree
                             },
                             editor : {
                                 xtype: 'TreeEditor',
