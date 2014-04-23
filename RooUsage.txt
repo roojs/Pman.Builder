@@ -408,3 +408,7 @@ left:
 right:
     Roo.bootstrap.Container
 
+left:    
+    Roo.bootstrap.Pagination
+right:
+    Roo.bootstrap.PaginationItem
