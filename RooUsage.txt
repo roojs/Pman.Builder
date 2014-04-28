@@ -322,6 +322,7 @@ right:
     Roo.bootstrap.CheckBox
     Roo.bootstrap.Radio
     Roo.bootstrap.ComboBox
+    Roo.bootstrap.Element
 
 left:
     Roo.bootstrap.Progress
