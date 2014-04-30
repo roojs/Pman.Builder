@@ -339,6 +339,11 @@ right:
     Roo.bootstrap.TableCell
     Roo.bootstrap.TableBody
 
+left:   
+    Roo.bootstrap.Table:cm[]          
+right:
+    Roo.grid.ColumnModel
+
 left:
     Roo.bootstrap.TableBody
 right:
