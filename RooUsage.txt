@@ -257,7 +257,7 @@ left:
   Roo.JsonView:store
   Roo.bootstrap.ComboBox:store
   Roo.bootstrap.Calendar:store
-  Roo.bootstrap.Table.Table:store
+  Roo.bootstrap.Table:store
 right: 
   Roo.data.Store
   Roo.data.SimpleStore
@@ -316,7 +316,7 @@ right:
     Roo.bootstrap.Popover
     Roo.bootstrap.Input
     Roo.bootstrap.TextArea
-    Roo.bootstrap.Table.Table
+    Roo.bootstrap.Table
     Roo.bootstrap.Pagination
     Roo.bootstrap.Progress
     Roo.bootstrap.TabPanel
@@ -333,35 +333,35 @@ right:
     Roo.bootstrap.ProgressBar
 
 left:
-    Roo.bootstrap.Table.Table
+    Roo.bootstrap.Table
 right:
-    Roo.bootstrap.Table.TableRow
-    Roo.bootstrap.Table.TableCell
-    Roo.bootstrap.Table.TableBody
+    Roo.bootstrap.TableRow
+    Roo.bootstrap.TableCell
+    Roo.bootstrap.TableBody
 
 left:   
-    Roo.bootstrap.Table.Table:cm[]          
+    Roo.bootstrap.Table:cm[]          
 right:
     Roo.bootstrap.Table.ColumnModel
 
 left:
-    Roo.bootstrap.Table.Table:sm
+    Roo.bootstrap.Table:sm
 right:  
     Roo.bootstrap.Table.RowSelectionModel    
 
 left:
-    Roo.bootstrap.Table.TableBody
+    Roo.bootstrap.TableBody
 right:
-    Roo.bootstrap.Table.TableRow
-    Roo.bootstrap.Table.TableCell
+    Roo.bootstrap.TableRow
+    Roo.bootstrap.TableCell
 
 left:
-    Roo.bootstrap.Table.TableRow
+    Roo.bootstrap.TableRow
 right:
-    Roo.bootstrap.Table.TableCell
+    Roo.bootstrap.TableCell
 
 left:
-    Roo.bootstrap.Table.TableCell
+    Roo.bootstrap.TableCell
 right:
     Roo.bootstrap.Button
 
