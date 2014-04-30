@@ -257,7 +257,7 @@ left:
   Roo.JsonView:store
   Roo.bootstrap.ComboBox:store
   Roo.bootstrap.Calendar:store
-  Roo.bootstrap.Table:store
+  Roo.bootstrap.Table.Table:store
 right: 
   Roo.data.Store
   Roo.data.SimpleStore
@@ -316,7 +316,7 @@ right:
     Roo.bootstrap.Popover
     Roo.bootstrap.Input
     Roo.bootstrap.TextArea
-    Roo.bootstrap.Table
+    Roo.bootstrap.Table.Table
     Roo.bootstrap.Pagination
     Roo.bootstrap.Progress
     Roo.bootstrap.TabPanel
