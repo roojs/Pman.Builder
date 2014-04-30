@@ -333,35 +333,35 @@ right:
     Roo.bootstrap.ProgressBar
 
 left:
-    Roo.bootstrap.Table
+    Roo.bootstrap.Table.Table
 right:
-    Roo.bootstrap.TableRow
-    Roo.bootstrap.TableCell
-    Roo.bootstrap.TableBody
+    Roo.bootstrap.Table.TableRow
+    Roo.bootstrap.Table.TableCell
+    Roo.bootstrap.Table.TableBody
 
 left:   
-    Roo.bootstrap.Table:cm[]          
+    Roo.bootstrap.Table.Table:cm[]          
 right:
     Roo.bootstrap.Table.ColumnModel
 
 left:
-    Roo.bootstrap.Table:sm
+    Roo.bootstrap.Table.Table:sm
 right:  
     Roo.bootstrap.Table.RowSelectionModel    
 
 left:
-    Roo.bootstrap.TableBody
+    Roo.bootstrap.Table.TableBody
 right:
-    Roo.bootstrap.TableRow
-    Roo.bootstrap.TableCell
+    Roo.bootstrap.Table.TableRow
+    Roo.bootstrap.Table.TableCell
 
 left:
-    Roo.bootstrap.TableRow
+    Roo.bootstrap.Table.TableRow
 right:
-    Roo.bootstrap.TableCell
+    Roo.bootstrap.Table.TableCell
 
 left:
-    Roo.bootstrap.TableCell
+    Roo.bootstrap.Table.TableCell
 right:
     Roo.bootstrap.Button
 
