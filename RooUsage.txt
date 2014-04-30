@@ -345,6 +345,11 @@ right:
     Roo.bootstrap.Table.ColumnModel
 
 left:
+    Roo.bootstrap.Table:sm
+right:  
+    Roo.bootstrap.Table.RowSelectionModel    
+
+left:
     Roo.bootstrap.TableBody
 right:
     Roo.bootstrap.TableRow
