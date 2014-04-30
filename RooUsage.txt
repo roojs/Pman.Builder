@@ -338,6 +338,9 @@ right:
     Roo.bootstrap.TableRow
     Roo.bootstrap.TableCell
     Roo.bootstrap.TableBody
+    Roo.bootstrap.Table:cm[]
+    Roo.bootstrap.Table:sm
+    
 
 left:   
     Roo.bootstrap.Table:cm[]          
