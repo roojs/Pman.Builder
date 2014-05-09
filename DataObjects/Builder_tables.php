@@ -213,8 +213,20 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         $cmd = "mysqldump -uroot --no-create-info summit cal_event";
         
+        require_once 'System.php';
+            
+        $tmpdir  = System::mktemp("-d remote_upload");
+
+        $path = $tmpdir . '/' . $tn . '.sql';
         
-        echo passthru($cmd);;exit;
+        header ('Content-Type: application/octet-stream');
+        header("Content-Disposition: attachment; filename=\"".$path."\";" );
+        @ob_clean();
+        flush();
+        readfile($src);
+        
+        
+//        echo passthru($cmd);;exit;
                 
                 exit;
             
