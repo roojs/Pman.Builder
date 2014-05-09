@@ -64,7 +64,6 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $desc[$tq->relname] = $tq->desc;
             }
         }
-        print_r($desc);exit;
         //   DB_DataObjecT::DebugLevel(1);
         $tq = DB_DataObject::factory('builder_tables');
         
