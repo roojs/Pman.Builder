@@ -104,7 +104,16 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         
                                                         Roo.log(node.attributes.name);
                                                         
-                                                        
+                                                        new Pman.Download({
+                                                            url : baseURL + '',
+                                                            params : {
+                                                                _dump : node.attributes.name
+                                                            },
+                                                            method : 'GET',
+                                                            success : function() {
+                                                            
+                                                            }
+                                                        });
                                                     }
                                                 },
                                                 text : "Export Data"
