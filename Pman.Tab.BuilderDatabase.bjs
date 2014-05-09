@@ -81,7 +81,7 @@
                                                         },
                                                         {
                                                             "listeners": {
-                                                                "click": "function (_self, e)\n{\n    \n}"
+                                                                "click": "function (_self, e)\n{\n    var node = _this.treepanel.tree.getSelectionModel().getSelectedNode();    \n}"
                                                             },
                                                             "text": "Export Data",
                                                             "xtype": "Item",

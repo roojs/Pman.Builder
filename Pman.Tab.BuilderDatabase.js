@@ -95,7 +95,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                 listeners : {
                                                     click : function (_self, e)
                                                     {
-                                                        
+                                                        var node = _this.treepanel.tree.getSelectionModel().getSelectedNode();    
                                                     }
                                                 },
                                                 text : "Export Data"
