@@ -71,7 +71,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         $modids = array();
         
-        print_r($t);exit;
+        
         foreach( $t as $k) {
             if (preg_match('/__keys$/', $k)) {
                 continue;
