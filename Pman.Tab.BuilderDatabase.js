@@ -95,14 +95,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                 listeners : {
                                                     click : function (_self, e)
                                                     {
-                                                        new Pman.Request({
-                                                            method: 'GET',
-                                                            url: baseURL + '/Roo/Builder_tables.php',
-                                                            params : {
-                                                                 _sync : 1
-                                                            }
-                                                        });
-                                                            
+                                                        
                                                     }
                                                 },
                                                 text : "Export DATA"
