@@ -49,7 +49,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $ret = array();
         $t = array_keys($tables);
         sort($t);
-        
+        print_r($t);exit;
         
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
