@@ -211,7 +211,14 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $host = array_shift(explode('/', $database[1]));
         $dn = array_pop(explode('/', $database[1]));
         
-        $cmd = "mysqldump -uroot --no-create-info summit cal_event";
+        $cmd = "mysqldump -u{$user} ";
+        if(!empty($pw)){
+            $cmd .= "-p{$pw} ";
+        }
+        
+        $cmd .= "--no-create-info summit {$tn}";
+        
+        print_r($cmd);exit;
         
         require_once 'System.php';
             
