@@ -105,7 +105,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             }
             
             
-            print_r(Services_JSON::stringify($this->tableSchema($k),null,'\n'));exit;
+            print_r(Services_JSON::stringify($this->tableSchema($k),null,'\t'));exit;
             $set = array(
                 'name' => $k,
                 'descrip' => isset($desc[$k]) ? $desc[$k] : '',
