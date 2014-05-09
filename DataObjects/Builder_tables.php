@@ -214,7 +214,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         
         
-        print_r($database);exit;
+        print_r($dn);exit;
                 
                 exit;
             
