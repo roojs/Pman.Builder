@@ -74,6 +74,18 @@
                                                             "text": "Sync Tables",
                                                             "xtype": "Item",
                                                             "|xns": "Roo.menu"
+                                                        },
+                                                        {
+                                                            "|xns": "Roo.menu",
+                                                            "xtype": "Separator"
+                                                        },
+                                                        {
+                                                            "listeners": {
+                                                                "click": "function (_self, e)\n{\n    new Pman.Request({\n        method: 'GET',\n        url: baseURL + '/Roo/Builder_tables.php',\n        params : {\n             _sync : 1\n        }\n    });\n        \n}"
+                                                            },
+                                                            "text": "Sync Tables",
+                                                            "xtype": "Item",
+                                                            "|xns": "Roo.menu"
                                                         }
                                                     ]
                                                 }
