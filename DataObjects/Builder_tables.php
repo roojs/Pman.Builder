@@ -223,7 +223,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         header("Content-Disposition: attachment; filename=\"".$path."\";" );
         @ob_clean();
         flush();
-        readfile($src);
+        readfile($path);
         
         
 //        echo passthru($cmd);;exit;
