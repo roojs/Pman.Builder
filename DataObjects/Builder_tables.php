@@ -220,13 +220,14 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $path = $tmpdir . '/' . $tn . '.sql';
         
         ob_start();
+        
         passthru($cmd);
-        $var = ob_get_contents();
+        
+        $data = ob_get_contents();
+        
         ob_end_clean();
         
-        print_r($var);exit;
-        
-        file_put_contents($path, passthru($cmd));
+        file_put_contents($path, $data);
         
         header ('Content-Type: application/octet-stream');
         header("Content-Disposition: attachment; filename=\"".$path."\";" );
