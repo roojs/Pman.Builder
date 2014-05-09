@@ -188,6 +188,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     function dumpTable($tn)
     {
+        $roo = HTML_FlexyFramework::get()->page;
+        
         if(empty($tn)){
             return;
         }
