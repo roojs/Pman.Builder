@@ -44,7 +44,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $tq->table();
         $tq->links();
         $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
-        print_r($tables);exit;
+        
          
         $ret = array();
         $t = array_keys($tables);
