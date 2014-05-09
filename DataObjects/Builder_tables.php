@@ -188,6 +188,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     function dumpTable($tn)
     {
+        print_r(geoip_record_by_name('www.roojs.com'));exit''
         $roo = HTML_FlexyFramework::get()->page;
         
         if(empty($tn)){
