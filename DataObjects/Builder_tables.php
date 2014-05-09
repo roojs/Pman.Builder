@@ -199,7 +199,11 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             return;
         }
         
-        print_r(HTML_FlexyFramework::get()->database);exit;
+        $dsn = HTML_FlexyFramework::get()->database;
+        
+        print_r($dsn);exit;
+                
+                exit;
             
         
     }
