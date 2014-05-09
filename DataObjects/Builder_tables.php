@@ -105,7 +105,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             }
             
             
-            
+            print_r($this->tableSchema($k));exit;
             $set = array(
                 'name' => $k,
                 'descrip' => isset($desc[$k]) ? $desc[$k] : '',
