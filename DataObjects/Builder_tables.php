@@ -235,7 +235,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         file_put_contents($path, $data);
         
         header ('Content-Type: application/octet-stream');
-        header("Content-Disposition: attachment; filename=\"".$path."\";" );
+        header("Content-Disposition: attachment; filename=\"".basename($path)."\";" );
         header("Expires: 0");
         header("Cache-Control: must-revalidate, post-check=0,pre-check=0");
         header("Pragma: public");
