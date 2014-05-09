@@ -42,7 +42,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         // ensure everything is loaded...
         $tq = DB_DataObject::factory('builder_tables');
         $tq->table();
-        print_r($tq);exit;
+        print_r($tq->table());exit;
         $tq->links();
         $tables = $_DB_DATAOBJECT['INI'][$tq->_database];
         
