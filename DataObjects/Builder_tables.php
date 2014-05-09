@@ -203,13 +203,13 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         $database = explode('@', $dsn);
         
+        $ui = str_replace('mysql://', '', $database[0]);
         
-        
-        print_r($database);exit;
-        $user = explode('mysql://', $database[0]);
-        
-        $dn = array_pop(explode('/', $database[1]));
+        $user = array_shift(explode(':', $ui));
+        $pw = array_pop(explode(':', $ui));
         $host = array_shift(explode('/', $database[1]));
+        $dn = array_pop(explode('/', $database[1]));
+        
         
         
         
