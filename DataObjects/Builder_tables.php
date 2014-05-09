@@ -214,7 +214,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         
         
-        echo exec('whoami');;exit;
+        echo passthru('whoami');;exit;
                 
                 exit;
             
