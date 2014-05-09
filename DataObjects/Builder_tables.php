@@ -54,7 +54,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         // for postgres we can get descriptions - this should just fail in Mysql..
         $desc= array();
         $dsn = HTML_FlexyFramework::get()->database;
-        print_r($dsn);exit;
+        
         if (preg_match('/^pgsql:/', $dsn )) {
             $tq = DB_DataObject::factory('builder_tables');
             $tq->query( "
@@ -64,6 +64,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
                 $desc[$tq->relname] = $tq->desc;
             }
         }
+        print_r($desc);exit;
         //   DB_DataObjecT::DebugLevel(1);
         $tq = DB_DataObject::factory('builder_tables');
         
