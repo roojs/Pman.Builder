@@ -218,7 +218,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $tmpdir  = System::mktemp("-d remote_upload");
 
         $path = $tmpdir . '/' . $tn . '.sql';
-        
+        print_r(passthru($cmd));exit;
         file_put_contents($path, passthru($cmd));
         
         header ('Content-Type: application/octet-stream');
