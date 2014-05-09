@@ -83,7 +83,7 @@
                                                             "listeners": {
                                                                 "click": "function (_self, e)\n{\n    \n}"
                                                             },
-                                                            "text": "Export DATA",
+                                                            "text": "Export Data",
                                                             "xtype": "Item",
                                                             "|xns": "Roo.menu"
                                                         }

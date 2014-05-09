@@ -98,7 +98,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         
                                                     }
                                                 },
-                                                text : "Export DATA"
+                                                text : "Export Data"
                                             }
                                         ]
                                     }
