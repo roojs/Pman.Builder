@@ -188,7 +188,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             return;
         }
         
-        $do = DB_DataObject::factory($k);
+        $do = DB_DataObject::factory($tn);
         if (!is_a($do,'DB_DataObject')) {
             return;
         }
