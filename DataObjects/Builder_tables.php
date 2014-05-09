@@ -28,6 +28,10 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             $this->syncDatabase();
             HTML_FlexyFramework::get()->page->jok("DONE");
         }
+        
+        if(!empty($q['_dump'])){
+            $this->dumpTable($q['_dump']);
+        }
        
     }
     
