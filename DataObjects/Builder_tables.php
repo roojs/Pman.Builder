@@ -85,14 +85,11 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             
             // get's the module part out of the dataobject class name
             // assumes '_' is not used in module name.
-            print_r($do);
-            
-            print_r(substr(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)+ 1)));exit;
             $mod = array_pop(
                     explode('_',
                         substr(get_class($do), 0, -1 * (strlen('_DataObject_') + strlen($k)+ 1))
                     ));
-             
+             print_r($mod);exit;
             // should get 'ZZZ' part.. : XXX_ZZZZ_DataObject_xx_Builder
             if (!isset($modids[$mod])) {
                 $x = DB_DataObject::factory('builder_tables');
