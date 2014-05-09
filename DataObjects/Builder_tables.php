@@ -215,7 +215,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         require_once 'System.php';
             
-        $tmpdir  = System::mktemp("-d remote_upload");
+        $tmpdir  = System::mktemp("-d dump");
 
         $path = $tmpdir . '/' . $tn . '.sql';
         
