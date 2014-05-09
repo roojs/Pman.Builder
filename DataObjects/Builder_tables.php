@@ -207,7 +207,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         $user = explode('@', $dsn);
         
-        print_r($dsn);exit;
+        print_r($user);exit;
                 
                 exit;
             
