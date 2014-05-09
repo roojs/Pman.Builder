@@ -214,7 +214,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $cmd = "mysqldump -uroot --no-create-info summit cal_event";
         
         
-        echo passthru('whoami');;exit;
+        echo passthru($cmd);;exit;
                 
                 exit;
             
