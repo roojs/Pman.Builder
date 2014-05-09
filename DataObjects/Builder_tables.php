@@ -199,7 +199,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             return;
         }
         
-        $roo->jok('run');exit;
+        print_r(HTML_FlexyFramework::get()->database);exit;
             
         
     }
