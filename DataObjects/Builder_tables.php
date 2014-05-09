@@ -219,16 +219,15 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
 
         $path = $tmpdir . '/' . $tn . '.sql';
         
+        file_put_contents($path, passthru($cmd));
+        
         header ('Content-Type: application/octet-stream');
         header("Content-Disposition: attachment; filename=\"".$path."\";" );
         @ob_clean();
         flush();
         readfile($path);
         
-        
-//        echo passthru($cmd);;exit;
-                
-                exit;
+        exit;
             
         
     }
