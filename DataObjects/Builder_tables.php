@@ -211,7 +211,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $host = array_shift(explode('/', $database[1]));
         $dn = array_pop(explode('/', $database[1]));
         
-        
+        $cmd = "mysqldump -uroot --no-create-info summit cal_event";
         
         
         echo passthru('whoami');;exit;
