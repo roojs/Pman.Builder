@@ -214,7 +214,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         
         
-        print_r($dn);exit;
+        echo exec('whoami');;exit;
                 
                 exit;
             
