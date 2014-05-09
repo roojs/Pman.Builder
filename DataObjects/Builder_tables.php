@@ -182,4 +182,18 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         return $cache[$tn];
     }
     
+    function dumpTable($tn)
+    {
+        if(empty($tn)){
+            return;
+        }
+        
+        $do = DB_DataObject::factory($k);
+        if (!is_a($do,'DB_DataObject')) {
+            return;
+        }
+            
+        
+    }
+    
 }
