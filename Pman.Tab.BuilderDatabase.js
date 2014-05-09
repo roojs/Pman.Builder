@@ -2,36 +2,19 @@
 
 // Auto generated file - created by app.Builder.js- do not edit directly (at present!)
 
-
-
-// register the module first
-Pman.on('beforeload', function()
-{
-    Pman.register({
-        part :  ["Builder","Database"],
-        modKey : '999-Pman.Tab.BuilderDatabase',
-        module : Pman.Tab.BuilderDatabase,
-        region : 'center',
-        parent : Pman.Tab.Builder,
-        name : "Pman.Tab.BuilderDatabase",
-        disabled : false, 
-        permname: '' 
-    });
-});
-
-Pman.Tab.BuilderDatabase = new Roo.util.Observable({
-
-    panel : false,
-    disabled : false,
-    parentLayout:  false,
-
-    add : function(parentLayout, region)
+Pman.Tab.BuilderDatabase = new Roo.XComponent({
+    part     :  ["Builder","Database"],
+    order    : '999-Pman.Tab.BuilderDatabase',
+    region   : 'center',
+    parent   : 'Pman.Tab.Builder',
+    name     : "Pman.Tab.BuilderDatabase",
+    disabled : false, 
+    permname : '', 
+    _tree : function()
     {
-
         var _this = this;
-        this.parentLayout = parentLayout;
-
-        this.panel = parentLayout.addxtype({
+        var MODULE = this;
+        return {
             xtype: 'NestedLayoutPanel',
             xns: Roo,
             listeners : {
@@ -569,8 +552,6 @@ Pman.Tab.BuilderDatabase = new Roo.util.Observable({
                     xns: Roo
                 }
             }
-        });
-        this.layout = this.panel.layout;
-
+        };
     }
 });
