@@ -201,11 +201,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         
         $dsn = HTML_FlexyFramework::get()->database;
         
+        $database = explode('@', $dsn);
+        
+        $dn = array_pop(explode('/', $database[1]));
+        $host = array_shift(explode('/', $database[1]));
         
         
-        $dn = array_pop(explode('/', $dsn));
-        
-        $user = explode('@', $dsn);
         
         print_r($user);exit;
                 
