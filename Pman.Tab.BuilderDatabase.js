@@ -105,7 +105,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                             
                                                     }
                                                 },
-                                                text : "Sync Tables"
+                                                text : "Export DATA"
                                             }
                                         ]
                                     }
