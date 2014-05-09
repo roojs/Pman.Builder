@@ -105,7 +105,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         Roo.log(node.attributes.name);
                                                         
                                                         new Pman.Download({
-                                                            url : baseURL + '',
+                                                            url : baseURL + '/Roo/Builder_tables.php',
                                                             params : {
                                                                 _dump : node.attributes.name
                                                             },

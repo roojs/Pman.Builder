@@ -81,7 +81,7 @@
                                                         },
                                                         {
                                                             "listeners": {
-                                                                "click": "function (_self, e)\n{\n    var node = _this.treepanel.tree.getSelectionModel().getSelectedNode();   \n    \n    if(!node){\n        Roo.MessageBox.alert('Error', 'Please select a table');\n        return;\n    } \n    \n    Roo.log(node.attributes.name);\n    \n    new Pman.Download({\n        url : baseURL + '',\n        params : {\n            _dump : node.attributes.name\n        },\n        method : 'GET',\n        success : function() {\n        \n        }\n    });\n}"
+                                                                "click": "function (_self, e)\n{\n    var node = _this.treepanel.tree.getSelectionModel().getSelectedNode();   \n    \n    if(!node){\n        Roo.MessageBox.alert('Error', 'Please select a table');\n        return;\n    } \n    \n    Roo.log(node.attributes.name);\n    \n    new Pman.Download({\n        url : baseURL + '/Roo/Builder_tables.php',\n        params : {\n            _dump : node.attributes.name\n        },\n        method : 'GET',\n        success : function() {\n        \n        }\n    });\n}"
                                                             },
                                                             "text": "Export Data",
                                                             "xtype": "Item",
