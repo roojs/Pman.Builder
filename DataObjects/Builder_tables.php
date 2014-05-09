@@ -192,6 +192,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         if (!is_a($do,'DB_DataObject')) {
             return;
         }
+        
+        
             
         
     }
