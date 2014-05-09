@@ -101,6 +101,10 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                             Roo.MessageBox.alert('Error', 'Please select a table');
                                                             return;
                                                         } 
+                                                        
+                                                        Roo.log(node.attributes.name);
+                                                        
+                                                        
                                                     }
                                                 },
                                                 text : "Export Data"
