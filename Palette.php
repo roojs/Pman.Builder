@@ -21,7 +21,7 @@ class Pman_Builder_Palette extends Pman
         $cls = $_REQUEST['xns'] . '.' . $_REQUEST['xtype'];
         
         $data = json_decode(file_get_contents($ff->rootDir . '/roojs1/docs/json/roodata.json'));
-        
+        print_r($data);exit;
         //echo '<PRE>'; print_R($data);
         
         $out = $data->data->{ $cls } -> {$_REQUEST['list'] };
