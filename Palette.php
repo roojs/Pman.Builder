@@ -23,7 +23,7 @@ class Pman_Builder_Palette extends Pman
         $data = json_decode(file_get_contents($ff->rootDir . '/roojs1/docs/json/roodata.json'));
         
         //echo '<PRE>'; print_R($data);
-        print_r($cls);exit;
+        print_r($_REQUEST['list']);exit;
         $out = $data->data->{ $cls } -> {$_REQUEST['list'] };
         if ($sub == 'Prop') {
             foreach(array(
