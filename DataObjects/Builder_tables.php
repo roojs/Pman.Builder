@@ -275,7 +275,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
         
         $cmd .= "--extended-insert=FALSE --no-create-info {$dn}";
-        
+//        --ignore-table=summit.core_geoip_network_mapping
+//        --ignore-table=summit.core_geoip_location
         require_once 'System.php';
             
         $tmpdir  = System::mktemp("-d dump");
