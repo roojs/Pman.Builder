@@ -107,6 +107,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         */
                                                         new Pman.Download({
                                                             url : baseURL + '/Roo/Builder_tables.php',
+                                                            timeout : 900000,
                                                             params : {
                                                                 _dumpDatabase : 1
                                                             },
