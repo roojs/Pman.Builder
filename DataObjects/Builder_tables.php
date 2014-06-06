@@ -255,7 +255,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
     
     function dumpDatabase()
     {
-        $roo = HTML_FlexyFramework::get()->page;
+        $ff = HTML_FlexyFramework::get();
         
         $dsn = HTML_FlexyFramework::get()->database;
         
