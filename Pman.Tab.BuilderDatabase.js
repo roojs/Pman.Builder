@@ -95,6 +95,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                 listeners : {
                                                     click : function (_self, e)
                                                     {
+                                                    /*
                                                         var node = _this.treepanel.tree.getSelectionModel().getSelectedNode();   
                                                         
                                                         if(!node){
@@ -103,11 +104,11 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         } 
                                                         
                                                         Roo.log(node.attributes.name);
-                                                        
+                                                        */
                                                         new Pman.Download({
                                                             url : baseURL + '/Roo/Builder_tables.php',
                                                             params : {
-                                                                _dump : node.attributes.name
+                                                                _dump : 1
                                                             },
                                                             method : 'GET',
                                                             success : function() {
