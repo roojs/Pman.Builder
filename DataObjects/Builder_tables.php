@@ -269,7 +269,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $host = array_shift(explode('/', $database[1]));
         $dn = array_pop(explode('/', $database[1]));
         
-        $cmd = "mysqldump -u{$user} ";
+        $cmd = "mysqldump -h {$host} -u{$user} ";
         if(!empty($pw)){
             $cmd .= "-p{$pw} ";
         }
