@@ -287,7 +287,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         passthru($cmd);
         
         $data = ob_get_contents();
-        
+        print_r($data);exit;
         ob_end_clean();
         
         file_put_contents($path, $data);
