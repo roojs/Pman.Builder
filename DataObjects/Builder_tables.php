@@ -258,7 +258,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         $roo = HTML_FlexyFramework::get()->page;
         
         $dsn = HTML_FlexyFramework::get()->database;
-        print_r($dsn);exit;
+        
         $database = explode('@', $dsn);
         
         $ui = str_replace('mysql://', '', $database[0]);
@@ -275,12 +275,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
         
         $cmd .= "--no-create-info {$dn}";
-        
+        print_r($cmd);exit;
         require_once 'System.php';
             
         $tmpdir  = System::mktemp("-d dump");
 
-        $path = $tmpdir . '/' . $tn . '.sql';
+        $path = $tmpdir . '/' . $dn . '.sql';
         
         ob_start();
         
