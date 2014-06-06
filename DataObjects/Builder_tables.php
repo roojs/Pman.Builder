@@ -274,7 +274,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             $cmd .= "-p{$pw} ";
         }
         
-        $cmd .= "--no-create-info summit {$tn}";
+        $cmd .= "--no-create-info {$dn}";
         
         require_once 'System.php';
             
