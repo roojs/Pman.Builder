@@ -108,7 +108,7 @@ Pman.Tab.BuilderDatabase = new Roo.XComponent({
                                                         new Pman.Download({
                                                             url : baseURL + '/Roo/Builder_tables.php',
                                                             params : {
-                                                                _dump : 1
+                                                                _dumpDatabase : 1
                                                             },
                                                             method : 'GET',
                                                             success : function() {
