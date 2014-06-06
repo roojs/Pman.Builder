@@ -275,14 +275,13 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
         
         if(!empty($ff->Pman_Ignore_Table)){
-            print_r($ff->Pman_Ignore_Table);exit;
+            foreach ($ff->Pman_Ignore_Table as $tn){
+                $cmd .= "--ignore-table={$dn}.{$tn} ";
+            }
         }
-        print_r($ff->Pman_Ignore_Table);
-        exit;
+        
         $cmd .= "--extended-insert=FALSE --no-create-info {$dn}";
         
-//        --ignore-table=summit.core_geoip_network_mapping
-//        --ignore-table=summit.core_geoip_location
         require_once 'System.php';
             
         $tmpdir  = System::mktemp("-d dump");
