@@ -30,8 +30,12 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         }
         
         if(!empty($q['_dumpTable'])){
-            $this->dumpTable($q['_dump']);
+            $this->dumpTable($q['_dumpTable']);
         }
+        
+//        if(!empty($q['_dumpTable'])){
+//            $this->dumpTable($q['_dumpTable']);
+//        }
        
     }
     
@@ -186,69 +190,67 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
         return $cache[$tn];
     }
     
-    function dumpTable($tn)
-    {
-        $roo = HTML_FlexyFramework::get()->page;
-        
-        if(empty($tn)){
-            return;
-        }
-        
-        $do = DB_DataObject::factory($tn);
-        if (!is_a($do,'DB_DataObject')) {
-            return;
-        }
-        
-        $dsn = HTML_FlexyFramework::get()->database;
-        
-        $database = explode('@', $dsn);
-        
-        $ui = str_replace('mysql://', '', $database[0]);
-        
-        $user = array_shift(explode(':', $ui));
-        $pw = array_pop(explode(':', $ui));
-        
-        $host = array_shift(explode('/', $database[1]));
-        $dn = array_pop(explode('/', $database[1]));
-        
-        $cmd = "mysqldump -u{$user} ";
-        if(!empty($pw)){
-            $cmd .= "-p{$pw} ";
-        }
-        
-        $cmd .= "--no-create-info summit {$tn}";
-        
-        require_once 'System.php';
-            
-        $tmpdir  = System::mktemp("-d dump");
-
-        $path = $tmpdir . '/' . $tn . '.sql';
-        
-        ob_start();
-        
-        passthru($cmd);
-        
-        $data = ob_get_contents();
-        
-        ob_end_clean();
-        
-        file_put_contents($path, $data);
-        
-        header('Content-Description: File Transfer');
-        header ('Content-Type: application/octet-stream');
-        header("Content-Disposition: attachment; filename=\"".basename($path)."\";" );
-        header("Expires: 0");
-        header("Cache-Control: must-revalidate, post-check=0,pre-check=0");
-        header("Pragma: public");
-        header('Content-Length: ' . filesize($path));
-        
-        @ob_clean();
-        flush();
-        readfile($path);
-        
-        exit;
-            
-        
-    }
+//    function dumpTable($tn)
+//    {
+//        $roo = HTML_FlexyFramework::get()->page;
+//        
+//        if(empty($tn)){
+//            return;
+//        }
+//        
+//        $do = DB_DataObject::factory($tn);
+//        if (!is_a($do,'DB_DataObject')) {
+//            return;
+//        }
+//        
+//        $dsn = HTML_FlexyFramework::get()->database;
+//        
+//        $database = explode('@', $dsn);
+//        
+//        $ui = str_replace('mysql://', '', $database[0]);
+//        
+//        $user = array_shift(explode(':', $ui));
+//        $pw = array_pop(explode(':', $ui));
+//        
+//        $host = array_shift(explode('/', $database[1]));
+//        $dn = array_pop(explode('/', $database[1]));
+//        
+//        $cmd = "mysqldump -u{$user} ";
+//        if(!empty($pw)){
+//            $cmd .= "-p{$pw} ";
+//        }
+//        
+//        $cmd .= "--no-create-info summit {$tn}";
+//        
+//        require_once 'System.php';
+//            
+//        $tmpdir  = System::mktemp("-d dump");
+//
+//        $path = $tmpdir . '/' . $tn . '.sql';
+//        
+//        ob_start();
+//        
+//        passthru($cmd);
+//        
+//        $data = ob_get_contents();
+//        
+//        ob_end_clean();
+//        
+//        file_put_contents($path, $data);
+//        
+//        header('Content-Description: File Transfer');
+//        header ('Content-Type: application/octet-stream');
+//        header("Content-Disposition: attachment; filename=\"".basename($path)."\";" );
+//        header("Expires: 0");
+//        header("Cache-Control: must-revalidate, post-check=0,pre-check=0");
+//        header("Pragma: public");
+//        header('Content-Length: ' . filesize($path));
+//        
+//        @ob_clean();
+//        flush();
+//        readfile($path);
+//        
+//        exit;
+//    }
     
 }
