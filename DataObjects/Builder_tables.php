@@ -274,8 +274,8 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             $cmd .= "-p{$pw} ";
         }
         
-        $cmd .= "--no-create-info {$dn}";
-        print_r($cmd);exit;
+        $cmd .= "--extended-insert=FALSE --no-create-info {$dn}";
+        
         require_once 'System.php';
             
         $tmpdir  = System::mktemp("-d dump");
