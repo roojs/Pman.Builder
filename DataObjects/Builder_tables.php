@@ -29,7 +29,7 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             HTML_FlexyFramework::get()->page->jok("DONE");
         }
         
-        if(!empty($q['_dump'])){
+        if(!empty($q['_dumpTable'])){
             $this->dumpTable($q['_dump']);
         }
        
