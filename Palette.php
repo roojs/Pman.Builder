@@ -49,7 +49,12 @@ class Pman_Builder_Palette extends Pman
                     
                     'type' => "String"
                 ),
-                  
+                array(
+                    'name' => "flexy:nameuses",
+                    'desc'  => "nameuses",
+                    'memberOf' => "Flexy",
+                    'type' => "String"
+                ),
                 
             ) as  $add) {
                 array_push($out,$add);
