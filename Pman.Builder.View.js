@@ -481,7 +481,7 @@ Pman.Builder.View = {
             tree.el.attr('flexy:if', tree['flexy:if']);
         }
         if (typeof(tree['flexy:nameuses']) != 'undefined') {
-            (tree.inputEl() !== 'undefined') ? tree.inputEl.attr('flexy:nameuses', tree['flexy:nameuses']) : tree.el.attr('flexy:nameuses', tree['flexy:nameuses']);
+            (tree.inputEl() !== 'undefined') ? tree.inputEl().attr('flexy:nameuses', tree['flexy:nameuses']) : tree.el.attr('flexy:nameuses', tree['flexy:nameuses']);
         }
         if (!tree.items || !tree.items.length) { return; }
         
