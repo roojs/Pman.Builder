@@ -480,6 +480,9 @@ Pman.Builder.View = {
         if (typeof(tree['flexy:if']) != 'undefined') {
             tree.el.attr('flexy:if', tree['flexy:if']);
         }
+        if (typeof(tree['flexy:nameuses']) != 'undefined') {
+            tree.el.attr('flexy:nameuses', tree['flexy:nameuses']);
+        }
         if (!tree.items || !tree.items.length) { return; }
         
         for (var i = 0; i < tree.items.length; i++){
