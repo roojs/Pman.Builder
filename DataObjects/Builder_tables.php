@@ -274,12 +274,6 @@ class Pman_Builder_DataObjects_Builder_tables extends DB_DataObject
             $cmd .= "-p{$pw} ";
         }
         
-        if(!empty($ff->Pman_Ignore_Table)){
-            foreach ($ff->Pman_Ignore_Table as $tn){
-                $cmd .= "--ignore-table={$dn}.{$tn} ";
-            }
-        }
-        
         $cmd .= "--extended-insert=FALSE --no-create-info {$dn}";
         
         require_once 'System.php';
