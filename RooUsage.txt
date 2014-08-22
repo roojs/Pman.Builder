@@ -474,6 +474,9 @@ right:
 
 left:    
     Roo.bootstrap.Navbar.Item
+    Roo.bootstrap.NavSimplebar.Item
+    Roo.bootstrap.NavHeaderbar.Item
+    Roo.bootstrap.NavSidebar.Item
 right:
     Roo.bootstrap.Container
 
