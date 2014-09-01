@@ -66,7 +66,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         // needs to modify the template directory??
         // use the builder_module == app name
         // look for part with same name.
-        if (empty($ff->Builder['from_filesystem'])) {
+        if (empty($ff->Pman_Builder['from_filesystem'])) {
         
             $template_engine = new HTML_Template_Flexy(array(
                 'templateDir' => $m->path
