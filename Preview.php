@@ -54,9 +54,10 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     
     function outputBody()
     {
+        $ff = HTML_FlexyFramework::get();
         
         
-        $proj = HTML_FlexyFramework::get()->project;
+        $proj = $ff->project;
         // DB_DataObject::debugLevel(1);
         $m = DB_DAtaObject::factory('Builder_modules');
         $m->get('name', $proj );
@@ -65,9 +66,12 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         // needs to modify the template directory??
         // use the builder_module == app name
         // look for part with same name.
-        $template_engine = new HTML_Template_Flexy(array(
-            'templateDir' => $m->path
-        ));
+        if (empty($ff->Builder['from_filesystem'])) {
+        
+            $template_engine = new HTML_Template_Flexy(array(
+                'templateDir' => $m->path
+            ));
+        }
         $template_engine->compile($this->template);
         if ($this->elements) { /* BC crap! */
             $this->elements = HTML_Template_Flexy_Factory::setErrors($this->elements,$this->errors);
