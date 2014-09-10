@@ -54,6 +54,10 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
     
     function outputBody()
     {
+        
+        if ($this->timer) {
+            $this->timer->setMarker(__CLASS__ . '::outputBody - start');
+        }
         $ff = HTML_FlexyFramework::get();
         
         
@@ -82,7 +86,9 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         $template_engine->elements = $this->elements;
         $template_engine->outputObject($this,$this->elements);
         
-        
+        if ($this->timer) {
+            $this->timer->setMarker(__CLASS__ . '::outputBody - end');
+        }
         
     }
 }
