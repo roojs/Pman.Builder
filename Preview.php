@@ -78,6 +78,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         } else {
             $template_engine = new HTML_Template_Flexy();
         }
+        $template_engine->debug = 1;
         
         $template_engine->compile($this->template);
         if ($this->elements) { /* BC crap! */
