@@ -86,6 +86,7 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
             $this->elements = HTML_Template_Flexy_Factory::setErrors($this->elements,$this->errors);
         }
         $template_engine->elements = $this->elements;
+         $this->timer->setMarker(__CLASS__ . '::outputBody - render template');
         $template_engine->outputObject($this,$this->elements);
         
         if ($this->timer) {
