@@ -71,13 +71,15 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
         // use the builder_module == app name
         // look for part with same name.
         if (empty($ff->Pman_Builder['from_filesystem'])) {
-        
+            
             $template_engine = new HTML_Template_Flexy(array(
                 'templateDir' => $m->path
             ));
         } else {
             $template_engine = new HTML_Template_Flexy();
         }
+        
+        print_r($template_engine->templateDir);exit;
         $template_engine->debug = 1;
         //print_R($template_engine);
         
