@@ -79,7 +79,6 @@ class Pman_Builder_Preview extends Pman_Cms_Preview
             $template_engine = new HTML_Template_Flexy();
         }
         
-        print_r($template_engine);exit;
         $template_engine->debug = 1;
         //print_R($template_engine);
         
